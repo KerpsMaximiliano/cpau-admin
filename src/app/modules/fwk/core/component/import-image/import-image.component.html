@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup">
+  <mat-form-field appearance="outline" class="import-image-input">
+
+    <input  matInput
+            class="input"
+            [id]="name"
+            [formControlName]="name"
+            [(ngModel)]="value"
+            [required]="config.required"
+            [readonly]="config.disabled"
+            [placeholder]="config.label" 
+            (blur)="changeInput(value)">
+
+    <mat-error *ngIf="formGroup.get(name).errors?.required">{{config.options.requiredMessage}}</mat-error>
+    <mat-error *ngIf="formGroup.get(name).errors?.invalidValue">{{config.options.invalidValueMessage}}</mat-error>
+  </mat-form-field>
+
+  <button mat-button
+      color="primary"
+      (click)="clickOpenCkfinder()"
+      class="import-image-button"
+      [disabled]="config.disabled">
+      <mat-icon>add_photo_alternate</mat-icon>
+  </button>
+</form>

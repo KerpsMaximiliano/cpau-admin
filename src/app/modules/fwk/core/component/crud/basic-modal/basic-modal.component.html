@@ -1,0 +1,22 @@
+<div class="{{data.modalKey}}-modal {{getUrl()}}-modal">
+  <div class="clear-div">
+      <button (click)="onNoClick()" [disabled]="submitting" mat-icon-button class="mat-icon-button_">
+          <mat-icon aria-label="clear">clear</mat-icon>
+      </button>
+  </div>
+  <h1 mat-dialog-title *ngIf="titleLabel">{{titleLabel}}</h1>
+  <div mat-dialog-content class='basic-modal-content'>
+    <app-dynamic-form-component [entity]="entity"    
+                                [isEdit]="isEdit"
+                                [fields]="fields"
+                                [subFormName]="formKey"
+                                [parentForm]="form"
+                                (objectModified)="objectModified($event)"
+                                (onChangeEntity)="onChangeEntity($event)">
+    </app-dynamic-form-component>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [ngClass]="[fuseSettings.colorClasses.primary_button, fuseSettings.colorClasses.primary_button_fg]" *ngIf="isAdd || isEdit" type="submit" (click)="onSubmit()" [disabled]="!isObjectModified || form.invalid || submitting" cdkFocusInitial>{{submitLabel}}</button>
+  </div>
+</div>
+

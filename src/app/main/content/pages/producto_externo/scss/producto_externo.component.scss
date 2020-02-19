@@ -1,0 +1,131 @@
+.component-PRODUCTO_EXTERNO{
+    .crud-table{
+        /* @media screen and (max-width:899px) {
+            .mat-header-row, .mat-row {
+                width: max-content;
+            }
+        } */
+
+        .action-cell {
+            width: 40px !important;
+            min-width: 40px !important;
+            max-width: 40px !important;
+        }
+
+        #orderHeader,
+        #orderCell{
+            width: 70px;
+            min-width: 70px;
+            max-width: 70px;
+        }
+
+        #favouriteHeader,
+        #favouriteCell{
+            width: 80px !important;
+            min-width: 80px !important;
+            max-width: 80px !important;
+        }
+
+        #categoryHeader,
+        #categoryCell{
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+
+        #subcategoryHeader,
+        #subcategoryCell {
+            width: 140px;
+            min-width: 140px;
+            max-width: 140px;
+        }
+
+        #questionHeader,
+        #questionCell {
+            min-width: 350px;
+        }
+    }
+}
+.control-mat-dialog .dynamicFormDiv[name=subForm]{
+    /*
+    .nameDiv{
+        display: inline-block;
+        width:45%;
+        margin-right: 10%;
+    }
+    .remarksDiv{
+        display: inline-block;
+        width:45%;
+    }
+    
+    
+    .minQuotaDiv{
+        display: inline-block;
+        width:30%;
+        margin-right: 5%;
+    }
+    .quotaDiv{
+        display: inline-block;
+        width:30%;
+        margin-right: 5%;
+    }
+    .allowQueueDiv{
+        display: inline-block;
+        width:20%;
+    }
+
+
+    .validateUserDiv{
+        display: inline-block;
+        width:13%;
+        margin-right: 8%;
+    }
+    .showUserDataDiv{
+        display: inline-block;
+        width:28%;
+        margin-right: 5%;
+    }
+    .allowUpdatesDiv{
+        display: inline-block;
+        width:22%;
+        margin-right: 5%;
+    }
+    .showTitleDiv{
+        display: inline-block;
+        width:15%;
+    }
+
+    .fromDateStringDiv{
+        display: inline-block;
+        width:45%;
+        margin-right: 10%;
+    }
+    .toDateStringDiv{
+        display: inline-block;
+        width:45%;
+    }
+
+    .placeDiv{
+        display: inline-block;
+        width:45%;
+        margin-right: 10%;
+    }
+    .dateDiv{
+        display: inline-block;
+        width:45%;
+    }
+
+    .categoryDiv{
+        display: inline-block;
+        width:45%;
+        margin-right: 10%;
+    }
+    .subcategoryDiv{
+    display: inline-block;
+    width:45%;
+    }
+    .favouriteDiv{
+    margin-top:15px;
+    }
+    */
+}

@@ -1,0 +1,31 @@
+import { CONTENIDO_CREATE_FORM_FIELDS_DEF } from './form/contenido.create.fields';
+import { CONTENIDO_UPDATE_FORM_FIELDS_DEF } from './form/contenido.update.fields';
+import { CONTENIDO_READ_FORM_FIELDS_DEF } from './form/contenido.read.fields';
+import { CONTENIDO_FILTER_FORM_FIELDS_DEF } from './form/contenido.filter.fields';
+import { CONTENIDO_SECURITY_DEF } from './security/contenido.security';
+import { CONTENIDO_GRID_DEF } from './grid/contenido.grid';
+import { CONTENIDO_I18N_DEF } from './i18n/contenido.i18n';
+import { CONTENIDO_NAV_DEF } from './navigation/contenido.nav';
+import { CrudDef } from '../../../../modules/fwk/core/model/component-def/crud-def';
+
+// Definicion de un template crud(Create,Read,Update and Delete)
+export const CONTENIDO_DEF: CrudDef = { 
+    name: 'CONTENIDO',
+    i18n: CONTENIDO_I18N_DEF,
+    grid: CONTENIDO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    forms: {
+        filter: CONTENIDO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
+        create: CONTENIDO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        update: CONTENIDO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+        read:  CONTENIDO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+    },
+    navigation: CONTENIDO_NAV_DEF,
+    security: CONTENIDO_SECURITY_DEF,
+    ws: {
+        key: 'CONTENIDO_CRUD_URL',
+        url: 'http://localhost:5000/api/Content/'
+    },
+    dialogConfig: {
+        width: '800px'
+    }   
+};
