@@ -7,6 +7,7 @@ import { BOLETIN_GRID_DEF } from './grid/boletin.grid';
 import { BOLETIN_I18N_DEF } from './i18n/boletin.i18n';
 import { BOLETIN_NAV_DEF } from './navigation/boletin.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const BOLETIN_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const BOLETIN_DEF: CrudDef = {
     security: BOLETIN_SECURITY_DEF,
     ws: {
         key: 'BOLETIN_CRUD_URL',
-        url: 'http://localhost:5000/api/Boletin/'
+        url: PREFIX_DOMAIN_API + 'Boletin'
     },
     dialogConfig: {
         width: '800px'

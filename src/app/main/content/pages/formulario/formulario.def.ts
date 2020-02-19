@@ -7,6 +7,7 @@ import { FORMULARIO_GRID_DEF } from './grid/formulario.grid';
 import { FORMULARIO_I18N_DEF } from './i18n/formulario.i18n';
 import { FORMULARIO_NAV_DEF } from './navigation/formulario.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const FORMULARIO_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const FORMULARIO_DEF: CrudDef = {
     security: FORMULARIO_SECURITY_DEF,
     ws: {
         key: 'FORMULARIO_CRUD_URL',
-        url: 'http://localhost:5000/api/Form/'
+        url: PREFIX_DOMAIN_API + 'Form'
     },
     dialogConfig: {
         width: '900px'

@@ -7,6 +7,7 @@ import { OPCION_GRID_DEF } from './grid/opcion.grid';
 import { OPCION_I18N_DEF } from './i18n/opcion.i18n';
 import { OPCION_NAV_DEF } from './navigation/opcion.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const OPCION_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const OPCION_DEF: CrudDef = {
     security: OPCION_SECURITY_DEF,
     ws: {
         key: 'OPCION_CRUD_URL',
-        url: 'http://localhost:5000/api/FormFieldOption'
+        url: PREFIX_DOMAIN_API + 'FormFieldOption'
     },
     dialogConfig: {
         width: '400px'

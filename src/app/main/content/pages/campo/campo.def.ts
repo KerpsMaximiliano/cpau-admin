@@ -7,6 +7,7 @@ import { CAMPO_GRID_DEF } from './grid/campo.grid';
 import { CAMPO_I18N_DEF } from './i18n/campo.i18n';
 import { CAMPO_NAV_DEF } from './navigation/campo.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const CAMPO_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const CAMPO_DEF: CrudDef = {
     security: CAMPO_SECURITY_DEF,
     ws: {
         key: 'CAMPO_CRUD_URL',
-        url: 'http://localhost:5000/api/FormField'
+        url: PREFIX_DOMAIN_API + 'FormField'
     },
     dialogConfig: {
         width: '400px'

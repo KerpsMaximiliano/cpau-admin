@@ -7,6 +7,7 @@ import { SECCION_GRID_DEF } from './grid/seccion.grid';
 import { SECCION_I18N_DEF } from './i18n/seccion.i18n';
 import { SECCION_NAV_DEF } from './navigation/seccion.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const SECCION_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const SECCION_DEF: CrudDef = {
     security: SECCION_SECURITY_DEF,
     ws: {
         key: 'SECCION_CRUD_URL',
-        url: 'http://localhost:5000/api/Section'
+        url: PREFIX_DOMAIN_API + 'Section'
     },
     dialogConfig: {
         width: '900px'

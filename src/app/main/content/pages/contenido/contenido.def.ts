@@ -7,6 +7,7 @@ import { CONTENIDO_GRID_DEF } from './grid/contenido.grid';
 import { CONTENIDO_I18N_DEF } from './i18n/contenido.i18n';
 import { CONTENIDO_NAV_DEF } from './navigation/contenido.nav';
 import { CrudDef } from '../../../../modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const CONTENIDO_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const CONTENIDO_DEF: CrudDef = {
     security: CONTENIDO_SECURITY_DEF,
     ws: {
         key: 'CONTENIDO_CRUD_URL',
-        url: 'http://localhost:5000/api/Content/'
+        url: PREFIX_DOMAIN_API + 'Content'
     },
     dialogConfig: {
         width: '800px'

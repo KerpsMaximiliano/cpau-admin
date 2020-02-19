@@ -24,7 +24,7 @@ export const IMAGEN_DEF: CrudDef = {
     security: IMAGEN_SECURITY_DEF,
     ws: {
         key: 'IMAGEN_CRUD_URL',
-        url: PREFIX_DOMAIN_API + 'Image/'
+        url: PREFIX_DOMAIN_API + 'Image'
     },
     dialogConfig: {
         width: '800px'

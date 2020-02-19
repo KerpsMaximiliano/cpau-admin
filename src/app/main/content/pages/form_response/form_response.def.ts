@@ -7,6 +7,7 @@ import { FORM_RESPONSE_GRID_DEF } from './grid/form_response.grid';
 import { FORM_RESPONSE_I18N_DEF } from './i18n/form_response.i18n';
 import { FORM_RESPONSE_NAV_DEF } from './navigation/form_response.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const FORM_RESPONSE_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const FORM_RESPONSE_DEF: CrudDef = {
     security: FORM_RESPONSE_SECURITY_DEF,
     ws: {
         key: 'FORM_RESPONSE_CRUD_URL',
-        url: 'http://localhost:5000/api/FormResponse/'
+        url: PREFIX_DOMAIN_API + 'FormResponse'
     },
     dialogConfig: {
         width: '400px'

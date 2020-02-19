@@ -7,6 +7,7 @@ import { BANNER_GRID_DEF } from './grid/banner.grid';
 import { BANNER_I18N_DEF } from './i18n/banner.i18n';
 import { BANNER_NAV_DEF } from './navigation/banner.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const BANNER_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const BANNER_DEF: CrudDef = {
     security: BANNER_SECURITY_DEF,
     ws: {
         key: 'BANNER_CRUD_URL',
-        url: 'http://localhost:5000/api/Banner/'
+        url: PREFIX_DOMAIN_API + 'Banner'
     },
     dialogConfig: {
         width: '800px'
