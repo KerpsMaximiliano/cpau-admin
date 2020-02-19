@@ -7,6 +7,7 @@ import { PRODUCTO_EXTERNO_GRID_DEF } from './grid/producto_externo.grid';
 import { PRODUCTO_EXTERNO_I18N_DEF } from './i18n/producto_externo.i18n';
 import { PRODUCTO_EXTERNO_NAV_DEF } from './navigation/producto_externo.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const PRODUCTO_EXTERNO_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const PRODUCTO_EXTERNO_DEF: CrudDef = {
     security: PRODUCTO_EXTERNO_SECURITY_DEF,
     ws: {
         key: 'PRODUCTO_EXTERNO_CRUD_URL',
-        url: 'http://localhost:5000/api/ExternalProduct/'
+        url: PREFIX_DOMAIN_API + 'ExternalProduct'
     },
     dialogConfig: {
         width: '800px'
