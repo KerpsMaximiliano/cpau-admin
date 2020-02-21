@@ -51,14 +51,13 @@ import { ExpressionService } from './service/expression-service/expression.servi
 import { FormGridModalComponent } from './component/form-grid-dialog/form-grid.dialog.component';
 import { SanitizeHtmlPipe } from './directive/sanitize-html.pipe';
 import { FloatComponent } from './component/dynamic-form/float/float.component';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ColorPickerComponent } from './component/color-picker/color-picker.component';
 import { TagsComponent } from './component/tags/tags.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ImportImageComponent } from './component/import-image/Import-Image.component';
 import { BackButtonComponent } from './component/back-button/backbutton.component';
 import { AppCrudComponent } from './shared/view/crud/app-crud.component';
-
+import { CKEditorModule } from 'ckeditor4-angular';
 
 @NgModule({
   imports: [CommonModule,

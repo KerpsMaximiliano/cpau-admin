@@ -59,7 +59,7 @@ export enum ControlTypeEnum {
   file =  'FILE',
   radio_button = 'RADIO-BUTTON',
   html = 'HTML',
-  html_editor = 'HTML_EDITOR',
+  html_ditor = 'HTML_EDITOR',
   color_picker = 'color_picker',
   tags = 'tags',
   import_image = 'import_image'
