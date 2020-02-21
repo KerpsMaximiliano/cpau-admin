@@ -8,6 +8,7 @@ import { MAILING_I18N_DEF } from './i18n/mailing.i18n';
 import { MAILING_NAV_DEF } from './navigation/mailing.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
 import { MAILING_CREATE_BEHAVIOR } from './form/mailing.create.behavior';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const MAILING_DEF: CrudDef = { 
@@ -25,7 +26,7 @@ export const MAILING_DEF: CrudDef = {
     security: MAILING_SECURITY_DEF,
     ws: {
         key: 'MAILING_CRUD_URL',
-        url: 'http://localhost:5000/api/Mailing/'
+        url: PREFIX_DOMAIN_API + 'Mailing'
     },
     dialogConfig: {
         width: '1400px'
