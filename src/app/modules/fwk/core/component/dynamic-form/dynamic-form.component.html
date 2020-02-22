@@ -97,7 +97,7 @@
           </mat-error>
       </mat-form-field>
       <div *ngIf="field.controlType == 'html_editor'">
-        <ckeditor  [editor]="getEditor()" [config]="ckeditorConfig" [formControlName]="field.key" data="{{field.value}}"></ckeditor>
+        <ckeditor   [formControlName]="field.key" data="{{field.value}}"></ckeditor>
       </div>
 
       <div *ngIf="field.controlType == 'color_picker'">

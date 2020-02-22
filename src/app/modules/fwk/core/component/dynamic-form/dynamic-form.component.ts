@@ -27,9 +27,6 @@ import {
 } from "rxjs/operators";
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../../service/generic-http-service/generic-http.service';
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-
 /**
  * @title Dialog Overview
  */
@@ -50,15 +47,18 @@ import { GenericHttpService } from '../../service/generic-http-service/generic-h
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ],
 })
-
 export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   ckeditorConfig = {
       language: 'es',
-      toolbar: [ 'ckfinder', 'Styles', 'Format', 'Font', 'FontSize', 'Table', '-', 'Link', 'TextColor', 'BGColor', 'Source', 
-                 'Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', '-', 'Outdent', 'Indent', '-', 'Print',
-                 'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
-      ],
+      /*
+        Reference config: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
+        http://www.cpau.org/Content/ckeditor/samples/toolbarconfigurator/index.html#basic
+      */
+      // toolbar: [ 'ckfinder', 'Styles', 'Format', 'Font', 'FontSize', 'Table', '-', 'Link', 'TextColor', 'BGColor', 'Source', 
+      //            'Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', '-', 'Outdent', 'Indent', '-', 'Print',
+      //            'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
+      // ],
       // ckfinder: {
       //   options: {
       //     resourceType: 'Images'
@@ -104,6 +104,15 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   onInit(): void {
     this.onInitWithFields(this.fields, this.entity);
+    // @ts-ignore
+    CKEDITOR.config.defaultLanguage = 'es';
+    // @ts-ignore
+    const editor = CKEDITOR.replace( 'editor1' );
+    // @ts-ignore
+    const ckfinder = CKFinder;
+    if (ckfinder) {
+      ckfinder.setupCKEditor( editor, '/Content/ckfinder/' );
+    }
   }
 
   onInitWithFields(fields, entity): void {
