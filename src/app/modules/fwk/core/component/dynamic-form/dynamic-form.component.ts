@@ -105,13 +105,14 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   onInit(): void {
     this.onInitWithFields(this.fields, this.entity);
     // @ts-ignore
-    CKEDITOR.config.defaultLanguage = 'es';
-    // @ts-ignore
-    const editor = CKEDITOR.replace( 'editor1' );
+    if (CKEDITOR) {
+      // @ts-ignore
+      CKEDITOR.config.defaultLanguage = 'es';
+    }
     // @ts-ignore
     const ckfinder = CKFinder;
     if (ckfinder) {
-      ckfinder.setupCKEditor( editor, '/Content/ckfinder/' );
+      ckfinder.setupCKEditor( null, '/Content/ckfinder/' );
     }
   }
 
