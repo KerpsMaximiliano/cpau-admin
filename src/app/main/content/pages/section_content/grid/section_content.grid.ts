@@ -68,7 +68,7 @@ export const SECTION_CONTENT_GRID_DEF = {
     {
       actionNameKey: 'section_content_grid_def_button_action_marcar_destacado',
       icon: 'blur_on',
-      confirm: true,
+      confirm: false,
       ws: {
         key: 'section_content_grid_def_button_action_marcar_destacado',
         url: PREFIX_DOMAIN_API + 'SectionContent/marcardestacado',
@@ -78,7 +78,7 @@ export const SECTION_CONTENT_GRID_DEF = {
     {
       actionNameKey: 'section_content_grid_def_button_action_desmarcar_destacado',
       icon: 'blur_off',
-      confirm: true,
+      confirm: false,
       ws: {
         key: 'section_content_grid_def_button_action_desmarcar_destacado',
         url: PREFIX_DOMAIN_API + 'SectionContent/quitardestacado/',
