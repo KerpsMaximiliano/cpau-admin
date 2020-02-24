@@ -7,9 +7,9 @@
         } */
 
         .action-cell {
-            width: 40px !important;
-            min-width: 40px !important;
-            max-width: 40px !important;
+            width: 80px !important;
+            min-width: 80px !important;
+            max-width: 80px !important;
         }
 
         #orderHeader,
@@ -44,6 +44,9 @@
         #questionCell {
             min-width: 350px;
         }
+
+       
+
     }
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
