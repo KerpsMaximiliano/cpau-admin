@@ -36,7 +36,8 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 500,
-    required: false
+    required: false,
+    disabled: true
   },
   
   /*{
