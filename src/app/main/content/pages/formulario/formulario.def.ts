@@ -29,6 +29,5 @@ export const FORMULARIO_DEF: CrudDef = {
     dialogConfig: {
         width: '900px'
     },
-    filterInMemory: false,
     forceGetDetail: true 
 };
