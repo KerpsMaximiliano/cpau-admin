@@ -33,7 +33,8 @@ export const SECTION_CONTENT_I18N_DEF = {
     section_content_grid_def_button_action_bajar : 'Bajar',
     SECTION_CONTENT_FILTER_FORM_FIELDS_DEF_FIELD_isPublished : 'Sólo Publicados',
     section_content_grid_def_column_tags : 'Tags',
-    section_content_create_form_fields_def_field_tags: 'Tags (ingrese una palabra y presione Enter para agregar)'
-
+    section_content_create_form_fields_def_field_tags: 'Tags (ingrese una palabra y presione Enter para agregar)',
+    section_content_grid_def_button_action_marcar_destacado : 'Destacar',
+    section_content_grid_def_button_action_desmarcar_destacado : 'Quitar Destacado'
   }
 };
