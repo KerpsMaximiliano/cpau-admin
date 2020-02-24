@@ -64,7 +64,43 @@ export const SECTION_CONTENT_GRID_DEF = {
           id : 'id'
         }
       }
+    },
+    {
+      actionNameKey: 'section_content_grid_def_button_action_marcar_destacado',
+      icon: 'blur_on',
+      confirm: true,
+      ws: {
+        key: 'section_content_grid_def_button_action_marcar_destacado',
+        url: PREFIX_DOMAIN_API + 'SectionContent/marcardestacado',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'section_content_grid_def_button_action_desmarcar_destacado',
+      icon: 'blur_off',
+      confirm: true,
+      ws: {
+        key: 'section_content_grid_def_button_action_desmarcar_destacado',
+        url: PREFIX_DOMAIN_API + 'SectionContent/quitardestacado/',
+        method: 'PUT'
+      }
+    },
+  ],
+  displayedActionsCondition: [
+    {
+      key: 'section_content_grid_def_button_action_marcar_destacado',
+      expression: {
+                    key: 'notHighlighted',
+                    value: true
+                  }
+    },
+    {
+      key: 'section_content_grid_def_button_action_desmarcar_destacado',
+      expression: {
+                    key: 'highlighted',
+                    value: true
+                  }
     }
-  ]
+ ]
   
 };
