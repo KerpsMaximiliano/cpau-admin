@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PRODUCTO_EXTERNO_GRID_DEF = {
   columnsDef: [
     {
@@ -38,6 +40,33 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
   displayedColumns: [
     'title',
     'orden'
- ]
+ ],
+ actions: [
+  {
+    actionNameKey: 'prodcuto_externo_grid_def_button_action_bajar',
+    icon: 'arrow_downward',
+    ws: {
+      key: 'prodcuto_externo_grid_def_button_action_bajar',
+      url: PREFIX_DOMAIN_API + 'ExternalProduct/BajarOrden',
+      method: 'GET',
+      querystring: {
+        id : 'id'
+      }
+    }
+  },
+  {
+    actionNameKey: 'prodcuto_externo_grid_def_button_action_subir',
+    icon: 'arrow_upward',
+    ws: {
+      key: 'prodcuto_externo_grid_def_button_action_subir',
+      url: PREFIX_DOMAIN_API + 'ExternalProduct/SubirOrden',
+      method: 'GET',
+      querystring: {
+        id : 'id'
+      }
+    }
+  }
+]
+
  
 };

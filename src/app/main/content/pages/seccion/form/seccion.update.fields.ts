@@ -36,7 +36,8 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 500,
-    required: false
+    required: false,
+    disabled: true
   },
   
   /*{
@@ -165,7 +166,6 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'policy',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy',
-    controlType: 'textbox',
-    maxLength: 500,
+    controlType: 'textbox'
   },
 ];
