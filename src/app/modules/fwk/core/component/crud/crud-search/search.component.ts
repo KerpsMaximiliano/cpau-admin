@@ -154,6 +154,15 @@ export class SearchComponent extends AbstractComponent implements OnInit {
   hasOptions(){
     return this.fieldsOptions && this.fieldsOptions.length > 0 ? true : false;
   }
+
+  userChangeOptions() {
+    if (this.fieldsOptions && this.entity) {
+      const fieldsChanges = this.fieldsOptions.filter(field => this.entity[field.key] !== undefined && this.entity[field.key] !== '' && this.entity[field.key] !== null);
+      return fieldsChanges.length > 0;
+    }
+    return false;
+  }
+
   openOptions(){
     const formDef = {
       key: 'searchOptions',
