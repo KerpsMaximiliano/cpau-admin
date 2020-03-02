@@ -14,9 +14,17 @@ export const SECCION_DEF: CrudDef = {
     name: 'SECCION',
     i18n: SECCION_I18N_DEF,
     grid: SECCION_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            initWs: {
+                key: 'SECCION_CREATE_INIT_URL',
+                url: PREFIX_DOMAIN_API + 'SectionInit'
+            },
+            fields: SECCION_CREATE_FORM_FIELDS_DEF
+        }
+    },
     forms: {
         filter: SECCION_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: SECCION_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         update: SECCION_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  SECCION_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },

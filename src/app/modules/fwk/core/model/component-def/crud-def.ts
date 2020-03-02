@@ -1,10 +1,6 @@
-import { Entity } from '../entity';
-import { WsDef } from '../ws-def';
 import { ComponentDef } from './component-def';
 import { FormsCrudDef } from './form-crud-def';
 import { GridDef } from './grid-def';
-import { FormDef } from '../form-def';
-import { FormsDef } from './form-def';
 import { ActionDef } from './action-def';
 import { DisplayActionsCondition } from '../display-actions-condition';
 
@@ -25,7 +21,5 @@ export class CrudDef extends ComponentDef {
       csvExportFileName: string
     };
     // Deprecado
-    form?: any;
     searchFields?: any;
-    tableDef?: any;
 }
