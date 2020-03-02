@@ -1,6 +1,7 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
 import { identifierModuleUrl } from "@angular/compiler";
 import { SECCION_CREATE_FORM_FIELDS_DEF } from "../form/seccion.create.fields";
+import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 
 export const SECCION_GRID_DEF = {
   columnsDef: [
@@ -152,5 +153,23 @@ export const SECCION_GRID_DEF = {
         method: 'PUT'
       }
     },
+    {
+      actionNameKey: 'seccion_grid_def_button_action_politicas',
+      icon: 'account_balance',
+      form: [
+        {
+          key: 'policy',
+          labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy',
+          controlType: HTML_EDITOR
+        }
+      ],
+      ws: {
+        key: 'seccion_grid_def_button_action_politicas',
+        url: PREFIX_DOMAIN_API + 'Section/UpdateByProps',
+        method: 'PUT'
+      }
+    },
   ]
 };
+
+
