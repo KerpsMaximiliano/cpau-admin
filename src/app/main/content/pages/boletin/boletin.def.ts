@@ -14,9 +14,18 @@ export const BOLETIN_DEF: CrudDef = {
     name: 'BOLETIN',
     i18n: BOLETIN_I18N_DEF,
     grid: BOLETIN_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            initWs: {
+                key: 'BOLETIN_CREATE_INIT_WS',
+                url: PREFIX_DOMAIN_API + 'Boletin/InitCreateForm'
+            },
+            fields: BOLETIN_CREATE_FORM_FIELDS_DEF
+        },
+    },
     forms: {
         filter: BOLETIN_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: BOLETIN_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        //create: BOLETIN_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         update: BOLETIN_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  BOLETIN_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
