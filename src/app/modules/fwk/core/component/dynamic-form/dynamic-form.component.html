@@ -8,7 +8,7 @@
         <app-datepicker-2 [field]="field" [parentForm]="form"></app-datepicker-2>
       </div>
       <mat-radio-group *ngIf="field.controlType == 'radio-button'" [formControlName]="field.key">
-          <mat-radio-button *ngFor="let option of field.options.options" name="field.key" value="{{option.value}}">{{option.label}}</mat-radio-button>
+          <mat-radio-button *ngFor="let option of field.options.options" [ngStyle]="{width: getOptionsWidth(field.options.options)}"  name="field.key" value="{{option.value}}">{{option.label}}</mat-radio-button>
       </mat-radio-group>
       <mat-form-field *ngIf="field.controlType == 'textarea'">
       <textarea  matInput placeholder="{{field.label}}"  [formControlName]="field.key"

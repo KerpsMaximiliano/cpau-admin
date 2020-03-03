@@ -29,6 +29,6 @@ export const MAILING_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Mailing'
     },
     dialogConfig: {
-        width: '1400px'
+        width: '700px'
     }   
 };

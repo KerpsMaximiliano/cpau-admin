@@ -372,4 +372,8 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     console.log(event, obj);
     this.forceEmitChangeEntity();
   }
+
+  getOptionsWidth(options: any[]){
+    return (Math.floor(100 / options.length) - 3) + '%';
+  }
 }

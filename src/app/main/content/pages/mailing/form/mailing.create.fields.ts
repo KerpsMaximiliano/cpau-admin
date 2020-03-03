@@ -54,7 +54,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
   },
   {
     key: 'matriculadoEstadosIds',
-    labelKey: 'Matriculados Por Estado',
+    labelKey: 'Matriculados Por Estado y Actividades',
     controlType: 'pick-list',
     options: {
         compositeKey: ['id'],
