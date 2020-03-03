@@ -40,16 +40,17 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     required: false,
     disabled: true
   },
-  
-  /*{
-    key: 'link',
-    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_url',
-    label: 'Link',
+
+  {
+    key: 'title',
+    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_title',
+    label: 'Ruta',
     type: 'string',
     controlType: 'textbox',
-    maxLength: 300,
+    maxLength: 500,
     required: false
-  },*/
+  },
+
   {
     key: 'link',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_url',
@@ -77,15 +78,6 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       }
   },
   
-  {
-    key: 'title',
-    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_title',
-    label: 'Ruta',
-    type: 'string',
-    controlType: 'textbox',
-    maxLength: 500,
-    required: false
-  },
   {
     key: 'imageId',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
@@ -138,11 +130,14 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       handlerSourceData: false,
       elementLabel: 'nombre',
       elementValue: 'id',
-      fromData: [{id: 0, nombre: 'Manual'},
-        {id: 1, nombre: 'Fecha Publicación (Nuevo->Viejo)'},
-        {id: 2, nombre: 'Fecha Publicación (Viejo->Nuevo)'},
-        {id: 3, nombre: 'Título(A->Z)'},
-        {id: 4, nombre: 'Título(Z->A)'}
+      fromData: [
+          {id: 0, nombre: 'Manual'},
+          {id: 1, nombre: 'Fecha Publicación (Nuevo->Viejo)'},
+          {id: 2, nombre: 'Fecha Publicación (Viejo->Nuevo)'},
+          {id: 3, nombre: 'Título(A->Z)'},
+          {id: 4, nombre: 'Título(Z->A)'},
+          {id: 5, nombre: 'Fecha Evento (Nuevo->Viejo)'},
+          {id: 6, nombre: 'Fecha Evento (Viejo->Nuevo)'}
         ]
     }
   },
