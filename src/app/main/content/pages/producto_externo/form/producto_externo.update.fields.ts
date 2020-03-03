@@ -34,15 +34,6 @@ export const PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF = [
     maxLength: 100
   },
   {
-    key: 'description',
-    labelKey: 'PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_description',
-    label: 'Descripci�n',
-    type: 'string',
-    controlType: 'textbox',
-    required: true,
-    maxLength: 8000
-  },
-  {
     key: 'url',
     labelKey: 'PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_url',
     label: 'URL',
@@ -50,6 +41,15 @@ export const PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'textbox',
     required: true,
     maxLength: 1000
+  },
+  {
+    key: 'description',
+    labelKey: 'PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_description',
+    label: 'Descripci�n',
+    type: 'string',
+    controlType: 'textbox',
+    required: true,
+    maxLength: 8000
   },
   {
     key: 'color',

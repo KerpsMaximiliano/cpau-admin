@@ -12,6 +12,7 @@ export class FormDef{
     title?: string;
     fieldsBehavior?: DynamicFieldBehavior[];
     submitWs?: WsDef;
+    initWs?: WsDef;
     actions?: ActionDef[];
     displayActionsCondition?: DisplayActionsCondition[];
 }

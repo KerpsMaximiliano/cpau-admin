@@ -24,6 +24,8 @@ import { DialogService } from '../../service/dialog-service/dialog.service';
 import { ActionDef } from '../../model/component-def/action-def';
 import { FileService } from '../../service/file/file.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { DynamicField } from '../../model/dynamic-form/dynamic-field';
 
 
 @Component({
@@ -126,33 +128,34 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
   }
 
   openAddDialog(): void {
-    const formCreate = this.getFormCreate(this.crudDef);
-    let funcName = this.crudDef.name;
-    if (funcName === undefined){
-      funcName = '';
-    }
-    const fieldsBehavior = this.crudDef.forms.createBehavior;
-    const dialogRef = this.dialog.open(CrudModalComponent, {
-      width: this.crudDef.dialogConfig &&
-              this.crudDef.dialogConfig.width ?
-                  this.crudDef.dialogConfig.width :
-                    '320px',
-      panelClass: 'control-mat-dialog',
-      data: { isAdd: true,
-              translate: (key) => { 
-                            return this.translate(key);
-                          },
-              form: this.addForm,
-              formName: 'formCreate',
-              funcName: funcName,
-              fields: this.clone(this.crudDef.forms.create),
-              fieldsBehavior: fieldsBehavior,
-              handlerFieldSourceData: this.handlerFieldSourceData,
-              crud: this}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    this.getFormCreate(this.crudDef).subscribe((formCreate: FormDef) => {
+      let funcName = this.crudDef.name;
+      if (funcName === undefined){
+        funcName = '';
+      }
+      const fieldsBehavior = formCreate.fieldsBehavior;
+      const dialogRef = this.dialog.open(CrudModalComponent, {
+        width: this.crudDef.dialogConfig &&
+                this.crudDef.dialogConfig.width ?
+                    this.crudDef.dialogConfig.width :
+                      '320px',
+        panelClass: 'control-mat-dialog',
+        data: { isAdd: true,
+                translate: (key) => { 
+                              return this.translate(key);
+                            },
+                form: this.addForm,
+                formName: 'formCreate',
+                funcName: funcName,
+                fields: this.clone(formCreate.fields),
+                fieldsBehavior: fieldsBehavior,
+                handlerFieldSourceData: this.handlerFieldSourceData,
+                crud: this}
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
     });
   }
 
@@ -194,7 +197,7 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
         translate: (key) => {
           return this.translate(key);
         },
-        submitActions: (actionDef, entity) => {
+        submitActions: (actionDef) => {
           ref.actionDefService.submitAction(actionDef, this.selects, this.i18nCurrentCrudComponent, this.crudDef.dialogConfig).subscribe(r => { }, e => { }, () => {
             this.findAll();
             this.notificationService.notifySuccess(this.translate('success_message'));
@@ -213,15 +216,34 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
   getCrudActions(){
     return this.actionDefService.filterActionsByCondition(this.crudDef.crudActions, this.crudDef.displayGlobalActions, this.selects);
   }
-  getFormCreate(crudDef: CrudDef): FormDef {
-    if (crudDef.forms && crudDef.forms.create){
-      const form = new FormDef();
-      form.fields = crudDef.forms.create;
-      return form;
-    }else if (crudDef.formsDef && crudDef.formsDef.create){
-      return crudDef.formsDef.create;
-    }
-    return undefined;
+  getFormCreate(crudDef: CrudDef): Observable<FormDef> {
+    return new Observable( obs => {
+      let form: FormDef;
+      if (crudDef.formsDef && crudDef.formsDef.create){
+        form = crudDef.formsDef.create;
+      } else if (crudDef.forms && crudDef.forms.create){
+        form = new FormDef();
+        form.fields = crudDef.forms.create;
+        form.fieldsBehavior = crudDef.forms.createBehavior;
+      }
+
+      if (form.initWs && form.initWs.url){
+        this.genericHttpService.basicGet(form.initWs.url, undefined, undefined, undefined).subscribe(r => {
+          r = r[0];
+          Object.getOwnPropertyNames(r).forEach(attribute => {
+            const attributeFields: DynamicField<any>[] = form.fields.filter(f => f.key === attribute);
+            if (attributeFields.length > 0) {
+              const attributeField: DynamicField<any> = attributeFields[0];
+              attributeField.value = r[attribute];
+            }
+          });
+          obs.next(form);
+        });
+      } else {
+        obs.next(form);
+      }
+    });
+    
   }
 
   clone(obj) {

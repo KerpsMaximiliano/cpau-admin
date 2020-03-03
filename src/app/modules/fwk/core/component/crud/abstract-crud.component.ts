@@ -135,23 +135,18 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   protected setUpCRUDDef(def) {
     this.crudDef = def;
     this.name = def.name;
-    if (this.crudDef.forms === undefined){
-      this.crudDef.forms = {};
-      if (this.crudDef.form){
-        this.crudDef.forms.create = this.crudDef.form.add;
-        this.crudDef.forms.update = this.crudDef.form.edit;
-        this.crudDef.forms.read = this.crudDef.form.view;
-      }
-    }
 
     if (this.crudDef.forms.filter === undefined){
       this.crudDef.forms.filter = this.crudDef.searchFields;
     }
 
+    if (this.crudDef.formsDef && this.crudDef.formsDef.create && this.crudDef.formsDef.create.fields){
+      this.crudDef.forms.create = this.crudDef.formsDef.create.fields;
+    }
+
     if (this.crudDef.forms.create) {
       this.addForm = this.formService.toFormGroup(this.crudDef.forms.create, {}, this.onFieldsChanges);
-    }
-    else {
+    } else {
       this.addForm = undefined;
     }
     if (this.crudDef.forms.update) {
@@ -159,10 +154,6 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
     }
     else {
       this.editForm = undefined;
-    }
-
-    if (this.crudDef.grid === undefined){
-      this.crudDef.grid = this.crudDef.tableDef;
     }
     /* New implementation */
     const ws = this.crudDef.ws;

@@ -50,17 +50,36 @@
     }
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
-    /*
-    .nameDiv{
-        display: inline-block;
-        width:45%;
-        margin-right: 10%;
+    
+    .titleDiv{
+        display: inline-block !important;
+        min-width: 50% !important;
+        width:50% !important;
+        max-width: 50% !important;
+        margin-right: 5% !important;
     }
-    .remarksDiv{
-        display: inline-block;
-        width:45%;
+    .tooltipDiv{
+        display: inline-block !important;
+        min-width: 45% !important;
+        width:45% !important;
+        max-width: 45% !important;
     }
     
+    .headerDiv{
+        display: inline-block !important;
+        min-width: 50% !important;
+        width:50% !important;
+        max-width: 50% !important;
+        margin-right: 5% !important;
+    }
+    .urlDiv{
+        display: inline-block !important;
+        min-width: 45% !important;
+        width:45% !important;
+        max-width: 45% !important;
+    }
+
+    /*
     
     .minQuotaDiv{
         display: inline-block;

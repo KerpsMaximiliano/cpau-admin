@@ -9,8 +9,7 @@ export const environment = {
     hmr       : false,
     bypassSec: true, // pasar a true para evitar ws
     dummyServices: true, // pasar a true para evitar ws
-    tokenKey: 'esiliva_usuario_json_token',
-    userKey: 'esiliva_usuario_user_data',
+    
     /** URLs of Services **/
     
     /** AUTHENTICATION */
