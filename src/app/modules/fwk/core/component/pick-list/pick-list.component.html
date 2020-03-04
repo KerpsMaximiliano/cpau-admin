@@ -4,7 +4,7 @@
   </mat-card-header>
   <mat-card-content>
     <mat-selection-list #from [(ngModel)]="fromDataSelected" (ngModelChange)="onNgModelChangeFromList($event)">
-      <mat-list-option *ngFor="let data of _fromData" [value]="data">
+      <mat-list-option checkboxPosition="before" *ngFor="let data of _fromData" [value]="data">
         {{getNameElementList(data)}}
       </mat-list-option>
     </mat-selection-list>

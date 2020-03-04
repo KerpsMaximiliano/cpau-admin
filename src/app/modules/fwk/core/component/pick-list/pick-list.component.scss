@@ -1,15 +1,19 @@
 .list-card {
-    max-width: 400px;
     min-width: 200px;
-    max-height: 250px;
+    width: 49%;
 }
 .list-spacer{
-    width: 20px;
+    width: 2%;
 }
 .list-card mat-card-content{
     overflow-y: auto;
-    max-height: 100px;
-    min-height: 100px;
+
+    max-height: 150px;
+    min-height: 150px;
+}
+
+.list-card mat-list-option {
+    height: 30px;
 }
 .list-card mat-card-header{
     border-bottom: 1px solid gainsboro;

@@ -41,10 +41,6 @@
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
     
-    .color-picker-input .mat-input-container .mat-form-field .ng-tns-c33-23 .mat-primary .mat-form-field-type-mat-input .mat-form-field-can-float .mat-form-field-hide-placeholder .ng-untouched .ng-pristine ng-valid {
-        width: 60%!important;
-    }
-
     .nameDiv{
         display: inline-block !important;
         max-width: 33% !important;
@@ -54,7 +50,8 @@
     }
     .seNameDiv{
         display: inline-block !important;
-        width:65% !important;
+        width:35% !important;
+        margin-right: 2% !important;
     }
 
     .titleDiv{
