@@ -70,19 +70,13 @@
                         [compositeKey]="field.options.compositeKey"
                         (onChangeControl)="onCustomControlChange(field.key,$event)"></app-pick-list>   
         </div>
-        <div *ngIf="field.controlType == 'autocomplete' && field.options.filteredData" >
-          <mat-form-field [floatLabel]="getFloatLabel(field)">
-            <mat-label *ngIf="field.options && field.options.matLabel">{{field.options.matLabel}}</mat-label>
-            <input type="text" (change)="onChangeSelect($event, field)" placeholder="{{field.label}}" aria-label="Number" matInput [formControlName]="field.key"  [matAutocomplete]="auto">
-            <mat-error id="{{field.key}}Error" *ngIf="form.controls[field.key].invalid  ">
-              {{getMessageErrorValidation(field)}}
-            </mat-error>
-          </mat-form-field>
-          <mat-autocomplete  (change)="onChangeSelect($event, field)" #auto="matAutocomplete" md-select-on-match='true' [displayWith]="field.options.filteredFn">
-            <mat-option *ngFor="let data of field.options.filteredData | async" [value]="field.options.elementValue ? data[field.options.elementValue] : data" >
-              {{ field.options.elementLabel ? data[field.options.elementLabel] :  data}}
-            </mat-option>
-          </mat-autocomplete>
+        <div *ngIf="field.controlType == 'autocomplete'">
+          <app-autocomplete [config]="field"
+                              [formGroup]="form"
+                                [searchTermInterface]="searchTermInterface(field)"
+                                  [formControlName]="field.key"
+                                    [name]="field.key">
+          </app-autocomplete>
         </div>
           <mat-form-field *ngIf="field.controlType == 'select'" [floatLabel]="getFloatLabel(field)">
           <mat-label *ngIf="field.options && field.options.matLabel">{{field.options.matLabel}}</mat-label>
