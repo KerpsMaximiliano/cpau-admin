@@ -16,6 +16,7 @@ import { ExpressionService } from '../../service/expression-service/expression.s
 import { CrudDef } from '../../model/component-def/crud-def';
 import { GridDef } from '../../model/component-def/grid-def';
 import { ActivatedRoute } from '@angular/router';
+import { SpinnerService } from '../../module/spinner/service/spinner.service';
 
 
 export  abstract class AbstractCrudComponent<E extends Entity, Service extends CRUD<E>> extends AbstractComponent implements OnInit {
@@ -38,6 +39,8 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   actionDefService: ActionDefService;
   expressionService: ExpressionService;
   activatedRoute: ActivatedRoute;
+  spinnerControl: any;
+
   constructor(injector: Injector) {
     super(injector);
     this.crudDefService = injector.get(CrudDefService);
@@ -47,6 +50,8 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
     this.genericHttpService = injector.get(GenericHttpService);
     this.expressionService = injector.get(ExpressionService);
     this.activatedRoute = injector.get(ActivatedRoute);
+    const spinnerService = injector.get(SpinnerService);
+    this.spinnerControl = spinnerService.getControlGlobalSpinner();
     
   }
 
@@ -238,6 +243,7 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
           pageSize: 10
         };
       }
+      this.spinnerControl.show();
       this.service.findAll(this.filterEntity, filter, filterInMemory, page)
       .subscribe(entities => {
               this.entities = entities,
@@ -245,6 +251,7 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
                 this.dataSource = new MatTableDataSource<E>(this.entities);
               }, 1);
               this.postFindAll();
+             this.spinnerControl.hide();
             });
     }
   }
