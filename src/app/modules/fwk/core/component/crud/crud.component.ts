@@ -81,6 +81,7 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
     this.dialog = dialog;
     this.configService = configService;
     this.localStorageService = localStorageService;
+    
     this.onConfigChanged =
     this.configService.onConfigChanged
         .subscribe(
@@ -108,14 +109,7 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
     }
   }
 
-  onInit() {
-    
-    // let returnPaths: any = this.activatedRoute.queryParams;
-    // returnPaths = returnPaths.getValue().returnPaths;
-    // if (returnPaths) {
-    //   this.returnPaths = JSON.parse('{ "data":' + returnPaths + '}')['data'];
-    // }
-  }
+  onInit() {}
 
   statusChanged(status: StatusTable<any>) {
     this.displayGlobalButtons(status.existSelectedItems());

@@ -27,6 +27,8 @@ import {
 } from "rxjs/operators";
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../../service/generic-http-service/generic-http.service';
+import { AutocompleteSearchTerm } from '../autocomplete/autocomplete.interface';
+import { AutocompleteService } from '../autocomplete/autocomplete.service';
 /**
  * @title Dialog Overview
  */
@@ -66,6 +68,12 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       // }
   };
 
+  public searchTermInterface(field){
+    return {
+      search: (term) => this.autocompleteService.autocompleteSearch(term, this.form, field)
+    };
+  } 
+
   form: FormGroup;
   formError: any;
   filteredData: Observable<any>;
@@ -97,9 +105,9 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   constructor(public injector: Injector,
     private formService: FormService,
-    private genericHttpService: GenericHttpService) {
+    private genericHttpService: GenericHttpService, 
+    private autocompleteService: AutocompleteService) {
       super(injector);
-
     }
 
   onInit(): void {
@@ -172,66 +180,6 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       }
       if (element.controlType === 'pick-list' && this.entity[element.key] !== '') {
         element.options.toData = this.entity[element.key];
-      }
-      if (element.controlType === 'autocomplete') {
-        if (element.options.elementLabel === undefined)  {
-          element.options.elementLabel = 'label';
-        }
-        if (element.options.elementValue === undefined)  {
-          element.options.elementValue = 'value';
-        }
-        element.options.filteredData = new Promise<any[]>((resolve, reject) => {
-          resolve([]);
-        }); 
-        this.form.controls[element.key].valueChanges
-        .pipe(
-          startWith(''),
-          debounceTime(1000),
-          distinctUntilChanged(), // If previous query is diffent from current
-        ).subscribe((text: string) => { // subscription for response
-          if (text === undefined || text.length < 3) {
-            return;
-          }
-          element.options.filteredData = new Promise<any[]>((resolve, reject) => {
-            const fromWs: WsDef = new WsDef();
-            fromWs.url = element.options.fromWs.url;
-            fromWs.querystring = element.options.fromWs.querystring;
-            fromWs.method = HTTP_METHODS.get;
-            if (fromWs.querystring) {
-              let querystring = '';
-              let andString = '';
-              const entity = this.formService.injectToEntity({[element.key]: text}, this.form, this.fields);
-
-              Object.keys(fromWs.querystring).forEach(key => {
-                if (element.key === fromWs.querystring[key]) {
-                  console.log(this.form.controls[element.key]);
-                  querystring += andString + key + '=' + this.form.controls[element.key].value;
-                  andString = '&';
-                } else if (entity[fromWs.querystring[key]]) {
-                  querystring += andString + key + '=' + entity[fromWs.querystring[key]];
-                  andString = '&';
-                }
-              });
-              fromWs.url += querystring === '' ? '' : '?' + querystring;
-          }
-          this.genericHttpService.callWs(fromWs).subscribe(r => {
-            element.options.fromData = r;
-            resolve(r);
-          });
-        });
-          
-        });
-        element.options.filteredFn = (value) => {
-          const result: any[] = element.options.fromData.filter(el => el[element.options.elementValue] == value);
-          element.options.valueLabel = this.form.controls[element.key].value;
-          if (result.length > 0) {
-            return result[0][element.options.elementLabel];
-          } 
-          if (element.options.autocompleteLabel && value !== '' && value !== undefined && value !== null){
-            return this.entityInit[element.options.autocompleteLabel];
-          }
-          return '';
-        };
       }
     });
   }

@@ -58,6 +58,8 @@ import { ImportImageComponent } from './component/import-image/Import-Image.comp
 import { BackButtonComponent } from './component/back-button/backbutton.component';
 import { AppCrudComponent } from './shared/view/crud/app-crud.component';
 import { CKEditorModule } from 'ckeditor4-angular';
+import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
+import { AutocompleteService } from './component/autocomplete/autocomplete.service';
 
 @NgModule({
   imports: [CommonModule,
@@ -89,6 +91,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
                     SpinnerComponent,
                     HtmlModalComponent,
                     DisclaimerComponent,
+                    AutocompleteComponent,
                     AppCrudComponent,
                     FormGridModalComponent,
                     FloatComponent],
@@ -97,6 +100,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
                  ImportImageComponent,
                  BackButtonComponent,
                  BasicModalComponent,
+                 AutocompleteComponent,
                  CrudTableComponent,
                  CrudComponent,
                  QuestionModalComponent,
@@ -123,6 +127,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
             BackButtonComponent,
             BasicModalComponent,
             CrudTableComponent,
+            AutocompleteComponent,
             CrudComponent,
             QuestionModalComponent,
             GridModalComponent,
@@ -163,6 +168,7 @@ import { CKEditorModule } from 'ckeditor4-angular';
               NotificationService,
               NavigationService,
               BaseCrudService,
+              AutocompleteService,
               ComponentDefService,
               SpinnerService,
               DialogService,
