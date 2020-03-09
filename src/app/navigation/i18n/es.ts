@@ -6,15 +6,18 @@ export const locale = {
             'GESTION_CONTENIDOS':{
                 'TITLE' : 'Gestión de Contenidos'
             },
-            'SECCION' : {'TITLE' : 'Seccion'},
-            'CONTENIDO' : {'TITLE' : 'Contenido'},
-            'IMAGEN' : {'TITLE' : 'Imagen'},
-            'BOLETIN' : {'TITLE' : 'Boletín'},
-            'INDICE' : {'TITLE' : 'Indice'},
+            'MENU_CONTENIDOS' : {'TITLE' : 'Contenidos'},
+            'SECCION' : {'TITLE' : 'Secciones'},
+            'CONTENIDO' : {'TITLE' : 'Contenidos'},
+            'IMAGEN' : {'TITLE' : 'Imágenes'},
+            'PRODUCTOEXTERNO' : {'TITLE' : 'Productos'},
+            'MENU_BOLETINES' : {'TITLE' : 'Newsletter'},
+            'BOLETIN' : {'TITLE' : 'Boletines'},
+            'INDICE' : {'TITLE' : 'Índice'},
             'MAILING' : {'TITLE' : 'Mailing'},
-            'FORMULARIO' : {'TITLE' : 'Formulario'},
-            'PUBLICIDAD' : {'TITLE' : 'Publicidad'},
-            'PRODUCTOEXTERNO' : {'TITLE' : 'Producto Externo'}
+            'MENU_HERRAMIENTAS' : {'TITLE' : 'Herramientas'},
+            'FORMULARIO' : {'TITLE' : 'Formularios'},
+            'PUBLICIDAD' : {'TITLE' : 'Publicidades'}
         }
     }
 };
