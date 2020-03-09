@@ -249,9 +249,14 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
               this.entities = entities,
               setTimeout(() => {
                 this.dataSource = new MatTableDataSource<E>(this.entities);
+                this.postFindAll();
+                if (this.entities) {
+                  const seconds = this.entities.length / 2000;
+                  setTimeout(() => {
+                    this.spinnerControl.hide();
+                  }, seconds);
+                }
               }, 1);
-              this.postFindAll();
-             this.spinnerControl.hide();
             });
     }
   }
