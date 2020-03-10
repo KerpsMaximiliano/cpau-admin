@@ -37,7 +37,7 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
       elementValue: 'id',
       fromData: [{id: 1, nombre: 'Predeterminada'},
                  {id: 2, nombre: 'Boletin'},
-                 {id: 3, nombre: 'RSS'},
+                 //{id: 3, nombre: 'RSS'},
                  {id: 4, nombre: 'Noticia'}
                 ]
       }

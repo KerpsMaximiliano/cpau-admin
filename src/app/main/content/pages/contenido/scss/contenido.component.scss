@@ -66,10 +66,16 @@
         width:45%;
         margin-right: 5%;
     }
-    
+
+    .linkTargetDiv{
+        display: inline-block !important;
+        width:45% !important;
+        margin-right: 5% !important;
+    }
+
     .percentDiv{
-        display: inline-block;
-        width:45%;
+        display: inline-block !important;
+        width:45% !important;
     }
 
     .eventCategoryIdDiv{

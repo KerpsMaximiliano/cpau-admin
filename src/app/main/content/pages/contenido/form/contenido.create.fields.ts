@@ -76,12 +76,12 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
       }
   },
 
-  {
+  /*{
     key: 'allowAnonymous',
     labelKey: 'contenido_create_form_fields_def_field_allowanonymous',
     type: 'checkbox',
     controlType: 'checkbox'
-  },
+  },*/
 
   {
     key: 'percent',
@@ -97,7 +97,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
 
-  {
+  /*{
     key: 'eventCategoryId',
     labelKey: 'contenido_create_form_fields_def_field_eventcategoryid',
     controlType: 'select',
@@ -117,7 +117,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 2000
-  },
+  },*/
 
 
   {
