@@ -17,6 +17,7 @@ import { CrudDef } from '../../model/component-def/crud-def';
 import { GridDef } from '../../model/component-def/grid-def';
 import { ActivatedRoute } from '@angular/router';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
+import { Subscription } from 'rxjs';
 
 
 export  abstract class AbstractCrudComponent<E extends Entity, Service extends CRUD<E>> extends AbstractComponent implements OnInit {
@@ -250,12 +251,10 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
               setTimeout(() => {
                 this.dataSource = new MatTableDataSource<E>(this.entities);
                 this.postFindAll();
-                if (this.entities) {
-                  const seconds = this.entities.length / 2000;
-                  setTimeout(() => {
-                    this.spinnerControl.hide();
-                  }, seconds);
-                }
+                this.dataSource._renderChangesSubscription = new Subscription();
+                this.dataSource._renderChangesSubscription.add(() => {
+                  this.spinnerControl.hide();
+                });
               }, 1);
             });
     }
