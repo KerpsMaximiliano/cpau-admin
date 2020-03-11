@@ -81,14 +81,18 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'imageId',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
-    controlType: 'select',
+    controlType: 'autocomplete',
     label: 'Imagen',
     options: {
       elementLabel: 'name',
       elementValue: 'id',
-      fromWs: {
-        url: PREFIX_DOMAIN_API + 'Image',
-      }
+      useNativeFilter: false
+    },
+    apiOptions: {
+      queryString: {
+        name: 'imageId'
+      },
+      url: PREFIX_DOMAIN_API + 'Image/GetSelectByProp'
     }
   },
 

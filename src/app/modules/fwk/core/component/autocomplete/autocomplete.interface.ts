@@ -1,6 +1,7 @@
 import { Observable } from "rxjs/Observable";
 
 export interface AutocompleteConfiguration {
+    key: string;
     // Atributo usado por el placeholder del componente para mostrar el nombre de campo
     label: string;
     // Validación de campo requerido o no
@@ -25,6 +26,8 @@ export interface AutocompleteOptions {
    elementLabel: string;
    // Elemento elemento del objeto seleccionado que se usa como valor del campo
    elementValue: string;
+   // Use Native filter
+   useNativeFilter?: boolean;
 }
 
 export interface AutocompleteChangeValue {
@@ -39,7 +42,7 @@ export interface AutocompleteSearchTerm {
 
 export interface ApiAutocompleteConfiguration extends AutocompleteConfiguration {
     // Configuracion para llamado de la api de autocompletado
-    apiOptions: any;
+    apiOptions: ApiAutocompleteOptions;
 }
 
 export interface ApiAutocompleteOptions {

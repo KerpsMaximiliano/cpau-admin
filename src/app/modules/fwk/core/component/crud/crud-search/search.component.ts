@@ -126,15 +126,6 @@ export class SearchComponent extends AbstractComponent implements OnInit {
   }
 
   clearForm() {
-    // this.resetCacheFields();
-    // const subform: any = this.form.controls['subForm'];
-    // this.generalField = this.getGeneralField(this.fields);
-    // this.generalFields = [
-    //   this.generalField
-    // ];
-
-    // this.entity = this.formService.injectToEntity({}, subform, this.generalFields);
-    // this.onSubmitSearch();
     this.reInit();
     const form: any = this.form.controls['subForm'];
     this.generalFields.forEach(f => {
