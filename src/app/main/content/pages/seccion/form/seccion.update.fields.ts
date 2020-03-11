@@ -136,8 +136,8 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
           {id: 2, nombre: 'Fecha Publicación (Viejo->Nuevo)'},
           {id: 3, nombre: 'Título(A->Z)'},
           {id: 4, nombre: 'Título(Z->A)'},
-          {id: 5, nombre: 'Fecha Evento (Nuevo->Viejo)'},
-          {id: 6, nombre: 'Fecha Evento (Viejo->Nuevo)'}
+          {id: 5, nombre: 'Fecha Evento (Actuales->Próximos)'},
+          {id: 6, nombre: 'Fecha Evento (Próximos->Actuales)'}
         ]
     }
   },
