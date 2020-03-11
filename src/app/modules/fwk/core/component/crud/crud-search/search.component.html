@@ -12,7 +12,7 @@
     <button mat-icon-button class="clear" (click)="clearForm()">
       <mat-icon class="secondary-text">clear</mat-icon>  
     </button>
-    <button *ngIf="hasOptions()" mat-icon-button class="drop_down" (click)="openOptions()" >
+    <button *ngIf="hasOptions()" type="button" mat-icon-button class="drop_down" (click)="openOptions()" >
         <mat-icon *ngIf="userChangeOptions()" style="color: red !important" class="secondary-text">arrow_drop_down</mat-icon>  
         <mat-icon *ngIf="!userChangeOptions()" class="secondary-text">arrow_drop_down</mat-icon>  
     </button>
