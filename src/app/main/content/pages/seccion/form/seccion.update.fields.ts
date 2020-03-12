@@ -86,7 +86,8 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     options: {
       elementLabel: 'name',
       elementValue: 'id',
-      useNativeFilter: false
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
     },
     apiOptions: {
       queryString: {
