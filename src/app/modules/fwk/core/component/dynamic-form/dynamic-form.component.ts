@@ -116,6 +116,8 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     if (CKEDITOR) {
       // @ts-ignore
       CKEDITOR.config.defaultLanguage = 'es';
+      // @ts-ignore
+      CKEDITOR.config.allowedContent = true;
     }
     // @ts-ignore
     const ckfinder = CKFinder;
