@@ -83,12 +83,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },*/
 
-  {
-    key: 'percent',
-    labelKey: 'contenido_create_form_fields_def_field_porcentaje',
-    controlType: 'number',
-    required: false
-  },
   
   {
     key: 'agenda_title',
@@ -130,5 +124,21 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'eventEndDateString',
     labelKey: 'contenido_create_form_fields_def_field_eventenddate',
     controlType: 'datepicker'
-  }
+  },
+
+  {
+    key: 'agenda_title',
+    labelKey: 'contenido_create_form_fields_def_title_beneficios',
+    title: 'Beneficios',
+    controlType: 'checkbox'
+  },
+
+  {
+    key: 'percent',
+    labelKey: 'contenido_create_form_fields_def_field_porcentaje',
+    controlType: 'number',
+    required: false
+  },
+  
+
 ];

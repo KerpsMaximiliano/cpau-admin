@@ -31,6 +31,21 @@
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
     
+    .import-image-input[_ngcontent-c44] {
+        width: 76.9%;
+    }
+
+    .linkDiv {
+        display: inline-block !important;
+        width:65% !important;
+        margin-right: 5% !important;
+    }
+
+    .linkTargetDiv{
+        display: inline-block !important;
+        width:30% !important;
+    }
+
     .titleDiv {
         display: inline-block !important;
         min-width: 80% !important;
@@ -67,28 +82,14 @@
         margin-right: 5%;
     }
 
-    .linkTargetDiv{
-        display: inline-block !important;
-        width:45% !important;
-        margin-right: 5% !important;
-    }
+    
 
     .percentDiv{
         display: inline-block !important;
         width:45% !important;
     }
 
-    .eventCategoryIdDiv{
-        display: inline-block;
-        width:45%;
-        margin-right: 5%;
-    }
-
-    .eventPlaceDiv{
-        display: inline-block;
-        width:50%;
-    }
-
+    
     .eventStartDateStringDiv{
         display: inline-block;
         width:45%;
