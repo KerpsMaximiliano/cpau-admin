@@ -114,8 +114,7 @@ export const CONTENIDO_GRID_DEF = {
           key: 'text',
           labelKey: 'contenido_create_form_fields_def_field_text',
           label: 'Texto',
-          controlType: HTML_EDITOR,
-          maxLength: 8000
+          controlType: HTML_EDITOR
         }
       ],
       ws: {
