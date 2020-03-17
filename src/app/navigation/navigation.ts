@@ -14,35 +14,35 @@ export const navigation = [
                 'icon' : 'settings',
                 'children' : [
                     {
-                        'title' : 'Menú Contenidos',
+                        'title' : 'Contenidos',
                         'translate': 'NAV.MENU_CONTENIDOS',
                         'type' : 'collapse',
                         'icon' : 'settings',
                         'children' : [
                             {
                                 'id'   : 'seccion',
-                                'title': 'Seccion',
+                                'title': 'Secciones',
                                 'translate': 'NAV.SECCION.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_SECCIONES,
                             },
                             {
                                 'id'   : 'contenido',
-                                'title': 'Contenido',
+                                'title': 'Contenidos',
                                 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_CONTENIDOS,
                             },
                             {
                                 'id'   : 'imagen',
-                                'title': 'Imagen',
+                                'title': 'Imágenes',
                                 'translate': 'NAV.IMAGEN.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_IMAGEN,
                             },
                             {
                                 'id'   : 'productoExterno',
-                                'title': 'Productos Externos',
+                                'title': 'Productos',
                                 'translate': 'NAV.PRODUCTOEXTERNO.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_PRODUCTO_EXTERNO,
@@ -50,21 +50,21 @@ export const navigation = [
                         ]
                     },
                     {
-                        'title' : 'Menú Boletines',
+                        'title' : 'Newsletter',
                         'translate': 'NAV.MENU_BOLETINES',
                         'type' : 'collapse',
                         'icon' : 'settings',
                         'children' : [
                             {
                                 'id'   : 'boletin',
-                                'title': 'Boletín',
+                                'title': 'Boletínes',
                                 'translate': 'NAV.BOLETIN.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_BOLETIN,
                             },
                             {
                                 'id'   : 'indice',
-                                'title': 'Indice',
+                                'title': 'Índices',
                                 'translate': 'NAV.INDICE.TITLE',
                                 'type' : 'item',
                                 'url'  : '/' + environment.URL_INDICE,
@@ -79,7 +79,7 @@ export const navigation = [
                         ]
                     },
                     {
-                        'title' : 'Menú Herramientas',
+                        'title' : 'Herramientas',
                         'translate': 'NAV.MENU_HERRAMIENTAS',
                         'type' : 'collapse',
                         'icon' : 'settings',

@@ -2,9 +2,9 @@ export const SECCION_I18N_DEF = {
   name: 'SECCION_I18N_DEF',
   lang: 'es',
   words: {
-    page_title: 'Sección',
-    seccion_nav_def: 'Sección',
-    seccion_create_form_fields_def_field_seccion: 'Sección',
+    page_title: 'Secciones',
+    seccion_nav_def: 'Secciones',
+    seccion_create_form_fields_def_field_seccion: 'Secciones',
     seccion_create_form_fields_def_field_id: 'ID',
     seccion_create_form_fields_def_field_name: 'Nombre',
     seccion_create_form_fields_def_field_sename: 'Ruta',
