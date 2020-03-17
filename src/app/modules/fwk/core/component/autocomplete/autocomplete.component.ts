@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, forwardRef, OnChanges } from '@angular/core';
-import { FormGroup, Validators, NG_VALUE_ACCESSOR, ControlValueAccessor, ValidatorFn, AbstractControl } from '@angular/forms';
+import { FormGroup, Validators, NG_VALUE_ACCESSOR, ControlValueAccessor, ValidatorFn, AbstractControl, FormControl } from '@angular/forms';
 import { AutocompleteConfiguration, AutocompleteChangeValue, AutocompleteSearchTerm } from './autocomplete.interface';
 import {
   debounceTime,
@@ -136,6 +136,19 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
 
   onChangeSelect(event, obj) {
     this.selectedAction = true;
+    if (this.config.options.transferIdToField) {
+      const field: AbstractControl = this.formGroup.controls[this.name];
+      
+      if (field && field.value) {
+        const transferField: AbstractControl = this.formGroup.controls[this.config.options.transferIdToField];
+        if (transferField === undefined) {
+          this.formGroup.addControl(this.config.options.transferIdToField, 
+                                    new FormControl(field.value[this.config.options.elementValue]));
+        } else {
+          this.formGroup.controls[this.config.options.transferIdToField].setValue(field.value[this.config.options.elementValue]);
+        }
+      }
+    }
   }
   
   get value(): any { return this._value; }

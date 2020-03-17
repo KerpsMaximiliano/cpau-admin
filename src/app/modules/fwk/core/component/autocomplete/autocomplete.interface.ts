@@ -28,6 +28,8 @@ export interface AutocompleteOptions {
    elementValue: string;
    // Use Native filter
    useNativeFilter?: boolean;
+   // Usado para pasar el id a otro campo
+   transferIdToField: string;
 }
 
 export interface AutocompleteChangeValue {
