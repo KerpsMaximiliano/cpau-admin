@@ -61,16 +61,34 @@ export const SECCION_GRID_DEF = {
     {
       columnDef: 'policy',
       columnNameKey: 'seccion_grid_def_column_policy'
+    },
+    {
+      columnDef: 'deleteable',
+      columnNameKey: 'seccion_grid_def_column_policy'
+    },
+    {
+      columnDef: 'notdeleteable',
+      columnNameKey: 'seccion_grid_def_column_policy'
     }
   ],
   sortAllColumns: true,
-  deleteAction: true,
+  deleteAction: false,
   displayedColumns: [
     'name',
     'seName',
     'published'
   ],
   actions: [
+    {
+      actionNameKey: 'section_content_grid_def_button_action_delete',
+      icon: 'delete',
+      confirm: true,
+      ws: {
+        key: 'section_content_grid_def_button_action_delete',
+        url: PREFIX_DOMAIN_API + 'Section',
+        method: 'DELETE'
+      }
+    },
     {
       actionNameKey: 'seccion_grid_def_button_action_nueva_seccion_hija',
       icon: 'post_add',
@@ -168,8 +186,18 @@ export const SECCION_GRID_DEF = {
         url: PREFIX_DOMAIN_API + 'Section/UpdateByProps',
         method: 'PUT'
       }
-    },
-  ]
+    }
+    
+  ],
+  displayedActionsCondition: [
+    {
+      key: 'section_content_grid_def_button_action_delete',
+      expression: {
+                    key: 'deleteable',
+                    value: true
+                  }
+    }
+ ]
 };
 
 

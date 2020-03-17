@@ -65,6 +65,7 @@ export const SECCION_I18N_DEF = {
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_ContanctTel: 'Teléfono Contacto',
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy: 'Políticas',
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_title: 'Título',
-    seccion_grid_def_button_action_politicas: 'Políticas'
+    seccion_grid_def_button_action_politicas: 'Políticas',
+    section_content_grid_def_button_action_delete: 'Eliminar'
   }
 };
