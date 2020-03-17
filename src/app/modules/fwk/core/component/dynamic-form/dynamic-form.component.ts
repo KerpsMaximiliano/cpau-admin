@@ -27,7 +27,7 @@ import {
 } from "rxjs/operators";
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../../service/generic-http-service/generic-http.service';
-import { AutocompleteSearchTerm } from '../autocomplete/autocomplete.interface';
+import { AutocompleteSearchTerm, AutocompleteConfiguration, ApiAutocompleteConfiguration } from '../autocomplete/autocomplete.interface';
 import { AutocompleteService } from '../autocomplete/autocomplete.service';
 /**
  * @title Dialog Overview
@@ -68,9 +68,9 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       // }
   };
 
-  public searchTermInterface(field){
+  public searchTermInterface(field: ApiAutocompleteConfiguration){
     return {
-      search: (term) => this.autocompleteService.autocompleteSearch(term, this.form, field)
+      search: (term) => this.autocompleteService.autocompleteSearch(this.form, field)
     };
   } 
 

@@ -28,7 +28,6 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
   @Input() name: string;
   @Input() term: string;
   @Input() searchTermInterface: AutocompleteSearchTerm;
-  @Input() nonNativeFilter: boolean;
   public listObj: any;
   selectedAction: boolean;
 
@@ -40,7 +39,6 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
   onTouch = () => { };
 
   constructor() {
-    this.nonNativeFilter = false;
     this.listObj = [];
   }
   
@@ -92,8 +90,9 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
              || this.term === null 
                || this.term.length < 3) {
                this.term = undefined;
+           } else {
+            this.search();
            }
-           this.search();
          });
  
   }
@@ -103,7 +102,7 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
       delay(0)
     ).subscribe(listObj => {
       this.listObj = listObj;
-      if (this.listObj && (this.nonNativeFilter == undefined || this.nonNativeFilter == false)) {
+      if (this.listObj && this.listObj.length && (this.config.options.useNativeFilter === undefined || this.config.options.useNativeFilter === true)) {
         this.listObj = this.listObj.filter(t => t[this.config.options.elementLabel].includes(this.term));
       }
     });
