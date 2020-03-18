@@ -15,17 +15,30 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'hidden'
   },
   {
-    key: 'imageId',
+    key: 'image',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
-    controlType: 'select',
+    controlType: 'autocomplete',
+    label: 'Imagen',
     options: {
+      transferIdToField: 'imageId',
       elementLabel: 'name',
       elementValue: 'id',
-      fromWs: {
-        url: PREFIX_DOMAIN_API + 'Image'
-      }
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'image'
+      },
+      url: PREFIX_DOMAIN_API + 'Image/GetSelectByProp'
     }
   },
+
+  {
+    key: 'imageId',
+    controlType: 'hidden'
+  },
+
   {
     key: 'typeId',
     labelKey: 'CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF_FIELD_typeid',

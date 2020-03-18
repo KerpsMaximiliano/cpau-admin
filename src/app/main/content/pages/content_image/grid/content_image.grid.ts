@@ -14,7 +14,7 @@ export const CONTENT_IMAGE_GRID_DEF = {
       columnNameKey: 'content_image_grid_def_column_imageid'
     },
     {
-      columnDef: 'image',
+      columnDef: 'imageName',
       columnNameKey: 'content_image_grid_def_column_imageid'
     },
     {
@@ -28,7 +28,7 @@ export const CONTENT_IMAGE_GRID_DEF = {
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'image',
+    'imageName',
     'typeIdString',
   ],
   deleteAction: true
