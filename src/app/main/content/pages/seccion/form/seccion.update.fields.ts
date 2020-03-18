@@ -84,6 +84,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'autocomplete',
     label: 'Imagen',
     options: {
+      transferIdToField: 'pepeId',
       elementLabel: 'name',
       elementValue: 'id',
       useNativeFilter: false,
@@ -95,6 +96,11 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       },
       url: PREFIX_DOMAIN_API + 'Image/GetSelectByProp'
     }
+  },
+
+  {
+    key: 'pepeId',
+    controlType: 'hidden'
   },
 
   {

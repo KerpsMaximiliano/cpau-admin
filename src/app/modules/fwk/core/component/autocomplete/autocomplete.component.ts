@@ -138,15 +138,10 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
     this.selectedAction = true;
     if (this.config.options.transferIdToField) {
       const field: AbstractControl = this.formGroup.controls[this.name];
-      
+      this.formGroup.controls[this.config.options.transferIdToField].setValue(undefined);
       if (field && field.value) {
         const transferField: AbstractControl = this.formGroup.controls[this.config.options.transferIdToField];
-        if (transferField === undefined) {
-          this.formGroup.addControl(this.config.options.transferIdToField, 
-                                    new FormControl(field.value[this.config.options.elementValue]));
-        } else {
-          this.formGroup.controls[this.config.options.transferIdToField].setValue(field.value[this.config.options.elementValue]);
-        }
+        this.formGroup.controls[this.config.options.transferIdToField].setValue(field.value[this.config.options.elementValue]);
       }
     }
   }
