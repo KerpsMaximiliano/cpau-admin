@@ -97,7 +97,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       url: PREFIX_DOMAIN_API + 'Image/GetSelectByProp'
     }
   },
-
+  
   {
     key: 'imageId',
     controlType: 'hidden'
