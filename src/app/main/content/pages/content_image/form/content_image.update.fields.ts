@@ -19,6 +19,7 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
     controlType: 'autocomplete',
     label: 'Imagen',
+    required: true,
     options: {
       transferIdToField: 'imageId',
       elementLabel: 'name',

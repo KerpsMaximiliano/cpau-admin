@@ -16,7 +16,7 @@ export const SECTION_CONTENT_GRID_DEF = {
       columnNameKey: 'section_content_grid_def_column_contentid'
     },
     {
-      columnDef: 'content',
+      columnDef: 'contentTitle',
       columnNameKey: 'section_content_grid_def_column_contentid'
     },
     {
@@ -36,7 +36,7 @@ export const SECTION_CONTENT_GRID_DEF = {
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
-    'content',
+    'contentTitle',
     'highlighted',
     'displayOrder'
   ],

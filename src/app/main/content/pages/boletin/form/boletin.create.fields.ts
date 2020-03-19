@@ -27,27 +27,6 @@ export const BOLETIN_CREATE_FORM_FIELDS_DEF = [
     value : todaynow()
   },
   {
-    key: 'texto1',
-    labelKey: 'boletin_create_form_fields_def_field_texto1',
-    label: 'Texto 1',
-    maxLength: 2000,
-    controlType: 'textbox'
-  },
-  {
-    key: 'texto2',
-    labelKey: 'boletin_create_form_fields_def_field_texto2',
-    label: 'Texto 2',
-    maxLength: 2000,
-    controlType: 'textbox'
-  },
-  {
-    key: 'texto3',
-    labelKey: 'boletin_create_form_fields_def_field_texto3',
-    label: 'Texto 3',
-    maxLength: 2000,
-    controlType: 'textbox'
-  },
-  {
     key: 'urlContenido',
     labelKey: 'boletin_create_form_fields_def_field_urlcontenido',
     label: 'URL Contenido',

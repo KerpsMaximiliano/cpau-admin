@@ -33,18 +33,32 @@ export const INDICE_CREATE_FORM_FIELDS_DEF = [
     controlType: 'number',
     value: '2020'
   },
+  
+
+
   {
-    key: 'contactListId',
+    key: 'contactList',
     labelKey: 'indice_create_form_fields_def_field_contactlistid',
-    label: 'Lista',
-    controlType: 'select',
+    controlType: 'autocomplete',
+    required: true,
     options: {
+      transferIdToField: 'contactListId',
       elementLabel: 'name',
       elementValue: 'id',
-      fromWs: {
-        url: PREFIX_DOMAIN_API + 'Indice/lista',
-      }
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'contactList'
+      },
+      url: PREFIX_DOMAIN_API + 'Indice/lista'
     }
-  }
+  },
+
+  {
+    key: 'contactListId',
+    controlType: 'hidden'
+  },
   
 ];

@@ -14,18 +14,30 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'hidden',
     mappingQuerystring: true
   },
+  
+  {
+    key: 'content',
+    labelKey: 'section_content_create_form_fields_def_field_contentid',
+    controlType: 'autocomplete',
+    required: true,
+    options: {
+      transferIdToField: 'contentId',
+      elementLabel: 'name',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        title: 'content'
+      },
+      url: PREFIX_DOMAIN_API + 'Content/GetSelectByProp'
+    }
+  },
+
   {
     key: 'contentId',
-    labelKey: 'section_content_create_form_fields_def_field_contentid',
-    controlType: 'select',
-    options: {
-      elementLabel: 'title',
-      elementValue: 'id',
-      fromWs: {
-        key: 'section_content_create_form_fields_def_field_contentid',
-        url: PREFIX_DOMAIN_API + 'Content/GetGrid',
-      }
-    }
+    controlType: 'hidden'
   },
   {
     key: 'highlighted',
