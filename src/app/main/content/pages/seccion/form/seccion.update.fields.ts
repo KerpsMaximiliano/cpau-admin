@@ -83,6 +83,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
     controlType: 'autocomplete',
     label: 'Imagen',
+    required: false,
     options: {
       transferIdToField: 'imageId',
       elementLabel: 'name',
@@ -129,7 +130,9 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       elementValue: 'id',
       fromData: [{id: 1, nombre: 'Agenda'},
                  {id: 2, nombre: 'Noticias con Imagen'},
-                 {id: 3, nombre: 'Beneficios'}]              
+                 {id: 3, nombre: 'Beneficios'},
+                 {id: 4, nombre: 'Noticias sin Imagen'}
+                ]              
     }
   },
   {
