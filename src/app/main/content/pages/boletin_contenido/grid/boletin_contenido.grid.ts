@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const BOLETIN_CONTENIDO_GRID_DEF = {
   columnsDef: [
     {
@@ -31,5 +33,31 @@ export const BOLETIN_CONTENIDO_GRID_DEF = {
     'content',
     'orden'
   ],
-  deleteAction: true
+  deleteAction: true,
+  actions: [
+    {
+      actionNameKey: 'section_content_grid_def_button_action_bajar',
+      icon: 'arrow_downward',
+      ws: {
+        key: 'section_content_grid_def_button_action_bajar',
+        url: PREFIX_DOMAIN_API + 'BoletinContenido/bajar',
+        method: 'GET',
+        querystring: {
+          id : 'id'
+        }
+      }
+    },
+    {
+      actionNameKey: 'section_content_grid_def_button_action_subir',
+      icon: 'arrow_upward',
+      ws: {
+        key: 'section_content_grid_def_button_action_subir',
+        url: PREFIX_DOMAIN_API + 'BoletinContenido/subir',
+        method: 'GET',
+        querystring: {
+          id : 'id'
+        }
+      }
+    }
+  ]
 };

@@ -35,14 +35,4 @@ export const BOLETIN_CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'hidden'
   },
 
-
-
-
-  {
-    key: 'orden',
-    labelKey: 'boletin_contenido_create_form_fields_def_field_orden',
-    label: 'Orden',
-    type: 'number',
-    controlType: 'number'
-  }
 ];

@@ -42,6 +42,6 @@ export const BOLETIN_CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'BOLETIN_CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_orden',
     label: 'Orden',
     type: 'number',
-    controlType: 'number'
+    controlType: 'hidden'
   }
 ];
