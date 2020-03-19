@@ -1,3 +1,11 @@
+function todaynow() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = String(today.getFullYear());
+  return  dd + "/" + mm + "/" + yyyy;
+}
+
 export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'info_title',
@@ -29,7 +37,8 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'publishDateString',
     labelKey: 'contenido_create_form_fields_def_field_publishdate',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    value: todaynow()
   },
   {
     key: 'showPublishDate',
@@ -41,13 +50,9 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'expirationDateString',
     labelKey: 'contenido_create_form_fields_def_field_expirationdate',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    value: todaynow()
   },
-
-  
-
-  
-
 
   {
     key: 'link',
@@ -118,12 +123,14 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'eventStartDateString',
     labelKey: 'contenido_create_form_fields_def_field_eventstartdate',
     label: 'Fecha Inicio',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    value: todaynow()
   },
   {
     key: 'eventEndDateString',
     labelKey: 'contenido_create_form_fields_def_field_eventenddate',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    value: todaynow()
   },
 
   {

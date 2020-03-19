@@ -1,11 +1,3 @@
-function todaynow() {
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = String(today.getFullYear());
-  return  dd + "/" + mm + "/" + yyyy;
-}
-
 export const BOLETIN_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'numero',
@@ -19,13 +11,16 @@ export const BOLETIN_CREATE_FORM_FIELDS_DEF = [
     maxLength: 200,
     required: true
   },
+  
+
   {
     key: 'fechaEnvioString',
     labelKey: 'boletin_create_form_fields_def_field_fechaenvio',
-    controlType: 'datepicker',
-    required: true,
-    value : todaynow()
+    label: 'Fecha Envio',
+    controlType: 'datepicker'
   },
+
+
   {
     key: 'urlContenido',
     labelKey: 'boletin_create_form_fields_def_field_urlcontenido',

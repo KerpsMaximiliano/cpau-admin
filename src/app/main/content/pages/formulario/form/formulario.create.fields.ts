@@ -1,5 +1,13 @@
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 
+function todaynow() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = String(today.getFullYear());
+  return  dd + "/" + mm + "/" + yyyy;
+}
+
 export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'name',
@@ -47,13 +55,15 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'formulario_create_form_fields_def_field_fromdate',
     label: 'Fecha Desde',
     controlType: 'datepicker',
-    required: true
+    required: true,
+    value: todaynow()
   },
   {
     key: 'toDateString',
     labelKey: 'formulario_create_form_fields_def_field_todate',
     label: 'Fecha Hasta',
     controlType: 'datepicker',
+    value: todaynow(),
     required: true
   },
   
@@ -104,7 +114,8 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'formulario_create_form_fields_def_field_date',
     label: 'Fecha',
     type: 'string',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    value: todaynow()
   },
   {
     key: 'contact',
