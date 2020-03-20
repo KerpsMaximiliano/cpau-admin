@@ -116,7 +116,7 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_column_inscriptos : 'Inscriptos',
     formulario_grid_def_button_action_inscriptos : 'Inscriptos',
     FORMULARIO_FILTER_FORM_FIELDS_DEF_FIELD_solo_publicados : 'Solo Activos',
-    formulario_grid_def_button_action_copiar : 'Copiar',
+    formulario_grid_def_button_action_copiar : 'Duplicar',
     formulario_grid_def_button_action_despublicar : 'Despublicar',
     formulario_grid_def_button_action_publicar : 'Publicar',
     formulario_grid_button_action_file_export : ' Exportar Inscriptos'
