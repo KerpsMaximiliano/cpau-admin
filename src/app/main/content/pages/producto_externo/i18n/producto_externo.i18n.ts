@@ -2,8 +2,8 @@ export const PRODUCTO_EXTERNO_I18N_DEF = {
   name: 'PRODUCTO_EXTERNO_I18N_DEF',
   lang: 'es',
   words: {
-    page_title: 'Producto Externo',
-    producto_externo_nav_def: 'Producto Externo',
+    page_title: 'Productos',
+    producto_externo_nav_def: 'Productos',
     producto_externo_create_form_fields_def_field_id: 'ID',
     producto_externo_create_form_fields_def_field_title: 'Titulo',
     producto_externo_create_form_fields_def_field_header: 'Header',
