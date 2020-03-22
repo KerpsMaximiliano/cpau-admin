@@ -9,5 +9,13 @@ export const SECCION_CREATE_FORM_FIELDS_DEF = [
     controlType: 'textbox',
     maxLength: 200,
     required: true
-  }  
+  },
+  {
+    key: 'published',
+    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_published',
+    label: 'Publicada',
+    type: 'checkbox',
+    controlType: 'checkbox'
+  }
+    
 ];

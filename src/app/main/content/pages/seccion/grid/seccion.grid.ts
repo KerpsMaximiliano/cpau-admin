@@ -99,6 +99,16 @@ export const SECCION_GRID_DEF = {
           controlType: 'hidden'
         },
         {
+          key: 'name',
+          label: 'Crear nueva sección en ',
+          type: 'string',
+          controlType: 'textbox',
+          maxLength: 200,
+          required: true,
+          disabled: true,
+          readonly: true
+        },
+        {
           key: 'newName',
           labelKey: 'seccion_create_form_fields_def_field_name',
           label: 'Nombre',
@@ -106,7 +116,15 @@ export const SECCION_GRID_DEF = {
           controlType: 'textbox',
           maxLength: 200,
           required: true
-        } 
+        },
+        {
+          key: 'published',
+          labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_published',
+          label: 'Publicada',
+          type: 'checkbox',
+          controlType: 'checkbox',
+          value: 'false'
+        }
       ],
       ws: {
         key: 'seccion_grid_def_button_action_nueva_seccion_hija',
