@@ -66,10 +66,16 @@ export class ActionDefService {
         const dialog = this.dialogService.openHtmlModal(data, undefined);
         obs.next(dialog);
       }else if (action.actionType === 'redirect'){
-        this.router.navigateByUrl(this.componentDefService.getUrlNavById(action.input)).then(() => {
-          obs.next({});
-          obs.complete();
-        });
+        if (action.redirect.openTab) {
+          var url = this.componentDefService.getUrlNavById(action.input);
+          var win = window.open(url, '_blank');
+          win.focus();
+        } else {
+          this.router.navigateByUrl(this.componentDefService.getUrlNavById(action.input)).then(() => {
+            obs.next({});
+            obs.complete();
+          });
+        }
         
       }else if (action.htmlModal){
         const data = {

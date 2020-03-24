@@ -85,6 +85,18 @@ export const SECTION_CONTENT_GRID_DEF = {
         method: 'PUT'
       }
     },
+    {
+      actionNameKey: 'Editar Contenido',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        url: '/contenido',
+        querystring: {
+          id : 'contentId'
+        }
+      },
+      icon: 'library_books'
+    },
   ],
   displayedActionsCondition: [
     {

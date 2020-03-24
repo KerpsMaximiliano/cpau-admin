@@ -25,4 +25,5 @@ export class ActionDef {
     ws?: WsDef;
     input?: any;
     confirm?: any;
+    redirect?: any;
 }

@@ -5,6 +5,11 @@ export const CONTENIDO_FILTER_FORM_FIELDS_DEF = [
     label: 'T�tulo',
     type: 'string',
     controlType: 'textbox'
+  },
+  {
+    key: 'id',
+    label: 'contentId',
+    controlType: 'number'
   }
 
 ];

@@ -9,6 +9,7 @@ import {
   filter
 } from "rxjs/operators";
 import { Observable } from 'rxjs/Observable';
+import { element } from 'protractor';
 
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -67,10 +68,12 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
      if (this.config.required) {
        this.formGroup.controls[this.name].setValidators([Validators.required, 
                                                            this.selectedValueIsRequired(getListObj, 
-                                                                                         this.config.options.elementValue)]);
+                                                                                         this.config.options.elementValue,
+                                                                                         this.config.options.elementLabel)]);
      } else {
        this.formGroup.controls[this.name].setValidators([this.selectValueOrCleanField(getListObj,
-                                                                                         this.config.options.elementValue)]);
+                                                                                         this.config.options.elementValue,
+                                                                                         this.config.options.elementLabel)]);
      }
  
      this.items.updateValueAndValidity();
@@ -154,8 +157,11 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
     }
   }
 
-  selectedValueIsRequired(getListObj: Function, elementValue: string): ValidatorFn {
+  selectedValueIsRequired(getListObj: Function, elementValue: string, elementLabel :string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
+      if (control.value[elementLabel] && control.value[elementValue]) {
+        return null;
+      }
       const index = getListObj().findIndex(obj=> {
         return (new RegExp('\^' + obj[elementValue] + '\$')).test(control.value[elementValue]);
       });
@@ -163,13 +169,12 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
     };
   }
 
-  selectValueOrCleanField(getListObj: Function, elementValue: string): ValidatorFn {
+  selectValueOrCleanField(getListObj: Function, elementValue: string, elementLabel: string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
       if (control.value) {
-        const index = getListObj().findIndex(obj=> {
-          return (new RegExp('\^' + obj[elementValue] + '\$')).test(control.value[elementValue]);
-        });
-        return index < 0 ? { ['selectOrCleanField']: {} } : null;
+        if (typeof control.value === 'string' && control.value != "") {
+          return  { ['selectOrCleanField']: {} };
+        }
       } 
       return null;
     };

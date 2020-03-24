@@ -27,6 +27,7 @@ import { ActionDefService } from '../../../service/action-def-service/action-def
 import { DisplayCondition } from '../../../model/component-def/display-condition';
 import { DynamicFieldConditionIf } from '../../../model/dynamic-form/dynamic-field-condition-if';
 import { Params } from '@angular/router';
+import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 const ACTION_COLUMN = '_action';
 const DELETE_COLUMN = 'delete';
@@ -208,8 +209,26 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
             this.spinnerGeneralControl.hide();
           });
       } else if (ACTION_TYPES.redirect === action.actionType){
-        const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
-        this.router.navigate([action.redirect.url], { queryParams });
+        if (action.redirect.openTab) {
+          var url = action.redirect.url;
+          const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
+          var queryParamsString = "";
+          var first = true;
+          Object.getOwnPropertyNames(queryParams).forEach(param => { 
+            if (!first) {
+              queryParamsString = queryParamsString + "&";
+            } else {
+              queryParamsString = queryParamsString + "?";
+              first = false;
+            }
+            queryParamsString = queryParamsString + param + "=" + queryParams[param]
+          });
+          var win = window.open(url + queryParamsString, '_blank');
+          win.focus();
+        } else {
+          const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
+          this.router.navigate([url], { queryParams });
+        }
       }else{
           this.spinnerGeneralControl.show();
           this.genericHttpService.callWs(action.ws, entity).subscribe(r => {
