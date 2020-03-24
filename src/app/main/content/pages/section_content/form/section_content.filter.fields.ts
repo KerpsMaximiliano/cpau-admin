@@ -7,7 +7,7 @@ export const SECTION_CONTENT_FILTER_FORM_FIELDS_DEF = [
     value: true
   },
   {
-    key: 'content',
+    key: 'title',
     labelKey: 'SECTION_CONTENT_FILTER_FORM_FIELDS_DEF_FIELD_contentid',
     label: 'Contenido',
     type: 'string',
