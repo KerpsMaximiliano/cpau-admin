@@ -159,7 +159,7 @@ export class AutocompleteComponent implements OnInit, ControlValueAccessor{
 
   selectedValueIsRequired(getListObj: Function, elementValue: string, elementLabel :string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
-      if (control.value[elementLabel] && control.value[elementValue]) {
+      if (control.value && control.value[elementLabel] && control.value[elementValue]) {
         return null;
       }
       const index = getListObj().findIndex(obj=> {

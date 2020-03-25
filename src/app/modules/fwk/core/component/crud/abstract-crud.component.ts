@@ -200,6 +200,11 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
           if (Array.isArray(forms[propName])){
             forms[propName].forEach(field => {
               field.label = i18n.translate(field.labelKey);
+
+              if (field.required != undefined && (field.required == true || field.required == 'true')) {
+                field.label = field.label + ' (*)';
+              }
+
             });
           }
         }

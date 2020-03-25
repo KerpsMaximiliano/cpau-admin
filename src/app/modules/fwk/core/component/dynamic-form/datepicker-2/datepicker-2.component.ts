@@ -154,6 +154,11 @@ export class Datepicker2Component extends DynamicFieldFormComponent implements O
       this.fieldsVisualDatepicker.forEach(f => {
         f.required = this.field.required;
         f.label = this.field.label;
+
+        if (f.required != undefined && f.required == true) {
+          f.label = f.label + ' (*)';
+        }
+
       });
       this.fieldLabel = fVF;
       this.fieldLabel.value = this.field.value;

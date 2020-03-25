@@ -209,9 +209,9 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
             this.spinnerGeneralControl.hide();
           });
       } else if (ACTION_TYPES.redirect === action.actionType){
+        var url = action.redirect.url;
+        const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
         if (action.redirect.openTab) {
-          var url = action.redirect.url;
-          const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
           var queryParamsString = "";
           var first = true;
           Object.getOwnPropertyNames(queryParams).forEach(param => { 
@@ -226,7 +226,6 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
           var win = window.open(url + queryParamsString, '_blank');
           win.focus();
         } else {
-          const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
           this.router.navigate([url], { queryParams });
         }
       }else{

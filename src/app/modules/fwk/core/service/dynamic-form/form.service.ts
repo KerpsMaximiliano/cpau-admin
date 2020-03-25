@@ -172,6 +172,9 @@ export class FormService {
           if (element.label === undefined || result !== element.labelKey){
             element.label = result;
           }
+          if (element.required != undefined && (element.required == true || element.required == 'true')) {
+            element.label = element.label + ' (*)';
+          }
         }
         if (element.validation) {
           if (element.validation.errorMessageKey) {

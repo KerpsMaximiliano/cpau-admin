@@ -87,7 +87,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     type: 'checkbox',
     controlType: 'checkbox'
   },*/
-
   
   {
     key: 'agenda_title',
@@ -95,29 +94,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     title: 'Agenda',
     controlType: 'checkbox'
   },
-
-  /*{
-    key: 'eventCategoryId',
-    labelKey: 'contenido_create_form_fields_def_field_eventcategoryid',
-    controlType: 'select',
-    options: {
-      handlerSourceData: false,
-      elementLabel: 'nombre',
-      elementValue: 'id',
-      fromData: [{id: 1, nombre: 'Eventos'},
-                 {id: 2, nombre: 'Concursos y Becas'},
-                 {id: 3, nombre: 'Actualización profesional'}]
-      }
-  },
-  {
-    key: 'eventPlace',
-    labelKey: 'contenido_create_form_fields_def_field_eventplace',
-    label: 'Lugar',
-    type: 'string',
-    controlType: 'textbox',
-    maxLength: 2000
-  },*/
-
 
   {
     key: 'eventStartDateString',
