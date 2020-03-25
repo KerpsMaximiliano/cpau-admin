@@ -90,7 +90,7 @@ export const SECTION_CONTENT_GRID_DEF = {
       actionType: 'redirect',
       redirect: {
         openTab: true,
-        url: '/contenido',
+        url: '/Content/admin/contenido',
         querystring: {
           id : 'contentId'
         }
