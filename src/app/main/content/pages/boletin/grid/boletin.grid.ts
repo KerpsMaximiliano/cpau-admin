@@ -65,6 +65,19 @@ export const BOLETIN_GRID_DEF = {
           boletinId : 'id'
         }
       }
-    }
+    },
+    {
+      actionNameKey: 'Previsualizar',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        idUrl: true,
+        url: '/boletin',
+        querystring: {
+          id : 'id'
+        }
+      },
+      icon: 'aspect_ratio'
+    },
   ]
 };

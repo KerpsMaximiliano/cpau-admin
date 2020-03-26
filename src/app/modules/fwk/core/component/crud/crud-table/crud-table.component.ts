@@ -210,21 +210,33 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
           });
       } else if (ACTION_TYPES.redirect === action.actionType){
         var url = action.redirect.url;
+        
         const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
+        
         if (action.redirect.openTab) {
+          
           var queryParamsString = "";
-          var first = true;
-          Object.getOwnPropertyNames(queryParams).forEach(param => { 
-            if (!first) {
-              queryParamsString = queryParamsString + "&";
-            } else {
-              queryParamsString = queryParamsString + "?";
-              first = false;
-            }
-            queryParamsString = queryParamsString + param + "=" + queryParams[param]
-          });
+
+          if (action.redirect.idUrl != undefined && action.redirect.idUrl && queryParams['id'] != undefined){
+            queryParamsString = "/" + queryParams['id'];
+          } else {
+
+            var first = true;
+            
+            Object.getOwnPropertyNames(queryParams).forEach(param => { 
+              if (!first) {
+                queryParamsString = queryParamsString + "&";
+              } else {
+                queryParamsString = queryParamsString + "?";
+                first = false;
+              }
+              queryParamsString = queryParamsString + param + "=" + queryParams[param]
+            });
+          }
+
           var win = window.open(url + queryParamsString, '_blank');
           win.focus();
+
         } else {
           this.router.navigate([url], { queryParams });
         }
