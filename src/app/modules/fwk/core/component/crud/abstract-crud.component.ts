@@ -18,6 +18,7 @@ import { GridDef } from '../../model/component-def/grid-def';
 import { ActivatedRoute } from '@angular/router';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
 import { Subscription } from 'rxjs';
+import moment = require('moment');
 
 
 export  abstract class AbstractCrudComponent<E extends Entity, Service extends CRUD<E>> extends AbstractComponent implements OnInit {
@@ -255,6 +256,18 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
               this.entities = entities,
               setTimeout(() => {
                 this.dataSource = new MatTableDataSource<E>(this.entities);
+
+                this.dataSource.sortingDataAccessor = (item, property) => {
+                  var fecha = moment(item[property], 'dd/MM/yyyy');
+                  if (fecha.isValid()) {
+                    return fecha.toDate();
+                  }
+                  if (isNaN(item[property])) {
+                    return item[property].toUpperCase();
+                  }
+                  return item[property];
+                };
+
                 this.postFindAll();
                 this.dataSource._renderChangesSubscription = new Subscription();
                 this.dataSource._renderChangesSubscription.add(() => {

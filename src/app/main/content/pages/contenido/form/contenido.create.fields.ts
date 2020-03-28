@@ -38,7 +38,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'publishDateString',
     labelKey: 'contenido_create_form_fields_def_field_publishdate',
     controlType: 'datepicker',
-    value: todaynow()
   },
   {
     key: 'showPublishDate',
@@ -51,7 +50,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'expirationDateString',
     labelKey: 'contenido_create_form_fields_def_field_expirationdate',
     controlType: 'datepicker',
-    value: todaynow()
   },
 
   {
@@ -100,13 +98,11 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'contenido_create_form_fields_def_field_eventstartdate',
     label: 'Fecha Inicio',
     controlType: 'datepicker',
-    value: todaynow()
   },
   {
     key: 'eventEndDateString',
     labelKey: 'contenido_create_form_fields_def_field_eventenddate',
     controlType: 'datepicker',
-    value: todaynow()
   },
 
   {

@@ -23,7 +23,6 @@ export const BANNER_CAMPAING_CREATE_FORM_FIELDS_DEF = [
     label: 'Fecha Inicio',
     controlType: 'datepicker',
     required: true,
-    value: todaynow()
   },
   {
     key: 'endDateString',
@@ -31,6 +30,5 @@ export const BANNER_CAMPAING_CREATE_FORM_FIELDS_DEF = [
     label: 'Fecha Fin',
     controlType: 'datepicker',
     required: true,
-    value: todaynow()
   }
 ];

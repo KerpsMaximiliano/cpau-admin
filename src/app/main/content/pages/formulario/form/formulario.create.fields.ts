@@ -56,14 +56,12 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     label: 'Fecha Desde',
     controlType: 'datepicker',
     required: true,
-    value: todaynow()
   },
   {
     key: 'toDateString',
     labelKey: 'formulario_create_form_fields_def_field_todate',
     label: 'Fecha Hasta',
     controlType: 'datepicker',
-    value: todaynow(),
     required: true
   },
   
@@ -115,7 +113,6 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     label: 'Fecha',
     type: 'string',
     controlType: 'datepicker',
-    value: todaynow()
   },
   {
     key: 'contact',
