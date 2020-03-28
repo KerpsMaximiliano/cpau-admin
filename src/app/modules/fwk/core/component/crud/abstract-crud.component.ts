@@ -18,7 +18,7 @@ import { GridDef } from '../../model/component-def/grid-def';
 import { ActivatedRoute } from '@angular/router';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
 import { Subscription } from 'rxjs';
-import moment = require('moment');
+import * as moment from 'moment';
 
 
 export  abstract class AbstractCrudComponent<E extends Entity, Service extends CRUD<E>> extends AbstractComponent implements OnInit {
