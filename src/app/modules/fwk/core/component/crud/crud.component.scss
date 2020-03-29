@@ -36,3 +36,9 @@ mat-card-content{
 
 }
 
+div[class*="update-modal-modal"] {
+    overflow-y: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}
+

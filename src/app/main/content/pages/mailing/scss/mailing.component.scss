@@ -12,52 +12,9 @@
             max-width: 40px !important;
         }
 
-        #orderHeader,
-        #orderCell{
-            width: 70px;
-            min-width: 70px;
-            max-width: 70px;
-        }
-
-        #favouriteHeader,
-        #favouriteCell{
-            width: 80px !important;
-            min-width: 80px !important;
-            max-width: 80px !important;
-        }
-
-        #categoryHeader,
-        #categoryCell{
-            width: 120px;
-            min-width: 120px;
-            max-width: 120px;
-        }
-
-        #subcategoryHeader,
-        #subcategoryCell {
-            width: 140px;
-            min-width: 140px;
-            max-width: 140px;
-        }
-
-        #questionHeader,
-        #questionCell {
-            min-width: 350px;
-        }
+       
     }
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
-    
-    .categoryDiv{
-        display: inline-block;
-        width:45%;
-        margin-right: 10%;
-    }
-    .subcategoryDiv{
-    display: inline-block;
-    width:45%;
-    }
-    .favouriteDiv{
-    margin-top:15px;
-    }
+        
 }

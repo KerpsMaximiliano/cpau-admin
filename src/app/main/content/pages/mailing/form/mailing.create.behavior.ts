@@ -108,7 +108,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
         },
          {
           key: 'url',
-          controlType: 'pick-hidden'
+          controlType: 'hidden'
         }
       ],
       else: [
@@ -164,7 +164,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
         },
          {
           key: 'url',
-          controlType: 'texbox'
+          controlType: 'textbox'
         }
       ],
       else: [

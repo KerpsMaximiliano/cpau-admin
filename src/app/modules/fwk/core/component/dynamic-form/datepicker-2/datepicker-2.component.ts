@@ -240,9 +240,12 @@ export class Datepicker2Component extends DynamicFieldFormComponent implements O
   }
 
   onChangeDate(){
-    const form: any = this.form;
+    const form: FormGroup = this.form;
     const modalKey = this.field.options &&
                         this.field.options.withHourAndMin ? 'datepicker-2-hh-mm' : 'datepicker-2';
+    if (form.controls.year.value == undefined || form.controls.year.value == null || form.controls.year.value == "") {
+      form.controls.year.setValue(new Date().getFullYear());
+    }
     const data = { 
       modalKey: modalKey,
       entity: this.formService.injectToEntity({}, form, this.fieldsDatepickerModal),
@@ -267,7 +270,9 @@ export class Datepicker2Component extends DynamicFieldFormComponent implements O
   }
 
   remove(){
-    this.form.reset();
-    this.formService.patchField(this.field.key,  undefined, this.parentForm);
+    if (isNaN(this.form.value.year)) {
+      this.form.reset();
+      this.formService.patchField(this.field.key,  undefined, this.parentForm);
+    }
   }
 }
