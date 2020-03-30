@@ -119,10 +119,10 @@ export class SearchComponent extends AbstractComponent implements OnInit {
     Object.getOwnPropertyNames(entity).forEach((val, idx) => {
       this.entity[val] = entity[val];
     });
-    if (this.forceFirstSubmit != null && this.forceFirstSubmit && this.firstSubmitForced === undefined){
-      this.onSubmitSearch();
-      this.firstSubmitForced = true;
-    }
+    //if (this.forceFirstSubmit != null && this.forceFirstSubmit && this.firstSubmitForced === undefined){
+    //  this.onSubmitSearch();
+    //  this.firstSubmitForced = true;
+    //}
   }
 
   clearForm() {

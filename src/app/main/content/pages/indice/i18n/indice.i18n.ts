@@ -29,6 +29,8 @@ export const INDICE_I18N_DEF = {
     'indice_grid_def_column_año': 'Año',
     indice_grid_def_column_recipients: 'Resultados',
     indice_grid_def_column_contactlistid: 'Lista',
-    indice_grid_button_action_file_inscriptos : 'Exportar'
+    indice_grid_button_action_file_inscriptos : 'Exportar',
+    add_button : 'Nuevo Índice',
+    add_modal_title: 'Nuevo Índice'
   }
 };

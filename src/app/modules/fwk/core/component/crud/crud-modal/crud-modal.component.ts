@@ -18,6 +18,7 @@ import { FormDef } from '../../../model/form-def';
 import { ActionDef } from '../../../model/component-def/action-def';
 import { ActionDefService } from '../../../service/action-def-service/action-def.service';
 import { ActivatedRoute } from '@angular/router';
+import { DialogService } from '../../../service/dialog-service/dialog.service';
 
 export const VALIDATIONS_ERRORS = 'VALIDATIONS_ERRORS';
 /**
@@ -53,6 +54,7 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
     public dialogRef: MatDialogRef<CrudModalComponent>,
     private activatedRoute: ActivatedRoute,
     private actionDefService: ActionDefService,
+    private dialogService: DialogService,
     @Inject(MAT_DIALOG_DATA) public data: any) {
       super(injector);
       this.dialogRef.disableClose = true;
@@ -77,7 +79,17 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
   }
 
   onNoClick(): void {
-    this.dialogRef.close();
+
+    const onSubmit = () => {
+      this.dialogRef.close();
+    }
+
+    if (this.isObjectModified) {
+      this.dialogService.showQuestionModal('Confirmación', '¿Está seguro que desea cerrar? Si lo hace perderá los cambios.', undefined, onSubmit, undefined);
+    } else {
+      onSubmit();
+    }
+
   }
 
   onInit() {

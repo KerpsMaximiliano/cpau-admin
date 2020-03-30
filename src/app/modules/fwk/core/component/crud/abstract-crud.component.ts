@@ -258,9 +258,9 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
                 this.dataSource = new MatTableDataSource<E>(this.entities);
 
                 this.dataSource.sortingDataAccessor = (item, property) => {
-                  var fecha = moment(item[property], 'dd/MM/yyyy');
+                  var fecha = moment(item[property], 'DD/MM/YYYY');
                   if (fecha.isValid()) {
-                    return fecha.toDate();
+                    return fecha.format('YYYYMMDD');
                   }
                   if (isNaN(item[property])) {
                     return item[property].toUpperCase();
