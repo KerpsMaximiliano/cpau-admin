@@ -16,7 +16,7 @@ export const INDICE_DEF: CrudDef = {
     i18n: INDICE_I18N_DEF,
     grid: INDICE_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
-        //filter: INDICE_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
+        filter: INDICE_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         create: INDICE_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         //update: INDICE_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         //read:  INDICE_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
