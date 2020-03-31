@@ -32,7 +32,7 @@ export const CAMPO_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
-  deleteAction: true,
+  deleteAction: false,
   displayedColumns: [
     'name',
     'type',
@@ -40,6 +40,20 @@ export const CAMPO_GRID_DEF = {
     'value'
   ],
   actions : [
+    {
+      actionNameKey: 'Eliminar',
+      icon: 'delete',
+      confirm: true,
+      ws: {
+        key: 'section_topic_grid_def_button_action_bajar',
+        url: PREFIX_DOMAIN_API + 'FormField/borrar',
+        method: 'GET',
+        querystring: {
+          idForm : 'idForm',
+          idFormField: 'idFormField'
+        }
+      }
+    },
     {
       actionNameKey: 'campo_grid_def_button_action_opciones',
       icon: 'format_list_bulleted',

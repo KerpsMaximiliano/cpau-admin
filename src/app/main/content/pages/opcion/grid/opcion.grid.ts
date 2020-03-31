@@ -4,7 +4,8 @@ export const OPCION_GRID_DEF = {
   columnsDef: [
     {
       columnDef: 'idFormFieldOption',
-      columnNameKey: 'opcion_grid_def_column_id'
+      columnNameKey: 'opcion_grid_def_column_id',
+      id: true
     },
     {
       columnDef: 'idFormField',
@@ -35,6 +36,21 @@ export const OPCION_GRID_DEF = {
   ],
   actions: [
     {
+      actionNameKey: 'Eliminar',
+      icon: 'delete',
+      ws: {
+        key: 'section_topic_grid_def_button_action_bajar',
+        url: PREFIX_DOMAIN_API + 'FormFieldOption/borrar',
+        method: 'GET',
+        confirm: true,
+        querystring: {
+          idForm : 'idForm',
+          idFormField: 'idFormField',
+          idFormFieldOption: 'idFormFieldOption'
+        }
+      }
+    },
+    {
       actionNameKey: 'section_topic_grid_def_button_action_bajar',
       icon: 'arrow_downward',
       ws: {
@@ -63,5 +79,5 @@ export const OPCION_GRID_DEF = {
       }
     }
   ],
-  deleteAction: true
+  deleteAction: false
 };

@@ -68,9 +68,13 @@ export class SearchComponent extends AbstractComponent implements OnInit {
     this.entity = {};
     this.resetCacheFields();
     this.generalField = this.getGeneralField(this.cacheFields);
-    this.generalFields = [
-      this.generalField
-    ];
+    if (this.generalField != undefined) {
+      this.generalFields = [
+        this.generalField
+      ];
+    } else {
+      this.generalFields = undefined;
+    }
     this.fieldsOptions = this.cacheFields.filter(f => {
       if (f.options){
         if (f.options.baseFilter){
@@ -107,10 +111,12 @@ export class SearchComponent extends AbstractComponent implements OnInit {
       field = filtered[0];
     }else{
       field = fields[0];
-      if (field.options === undefined){
-        field.options = {};
+      if (field != undefined) {
+        if (field.options === undefined){
+          field.options = {};
+        }
+        field.options.baseFilter = true;
       }
-      field.options.baseFilter = true;
     }
     return field;
   }
