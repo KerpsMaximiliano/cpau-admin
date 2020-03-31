@@ -59,6 +59,8 @@ export const BOLETIN_I18N_DEF = {
     boletin_grid_def_column_notasconcopete: 'Notas con Copete',
     boletin_grid_def_column_especial: 'Especial',
     boletin_grid_def_column_urlcontenido: 'URL Contenido',
-    boletin_grid_def_button_action_contenido : 'Contenido'
+    boletin_grid_def_button_action_contenido : 'Contenido',
+    add_button: 'Agregar'
+
   }
 };
