@@ -67,7 +67,12 @@ export class ActionDefService {
         obs.next(dialog);
       }else if (action.actionType === 'redirect'){
         if (action.redirect.openTab) {
-          var url = this.componentDefService.getUrlNavById(action.input);
+          var url = "";
+          if (action.redirect.externalUrl != undefined && action.redirect.externalUrl) {
+            url = action.input;
+          } else  {
+            url = this.componentDefService.getUrlNavById(action.input);
+          }
           var win = window.open(url, '_blank');
           win.focus();
         } else {

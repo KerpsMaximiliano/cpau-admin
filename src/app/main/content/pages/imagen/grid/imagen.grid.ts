@@ -31,7 +31,7 @@ export const IMAGEN_GRID_DEF = {
   ],
   actions: [
     {
-      labelTitle: 'Preview Imagen',
+      labelTitle: 'Preview',
       actionNameKey: 'Preview',
       icon: 'image',
       notShowButton: true,

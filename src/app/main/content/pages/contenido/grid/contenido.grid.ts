@@ -1,4 +1,4 @@
-import { PREFIX_DOMAIN_API } from "environments/environment";
+import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 
 export const CONTENIDO_GRID_DEF = {
@@ -133,6 +133,20 @@ export const CONTENIDO_GRID_DEF = {
           contentId : 'id'
         }
       }
+    },
+    {
+      actionNameKey: 'Previsualizar',
+      actionType: 'redirect',
+      redirect: {
+        externalUrl: true,
+        openTab: true,
+        idUrl: true,
+        url: PREFIX_INSTITUCIONAL + '/notaPreview',
+        querystring: {
+          id : 'id'
+        }
+      },
+      icon: 'aspect_ratio'
     }
   ]
 };
