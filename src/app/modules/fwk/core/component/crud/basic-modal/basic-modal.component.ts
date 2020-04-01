@@ -41,10 +41,13 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
   modalName: string;
   formKey: string;
   activatedRoute: ActivatedRoute;
+  notShowButton: boolean;
+  labelTitle: string;
   constructor(public injector: Injector,
     public dialogRef: MatDialogRef<BasicModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
       super(injector);
+      this.notShowButton = this.data.config.notShowButton === undefined ? false : this.data.config.notShowButton;
       this.activatedRoute = injector.get(ActivatedRoute);
       this.dialogRef.disableClose = true;
       this.entity = this.data.entity;
@@ -56,6 +59,7 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
       this.formKey = this.data.config.formKey;
       this.form = new FormGroup({});
       this.isObjectModified = false;
+      this.labelTitle = this.data.config.labelTitle;
   }
 
   onNoClick(): void {
@@ -71,6 +75,10 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
   }
 
   onInit() {}
+
+  isNotShowButton() {
+    return this.notShowButton;
+  }
 
   onChangeEntity(entity) {
     if (this.config.ws && (this.config.ws.method === HTTP_METHODS.put || 
@@ -124,6 +132,9 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
   }
 
   get titleLabel() {
+    if (this.labelTitle) {
+      return this.labelTitle;
+    }
     if (this.modalName){
       return this.modalName;
     }else if (this.config.titleKey){

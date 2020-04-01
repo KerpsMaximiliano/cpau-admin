@@ -15,7 +15,7 @@
                                 (onChangeEntity)="onChangeEntity($event)">
     </app-dynamic-form-component>
   </div>
-  <div mat-dialog-actions>
+  <div mat-dialog-actions *ngIf="!isNotShowButton()">
     <button mat-button [ngClass]="[fuseSettings.colorClasses.primary_button, fuseSettings.colorClasses.primary_button_fg]" *ngIf="isAdd || isEdit" type="submit" (click)="onSubmit()" [disabled]="!isObjectModified || form.invalid || submitting" cdkFocusInitial>{{submitLabel}}</button>
   </div>
 </div>

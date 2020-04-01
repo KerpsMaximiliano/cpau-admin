@@ -20,6 +20,7 @@ export const FLOAT = 'FLOAT';
 export const COLOR_PICKER = 'COLOR_PICKER';
 export const TAGS = 'TAGS';
 export const IMPORT_IMAGE = 'IMPORT_IMAGE';
+export const IMAGE_PREVIEW = 'IMAGE_PREVIEW';
 export const CONTROL_TYPE = {
   email: EMAIL,
   textbox : TEXTBOX,
@@ -40,7 +41,8 @@ export const CONTROL_TYPE = {
   disclaimer: DISCLAIMER,
   color_picker: COLOR_PICKER,
   tags: TAGS,
-  import_image: IMPORT_IMAGE
+  import_image: IMPORT_IMAGE,
+  image_preview: IMAGE_PREVIEW
 };
 
 export enum ControlTypeEnum {
@@ -62,7 +64,8 @@ export enum ControlTypeEnum {
   html_ditor = 'HTML_EDITOR',
   color_picker = 'color_picker',
   tags = 'tags',
-  import_image = 'import_image'
+  import_image = 'import_image',
+  image_preview = 'image_preview'
 }
 
 export class DynamicField<T>{

@@ -17,7 +17,10 @@
         {{getMessageErrorValidation(field)}}
       </mat-error>
       </mat-form-field>
-        <mat-form-field *ngIf="field.controlType == 'textbox'" [floatLabel]="getFloatLabel(field)">
+
+      <img width="600" src="https://static.cpau.org{{field.value}}" alt="Ruta de imagen inválida" *ngIf="field.controlType == 'image_preview'" align="center" />
+
+      <mat-form-field *ngIf="field.controlType == 'textbox'" [floatLabel]="getFloatLabel(field)">
             <mat-label *ngIf="field.options && field.options.matLabel">{{field.options.matLabel}}</mat-label>
             <input  matInput restrictionKeys="{{getRestrictionKeys(field)}}" placeholder="{{field.label}}"  [formControlName]="field.key"
                     [id]="field.key" [type]="field.type">
