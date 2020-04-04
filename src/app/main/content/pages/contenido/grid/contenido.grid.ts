@@ -130,7 +130,8 @@ export const CONTENIDO_GRID_DEF = {
       redirect: {
         url: '/contentImage',
         querystring: {
-          contentId : 'id'
+          contentId : 'id',
+          parentTitle: 'title'
         }
       }
     },

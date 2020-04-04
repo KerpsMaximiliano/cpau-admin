@@ -138,7 +138,8 @@ export const SECCION_GRID_DEF = {
       redirect: {
         url: '/sectionContent',
         querystring: {
-          sectionId : 'id'
+          sectionId : 'id',
+          parentTitle: 'name'
         }
       },
       icon: 'library_books'

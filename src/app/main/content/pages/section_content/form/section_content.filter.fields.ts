@@ -17,5 +17,9 @@ export const SECTION_CONTENT_FILTER_FORM_FIELDS_DEF = [
     key: 'sectionId',
     label: 'sectionID',
     controlType: 'number'
+  },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
   }
 ];

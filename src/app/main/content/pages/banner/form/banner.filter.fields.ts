@@ -13,5 +13,9 @@ export const BANNER_FILTER_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     filterType: 'equals'
+  },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
   }
 ];

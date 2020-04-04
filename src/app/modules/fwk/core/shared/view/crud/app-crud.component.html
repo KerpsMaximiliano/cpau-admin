@@ -17,7 +17,7 @@
                 <back-button *ngIf='crudDef.backButton' style= "margin-right: 10px;"></back-button>
                 
                 <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
-                    {{translate('page_title')}}
+                    {{translate('page_title')}}{{getParentTitle()}}
                 </span>
             </div>
             <app-search *ngIf='crudDef.forms.filter' [fields]='crudDef.forms.filter' (onChangeSearchEntity)='filterSearchEntity($event)' [forceFirstSubmit]='true'></app-search>

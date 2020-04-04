@@ -62,7 +62,8 @@ export const CAMPO_GRID_DEF = {
         url: '/opcion',
         querystring: {
           idForm : 'idForm',
-          idFormField : 'idFormField'
+          idFormField : 'idFormField',
+          parentTitle: 'name'
         }
       }
     },

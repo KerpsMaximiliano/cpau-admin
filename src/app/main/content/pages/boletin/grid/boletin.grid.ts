@@ -62,7 +62,8 @@ export const BOLETIN_GRID_DEF = {
       redirect: {
         url: '/boletinContenido',
         querystring: {
-          boletinId : 'id'
+          boletinId : 'id',
+          parentTitle: 'titulo'
         }
       }
     },

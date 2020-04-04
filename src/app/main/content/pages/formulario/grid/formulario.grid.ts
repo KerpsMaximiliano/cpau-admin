@@ -205,7 +205,8 @@ export const FORMULARIO_GRID_DEF = {
       redirect: {
         url: '/campo',
         querystring: {
-          idForm : 'id'
+          idForm : 'id',
+          parentTitle: 'name'
         }
       }
     },
@@ -216,7 +217,8 @@ export const FORMULARIO_GRID_DEF = {
       redirect: {
         url: '/formResponse',
         querystring: {
-          idForm : 'id'
+          idForm : 'id',
+          parentTitle: 'name'
         }
       }
     },

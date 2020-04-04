@@ -8,5 +8,9 @@ export const CONTENT_IMAGE_FILTER_FORM_FIELDS_DEF = [
         key: 'contentId',
         label: 'contentId',
         controlType: 'number'
+    },
+    {
+        key: 'parentTitle',
+        controlType: 'hidden'
     }
 ];

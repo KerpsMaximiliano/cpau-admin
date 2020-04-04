@@ -12,5 +12,9 @@ export const OPCION_FILTER_FORM_FIELDS_DEF = [
     label: 'ID Field',
     type: 'string',
     controlType: 'textbox'
+  },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
   }
 ];

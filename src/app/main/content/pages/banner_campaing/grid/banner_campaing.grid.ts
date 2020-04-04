@@ -33,7 +33,8 @@ export const BANNER_CAMPAING_GRID_DEF = {
       redirect: {
         url: '/banner',
         querystring: {
-          campaignId : 'id'
+          campaignId : 'id',
+          parentTitle: 'name'
         }
       }
     }

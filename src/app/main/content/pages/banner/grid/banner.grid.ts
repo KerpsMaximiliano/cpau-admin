@@ -45,5 +45,22 @@ export const BANNER_GRID_DEF = {
     'isMainPage',
     'isNewsletter',
     'isSection'
+  ],
+  actions: [
+    {
+      labelTitle: 'Preview',
+      actionNameKey: 'Preview',
+      icon: 'image',
+      notShowButton: true,
+      form: [
+        {
+          key: 'urlImage',
+          labelKey: 'imagen_prueba',
+          label: 'imagen_prueba',
+          type: 'image_preview',
+          controlType: 'image_preview',
+        }
+      ]
+    },
   ]
 };

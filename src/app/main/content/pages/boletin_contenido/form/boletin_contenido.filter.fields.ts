@@ -12,7 +12,12 @@ export const BOLETIN_CONTENIDO_FILTER_FORM_FIELDS_DEF = [
     labelKey: 'BOLETIN_CONTENIDO_FILTER_FORM_FIELDS_DEF_FIELD_boletinId',
     label: 'Boletin ID',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'hidden'
+  },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
   }
+
 
 ];

@@ -17,6 +17,8 @@ import { LocalStorageService } from '../../../service/local-storage/local-storag
 })
 export class AppCrudComponent extends CrudComponent implements OnInit, OnDestroy {
  
+
+
   constructor(configService: FuseConfigService,
               dialog: MatDialog,
               localStorageService: LocalStorageService,
@@ -30,5 +32,11 @@ export class AppCrudComponent extends CrudComponent implements OnInit, OnDestroy
             theme_options: false
         }
     };
+  }
+
+  getParentTitle(){
+    if (this.filterEntity != undefined && this.filterEntity['parentTitle']) {
+      return " - " + this.filterEntity['parentTitle'];
+    } return "";
   }
 }
