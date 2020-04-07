@@ -122,7 +122,10 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     // @ts-ignore
     const ckfinder = CKFinder;
     if (ckfinder) {
-      ckfinder.setupCKEditor( null, '/Content/ckfinder/' );
+      ckfinder.setupCKEditor( null, '/Content/ckfinder/', {
+        currentFolder: ".newsite",
+        rememberLastFolder: false
+      });
     }
   }
 

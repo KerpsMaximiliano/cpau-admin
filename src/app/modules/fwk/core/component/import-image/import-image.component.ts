@@ -63,6 +63,8 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   clickOpenCkfinder() {
     //@ts-ignore
     CKFinder.popup({
+      currentFolder: ".newsite",
+      rememberLastFolder: false,
       chooseFiles: true,
       chooseFilesClosePopup: true,
       chooseFilesOnDblClick: true,
@@ -71,7 +73,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
           finder.on('files:choose', (evt) => {
               const file = evt.data.files.first();
               const url = file.getUrl();
-              this.value = new URL(url).pathname.replace('/media/', '/');
+              this.value = url;
           });
       }
   });
