@@ -74,6 +74,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
               const file = evt.data.files.first();
               const url = file.getUrl();
               this.value = url;
+              this.formGroup.updateValueAndValidity();
           });
       }
   });
