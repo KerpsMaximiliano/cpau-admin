@@ -9,6 +9,7 @@ export interface ImportImageConfiguration {
     // Atributo de tipo string, representando un código hexa, con el que se puede inicializar el campo a nivel de código en la aplicacion
     value?: string;
     options?: ImportImageOptions;
+    icon?: string;
 }
 
 

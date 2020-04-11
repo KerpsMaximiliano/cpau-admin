@@ -16,7 +16,8 @@ export const IMAGEN_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'import_image',
     maxLength: 200,
-    required: true
+    required: true,
+    icon: 'add_photo_alternate'
   },
   {
     key: 'epigraph',

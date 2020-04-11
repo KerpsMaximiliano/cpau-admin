@@ -57,7 +57,8 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'contenido_create_form_fields_def_field_link',
     label: 'Link',
     controlType: 'import_image',
-    maxLength: 500
+    maxLength: 500,
+    icon: 'attach_file'
   },
   {
     key: 'linkTarget',
