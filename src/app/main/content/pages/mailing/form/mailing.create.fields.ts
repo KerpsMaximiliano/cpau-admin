@@ -1,5 +1,5 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
-import { RADIO_BUTTON } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { RADIO_BUTTON, IMPORT_IMAGE } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 
 export const MAILING_CREATE_FORM_FIELDS_DEF = [
   {
@@ -22,6 +22,13 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     label: 'Asunto',
     type: 'string',
     controlType: 'textbox'
+  },
+
+  {
+    key: 'agenda_title',
+    labelKey: 'Destinatarios',
+    title: 'Destinatarios',
+    controlType: 'checkbox'
   },
 
   {
@@ -84,6 +91,13 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
   },
 
   {
+    key: 'info_title',
+    labelKey: 'Contenido',
+    title: 'Contenido',
+    controlType: 'checkbox'
+  },
+
+  {
     key: 'content',
     label: 'Contenido',
     required: true,
@@ -99,6 +113,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     }
   },
 
+  
 
   {
     key: 'boletinId',
@@ -130,7 +145,6 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     key: 'url',
     labelKey: 'mailing_create_form_fields_def_field_url',
     label: 'URL',
-    type: 'string',
-    controlType: 'textbox'
+    controlType: IMPORT_IMAGE
   }
 ];

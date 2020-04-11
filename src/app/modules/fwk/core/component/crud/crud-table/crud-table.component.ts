@@ -209,29 +209,42 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
             this.spinnerGeneralControl.hide();
           });
       } else if (ACTION_TYPES.redirect === action.actionType){
-        var url = action.redirect.url;
-        
+        var url: String = action.redirect.url;
+                
         const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
         
+        if (queryParams['externalUrl']) {
+          url = queryParams['externalUrl'];
+          if (!url.startsWith('http://') &&  !url.startsWith('https://')) {
+            url = 'http://' + url;
+          }
+        }
+
         if (action.redirect.openTab) {
           
           var queryParamsString = "";
 
-          if (action.redirect.idUrl != undefined && action.redirect.idUrl && queryParams['id'] != undefined){
-            queryParamsString = "/" + queryParams['id'];
-          } else {
+          if (queryParams && queryParams != undefined) {
 
-            var first = true;
-            
-            Object.getOwnPropertyNames(queryParams).forEach(param => { 
-              if (!first) {
-                queryParamsString = queryParamsString + "&";
-              } else {
-                queryParamsString = queryParamsString + "?";
-                first = false;
-              }
-              queryParamsString = queryParamsString + param + "=" + queryParams[param]
-            });
+            if (action.redirect.idUrl != undefined && action.redirect.idUrl && queryParams['id'] != undefined){
+              queryParamsString = "/" + queryParams['id'];
+            } else {
+
+              var first = true;
+              
+              Object.getOwnPropertyNames(queryParams).forEach(param => { 
+                if (param != 'externalUrl') {
+                  if (!first) {
+                    queryParamsString = queryParamsString + "&";
+                  } else {
+                    queryParamsString = queryParamsString + "?";
+                    first = false;
+                  }
+                  queryParamsString = queryParamsString + param + "=" + queryParams[param]
+                }
+              });
+            }
+          
           }
 
           var win = window.open(url + queryParamsString, '_blank');

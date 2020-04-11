@@ -83,5 +83,18 @@ export const BOLETIN_GRID_DEF = {
       },
       icon: 'aspect_ratio'
     },
+    {
+      actionNameKey: 'Ver URL Contenido',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        externalUrl: true,
+        url: '',
+        querystring: {
+          externalUrl : 'urlContenido'
+        }
+      },
+      icon: 'link'
+    },
   ]
 };
