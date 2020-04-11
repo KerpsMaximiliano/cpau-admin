@@ -61,14 +61,12 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   }
 
   clickOpenCkfinder() {
-    //@ts-ignore
-    CKFinder.popup({
+    const ckFinderConfig: any = {
       currentFolder: ".newsite",
       rememberLastFolder: false,
       chooseFiles: true,
       chooseFilesClosePopup: true,
       chooseFilesOnDblClick: true,
-      // startupPath: 'Files:' + this.value ? this.value : '',
       onInit: (finder) => {
           finder.on('files:choose', (evt) => {
               const file = evt.data.files.first();
@@ -77,16 +75,19 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
               this.formGroup.updateValueAndValidity();
           });
       }
-  });
+    }
+
+    // ResourceType
+    if (this.config.options && this.config.options.resourceType) {
+      ckFinderConfig.resourceType = this.config.options.resourceType;
+    }
+
+
+    //@ts-ignore
+    CKFinder.popup(ckFinderConfig);
   }
 
   changeInput() {
-    // if (!this.pattern.test(this.value) && this.value) {
-    //   this.formGroup.controls[this.name].setErrors({invalidValue: true});
-    // } else if (this.formGroup.controls[this.name].errors) {
-    //   delete this.formGroup.controls[this.name].errors.invalidValue;
-    // }
-
     this.formGroup.updateValueAndValidity();
   }
 }

@@ -18,4 +18,6 @@ export interface ImportImageOptions {
    requiredMessage: string;
    // Mensaje de error que se muestra debajo del campo en rojo cuando se ingresa un valor hexadecimal no contemplado
    invalidValueMessage: string;
+   // tipos de archivos permitidos
+   resourceType?: string; // Types: Images
 }

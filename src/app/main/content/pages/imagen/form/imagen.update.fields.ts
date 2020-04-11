@@ -21,7 +21,11 @@ export const IMAGEN_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'import_image',
     maxLength: 200,
-    required: true
+    required: true,
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    }
   },
   {
     key: 'epigraph',
