@@ -24,6 +24,14 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   _value: string;
   // pattern = new RegExp('^#+([a-fA-F0-9]{6})$');
 
+  urlpattern = new RegExp('^((https?:\\/\\/)|(http?:\\/\\/))'+ // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+
+
   onChange = (_: any) => { };
   onTouch = () => { };
 
@@ -44,7 +52,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
     if (this.config.required) {
       this.formGroup.controls[this.name].setValidators([Validators.required]);
     }
-
+    this.formGroup.controls[this.name].setValidators([Validators.pattern(this.urlpattern)]);
     this.formGroup.controls[this.name].updateValueAndValidity();
   }
 
@@ -58,6 +66,13 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
 
   registerOnTouched(fn: any): void {
     this.onTouch = fn;
+  }
+
+  clickOpenUrl() {
+    if (this.value != undefined && this.value != "" && this.urlpattern.test(this.value)) {
+        var win = window.open(this.value, '_blank');
+        win.focus();
+    }
   }
 
   clickOpenCkfinder() {
@@ -88,6 +103,12 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   }
 
   changeInput() {
+
+    if (!this.urlpattern.test(this.value) && this.value) {
+      this.formGroup.controls[this.name].setErrors({invalidValue: true});
+    } else if (this.formGroup.controls[this.name].errors) {
+      delete this.formGroup.controls[this.name].errors.invalidValue;
+    }
     this.formGroup.updateValueAndValidity();
   }
 }

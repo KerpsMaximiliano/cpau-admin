@@ -7,9 +7,9 @@
         } */
 
         .action-cell {
-            width: 350px !important;
-            min-width: 350px !important;
-            max-width: 350px !important;
+            width: 360px !important;
+            min-width: 360px !important;
+            max-width: 360px !important;
         }
 
         #fromDateHeader,
@@ -49,13 +49,15 @@
     
     .nameDiv{
         display: inline-block !important;
-        width:45% !important;
-        max-width: 45% !important;
-        margin-right: 5% !important;
+        width:100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
     }
     .remarksDiv{
         display: inline-block !important;
-        min-width:50% !important;
+        width:100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
     }
     
     

@@ -83,7 +83,7 @@ export const BOLETIN_GRID_DEF = {
       },
       icon: 'aspect_ratio'
     },
-    {
+    /*{
       actionNameKey: 'Ver URL Contenido',
       actionType: 'redirect',
       redirect: {
@@ -95,6 +95,6 @@ export const BOLETIN_GRID_DEF = {
         }
       },
       icon: 'link'
-    },
+    },*/
   ]
 };

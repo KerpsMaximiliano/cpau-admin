@@ -35,55 +35,75 @@
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
     
-    .nameDiv{
+    /*.nameDiv{
         display: inline-block !important;
         max-width: 33% !important;
         width:33% !important;
         min-width: 33% !important;
         margin-right: 2% !important;
-    }
-    .seNameDiv{
+    }*/
+    /*.seNameDiv{
         display: inline-block !important;
         width:35% !important;
         margin-right: 2% !important;
     }
 
+    
+
+*/
+
     .titleDiv{
         display: inline-block !important;
         width:100% !important;
+        max-width:100% !important;
+        min-width:100% !important;
     }
 
-    .imageIdDiv{
+    .imageDiv{
         display: inline-block !important;
-        width:58% !important;
-        margin-right: 5% !important;
+        width:62% !important;
+        max-width:62% !important;
+        min-width:62% !important;
+        margin-right: 3%;
+    }
+
+
+    .publishedDiv{
+        display: inline-block !important;
+        width:15% !important;
+        max-width:15% !important;
+        min-width:15% !important;
     }
 
     .allowAnonymousDiv{
         display: inline-block !important;
         width:15% !important;
-        margin-right: 2% !important;
+        max-width:15% !important;
+        min-width:15% !important;
     }
     
 
-    .publishedDiv{
-        display: inline-block !important;
-        width:20% !important;
-    }
+    
+  /*  
 
+    
+
+*/    
 
     .templateIdDiv{
         display: inline-block !important;
         width:48% !important;
+        max-width:48% !important;
+        min-width:48% !important;
         margin-right: 2%;
     }
 
     .orderItemsByDiv{
         display: inline-block !important;
         width:50% !important;
+        max-width:50% !important;
+        min-width:50% !important;
     }
-
-    
 
     .contactNameDiv{
         display: inline-block;
@@ -93,14 +113,14 @@
 
     .contactEmailDiv{
         display: inline-block;
-        width:30%;
+        width:31%;
         margin-right: 3%;
     }
 
     .contanctTelDiv{
         display: inline-block;
-        width:30%;
-        margin-right: 3%;
+        width:33%;
+      
     }
 
 

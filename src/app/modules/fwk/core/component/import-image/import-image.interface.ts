@@ -10,6 +10,8 @@ export interface ImportImageConfiguration {
     value?: string;
     options?: ImportImageOptions;
     icon?: string;
+    iconOpenUrl?: string;
+    showPreview?: boolean;
 }
 
 

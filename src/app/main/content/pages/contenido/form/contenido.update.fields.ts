@@ -50,7 +50,8 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Link',
     controlType: 'import_image',
     maxLength: 500,
-    icon: 'attach_file'
+    icon: 'attach_file',
+    showPreview: true
   },
   {
     key: 'linkTarget',

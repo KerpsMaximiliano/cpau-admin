@@ -10,6 +10,11 @@
             }
         } */
 
+        .action-cell {
+            width: 80px !important;
+            min-width: 80px !important;
+            max-width: 80px !important;
+        }
         
         mat-header-cell.checkbox-cell {
             display: none;
@@ -34,6 +39,27 @@
     .displayOrderDiv{
         display: inline-block !important;
         width:20% !important;
+    }
+    
+    .isMainPageDiv {
+        display: inline-block !important;
+        width:33% !important;
+        min-width: 33% !important;
+        max-width: 33% !important;
+    }
+
+    .isNewsletterDiv {
+        display: inline-block !important;
+        width:33% !important;
+        min-width: 33% !important;
+        max-width: 33% !important;
+    }
+
+    .isSectionDiv {
+        display: inline-block !important;
+        width:33% !important;
+        min-width: 33% !important;
+        max-width: 33% !important;
     }
     
 

@@ -38,6 +38,7 @@ export const PRODUCTO_EXTERNO_CREATE_FORM_FIELDS_DEF = [
     key: 'imageURL',
     labelKey: 'producto_externo_create_form_fields_def_field_imageurl',
     label: 'Imagen',
-    controlType: 'import_image'
+    controlType: 'import_image',
+    showPreview: true
   }
 ];

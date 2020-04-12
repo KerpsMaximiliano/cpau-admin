@@ -25,7 +25,8 @@ export const IMAGEN_UPDATE_FORM_FIELDS_DEF = [
     options: {
       // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
       resourceType: 'Images'
-    }
+    },
+    showPreview: true
   },
   {
     key: 'epigraph',

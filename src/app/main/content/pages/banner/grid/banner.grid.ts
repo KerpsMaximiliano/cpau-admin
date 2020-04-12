@@ -46,7 +46,7 @@ export const BANNER_GRID_DEF = {
     'isNewsletter',
     'isSection'
   ],
-  actions: [
+  /*actions: [
     {
       labelTitle: 'Preview',
       actionNameKey: 'Preview',
@@ -61,6 +61,6 @@ export const BANNER_GRID_DEF = {
           controlType: 'image_preview',
         }
       ]
-    },
-  ]
+    }
+  ],*/
 };
