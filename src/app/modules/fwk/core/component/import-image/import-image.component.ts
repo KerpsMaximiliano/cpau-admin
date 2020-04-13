@@ -61,12 +61,14 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   }
 
   clickOpenCkfinder() {
+    let resourceType = this.config.options && this.config.options.resourceType ? this.config.options.resourceType : 'Files:';
+    const defaultStartUpFolder = '.newsite';
     const ckFinderConfig: any = {
-      currentFolder: ".newsite",
-      rememberLastFolder: false,
       chooseFiles: true,
       chooseFilesClosePopup: true,
       chooseFilesOnDblClick: true,
+      rememberLastFolder: false,
+      startupPath : resourceType + defaultStartUpFolder,
       onInit: (finder) => {
           finder.on('files:choose', (evt) => {
               const file = evt.data.files.first();
