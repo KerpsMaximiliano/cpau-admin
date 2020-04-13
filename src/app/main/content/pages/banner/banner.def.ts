@@ -27,7 +27,7 @@ export const BANNER_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Banner'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     backButton: true,
     filterInMemory: false

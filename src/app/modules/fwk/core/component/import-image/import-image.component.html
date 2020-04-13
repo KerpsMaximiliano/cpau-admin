@@ -19,7 +19,17 @@
       color="primary"
       (click)="clickOpenCkfinder()"
       class="import-image-button"
+      title="Seleccionar"
       [disabled]="config.disabled">
-      <mat-icon>add_photo_alternate</mat-icon>
+      <mat-icon>{{config.icon != undefined ? config.icon : 'add_photo_alternate'}}</mat-icon>
+  </button>
+
+  <button mat-button *ngIf="config.showPreview != undefined ? config.showPreview : false"
+      color="primary"
+      (click)="clickOpenUrl()"
+      title="Previsualizar"
+      class="import-image-button"
+      [disabled]="config.disabled">
+      <mat-icon>{{config.iconOpenUrl != undefined ? config.iconOpenUrl : 'filter_none'}}</mat-icon>
   </button>
 </form>

@@ -20,16 +20,28 @@ export const BANNER_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'import_image',
     required: true,
     minLength: 3,
-    maxLength: 200
+    maxLength: 200,
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    },
+    showPreview: true
   
   },
   {
     key: 'urlLink',
     labelKey: 'banner_create_form_fields_def_field_urllink',
     label: 'Link',
-    type: 'string',
-    controlType: 'textbox',
-    maxLength: 200
+    controlType: 'import_image',
+    required: true,
+    minLength: 3,
+    maxLength: 200,
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    },
+    icon: 'link',
+    showPreview: true
   },
   {
     key: 'alternativeText',

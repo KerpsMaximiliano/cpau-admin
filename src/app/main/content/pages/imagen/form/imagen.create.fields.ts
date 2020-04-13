@@ -16,7 +16,13 @@ export const IMAGEN_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'import_image',
     maxLength: 200,
-    required: true
+    required: true,
+    icon: 'add_photo_alternate',
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    },
+    showPreview: true
   },
   {
     key: 'epigraph',

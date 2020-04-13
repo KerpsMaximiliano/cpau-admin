@@ -27,6 +27,6 @@ export const IMAGEN_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Image'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     }   
 };

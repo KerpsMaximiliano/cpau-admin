@@ -147,7 +147,7 @@ export const CONTENIDO_GRID_DEF = {
           id : 'id'
         }
       },
-      icon: 'aspect_ratio'
+      icon: 'filter_none'
     }
   ]
 };

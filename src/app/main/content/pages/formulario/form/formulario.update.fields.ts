@@ -96,7 +96,12 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     key: 'headerImage',
     labelKey: 'formulario_create_form_fields_def_field_headerimage',
     label: 'Imagen de Cabecera',
-    controlType: 'import_image'
+    controlType: 'import_image',
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    },
+    showPreview: true
   },
   {
     key: 'place',

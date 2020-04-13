@@ -29,7 +29,7 @@ export const IMAGEN_GRID_DEF = {
   displayedColumns: [
     'name'
   ],
-  actions: [
+  /*actions: [
     {
       labelTitle: 'Preview',
       actionNameKey: 'Preview',
@@ -45,5 +45,5 @@ export const IMAGEN_GRID_DEF = {
         }
       ]
     },
-  ]
+  ]*/
 };

@@ -25,7 +25,9 @@ export const BOLETIN_CREATE_FORM_FIELDS_DEF = [
     key: 'urlContenido',
     labelKey: 'boletin_create_form_fields_def_field_urlcontenido',
     label: 'URL Contenido',
-    controlType: 'import_image'
+    controlType: 'import_image',
+    icon: 'link',
+    showPreview: true
   },
   {
     key: 'publicado',

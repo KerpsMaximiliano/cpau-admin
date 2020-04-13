@@ -31,7 +31,9 @@ export const BOLETIN_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'boletin_create_form_fields_def_field_urlcontenido',
     label: 'URL Contenido',
     maxLength: 2000,
-    controlType: 'import_image'
+    controlType: 'import_image',
+    icon: 'link',
+    showPreview: true
   },  
   {
     key: 'publicado',

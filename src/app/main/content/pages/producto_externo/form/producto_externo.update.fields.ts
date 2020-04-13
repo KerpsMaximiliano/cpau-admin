@@ -72,7 +72,8 @@ export const PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Imagen',
     controlType: 'import_image',
     required: true,
-    maxLength: 100
+    maxLength: 100,
+    showPreview: true
   },
   {
     key: 'orden',

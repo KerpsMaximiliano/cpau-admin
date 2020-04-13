@@ -57,7 +57,9 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     label: 'Link',
     type: 'string',
     controlType: 'import_image',
-    required: false
+    required: false,
+    icon: 'attach_file',
+    showPreview: true
   },
   {
     key: 'linkTarget',
@@ -155,6 +157,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
         ]
     }
   },
+
   {
     key: 'contactName',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_ContactName',
