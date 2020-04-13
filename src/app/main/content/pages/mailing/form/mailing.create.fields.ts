@@ -145,6 +145,8 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     key: 'url',
     labelKey: 'mailing_create_form_fields_def_field_url',
     label: 'URL',
-    controlType: IMPORT_IMAGE
+    controlType: 'import_image',
+    icon: 'attach_file',
+    showPreview: true
   }
 ];

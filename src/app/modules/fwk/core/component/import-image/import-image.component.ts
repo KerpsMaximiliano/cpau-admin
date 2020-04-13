@@ -53,6 +53,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
       this.formGroup.controls[this.name].setValidators([Validators.required]);
     }
     this.formGroup.controls[this.name].setValidators([Validators.pattern(this.urlpattern)]);
+    this.config.options.invalidValueMessage = 'Formato de URL inválida. Debe comenzar con http:// o https://';
     this.formGroup.controls[this.name].updateValueAndValidity();
   }
 
@@ -76,6 +77,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   }
 
   clickOpenCkfinder() {
+    const compName = this.name;
     const ckFinderConfig: any = {
       currentFolder: ".newsite",
       rememberLastFolder: false,
@@ -87,7 +89,8 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
               const file = evt.data.files.first();
               const url = file.getUrl();
               this.value = url;
-              this.formGroup.updateValueAndValidity();
+              this.formGroup.controls[compName].setValue(url);
+              this.formGroup.controls[compName].updateValueAndValidity();
           });
       }
     }

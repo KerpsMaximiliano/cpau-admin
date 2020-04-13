@@ -81,14 +81,6 @@
         max-width:15% !important;
         min-width:15% !important;
     }
-    
-
-    
-  /*  
-
-    
-
-*/    
 
     .templateIdDiv{
         display: inline-block !important;
@@ -97,6 +89,21 @@
         min-width:48% !important;
         margin-right: 2%;
     }
+
+    .linkDiv{
+        display: inline-block !important;
+        width:100% !important;
+        max-width:100% !important;
+        min-width:100% !important;
+    }
+
+    .linkTargetDiv{
+        display: inline-block !important;
+        width:100% !important;
+        max-width:100% !important;
+        min-width:100% !important;
+    }
+
 
     .orderItemsByDiv{
         display: inline-block !important;
