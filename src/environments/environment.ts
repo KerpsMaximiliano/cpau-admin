@@ -2,10 +2,10 @@
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-export const PREFIX_DOMAIN_API =  'http://localhost:5000/api/';
-//export const PREFIX_DOMAIN_API =  'https://site2020-api.azurewebsites.net/api/';
-export const PREFIX_INSTITUCIONAL = 'http://localhost:4200';
-//export const PREFIX_INSTITUCIONAL = 'https://site2020-institucional.azurewebsites.net';
+//export const PREFIX_DOMAIN_API =  'http://localhost:5000/api/';
+export const PREFIX_DOMAIN_API =  'https://site2020-api.azurewebsites.net/api/';
+//export const PREFIX_INSTITUCIONAL = 'http://localhost:4200';
+export const PREFIX_INSTITUCIONAL = 'https://site2020-institucional.azurewebsites.net';
 
 
 export const environment = {
