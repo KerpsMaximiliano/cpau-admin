@@ -78,7 +78,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
 
   clickOpenCkfinder() {
 	const compName = this.name;
-	let resourceType = this.config.options && this.config.options.resourceType ? this.config.options.resourceType : 'Files:';
+	let resourceType = this.config.options && this.config.options.resourceType ? this.config.options.resourceType + ':' : 'Files:';
   const defaultStartUpFolder = '.newsite';    
   const ckFinderConfig: any = {
       chooseFiles: true,
@@ -96,12 +96,6 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
           });
       }
     }
-
-    // ResourceType
-    if (this.config.options && this.config.options.resourceType) {
-      ckFinderConfig.resourceType = this.config.options.resourceType;
-    }
-
 
     //@ts-ignore
     CKFinder.popup(ckFinderConfig);

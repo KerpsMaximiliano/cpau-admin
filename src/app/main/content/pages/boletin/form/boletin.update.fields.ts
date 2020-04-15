@@ -32,7 +32,7 @@ export const BOLETIN_UPDATE_FORM_FIELDS_DEF = [
     label: 'URL Contenido',
     maxLength: 2000,
     controlType: 'import_image',
-    icon: 'link',
+    icon: 'attach_file',
     showPreview: true
   },  
   {
