@@ -123,7 +123,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     const ckfinder = CKFinder;
     if (ckfinder) {
       ckfinder.setupCKEditor( null, '/Content/ckfinder/', {
-        currentFolder: ".newsite",
+        startupPath: "Files:.newsite",
         rememberLastFolder: false
       });
     }
