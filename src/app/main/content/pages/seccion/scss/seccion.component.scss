@@ -92,16 +92,21 @@
 
     .linkDiv{
         display: inline-block !important;
-        width:100% !important;
-        max-width:100% !important;
-        min-width:100% !important;
+        width:85% !important;
+        max-width:85% !important;
+        min-width:85% !important;
     }
 
     .linkTargetDiv{
+        padding-left: 15px;
         display: inline-block !important;
-        width:100% !important;
-        max-width:100% !important;
-        min-width:100% !important;
+        width:15% !important;
+        max-width:15% !important;
+        min-width:15% !important;
+    }
+
+    .import-image-input {
+        width: 86% !important;
     }
 
 

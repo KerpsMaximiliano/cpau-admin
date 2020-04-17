@@ -31,15 +31,22 @@
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
     
-    .linkDiv {
+    .linkDiv{
         display: inline-block !important;
-        width:65% !important;
-        margin-right: 5% !important;
+        width:82% !important;
+        max-width:82% !important;
+        min-width:82% !important;
     }
 
     .linkTargetDiv{
         display: inline-block !important;
-        width:30% !important;
+        width:10% !important;
+        max-width:10% !important;
+        min-width:10% !important;
+    }
+
+    .control-mat-dialog .dynamicFormDiv[name=subForm] .import-image-input {
+        width: 83% !important;
     }
 
     .titleDiv {
@@ -54,6 +61,10 @@
         width:15% !important;
     }
     
+    .subTitleDiv {
+        display: inline-block !important;
+        width:85% !important;
+    }
 
     .publishDateStringDiv{
         display: inline-block !important;
