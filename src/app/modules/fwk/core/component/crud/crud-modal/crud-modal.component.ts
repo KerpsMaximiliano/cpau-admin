@@ -167,6 +167,46 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
       });
     }
   }
+  onSubmitNoClose(): void {
+    this.globalSpinnerControl.show();
+    //this.submitting = true;
+    if (this.isAdd) {
+      this.data.crud.validationAdd(this.entity).subscribe(r => {
+        this.data.crud.add(this.entity).subscribe(ok => {
+            //this.dialogRef.close();
+            this.notificationService.notifySuccess(this.translate('success_message'));
+            this.globalSpinnerControl.hide();
+            this.isObjectModified = false;
+        }, error => {
+          this.handlerError(error); 
+          this.globalSpinnerControl.hide();
+        }) ;
+      }, error => {
+        if (VALIDATIONS_ERRORS === error.error.status) {
+          this.formService.addErrorToFields(this.form.controls.subForm, error.error.errors);
+        }
+        this.submitting = false;
+        this.globalSpinnerControl.hide();
+      });
+    } else if (this.isEdit) {
+      this.data.crud.validationEdit(this.entity).subscribe(r => {
+        this.data.crud.edit(this.entity).subscribe(ok => {
+          //this.dialogRef.close();
+          this.isObjectModified = false;
+          this.globalSpinnerControl.hide();
+          this.notificationService.notifySuccess(this.translate('success_message'));
+        }, error => {
+          this.handlerError(error); 
+          this.globalSpinnerControl.hide();
+        });
+      }, error => {
+        this.handlerError(error);
+        this.globalSpinnerControl.hide();
+      }, () => {
+        this.globalSpinnerControl.hide();
+      });
+    }
+  }
   getActions(form){
     let actions;
     if (form){

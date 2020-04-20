@@ -15,4 +15,5 @@ export class FormDef{
     initWs?: WsDef;
     actions?: ActionDef[];
     displayActionsCondition?: DisplayActionsCondition[];
+    showSubmitContinue?: boolean = false;
 }

@@ -197,7 +197,27 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         this.crud.findAll();
       });
-    }else{
+    } else if (action.formDef){
+      const data = { 
+        entity: entity,
+        config: action,
+        formDef: action.formDef,
+        fields: action.formDef.fields,
+        i18n: this.crud.i18nCurrentCrudComponent,
+     };
+      const dialogRef = this.dialog.open(BasicModalComponent, {
+      width:  this.crud.crudDef.dialogConfig &&
+      this.crud.crudDef.dialogConfig.width ?
+      this.crud.crudDef.dialogConfig.width : '320px',
+      panelClass: 'control-mat-dialog',
+      data: data
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+      this.crud.findAll();
+      });
+    }
+    else{
       if (ACTION_TYPES.file_download === action.actionType){
           this.spinnerGeneralControl.show();
           this.fileService.downloadFileByAction(action, entity).subscribe(r => {

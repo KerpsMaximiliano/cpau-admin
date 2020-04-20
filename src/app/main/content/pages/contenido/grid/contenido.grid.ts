@@ -1,7 +1,8 @@
 import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 
-export const CONTENIDO_GRID_DEF = {
+export const CONTENIDO_GRID_DEF: GridDef = {
   columnsDef: [
     {
       columnDef: 'title',

@@ -135,6 +135,7 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
                       '320px',
         panelClass: 'control-mat-dialog',
         data: { isAdd: true,
+                formDef: formCreate,
                 translate: (key) => { 
                               return this.translate(key);
                             },
