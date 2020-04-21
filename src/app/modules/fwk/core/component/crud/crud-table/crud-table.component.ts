@@ -180,6 +180,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
             this.notificationService.notifySuccess(this.crud.translate('success_message'));
       });
     }else if (action.form){
+      action.submitButtonKey = 'Guardar';
       const data = { 
                      entity: entity,
                      config: action,
@@ -198,6 +199,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
         this.crud.findAll();
       });
     } else if (action.formDef){
+      action.submitButtonKey = 'Guardar';
       const data = { 
         entity: entity,
         config: action,
