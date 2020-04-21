@@ -172,7 +172,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
     maxLength: 500,
   },
   {
-    key: 'contanctTel',
+    key: 'contactTel',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_ContanctTel',
     controlType: 'textbox',
     maxLength: 500,
