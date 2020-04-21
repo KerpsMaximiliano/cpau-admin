@@ -14,10 +14,18 @@ export const BOLETIN_CONTENIDO_DEF: CrudDef = {
     name: 'BOLETIN_CONTENIDO',
     i18n: BOLETIN_CONTENIDO_I18N_DEF,
     grid: BOLETIN_CONTENIDO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create: {
+            fields : BOLETIN_CONTENIDO_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        },
+        update: {
+            fields : BOLETIN_CONTENIDO_UPDATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        }
+    },
     forms: {
         filter: BOLETIN_CONTENIDO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: BOLETIN_CONTENIDO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: BOLETIN_CONTENIDO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  BOLETIN_CONTENIDO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: BOLETIN_CONTENIDO_NAV_DEF,

@@ -14,10 +14,18 @@ export const FORMULARIO_DEF: CrudDef = {
     name: 'FORMULARIO',
     i18n: FORMULARIO_I18N_DEF,
     grid: FORMULARIO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            fields: FORMULARIO_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        },
+        update: {
+            fields: FORMULARIO_UPDATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        }
+    },
     forms: {
         filter: FORMULARIO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: FORMULARIO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: FORMULARIO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  FORMULARIO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: FORMULARIO_NAV_DEF,

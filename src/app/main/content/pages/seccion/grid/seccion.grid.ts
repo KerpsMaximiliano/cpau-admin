@@ -2,8 +2,9 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 import { identifierModuleUrl } from "@angular/compiler";
 import { SECCION_CREATE_FORM_FIELDS_DEF } from "../form/seccion.create.fields";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 
-export const SECCION_GRID_DEF = {
+export const SECCION_GRID_DEF : GridDef = {
   columnsDef: [
     {
       columnDef: 'id',
@@ -92,40 +93,40 @@ export const SECCION_GRID_DEF = {
     {
       actionNameKey: 'seccion_grid_def_button_action_nueva_seccion_hija',
       icon: 'post_add',
-      form: [
-        {
-          label: 'id',
-          key: 'id',
-          controlType: 'hidden'
-        },
-        {
-          key: 'name',
-          label: 'Crear nueva sección en ',
-          type: 'string',
-          controlType: 'textbox',
-          maxLength: 200,
-          required: true,
-          disabled: true,
-          readonly: true
-        },
-        {
-          key: 'newName',
-          labelKey: 'seccion_create_form_fields_def_field_name',
-          label: 'Nombre',
-          type: 'string',
-          controlType: 'textbox',
-          maxLength: 200,
-          required: true
-        },
-        {
-          key: 'published',
-          labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_published',
-          label: 'Publicada',
-          type: 'checkbox',
-          controlType: 'checkbox',
-          value: 'false'
-        }
-      ],
+      formDef: {
+        showSubmitContinue: true,
+        fields : [
+          {
+            label: 'id',
+            key: 'id',
+            controlType: 'hidden'
+          },
+          {
+            key: 'name',
+            label: 'Crear nueva sección en ',
+            controlType: 'textbox',
+            maxLength: 200,
+            required: true,
+            disabled: true,
+          },
+          {
+            key: 'newName',
+            labelKey: 'seccion_create_form_fields_def_field_name',
+            label: 'Nombre',
+            controlType: 'textbox',
+            maxLength: 200,
+            required: true
+          },
+          {
+            key: 'published',
+            labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_published',
+            label: 'Publicada',
+            controlType: 'checkbox',
+            value: 'false'
+          }
+        ]
+      },
+      
       ws: {
         key: 'seccion_grid_def_button_action_nueva_seccion_hija',
         url: PREFIX_DOMAIN_API + 'Section',
@@ -193,13 +194,16 @@ export const SECCION_GRID_DEF = {
     {
       actionNameKey: 'seccion_grid_def_button_action_politicas',
       icon: 'account_balance',
-      form: [
-        {
-          key: 'policy',
-          labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy',
-          controlType: HTML_EDITOR
-        }
-      ],
+      formDef: {
+        fields : [
+          {
+            key: 'policy',
+            labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy',
+            controlType: HTML_EDITOR
+          }
+        ],
+        showSubmitContinue: true
+      },
       ws: {
         key: 'seccion_grid_def_button_action_politicas',
         url: PREFIX_DOMAIN_API + 'Section/UpdateByProps',

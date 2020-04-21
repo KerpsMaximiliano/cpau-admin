@@ -14,10 +14,18 @@ export const CAMPO_DEF: CrudDef = {
     name: 'CAMPO',
     i18n: CAMPO_I18N_DEF,
     grid: CAMPO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            fields: CAMPO_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        },
+        update: {
+            showSubmitContinue: true,
+            fields: CAMPO_UPDATE_FORM_FIELDS_DEF,
+        }
+    },
     forms: {
         filter: CAMPO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: CAMPO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: CAMPO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  CAMPO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: CAMPO_NAV_DEF,
@@ -27,7 +35,7 @@ export const CAMPO_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'FormField'
     },
     dialogConfig: {
-        width: '400px'
+        width: '500px'
     },
     filterInMemory: false,
     backButton: true

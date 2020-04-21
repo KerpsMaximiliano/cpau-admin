@@ -15,11 +15,18 @@ export const SECTION_CONTENT_DEF: CrudDef = {
     name: 'SECTION_CONTENT',
     i18n: SECTION_CONTENT_I18N_DEF,
     grid: SECTION_CONTENT_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create: {
+            showSubmitContinue: true,
+            fields: SECTION_CONTENT_CREATE_FORM_FIELDS_DEF
+        },
+        update: {
+            showSubmitContinue: true,
+            fields: SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF
+        }
+    },
     forms: {
         filter: SECTION_CONTENT_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: SECTION_CONTENT_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
-        //read:  SECTION_CONTENT_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: SECTION_CONTENT_NAV_DEF,
     security: SECTION_CONTENT_SECURITY_DEF,

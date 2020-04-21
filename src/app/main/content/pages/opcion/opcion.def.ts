@@ -14,10 +14,17 @@ export const OPCION_DEF: CrudDef = {
     name: 'OPCION',
     i18n: OPCION_I18N_DEF,
     grid: OPCION_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            showSubmitContinue: true,
+            fields: OPCION_CREATE_FORM_FIELDS_DEF
+        }, update: {
+            showSubmitContinue: true,
+            fields: OPCION_UPDATE_FORM_FIELDS_DEF
+        }
+    },
     forms: {
         filter: OPCION_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: OPCION_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: OPCION_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  OPCION_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: OPCION_NAV_DEF,
@@ -27,7 +34,7 @@ export const OPCION_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'FormFieldOption'
     },
     dialogConfig: {
-        width: '400px'
+        width: '500px'
     },
     filterInMemory: false,
     backButton: true

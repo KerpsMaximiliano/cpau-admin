@@ -1,6 +1,7 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
+import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 
-export const SECTION_CONTENT_GRID_DEF = {
+export const SECTION_CONTENT_GRID_DEF: GridDef = {
   columnsDef: [
     {
       columnDef: 'id',

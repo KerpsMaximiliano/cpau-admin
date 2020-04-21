@@ -44,7 +44,7 @@ const form_receipt = {
   }
 ]*/
 
-export const FORMULARIO_GRID_DEF = {
+export const FORMULARIO_GRID_DEF: GridDef = {
   columnsDef: [
     {
       columnDef: 'id',
@@ -153,9 +153,10 @@ export const FORMULARIO_GRID_DEF = {
     {
       actionNameKey: 'formulario_grid_def_button_action_descripcion',
       icon: 'description',
-      form: [
-        form_descripcion
-      ],
+      formDef : {
+        fields: [form_descripcion],
+        showSubmitContinue: true
+      },
       ws: {
         key: 'formulario_grid_def_button_action_descripcion',
         url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
@@ -165,9 +166,10 @@ export const FORMULARIO_GRID_DEF = {
     {
       actionNameKey: 'formulario_grid_def_button_action_finalMessage',
       icon: 'message',
-      form: [
-        form_finalMessage
-      ],
+      formDef: {
+        fields: [ form_finalMessage ],
+        showSubmitContinue: true
+      },
       ws: {
         key: 'formulario_grid_def_button_action_finalMessage',
         url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
@@ -177,21 +179,24 @@ export const FORMULARIO_GRID_DEF = {
     {
       actionNameKey: 'formulario_grid_def_button_action_receipt',
       icon: 'receipt',
-      form: [
-        {
-          key: 'showReceipt',
-          labelKey: 'formulario_create_form_fields_def_field_showreceipt',
-          label: 'Mostrar Comprobante',
-          controlType: 'checkbox'
-        },
-        {
-          key: 'receiptFooter',
-          labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
-          label: 'Pie del Comprobante',
-          controlType: HTML_EDITOR,
-          maxLength: 8000
-        }
-      ],
+      formDef: {
+        showSubmitContinue: true,
+        fields : [
+          {
+            key: 'showReceipt',
+            labelKey: 'formulario_create_form_fields_def_field_showreceipt',
+            label: 'Mostrar Comprobante',
+            controlType: 'checkbox'
+          },
+          {
+            key: 'receiptFooter',
+            labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
+            label: 'Pie del Comprobante',
+            controlType: HTML_EDITOR,
+            maxLength: 8000
+          }
+        ]
+      },
       ws: {
         key: 'formulario_grid_def_button_action_receipt',
         url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
@@ -230,7 +235,6 @@ export const FORMULARIO_GRID_DEF = {
           key: 'name',
           labelKey: 'formulario_create_form_fields_def_field_name',
           label: 'Nombre',
-          type: 'string',
           controlType: 'textbox',
           maxLength: 200,
           required: true

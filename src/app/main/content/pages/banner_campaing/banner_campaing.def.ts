@@ -14,10 +14,18 @@ export const BANNER_CAMPAING_DEF: CrudDef = {
     name: 'BANNER_CAMPAING',
     i18n: BANNER_CAMPAING_I18N_DEF,
     grid: BANNER_CAMPAING_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            showSubmitContinue: true,
+            fields: BANNER_CAMPAING_CREATE_FORM_FIELDS_DEF
+        },
+        update: {
+            showSubmitContinue: true,
+            fields: BANNER_CAMPAING_UPDATE_FORM_FIELDS_DEF
+        }
+    },
     forms: {
         filter: BANNER_CAMPAING_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: BANNER_CAMPAING_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: BANNER_CAMPAING_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  BANNER_CAMPAING_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: BANNER_CAMPAING_NAV_DEF,
@@ -27,6 +35,6 @@ export const BANNER_CAMPAING_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'BannerCampaign'
     },
     dialogConfig: {
-        width: '400px'
+        width: '500px'
     }
 };

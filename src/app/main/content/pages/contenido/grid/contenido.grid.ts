@@ -92,15 +92,18 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_resumen',
       icon: 'notes',
-      form: [
-        {
-          key: 'summary',
-          labelKey: 'contenido_create_form_fields_def_field_summary',
-          label: 'Resumen',
-          controlType: HTML_EDITOR,
-          maxLength: 8000
-        }   
-      ],
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'summary',
+            labelKey: 'contenido_create_form_fields_def_field_summary',
+            label: 'Resumen',
+            controlType: HTML_EDITOR,
+            maxLength: 8000
+          }
+        ]
+      },
       ws: {
         key: 'contenido_grid_def_button_action_resumen',
         url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',
