@@ -110,14 +110,18 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_texto',
       icon: 'menu_book',
-      form: [
-        {
-          key: 'text',
-          labelKey: 'contenido_create_form_fields_def_field_text',
-          label: 'Texto',
-          controlType: HTML_EDITOR
-        }
-      ],
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'text',
+            labelKey: 'contenido_create_form_fields_def_field_text',
+            label: 'Texto',
+            controlType: HTML_EDITOR
+          }
+        ]
+      },
+      
       ws: {
         key: 'contenido_grid_def_button_action_texto',
         url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',

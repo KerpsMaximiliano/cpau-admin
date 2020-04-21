@@ -1,5 +1,5 @@
 <div class="disabled-div"></div>
-<form *ngIf="form" class="dynamicFormDiv" name="{{subFormName}}" [formGroup]="form" novalidate>
+<form *ngIf="form" #formDirective="ngForm" class="dynamicFormDiv" name="{{subFormName}}" [formGroup]="form" novalidate>
   <div [formGroup]="form" *ngFor="let field of fields" class="{{field.key}}Div dynamicFieldDiv" [ngClass]="hideField(field)">
       <app-file *ngIf="field.controlType == 'file'" [field]="field" [parentForm]="form"></app-file>
       <app-disclaimer [field]="field" [parentForm]="form"></app-disclaimer>

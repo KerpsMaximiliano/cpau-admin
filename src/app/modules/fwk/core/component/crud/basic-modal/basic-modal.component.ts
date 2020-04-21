@@ -17,6 +17,7 @@ import { AbstractFormComponent } from '../../abstract-form.component';
 import { WsDef, HTTP_METHODS } from '../../../model/ws-def';
 import { I18n } from '../../../model/i18n';
 import { ActivatedRoute } from '@angular/router';
+import { FormDef } from '../../../model/form-def';
 
 export const VALIDATIONS_ERRORS = 'VALIDATIONS_ERRORS';
 /**
@@ -43,6 +44,7 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
   activatedRoute: ActivatedRoute;
   notShowButton: boolean;
   labelTitle: string;
+  formDef: FormDef;
   constructor(public injector: Injector,
     public dialogRef: MatDialogRef<BasicModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
@@ -60,6 +62,10 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
       this.form = new FormGroup({});
       this.isObjectModified = false;
       this.labelTitle = this.data.config.labelTitle;
+      this.formDef = this.data.config.formDef;
+      if (this.formDef){
+        this.fields = this.formDef.fields;
+      }
   }
 
   onNoClick(): void {
@@ -96,14 +102,24 @@ export class BasicModalComponent extends AbstractFormComponent implements OnInit
     return true;
   }
 
-  onSubmit(): void {
+  onSubmitNoClose(){
+    this.callSubmit(() => {});
+  }
+
+  onSubmit(){
+    this.callSubmit(() => {
+        this.dialogRef.close();
+    });
+  }
+
+  callSubmit(callback): void {
     if (this.submit && this.submit.onSubmitModal){
       this.submit.onSubmitModal(this.entity, this.dialogRef);
     }else{
       if (this.config && this.config.ws){
           this.genericSubmitWithWsDef(this.config.ws, this.entity, this.form.controls.subForm).subscribe(r => {
             this.notificationService.notifySuccess(this.translate('success_message'));
-            this.dialogRef.close();
+            callback();
         });
       }
     }

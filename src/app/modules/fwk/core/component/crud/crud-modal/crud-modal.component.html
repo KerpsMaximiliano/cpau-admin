@@ -5,7 +5,7 @@
 <h1 mat-dialog-title>{{titleLabel}}</h1>
 <div mat-dialog-content class='crud-modal-content' class="{{getFuncName()}}-modal newItemModal">
     <div class="disabled-div"></div>
-    <app-dynamic-form-component [entity]="entity"    
+    <app-dynamic-form-component #dynamicForm [entity]="entity"    
                                 [isEdit]="isEdit"
                                 [fields]="fields"
                                 [handlerFieldSourceData]="handlerFieldSourceData"

@@ -135,7 +135,7 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
                       '320px',
         panelClass: 'control-mat-dialog',
         data: { isAdd: true,
-                formDef: formCreate,
+                formDef: this.clone(formCreate),
                 translate: (key) => { 
                               return this.translate(key);
                             },
@@ -148,8 +148,10 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
                 crud: this}
       });
   
-      dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
+      dialogRef.afterClosed().subscribe(reopen => {
+        if(reopen) {
+          this.openAddDialog();
+        }
       });
     });
   }

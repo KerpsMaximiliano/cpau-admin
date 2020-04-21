@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, ViewChild} from '@angular/core';
 import { OnInit, OnDestroy } from '@angular/core';
 import '@ckeditor/ckeditor5-build-classic/build/translations/es';
 import { FormGroup } from '@angular/forms';
@@ -102,7 +102,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   onFieldsChanges = new EventEmitter(true);
   initialized: boolean;
   @ViewChildren(MatError) matErrors: QueryList<MatError>;
-
+  @ViewChild('formDirective') private formDirective: NgForm;
   constructor(public injector: Injector,
     private formService: FormService,
     private genericHttpService: GenericHttpService, 
