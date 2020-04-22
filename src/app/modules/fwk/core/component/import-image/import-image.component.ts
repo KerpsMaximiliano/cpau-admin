@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, forwardRef } from '@angular/core';
+import { Component, OnInit, Input, forwardRef, ChangeDetectorRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, FormGroup, Validators } from '@angular/forms';
 import { ImportImageConfiguration } from './import-image.interface';
 
@@ -31,7 +31,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
   '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
-
+  constructor(protected changeDetectorRef: ChangeDetectorRef){}
   onChange = (_: any) => { };
   onTouch = () => { };
 
@@ -42,7 +42,7 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
       this.onChange(v);
     }
   }
-
+  
   ngOnInit() {
     /**Pre-Carga */
     if (!this.formGroup.controls[this.name].value) {
@@ -53,8 +53,10 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
       this.formGroup.controls[this.name].setValidators([Validators.required]);
     }
     this.formGroup.controls[this.name].setValidators([Validators.pattern(this.urlpattern)]);
+    
     this.config.options.invalidValueMessage = 'Formato de URL inválida. Debe comenzar con http:// o https://';
     this.formGroup.controls[this.name].updateValueAndValidity();
+    this.changeDetectorRef.detectChanges();
   }
 
   writeValue(value: any): void {
