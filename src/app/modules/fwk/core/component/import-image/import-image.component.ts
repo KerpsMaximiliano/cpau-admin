@@ -56,7 +56,6 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
     
     this.config.options.invalidValueMessage = 'Formato de URL inválida. Debe comenzar con http:// o https://';
     this.formGroup.controls[this.name].updateValueAndValidity();
-    this.changeDetectorRef.detectChanges();
   }
 
   writeValue(value: any): void {
