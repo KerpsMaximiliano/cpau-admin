@@ -115,11 +115,6 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Fecha Inicio',
     controlType: 'datepicker'
   },
-  {
-    key: 'eventEndDateString',
-    labelKey: 'contenido_create_form_fields_def_field_eventenddate',
-    controlType: 'datepicker'
-  },
 
   {
     key: 'agenda_title',

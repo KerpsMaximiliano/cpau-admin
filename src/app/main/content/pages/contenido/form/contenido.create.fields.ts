@@ -102,12 +102,6 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'datepicker',
   },
   {
-    key: 'eventEndDateString',
-    labelKey: 'contenido_create_form_fields_def_field_eventenddate',
-    controlType: 'datepicker',
-  },
-
-  {
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_beneficios',
     title: 'Beneficios',
