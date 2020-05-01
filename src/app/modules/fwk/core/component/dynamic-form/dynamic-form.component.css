@@ -41,3 +41,7 @@ mat-radio-button{
 .hide{
     position: fixed;
 }
+
+.lineheight135 {
+    line-height: 1.350 !important;
+}
