@@ -5,6 +5,7 @@ import { User } from '../../model/user';
 import { HttpService } from '../http-service/http.service';
 import { environment } from 'environments/environment';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
+import { SpinnerService } from '../../module/spinner/service/spinner.service';
 
 
 const USER_DATA = 'user_data';
@@ -12,16 +13,22 @@ const USER_DATA = 'user_data';
 export class AuthService extends HttpService {
   
   private genericHttpService: GenericHttpService;
-
+  private spinnerService: SpinnerService;
   constructor(protected injector: Injector) { 
     super(injector, '');
+    this.spinnerService = injector.get(SpinnerService);
     this.genericHttpService = injector.get(GenericHttpService);
   }
 
 
   logout() {
-    this.localStorageService.remove(USER_DATA);
-    this.localStorageService.cleanUserSession();
+    this.spinnerService.getControlGlobalSpinner().show();
+    this.genericHttpService.basicPost(environment.URL_LOGOUT_API, {}).subscribe(() => {
+      this.localStorageService.remove(USER_DATA);
+      this.localStorageService.cleanUserSession();
+      window.location.href = environment.URL_LOGIN;
+      this.spinnerService.getControlGlobalSpinner().hide();
+    });
   }
 
   isTokenExpired(): Observable<any> {

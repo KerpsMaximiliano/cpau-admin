@@ -28,6 +28,7 @@ export const MAILING_DEF: CrudDef = {
         key: 'MAILING_CRUD_URL',
         url: PREFIX_DOMAIN_API + 'Mailing'
     },
+    openLink: "https://t2r34jbcni.execute-api.us-east-1.amazonaws.com/prod/estado-envio",
     dialogConfig: {
         width: '700px'
     }   

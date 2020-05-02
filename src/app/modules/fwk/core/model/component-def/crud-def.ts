@@ -17,6 +17,7 @@ export class CrudDef extends ComponentDef {
     filterInMemory?: boolean;
     serverPagination?: boolean;
     initFilter?: boolean;
+    openLink?: string,
     exportCsv?: {
       csvExportFileName: string
     };

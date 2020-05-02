@@ -154,7 +154,6 @@ export class FuseToolbarComponent extends AbstractComponent
 
     onLogout(){
         this.authService.logout();
-        this.navigate(environment.URL_LOGIN, undefined);
     }
 
     goUserDetails(){
