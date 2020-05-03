@@ -21,8 +21,10 @@
                 </span>
             </div>
             <app-search *ngIf='crudDef.forms.filter' [fields]='crudDef.forms.filter' (onChangeSearchEntity)='filterSearchEntity($event)' [forceFirstSubmit]='true'></app-search>
+            <a *ngIf="crudDef.openLink" mat-raised-button class="mat-white-bg my-12 mt-sm-0" target="_blank" [href]="crudDef.openLink">Panel Mailer</a>
             <div class="header-buttons">
                 <!-- / APP TITLE -->
+                
                 <button 
                     *ngIf="crudDef.exportCsv"
                     mat-mini-fab 
@@ -30,6 +32,7 @@
                     (click)="exportCsv()">
                     <mat-icon aria-label="icon">print</mat-icon>
                 </button>
+                
                 <button mat-raised-button
                         *ngIf="showAddButton()"
                         (click)="openAddDialog()"

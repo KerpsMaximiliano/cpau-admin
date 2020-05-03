@@ -16,14 +16,19 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
     return  new Observable<boolean>(obs => {
-      this.authService.isTokenExpired().subscribe(isTokenExpired => {  
+      if(environment["security"] == false){
+        obs.next(true)
+      } else {
+        this.authService.isTokenExpired().subscribe(isTokenExpired => {  
           if (isTokenExpired && route.routeConfig.path !== environment.URL_LOGIN){
-            this.router.navigate(['/' + environment.URL_LOGIN]);
+              window.location.href = environment.URL_LOGIN; 
+              //this.router.navigate(['/' + environment.URL_LOGIN]);
           } else if (!isTokenExpired && route.routeConfig.path === environment.URL_LOGIN) {
             this.router.navigate(['/' + environment.URL_ROOT]);
           }
           obs.next(true);
-      });
+        });
+      }
     });
   }
 }
