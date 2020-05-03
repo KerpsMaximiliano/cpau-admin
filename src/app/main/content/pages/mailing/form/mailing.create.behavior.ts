@@ -10,7 +10,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'to',
-          value: 'lista',
+          value: 'ContactList',
         } 
       ],
       then: [
@@ -38,7 +38,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'to',
-          value: 'estado',
+          value: 'MatriculadoEstados',
         } 
       ],
       then: [
@@ -66,7 +66,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
         if: [
           {
             key: 'to',
-            value: 'actividad',
+            value: 'MatriculadoActividades',
           } 
         ],
         then: [
@@ -94,7 +94,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'content',
-          value: 'boletin',
+          value: 'Boletin',
         } 
       ],
       then: [
@@ -122,7 +122,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'content',
-          value: 'pagina',
+          value: 'Page',
         } 
       ],
       then: [
@@ -150,7 +150,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'content',
-          value: 'url',
+          value: 'Url',
         } 
       ],
       then: [

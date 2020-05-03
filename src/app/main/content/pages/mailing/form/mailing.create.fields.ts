@@ -37,12 +37,12 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     required: true,
     requiredMessage: 'Debe seleccionar un destinatario',
     controlType: RADIO_BUTTON,
-    value: 'lista',
+    value: 'ContactList',
     options: {
       options: [
-        {value: 'lista', label: 'Lista de Contactos' },
-        {value: 'estado', label: 'Matrículados por Estado' },
-        {value: 'actividad', label: 'Matrículados por Actividades' }
+        {value: 'ContactList', label: 'Lista de Contactos' },
+        {value: 'MatriculadoEstados', label: 'Matrículados por Estado' },
+        {value: 'MatriculadoActividades', label: 'Matrículados por Actividades' }
       ]
     }
   },
@@ -106,9 +106,9 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     value: 'boletin',
     options: {
       options: [
-        {value: 'boletin', label: 'Boletín' },
-        {value: 'pagina', label: 'Página del Sitio' },
-        {value: 'url', label: 'Url' }
+        {value: 'Boletin', label: 'Boletín' },
+        {value: 'Page', label: 'Página del Sitio' },
+        {value: 'URL', label: 'Url' }
       ]
     }
   },
