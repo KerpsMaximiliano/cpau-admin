@@ -9,7 +9,7 @@ export const PREFIX_INSTITUCIONAL = 'https://site2020-institucional.azurewebsite
 
 
 export const environment = {
-    production: false,
+    production: true,
     hmr       : false,
     // pasar a true para evitar ws
     /** URLs of Services **/
@@ -31,5 +31,6 @@ export const environment = {
     URL_FORMULARIO: 'formulario',
     URL_PUBLICIDAD: 'bannerCampaing',
     URL_PRODUCTO_EXTERNO : 'productoExterno',
+    URL_LOGOUT_API: PREFIX_DOMAIN_API + 'logout',
 };
 
