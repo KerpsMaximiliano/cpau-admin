@@ -75,7 +75,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
       elementValue: 'id',
       fromData: [{id: 0, nombre: '_self'},
                  {id: 1, nombre: '_blank'},
-                 {id: 2, nombre: '__parent'},
+                 {id: 2, nombre: '_parent'},
                  {id: 3, nombre: '_top'},
                  {id: 4, nombre: '_search'}]
       }
