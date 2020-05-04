@@ -103,7 +103,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     required: true,
     requiredMessage: 'Debe seleccionar un contenido',
     controlType: RADIO_BUTTON,
-    value: 'boletin',
+    value: 'Boletin',
     options: {
       options: [
         {value: 'Boletin', label: 'Boletín' },
