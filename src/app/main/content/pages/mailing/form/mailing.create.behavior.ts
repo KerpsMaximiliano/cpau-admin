@@ -150,7 +150,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
       if: [
         {
           key: 'content',
-          value: 'Url',
+          value: 'URL',
         } 
       ],
       then: [
