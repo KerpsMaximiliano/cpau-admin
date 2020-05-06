@@ -9,6 +9,8 @@ export const PREFIX_INSTITUCIONAL = 'https://site2020-institucional.azurewebsite
 
 
 export const environment = {
+    localAuth: false,
+    
     production: true,
     hmr       : false,
     // pasar a true para evitar ws

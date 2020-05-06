@@ -49,10 +49,10 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
       handlerSourceData: false,
       elementLabel: 'nombre',
       elementValue: 'id',
-      fromData: [{id: 1, nombre: 'Predeterminada'},
+      fromData: [{id: 1, nombre: 'Sección'},
                  {id: 2, nombre: 'Boletin'},
                  //{id: 3, nombre: 'RSS'},
-                 {id: 4, nombre: 'Noticia'}
+                 {id: 4, nombre: 'Nota'}
                 ]
       }
   }
