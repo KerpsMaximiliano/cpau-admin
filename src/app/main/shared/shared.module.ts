@@ -25,7 +25,7 @@ import { IntegrationComponent } from '../content/integration/integration.compone
 
 const routes = [
     {
-        path     : environment.URL_LOGIN,
+        path     : "auth/login",
         component: LoginComponent
     },
     {

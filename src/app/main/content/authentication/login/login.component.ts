@@ -69,7 +69,7 @@ export class LoginComponent extends AbstractFormComponent implements OnInit {
         return this.formService.getMessageErrorValidation(this.loginForm, field);
     }
     onInit() {
-        this.authService.logout();
+        
         this.loginForm = this.formService.toFormGroup(this.fields, {}, undefined);
 
         const formUserData = this.localStorageService.getLoginFormUserData();

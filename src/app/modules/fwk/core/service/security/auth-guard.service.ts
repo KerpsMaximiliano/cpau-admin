@@ -21,8 +21,11 @@ export class AuthGuardService implements CanActivate {
       } else {
         this.authService.isTokenExpired().subscribe(isTokenExpired => {  
           if (isTokenExpired && route.routeConfig.path !== environment.URL_LOGIN){
+            if(environment["localAuth"] == true){
+              this.router.navigate(['/auth/login']);
+            } else {
               window.location.href = environment.URL_LOGIN; 
-              //this.router.navigate(['/' + environment.URL_LOGIN]);
+            }
           } else if (!isTokenExpired && route.routeConfig.path === environment.URL_LOGIN) {
             this.router.navigate(['/' + environment.URL_ROOT]);
           }
