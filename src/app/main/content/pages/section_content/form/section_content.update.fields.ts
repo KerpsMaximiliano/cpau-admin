@@ -50,5 +50,9 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'section_content_create_form_fields_def_field_tags',
     label: 'Tags',
     controlType: 'tags'
+  },
+  {
+    key: 'displayOrder',
+    controlType: 'hidden'
   }
 ];
