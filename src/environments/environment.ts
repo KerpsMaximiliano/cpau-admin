@@ -6,6 +6,8 @@
 export const PREFIX_DOMAIN_API =  'https://site2020-api.azurewebsites.net/api/';
 //export const PREFIX_INSTITUCIONAL = 'http://localhost:4200';
 export const PREFIX_INSTITUCIONAL = 'https://site2020-institucional.azurewebsites.net';
+//export const PREFIX_OLDSITE = 'http://localhost:50501';
+export const PREFIX_OLDSITE = 'https://site2020-oldsite.azurewebsites.net';
 
 
 export const environment = {

@@ -1,5 +1,5 @@
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
-import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
+import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL, PREFIX_OLDSITE } from "environments/environment";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 
 const form_descripcion = 
@@ -286,7 +286,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
         openTab: true,
         externalUrl: true,
         idUrl: true,
-        url: PREFIX_INSTITUCIONAL + '/formulario',
+        url: PREFIX_OLDSITE + '/formularios',
         querystring: {
           id : 'id'
         }
