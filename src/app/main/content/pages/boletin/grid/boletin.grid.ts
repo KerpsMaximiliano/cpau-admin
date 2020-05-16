@@ -76,7 +76,7 @@ export const BOLETIN_GRID_DEF = {
         openTab: true,
         externalUrl: true,
         idUrl: true,
-        url: PREFIX_INSTITUCIONAL + '/boletin',
+        url: PREFIX_INSTITUCIONAL + '?redirectToPage=/boletin',
         querystring: {
           id : 'id'
         }
