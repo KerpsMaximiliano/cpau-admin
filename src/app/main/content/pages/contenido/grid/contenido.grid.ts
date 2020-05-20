@@ -150,7 +150,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
         externalUrl: true,
         openTab: true,
         idUrl: true,
-        url: PREFIX_INSTITUCIONAL + '/notaPreview',
+        url: PREFIX_INSTITUCIONAL + '?redirectToPage=/notaPreview',
         querystring: {
           id : 'id'
         }
