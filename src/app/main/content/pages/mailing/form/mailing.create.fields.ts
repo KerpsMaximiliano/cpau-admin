@@ -148,5 +148,13 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     controlType: 'import_image',
     icon: 'attach_file',
     showPreview: true
-  }
+  },
+
+  {
+    key: 'hasParameters',
+    labelKey: 'Incluye parámetros',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
+
 ];
