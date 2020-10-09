@@ -14,7 +14,7 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'hidden',
     mappingQuerystring: true
   },
-  
+
   {
     key: 'content',
     labelKey: 'section_content_create_form_fields_def_field_contentid',
@@ -46,13 +46,17 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
+    key: 'displayOrder',
+    labelKey: 'section_content_update_form_fields_def_field_displayorder',
+    label: 'Orden',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
+  {
     key: 'tag',
     labelKey: 'section_content_create_form_fields_def_field_tags',
     label: 'Tags',
     controlType: 'tags'
-  },
-  {
-    key: 'displayOrder',
-    controlType: 'hidden'
   }
 ];
