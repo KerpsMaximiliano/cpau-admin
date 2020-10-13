@@ -31,7 +31,7 @@ export const SECTION_CONTENT_GRID_DEF: GridDef = {
     ,
     {
       columnDef: 'displayOrder',
-      columnNameKey: 'displayOrder'
+      columnNameKey: 'Orden'
     }
   ],
   sortAllColumns: true,
