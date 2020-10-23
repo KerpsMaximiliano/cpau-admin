@@ -8,6 +8,7 @@ export const NUMBER = 'number';
 export const AUTOCOMPLETE: any = 'autocomplete';
 export const SELECT: any = 'select';
 export const DATEPICKER: any = 'datepicker';
+export const DATETIMEPICKER: any = 'datetimepicker';
 export const CHECKBOX: any = 'checkbox';
 export const TEXTAREA: any = 'textarea';
 export const PICKLIST: any = 'pick-list';
@@ -31,6 +32,7 @@ export const CONTROL_TYPE = {
   autocomplete  : AUTOCOMPLETE,
   select : SELECT,
   datepicker : DATEPICKER,
+  datetimepicker : DATETIMEPICKER,
   checkbox : CHECKBOX,
   textarea : TEXTAREA,
   picklist : PICKLIST,
@@ -55,6 +57,7 @@ export enum ControlTypeEnum {
   autocomplete  = 'AUTOCOMPLETE',
   select = 'SELECT',
   datepicker = 'DATEPICKER',
+  datetimepicker = 'DATETIMEPICKER',
   checkbox = 'CHECKBOX',
   textarea = 'TEXTAREA',
   picklist = 'PICKLIST',
