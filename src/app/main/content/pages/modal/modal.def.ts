@@ -24,7 +24,7 @@ export const MODAL_DEF = {
         }
     },
     forms: {
-        filter: MODAL_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
+        // filter: MODAL_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         read: MODAL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: MODAL_NAV_DEF,

@@ -3,7 +3,7 @@
 export const MODAL_UPDATE_FORM_FIELDS_DEF = [
     {
         key: 'title',
-        labelKey: '',
+        labelKey: 'modal_update_form_fields_def_field_title',
         label: 'titulo',
         type: 'string',
         controlType: 'textbox',
@@ -12,10 +12,25 @@ export const MODAL_UPDATE_FORM_FIELDS_DEF = [
     },
     {
         key: 'content',
-        labelKey: '',
+        labelKey: 'modal_update_form_fields_def_field_content',
         label: 'Contenido',
         type: 'string',
-        controlType: 'textbox'
+        controlType: 'textbox',
+        required: true
+    },
+    {
+        key: 'dateStart',
+        labelKey: 'modal_update_form_fields_def_field_startdate',
+        label: 'Fecha Inicio',
+        controlType: 'datetimepicker',
+        required: true
+    },
+    {
+        key: 'dateEnd',
+        labelKey: 'modal_update_form_fields_def_field_enddate',
+        label: 'Fecha Fin',
+        controlType: 'datetimepicker',
+        required: true
     }
 
 ];

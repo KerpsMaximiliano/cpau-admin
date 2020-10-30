@@ -8,23 +8,30 @@ export const MODAL_GRID_DEF = {
             columnNameKey: 'modal_grid_def_column_id'
         },
         {
+            columnDef: 'title',
+            columnNameKey: 'modal_grid_def_column_title'
+        },
+        {
             columnDef: 'content',
             columnNameKey: 'modal_grid_def_column_content'
+        },
+        {
+            columnDef: 'dateStartGrid',
+            columnNameKey: 'modal_grid_def_column_startdate'
+        },
+        {
+            columnDef: 'dateEndGrid',
+            columnNameKey: 'modal_grid_def_column_enddate'
         }
-        //       {
-        //         columnDef: 'seName',
-        //         columnNameKey: 'seccion_grid_def_column_sename'
-        //       },
-        //       {
-        //         columnDef: 'link',
-        //         columnNameKey: 'seccion_grid_def_column_url'
-        //       },
     ],
     sortAllColumns: true,
     //     deleteAction: false,
     displayedColumns: [
         'id',
+        'title',
         'content',
+        'dateStartGrid',
+        'dateEndGrid'
     ],
     // actions: [
     //   {

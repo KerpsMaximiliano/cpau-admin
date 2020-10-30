@@ -114,7 +114,6 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     this.onInitWithFields(this.fields, this.entity);
     // @ts-ignore
     if (CKEDITOR) {
-      debugger;
       // @ts-ignore
       CKEDITOR.config.defaultLanguage = 'es';
       // @ts-ignore
