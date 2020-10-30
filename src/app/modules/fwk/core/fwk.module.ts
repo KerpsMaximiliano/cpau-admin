@@ -60,6 +60,8 @@ import { AppCrudComponent } from "./shared/view/crud/app-crud.component";
 import { CKEditorModule } from "ckeditor4-angular";
 import { AutocompleteComponent } from "./component/autocomplete/autocomplete.component";
 import { AutocompleteService } from "./component/autocomplete/autocomplete.service";
+import { DpDatePickerModule } from 'ng2-date-picker';
+import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-time/datepicker-time.component';
 
 @NgModule({
   imports: [
@@ -72,6 +74,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     CKEditorModule,
     ColorPickerModule,
     RouterModule,
+    DpDatePickerModule
   ],
   entryComponents: [
     ColorPickerComponent,
@@ -97,6 +100,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     AppCrudComponent,
     FormGridModalComponent,
     FloatComponent,
+    DatepickerTimeComponent
   ],
   declarations: [
     DynamicFormComponent,
@@ -124,6 +128,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     ColorPickerComponent,
     TagsComponent,
     FloatComponent,
+    DatepickerTimeComponent,
   ],
 
   exports: [
@@ -157,6 +162,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     ColorPickerComponent,
     TagsComponent,
     FloatComponent,
+    DatepickerTimeComponent
   ],
   providers: [
     FuseConfigService,

@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
-import { FormControl, Validators, FormGroup } from '@angular/forms';
-import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE, ControlTypeEnum } from '../../model/dynamic-form/dynamic-field';
-
-import { AbstractControl } from '@angular/forms/src/model';
-import { ValidatorFn } from '@angular/forms/src/directives/validators';
-import { String, StringBuilder } from 'typescript-string-operations';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
-import {MatDatepicker} from '@angular/material/datepicker';
+import { FormControl, FormGroup } from '@angular/forms';
+import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -17,23 +11,20 @@ import 'rxjs/add/operator/switchMap';
 // the `default as` syntax.
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
-import {defaultFormat as _rollupMoment, Moment} from 'moment';
-import { Observer } from 'rxjs/Observer';
+import {defaultFormat as _rollupMoment} from 'moment';
 import { Observable } from 'rxjs/Observable';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
-import { environment } from 'environments/environment';
 import { FormValidatorService, MY_FORMATS } from './form.validator.service';
 import { DynamicFieldBehavior } from '../../model/dynamic-form/dynamic-field-behavior';
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
 import { GridDef } from '../../model/component-def/grid-def';
 import { ActionDef } from '../../model/component-def/action-def';
-import { ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
-import { DynamicFieldConditionIf, CONDITION_COMPARE } from '../../model/dynamic-form/dynamic-field-condition-if';
+import { ActivatedRoute } from '@angular/router';
+import { DynamicFieldConditionIf } from '../../model/dynamic-form/dynamic-field-condition-if';
 import { FilterService, FILTER_TYPE } from '../filter-service/filter.service';
 import { FormDef } from '../../model/form-def';
-import { BehaviorSubject } from 'rxjs';
 
 
 const moment: any = _rollupMoment || _moment;
