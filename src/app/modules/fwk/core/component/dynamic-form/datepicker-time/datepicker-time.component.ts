@@ -23,7 +23,7 @@ export class DatepickerTimeComponent extends DynamicFieldFormComponent implement
     showNearMonthDays: true,
     showWeekNumbers: false,
     enableMonthSelector: true,
-    format: 'YYYY-MM-DD HH:mm:ss',
+    format: 'DD/MM/YYYY HH:mm:ss',
     yearFormat: 'YYYY',
     showGoToCurrent: true,
     dayBtnFormat: 'DD',
@@ -45,7 +45,9 @@ export class DatepickerTimeComponent extends DynamicFieldFormComponent implement
 
   ngOnInit() {
     if (this.parentForm && this.parentForm.controls[this.field.key] && !this.parentForm.controls[this.field.key].value) {
-      this.parentForm.controls[this.field.key].patchValue(new Date().toJSON().split('T')[0] + ' 00:00:00');
+      const date = new Date();
+      const dateFormat = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear();
+      this.parentForm.controls[this.field.key].patchValue(dateFormat + ' 00:00:00');
     }
   }
 
