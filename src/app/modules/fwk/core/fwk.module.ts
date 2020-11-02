@@ -60,6 +60,7 @@ import { AppCrudComponent } from "./shared/view/crud/app-crud.component";
 import { CKEditorModule } from "ckeditor4-angular";
 import { AutocompleteComponent } from "./component/autocomplete/autocomplete.component";
 import { AutocompleteService } from "./component/autocomplete/autocomplete.service";
+import { AutocompleteDesplegableComponent } from "./component/autocomplete-desplegable/autocomplete-desplegable.component";
 
 @NgModule({
   imports: [
@@ -97,6 +98,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     AppCrudComponent,
     FormGridModalComponent,
     FloatComponent,
+    AutocompleteDesplegableComponent
   ],
   declarations: [
     DynamicFormComponent,
@@ -124,6 +126,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     ColorPickerComponent,
     TagsComponent,
     FloatComponent,
+    AutocompleteDesplegableComponent
   ],
 
   exports: [
@@ -157,6 +160,7 @@ import { AutocompleteService } from "./component/autocomplete/autocomplete.servi
     ColorPickerComponent,
     TagsComponent,
     FloatComponent,
+    AutocompleteDesplegableComponent
   ],
   providers: [
     FuseConfigService,
