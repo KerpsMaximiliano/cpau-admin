@@ -1,21 +1,27 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormGroup, NG_VALUE_ACCESSOR, ValidatorFn, Validators } from '@angular/forms';
-import { debounceTime, delay, distinctUntilChanged, startWith } from 'rxjs/operators';
-
+import { Component, OnInit, Input, Output, EventEmitter, forwardRef, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, Validators, NG_VALUE_ACCESSOR, ControlValueAccessor, ValidatorFn, AbstractControl } from '@angular/forms';
+import { MatAutocompleteTrigger } from '@angular/material';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  startWith,
+  delay,
+} from "rxjs/operators";
+import { ApiAutocompleteConfiguration, AutocompleteChangeValue, AutocompleteConfiguration, AutocompleteSearchTerm } from '../autocomplete/autocomplete.interface';
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => AutocompleteDesplegableComponent),
   multi: true
 };
-
 @Component({
   selector: 'app-autocomplete-desplegable',
   templateUrl: './autocomplete-desplegable.component.html',
-  styleUrls: ['./autocomplete-desplegable.component.scss']
+  styleUrls: ['./autocomplete-desplegable.component.scss'],
+  providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
 export class AutocompleteDesplegableComponent implements OnInit, ControlValueAccessor{
 
-  @Input() config: AutocompleteConfiguration;
+  @Input() config: ApiAutocompleteConfiguration;
   @Input() formGroup: FormGroup;
   @Input() name: string;
   @Input() term: string;
@@ -34,6 +40,7 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
     this.listObj = [];
   }
   
+  // ControlValueAccessor implementation
   writeValue(value: any): void {
     this.value = value;
   }
@@ -86,8 +93,11 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
            } else {
             this.search();
            }
-         });
- 
+         }); 
+  }
+
+  openSelect() {
+    this.search();
   }
 
   private search() {
@@ -105,8 +115,14 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
   get items() {
     return this.formGroup.get(this.name);
   }
-  
-  // Class methods
+
+  showList(): any []{
+    if (this.config.apiOptions && this.config.apiOptions.defaultShow) {
+      return this.listObj.slice(0, this.config.apiOptions.defaultShow);
+    }
+    return this.listObj;
+  }
+
   displayWith() {
     const self = this;
     return (value: any) => {
@@ -120,20 +136,12 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
     }
   }
 
-  showList(): any []{
-    if (this.term === undefined) {
-       return [];
-    }
-    return this.listObj;
-  }
-
   onChangeSelect(event, obj) {
     this.selectedAction = true;
     if (this.config.options.transferIdToField) {
       const field: AbstractControl = this.formGroup.controls[this.name];
       this.formGroup.controls[this.config.options.transferIdToField].setValue(undefined);
       if (field && field.value) {
-        const transferField: AbstractControl = this.formGroup.controls[this.config.options.transferIdToField];
         this.formGroup.controls[this.config.options.transferIdToField].setValue(field.value[this.config.options.elementValue]);
       }
     }
