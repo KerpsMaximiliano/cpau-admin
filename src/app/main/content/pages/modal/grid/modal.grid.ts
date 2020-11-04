@@ -25,11 +25,11 @@ export const MODAL_GRID_DEF = {
         }
     ],
     sortAllColumns: true,
-    //     deleteAction: false,
+    deleteAction: true,
     displayedColumns: [
-        'id',
+        //'id',
         'title',
-        'content',
+        //'content',
         'dateStartGrid',
         'dateEndGrid'
     ],
