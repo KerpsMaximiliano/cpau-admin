@@ -10,7 +10,6 @@ export const PREFIX_OLDSITE = '';
 
 export const environment = {
     localAuth: false,
-
     production: true,
     hmr: false,
     // pasar a true para evitar ws
@@ -24,6 +23,7 @@ export const environment = {
     URL_ROOT: '',
     URL_LOGIN: PREFIX_INSTITUCIONAL,
     // Business
+
     URL_SECCIONES: 'seccion',
     URL_CONTENIDOS: 'contenido',
     URL_IMAGEN: 'imagen',
@@ -31,10 +31,9 @@ export const environment = {
     URL_INDICE: 'indice',
     URL_MAILING: 'mailing',
     URL_FORMULARIO: 'formulario',
+    URL_ABM_MODAL: 'modalHome',
     URL_PUBLICIDAD: 'bannerCampaing',
     URL_PRODUCTO_EXTERNO: 'productoExterno',
-    URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout',
-    URL_ABM_MODAL: 'modalHome'
-
+    URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout'
 };
 
