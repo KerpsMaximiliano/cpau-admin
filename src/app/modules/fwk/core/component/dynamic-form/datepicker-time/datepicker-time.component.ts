@@ -23,7 +23,7 @@ export class DatepickerTimeComponent extends DynamicFieldFormComponent implement
     showNearMonthDays: true,
     showWeekNumbers: false,
     enableMonthSelector: true,
-    format: 'DD/MM/YYYY HH:mm:ss',
+    format: 'DD/MM/YYYY HH:mm',
     yearFormat: 'YYYY',
     showGoToCurrent: true,
     dayBtnFormat: 'DD',
@@ -32,7 +32,7 @@ export class DatepickerTimeComponent extends DynamicFieldFormComponent implement
     hours24Format: 'HH',
     meridiemFormat: 'A',
     minutesFormat: 'mm',
-    minutesInterval: 30,
+    minutesInterval: 1,
     secondsFormat: 'ss',
     secondsInterval: 1,
     showSeconds: false,
@@ -44,11 +44,11 @@ export class DatepickerTimeComponent extends DynamicFieldFormComponent implement
   };
 
   ngOnInit() {
-    if (this.parentForm && this.parentForm.controls[this.field.key] && !this.parentForm.controls[this.field.key].value) {
-      const date = new Date();
-      const dateFormat = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear();
-      this.parentForm.controls[this.field.key].patchValue(dateFormat + ' 00:00:00');
-    }
+    // if (this.parentForm && this.parentForm.controls[this.field.key] && !this.parentForm.controls[this.field.key].value) {
+    //   const date = new Date();
+    //   const dateFormat = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear();
+    //   this.parentForm.controls[this.field.key].patchValue(dateFormat + ' 00:00:00');
+    // }
   }
 
   remove(){
