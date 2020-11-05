@@ -1,5 +1,7 @@
 // import { PREFIX_DOMAIN_API } from "environments/environment";
 
+import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+
 export const MODAL_UPDATE_FORM_FIELDS_DEF = [
     {
         key: 'title',
@@ -15,7 +17,7 @@ export const MODAL_UPDATE_FORM_FIELDS_DEF = [
         labelKey: 'modal_update_form_fields_def_field_content',
         label: 'Contenido',
         type: 'string',
-        controlType: 'textbox',
+        controlType: HTML_EDITOR,
         required: true
     },
     {
