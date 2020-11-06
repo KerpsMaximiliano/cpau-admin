@@ -57,10 +57,10 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     },
     apiOptions: {
       queryString: {
-        title: 'contactList'
+        name: 'contactList'
       },
       defaultShow: 20,
-      url: PREFIX_DOMAIN_API + 'ContactList'
+      url: PREFIX_DOMAIN_API + 'ContactList/GetSelectByProp'
     }
   },
   {
@@ -135,10 +135,10 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     },
     apiOptions: {
       queryString: {
-        title: 'boletin'
+        titulo: 'boletin'
       },
       defaultShow: 20,
-      url: PREFIX_DOMAIN_API + 'Boletin'
+      url: PREFIX_DOMAIN_API + 'Boletin/GetSelectByProp'
     }
   },
 
@@ -160,7 +160,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     },
     apiOptions: {
       queryString: {
-        title: 'page'
+        name: 'page'
       },
       defaultShow: 20,
       url: PREFIX_DOMAIN_API + 'Boletin/contenido'

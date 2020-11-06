@@ -7,7 +7,7 @@
                 [formControlName]="name" 
                   [matAutocomplete]="auto"
                   (focus)="listObj=[]">
-      <button id="caret" (click)="openSelect()">&#9660;</button>
+      <button id="caret" (click)="openSelect()"><div class="mat-select-arrow"></div></button>
     </div>
     <mat-error *ngIf="formGroup.get(name).errors?.required">{{config.options.requiredMessage}}</mat-error>
     <mat-error *ngIf="formGroup.get(name).errors?.invalidValue">{{config.options.invalidValueMessage}}</mat-error>
@@ -17,6 +17,7 @@
           (optionSelected)="onChangeSelect($event, config)" 
           #auto="matAutocomplete" 
           md-select-on-match='true'
+          [class]="'mat-autocomplete-desplegable-option'"
           [displayWith]="displayWith()">
     <mat-option *ngFor="let data of showList()" [value]="data">
         {{ config.options.elementLabel ? data[config.options.elementLabel] :  data}}

@@ -185,7 +185,7 @@ export const SECCION_GRID_DEF : GridDef = {
           },
           apiOptions: {
             queryString: {
-              title: 'newParent'
+              filter: 'newParent'
             },
             defaultShow: 20,
             url: PREFIX_DOMAIN_API + 'Section/SeccionRuta'

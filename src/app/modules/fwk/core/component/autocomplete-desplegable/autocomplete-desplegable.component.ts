@@ -97,7 +97,11 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
   }
 
   openSelect() {
-    this.search();
+    if (this.listObj.length > 0) {
+      this.listObj = [];
+    } else {
+      this.search();
+    }
   }
 
   private search() {
