@@ -1,33 +1,24 @@
-import { Component, Inject, ViewChild } from '@angular/core';
-import { OnInit, OnDestroy } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import { OnInit } from '@angular/core';
 import '@ckeditor/ckeditor5-build-classic/build/translations/es';
 import { FormGroup } from '@angular/forms';
-import { FormBuilder, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Injector } from '@angular/core';
-import { startWith } from 'rxjs/operators/startWith';
 import { Observable } from 'rxjs/Observable';
 import { Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { defaultFormat as _rollupMoment, Moment } from 'moment';
-import { ViewEncapsulation } from '@angular/core';
+import {defaultFormat as _rollupMoment} from 'moment';
 import { ViewChildren } from '@angular/core';
 import { QueryList } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { FormService } from '../../service/dynamic-form/form.service';
 import { AbstractComponent } from '../abstract-component.component';
 import { DynamicField, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
-import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
+import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS, MatError } from '@angular/material';
 import { MY_FORMATS } from '../../service/dynamic-form/form.validator.service';
-import {
-  debounceTime,
-  map,
-  distinctUntilChanged,
-  filter
-} from "rxjs/operators";
-import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../../service/generic-http-service/generic-http.service';
-import { AutocompleteSearchTerm, AutocompleteConfiguration, ApiAutocompleteConfiguration } from '../autocomplete/autocomplete.interface';
+import { ApiAutocompleteConfiguration } from '../autocomplete/autocomplete.interface';
 import { AutocompleteService } from '../autocomplete/autocomplete.service';
 /**
  * @title Dialog Overview

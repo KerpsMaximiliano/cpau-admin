@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
+import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE, AUTOCOMPLETE_DESPLEGABLE } from '../../model/dynamic-form/dynamic-field';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -15,7 +15,7 @@ import {defaultFormat as _rollupMoment} from 'moment';
 import { Observable } from 'rxjs/Observable';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
-import { FormValidatorService, MY_FORMATS } from './form.validator.service';
+import { FormValidatorService } from './form.validator.service';
 import { DynamicFieldBehavior } from '../../model/dynamic-form/dynamic-field-behavior';
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
@@ -267,7 +267,7 @@ export class FormService {
           // this.disabledInputDatePicker(field);
         }
 
-        if (field.controlType === 'autocomplete' && field.options.fromData === undefined) {
+        if ((field.controlType === 'autocomplete' || field.controlType === 'autocomplete-desplegable') && field.options.fromData === undefined) {
           field.options.fromData  = [];
         }
 
@@ -341,6 +341,7 @@ export class FormService {
   private setUpWsDef(field, form: FormGroup){
     if ((field.controlType === CONTROL_TYPE.select || 
           field.controlType === CONTROL_TYPE.autocomplete || 
+          field.controlType === CONTROL_TYPE.autocomplete_desplegable || 
           field.controlType === CONTROL_TYPE.picklist) &&
             field.options.fromWs) {
       const fromWs: WsDef = field.options.fromWs;
@@ -427,6 +428,7 @@ export class FormService {
       setValues: function(observable: Observable<any>) { service.setValues(observable, field); },
       changeToRequired: function() { service.changeToRequired(form, field); },
       changeToAutoComplete : function () { service.changeFieldToAutocomplete(form, field); },
+      changeToAutoCompleteDesplegable : function () { service.changeFieldToAutocompleteDesplegable(form, field); },
       changeFieldToSelect : function () {service.changeFieldToSelect(form, field); },
       changeFieldToNumber: function () {service.changeFieldToNumber(form, field); },
       changeFieldToTextbox: function () {service.changeFieldToTextbox (form, field); },
@@ -725,6 +727,15 @@ export class FormService {
       this.enabled(form, field);
       this.setUndefinedField(form, field);
       field.controlType = AUTOCOMPLETE;
+    }
+    return field;
+  }
+
+  private changeFieldToAutocompleteDesplegable(form, field) {
+    if (field.controlType !== AUTOCOMPLETE_DESPLEGABLE) {
+      this.enabled(form, field);
+      this.setUndefinedField(form, field);
+      field.controlType = AUTOCOMPLETE_DESPLEGABLE;
     }
     return field;
   }

@@ -18,7 +18,7 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'content',
     labelKey: 'section_content_create_form_fields_def_field_contentid',
-    controlType: 'autocomplete',
+    controlType: 'autocomplete-desplegable',
     required: true,
     options: {
       transferIdToField: 'contentId',
@@ -31,6 +31,7 @@ export const SECTION_CONTENT_UPDATE_FORM_FIELDS_DEF = [
       queryString: {
         title: 'content'
       },
+      defaultShow: 20,
       url: PREFIX_DOMAIN_API + 'Content/GetSelectByProp'
     }
   },
