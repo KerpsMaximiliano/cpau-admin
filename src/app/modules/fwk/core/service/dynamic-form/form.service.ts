@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
+import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE, AUTOCOMPLETE_DESPLEGABLE } from '../../model/dynamic-form/dynamic-field';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -15,7 +15,7 @@ import {defaultFormat as _rollupMoment} from 'moment';
 import { Observable } from 'rxjs/Observable';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
-import { FormValidatorService, MY_FORMATS } from './form.validator.service';
+import { FormValidatorService } from './form.validator.service';
 import { DynamicFieldBehavior } from '../../model/dynamic-form/dynamic-field-behavior';
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
