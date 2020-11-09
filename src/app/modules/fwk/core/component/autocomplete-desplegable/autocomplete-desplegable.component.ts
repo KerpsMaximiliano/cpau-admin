@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter, forwardRef, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, forwardRef, ViewChild, ElementRef, OnChanges } from '@angular/core';
 import { FormGroup, Validators, NG_VALUE_ACCESSOR, ControlValueAccessor, ValidatorFn, AbstractControl } from '@angular/forms';
-import { MatAutocompleteTrigger } from '@angular/material';
+import { environment } from '../../../../../../environments/environment';
+
 import {
   debounceTime,
   distinctUntilChanged,
@@ -19,7 +20,7 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   styleUrls: ['./autocomplete-desplegable.component.scss'],
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
-export class AutocompleteDesplegableComponent implements OnInit, ControlValueAccessor{
+export class AutocompleteDesplegableComponent implements OnInit, OnChanges, ControlValueAccessor{
 
   @Input() config: ApiAutocompleteConfiguration;
   @Input() formGroup: FormGroup;
@@ -78,7 +79,7 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
          .valueChanges
          .pipe(
            startWith(''),
-           debounceTime(700),
+           debounceTime(environment.AUTOCOMPLETE_WAITING_TIME),
            distinctUntilChanged(), // If previous query is diffent from current
          ).subscribe((term: string) => { // subscription for response
            if (this.selectedAction) {
@@ -94,6 +95,21 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
             this.search();
            }
          }); 
+  }
+
+  ngOnChanges() {
+         /**Requerido */
+         const getListObj = () => this.listObj;
+         if (this.config.required) {
+           this.formGroup.controls[this.name].setValidators([Validators.required, 
+                                                               this.selectedValueIsRequired(getListObj, 
+                                                                                             this.config.options.elementValue,
+                                                                                             this.config.options.elementLabel)]);
+         } else {
+           this.formGroup.controls[this.name].setValidators([this.selectValueOrCleanField(getListObj,
+                                                                                             this.config.options.elementValue,
+                                                                                             this.config.options.elementLabel)]);
+         }
   }
 
   openSelect() {
@@ -136,7 +152,7 @@ export class AutocompleteDesplegableComponent implements OnInit, ControlValueAcc
                       && self.config.options 
                         && self.config.options.elementLabel)
                           ? value
-                            : value[self.config.options.elementLabel] 
+                            : value[self.config.options.elementLabel]; 
     }
   }
 
