@@ -31,44 +31,44 @@ import { AutocompleteService } from '../autocomplete/autocomplete.service';
   providers: [
     // The locale would typically be provided on the root module of your application. We do it at
     // the component level here, due to limitations of our example generation script.
-    {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
 
     // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
     // `MatMomentDateModule` in your applications root module. We provide it at the component level
     // here, due to limitations of our example generation script.
-    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
-    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
   ],
 })
 export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   ckeditorConfig = {
-      language: 'es',
-      /*
-        Reference config: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
-        http://www.cpau.org/Content/ckeditor/samples/toolbarconfigurator/index.html#basic
-      */
-      // toolbar: [ 'ckfinder', 'Styles', 'Format', 'Font', 'FontSize', 'Table', '-', 'Link', 'TextColor', 'BGColor', 'Source', 
-      //            'Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', '-', 'Outdent', 'Indent', '-', 'Print',
-      //            'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
-      // ],
-      // ckfinder: {
-      //   options: {
-      //     resourceType: 'Images'
-      //   }
-      // }
+    language: 'es',
+    /*
+      Reference config: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
+      http://www.cpau.org/Content/ckeditor/samples/toolbarconfigurator/index.html#basic
+    */
+    // toolbar: [ 'ckfinder', 'Styles', 'Format', 'Font', 'FontSize', 'Table', '-', 'Link', 'TextColor', 'BGColor', 'Source', 
+    //            'Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', '-', 'Outdent', 'Indent', '-', 'Print',
+    //            'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
+    // ],
+    // ckfinder: {
+    //   options: {
+    //     resourceType: 'Images'
+    //   }
+    // }
   };
 
-  public searchTermInterface(field: ApiAutocompleteConfiguration){
+  public searchTermInterface(field: ApiAutocompleteConfiguration) {
     return {
       search: (term) => this.autocompleteService.autocompleteSearch(this.form, field)
     };
-  } 
+  }
 
   form: FormGroup;
   formError: any;
   filteredData: Observable<any>;
-  
+
   _fields: DynamicField<any>[];
   formValidated: boolean;
   initStateObject: any;
@@ -96,10 +96,10 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   @ViewChild('formDirective') private formDirective: NgForm;
   constructor(public injector: Injector,
     private formService: FormService,
-    private genericHttpService: GenericHttpService, 
+    private genericHttpService: GenericHttpService,
     private autocompleteService: AutocompleteService) {
-      super(injector);
-    }
+    super(injector);
+  }
 
   onInit(): void {
     this.onInitWithFields(this.fields, this.entity);
@@ -113,7 +113,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     // @ts-ignore
     const ckfinder = CKFinder;
     if (ckfinder) {
-      ckfinder.setupCKEditor( null, '/Content/ckfinder/', {
+      ckfinder.setupCKEditor(null, '/Content/ckfinder/', {
         startupPath: "Files:.newsite",
         rememberLastFolder: false
       });
@@ -121,7 +121,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   }
 
   onInitWithFields(fields, entity): void {
-    this.form = this.formService.toFormGroupEntity(entity, fields, {disabled: !this.isEdit}, this.onFieldsChanges);
+    this.form = this.formService.toFormGroupEntity(entity, fields, { disabled: !this.isEdit }, this.onFieldsChanges);
     if (this.subFormName === undefined) {
       this.subFormName = 'subForm';
     }
@@ -137,7 +137,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     this.saveInitialStateObject();
   }
 
-  saveInitialStateObject(){
+  saveInitialStateObject() {
     this.initStateObject = this.formService.injectToEntity({}, this.form, this.fields);
   }
 
@@ -186,48 +186,48 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   onFormValuesChanged() {
 
-    for ( const field in this.formError ) {
-        if ( !this.formError.hasOwnProperty(field) ) {
-            continue;
-        }
+    for (const field in this.formError) {
+      if (!this.formError.hasOwnProperty(field)) {
+        continue;
+      }
 
-        // Clear previous errors
-        this.formError[field] = {};
+      // Clear previous errors
+      this.formError[field] = {};
 
-        // Get the control
-        const control = this.form.get(field);
+      // Get the control
+      const control = this.form.get(field);
 
-        if ( control && control.dirty && !control.valid ) {
-            this.formError[field] = control.errors;
-        }
+      if (control && control.dirty && !control.valid) {
+        this.formError[field] = control.errors;
+      }
 
     }
 
     if (this.form.valid) {
       this.forceEmitChangeEntity();
     }
-    
+
   }
 
-  forceEmitChangeEntity(){
+  forceEmitChangeEntity() {
     const obj = this.formService.injectToEntity({}, this.form, this.fields);
     this.onChangeEntity.emit(obj);
     this.checkObjectModified(obj);
   }
 
-  checkObjectModified(obj){
-    if (this.initStateObject){
+  checkObjectModified(obj) {
+    if (this.initStateObject) {
       let isObjectModified = false;
       this.fields.forEach(field => {
-        if (isObjectModified === false){
-          if (field.controlType === 'pick-list'){
+        if (isObjectModified === false) {
+          if (field.controlType === 'pick-list') {
             if ((this.initStateObject[field.key] === undefined && obj[field.key] !== undefined) ||
-                  (this.initStateObject[field.key] !== undefined && obj[field.key] === undefined) ||
-                    (this.initStateObject[field.key].length !== obj[field.key].length)) {
+              (this.initStateObject[field.key] !== undefined && obj[field.key] === undefined) ||
+              (this.initStateObject[field.key].length !== obj[field.key].length)) {
               isObjectModified = true;
-            }else if (field.options.compositeKey && field.options.compositeKey.length > 0){
+            } else if (field.options.compositeKey && field.options.compositeKey.length > 0) {
             }
-          }else if (this.initStateObject[field.key] !== obj[field.key]) {
+          } else if (this.initStateObject[field.key] !== obj[field.key]) {
             isObjectModified = true;
           }
         }
@@ -235,7 +235,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       this.objectModified.emit(isObjectModified);
     }
   }
-  existControlTypeField(field: DynamicField<any>){
+  existControlTypeField(field: DynamicField<any>) {
     return this.formService.implementedField(field);
   }
   isSubmited() {
@@ -259,20 +259,20 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   }
 
   checkValueAutocomple(field) {
-      setTimeout(() => {
-        const value = this.form.controls[field.key].value;
-        if (value) {
-          let match = false;
-          field.options.fromData.forEach(element => {
-            if (element === value) {
-              match = true;
-            }
-          });
-          if (!match) {
-            this.form.controls[field.key].setValue('');
+    setTimeout(() => {
+      const value = this.form.controls[field.key].value;
+      if (value) {
+        let match = false;
+        field.options.fromData.forEach(element => {
+          if (element === value) {
+            match = true;
           }
+        });
+        if (!match) {
+          this.form.controls[field.key].setValue('');
         }
-      }, 300);
+      }
+    }, 300);
   }
   // Date Picker
   getIdDatePicker(fieldKey) {
@@ -295,29 +295,29 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     };
     return hide;
   }
-  
-  getRestrictionKeys(field: DynamicField<any>){
-    if (field.options.restrictionKeys){
-      return field.options.restrictionKeys;
-    }else{
 
-     if (field.controlType === CONTROL_TYPE.number){
-       return '[0-9]';
-     }
-     return '';
+  getRestrictionKeys(field: DynamicField<any>) {
+    if (field.options.restrictionKeys) {
+      return field.options.restrictionKeys;
+    } else {
+
+      if (field.controlType === CONTROL_TYPE.number) {
+        return '[0-9]';
+      }
+      return '';
     }
   }
 
-  getFloatLabel(field: DynamicField<any>){
+  getFloatLabel(field: DynamicField<any>) {
     return field.options['floatLabel'] ? field.options['floatLabel'] : 'auto';
   }
 
-  onChangeSelect(obj, event){
+  onChangeSelect(obj, event) {
     console.log(event, obj);
     this.forceEmitChangeEntity();
   }
 
-  getOptionsWidth(options: any[]){
+  getOptionsWidth(options: any[]) {
     return (Math.floor(100 / options.length) - 3) + '%';
   }
 }
