@@ -128,7 +128,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     controlType: 'autocomplete-desplegable',
     options: {
       transferIdToField: 'boletinId',
-      elementLabel: 'titulo',
+      elementLabel: 'name',
       elementValue: 'id',
       useNativeFilter: false,
       selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
