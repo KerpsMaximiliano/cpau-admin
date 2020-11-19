@@ -24,12 +24,14 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   _value: string;
   // pattern = new RegExp('^#+([a-fA-F0-9]{6})$');
 
-  urlpattern = new RegExp('^((https?:\\/\\/)|(http?:\\/\\/))'+ // protocol
-  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  urlpattern = new RegExp('^((https?:\\/\\/)|(http?:\\/\\/))' + // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+  '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+
+  emailPattern = new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$');
 
   constructor(protected changeDetectorRef: ChangeDetectorRef){}
   onChange = (_: any) => { };
@@ -52,9 +54,9 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
     if (this.config.required) {
       this.formGroup.controls[this.name].setValidators([Validators.required]);
     }
-    this.formGroup.controls[this.name].setValidators([Validators.pattern(this.urlpattern)]);
+    // this.formGroup.controls[this.name].setValidators([Validators.pattern(this.urlpattern)]);
     
-    this.config.options.invalidValueMessage = 'Formato de URL inválida. Debe comenzar con http:// o https://';
+    this.config.options.invalidValueMessage = 'Formato de URL o Email inválido. Debe comenzar con http:// o https:// o ingresar un email válido';
     this.formGroup.controls[this.name].updateValueAndValidity();
   }
 
@@ -71,15 +73,15 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
   }
 
   clickOpenUrl() {
-    if (this.value != undefined && this.value != "" && this.urlpattern.test(this.value)) {
-        var win = window.open(this.value, '_blank');
+    if (this.value !== undefined && this.value !== '' && (this.urlpattern.test(this.value) || this.emailPattern.test(this.value))) {
+        const win = window.open(this.value, '_blank');
         win.focus();
     }
   }
 
   clickOpenCkfinder() {
-	const compName = this.name;
-	let resourceType = this.config.options && this.config.options.resourceType ? this.config.options.resourceType + ':' : 'Files:';
+  const compName = this.name;
+  const resourceType = this.config.options && this.config.options.resourceType ? this.config.options.resourceType + ':' : 'Files:';
   const defaultStartUpFolder = '.newsite';    
   const ckFinderConfig: any = {
       chooseFiles: true,
@@ -96,15 +98,15 @@ export class ImportImageComponent implements OnInit, ControlValueAccessor {
               this.formGroup.controls[compName].updateValueAndValidity();
           });
       }
-    }
+    };
 
-    //@ts-ignore
+    // @ts-ignore
     CKFinder.popup(ckFinderConfig);
   }
 
   changeInput() {
 
-    if (!this.urlpattern.test(this.value) && this.value) {
+    if ((!this.urlpattern.test(this.value) && !this.emailPattern.test(this.value)) && this.value) {
       this.formGroup.controls[this.name].setErrors({invalidValue: true});
     } else if (this.formGroup.controls[this.name].errors) {
       delete this.formGroup.controls[this.name].errors.invalidValue;
