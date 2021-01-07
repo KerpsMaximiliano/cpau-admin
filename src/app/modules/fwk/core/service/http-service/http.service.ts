@@ -179,7 +179,7 @@ export class HttpService extends BaseService {
   subHandleError(observer, error) {
     console.log('****** server error ⬎');
     console.log(error);
-    if (error.error.message) {
+    if (error && error.error && error.error.message) {
         this.notificationService.notifyError(error.error.message);  
     } else {
       this.notificationService.notifyError('Se produjo un error de respuesta del servidor');  

@@ -19,6 +19,7 @@ import { TAG_SELECTION_DEF } from './tag_selection/tag_selection.def';
 import { MAILING_DEF } from './mailing/mailing.def';
 import { FORM_RESPONSE_DEF } from './form_response/form_response.def';
 import { MODAL_DEF } from './modal/modal.def';
+import { PERFIL_IDENTIFICACION_DEF } from './perfil_identificacion/perfil_identificacion.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -40,6 +41,7 @@ export const COMPONENTS: ComponentDef[] = [
   TAG_SELECTION_DEF,
   MAILING_DEF,
   FORM_RESPONSE_DEF,
-  MODAL_DEF
+  MODAL_DEF,
+  PERFIL_IDENTIFICACION_DEF
 ];
 

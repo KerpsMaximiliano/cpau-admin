@@ -21,6 +21,7 @@ import { MAILING_DEF } from './mailing/mailing.def';
 import { FORM_RESPONSE_DEF } from './form_response/form_response.def';
 import { IntegrationComponent } from '../integration/integration.component';
 import { MODAL_DEF } from './modal/modal.def';
+import { PERFIL_IDENTIFICACION_DEF } from './perfil_identificacion/perfil_identificacion.def';
 
 export const ROUTES: Routes = [
   {
@@ -120,6 +121,11 @@ export const ROUTES: Routes = [
   },
   {
     path: MODAL_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PERFIL_IDENTIFICACION_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }

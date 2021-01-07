@@ -6,7 +6,19 @@ export const navigation = [
         'translate': 'NAV.ADMINISTRATION',
         'type': 'group',
         'children': [
-
+            {
+                'title': 'Personas',
+                'type': 'collapse',
+                'icon': 'settings',
+                'children': [
+                    {
+                        'title': 'Contactos',
+                        'type': 'item',
+                        'url': '/' + environment.URL_PERFIL_IDENTIFICACION
+                        
+                    }
+                ]
+            },
             {
                 'title': 'Gestión de Contenido',
                 'translate': 'NAV.GESTION_CONTENIDOS',

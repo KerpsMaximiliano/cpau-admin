@@ -52,7 +52,7 @@ export class GeneralErrorHandlerService extends BaseService implements ErrorHand
           console.log('Error 401');
           console.log(error);
         }
-        if (VALIDATIONS_ERRORS === error.error.status && error.error.message) {
+        if (error && error.error && VALIDATIONS_ERRORS === error.error.status && error.error.message) {
           notificationService.notifyError(error.error.message);  
         }
       } else if (error.message === 'revalidate' || error.message === 'notuserlogged') {
