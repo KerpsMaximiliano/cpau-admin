@@ -3,7 +3,7 @@
   
   <input type='file' #fileinput [accept]='acceptTypes()' (change)="onFileChange($event)" [hidden]="true">
   <mat-form-field class="acreditacion-styleWidth_form-field">
-    <input matInput placeholder="{{field.label}}" [type]="textbox" 
+    <input matInput placeholder="{{field.label}}"
             [(ngModel)]="fileName" [ngModelOptions]="{standalone: true}" disabled>
     <mat-error id="{{field.key}}Error" *ngIf="parentForm.controls[field.key].invalid ">
         {{getMessageErrorValidation(field)}}
