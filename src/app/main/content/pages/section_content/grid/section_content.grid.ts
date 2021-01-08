@@ -37,7 +37,6 @@ export const SECTION_CONTENT_GRID_DEF: GridDef = {
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
-    'sectionId',
     'contentTitle',
     'highlighted',
     'displayOrder'
