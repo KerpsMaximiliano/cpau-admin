@@ -12,46 +12,30 @@ export const environment = {
     localAuth: false,
     
     production: true,
-    hmr       : false,
+    hmr: false,
     // pasar a true para evitar ws
     /** URLs of Services **/
 
     /** AUTHENTICATION */
-    AUTHENTICATION_URL:  PREFIX_DOMAIN_API + 'Auth',
+    AUTHENTICATION_URL:  PREFIX_DOMAIN_API + 'User/login',
     AUTHENTICATION_REFRESH_TOKEN_URL:  PREFIX_DOMAIN_API + 'Auth/refresh',
 
     /* Config General URl*/
     URL_ROOT: '',
     URL_LOGIN: PREFIX_INSTITUCIONAL,
     // Business
-    URL_PREGUNTA_PERFIL: 'preguntaPerfil',
-    URL_LIMITES_INVERSIONISTA: 'limitesInversionista',
-    URL_SCORING_SOLICITANTE: 'scoringSolicitante',
-    URL_LISTADO_CLIENTE: 'clienteListado',
-    URL_CLIENTE_DETAIL: 'client/detail/:id',
-    CLIENT_DETAIL_URL: 'clientform/detail/',
-    URL_REGISTRO_CLIENTE: 'registro/cliente',
-    URL_ACREDITACION: 'acreditacion',
-    URL_LOAN_CLIENT_REQUEST: 'solicitudPrestamo',
-    URL_LOAN_CLIENT_AUCTION: 'subastaPrestamo',
-    URL_LOAN_CLIENT: 'prestamo',
 
-    /* NEW IMPLEMENTATION */
-    NAVIGATION_URLS: [
-        {
-            key: 'faq',
-            url: 'faq'
-        }
-    ],
-    
-    /*NEW IMPLEMENTATION */
-    WS_URLS: [
-        // {
-        //     key: 'CRUD_FAQ_URL',
-        //     url: PREFIX_DOMAIN_API + 'ws-rest-parameter/faqs/'
-        // }
-    ],
+    URL_SECCIONES: 'seccion',
+    URL_CONTENIDOS: 'contenido',
+    URL_IMAGEN: 'imagen',
+    URL_BOLETIN: 'boletin',
+    URL_INDICE: 'indice',
+    URL_MAILING: 'mailing',
+    URL_FORMULARIO: 'formulario',
+    URL_ABM_MODAL: 'modalHome',
+    URL_PUBLICIDAD: 'bannerCampaing',
+    URL_PRODUCTO_EXTERNO : 'productoExterno',
+    URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout',
 
     AUTOCOMPLETE_WAITING_TIME: 700
 };
-
