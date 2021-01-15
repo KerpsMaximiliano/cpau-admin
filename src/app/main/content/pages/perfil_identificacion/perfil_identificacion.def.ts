@@ -30,7 +30,10 @@ export const PERFIL_IDENTIFICACION_DEF: CrudDef = {
     dialogConfig: {
         width: '400px'
     },
-    // filterInMemory: true,
-    // serverPagination: true,
-    // initFilter: true
+    filterInMemory: false,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };

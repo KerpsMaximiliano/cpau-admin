@@ -34,13 +34,13 @@ export const PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF = [
   //   type: 'string',
   //   controlType: 'textbox'
   // },
-  // {
-  //   key: 'email',
-  //   labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_email',
-  //   label: 'Email',
-  //   type: 'string',
-  //   controlType: 'textbox'
-  // },
+  {
+    key: 'email',
+    labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_email',
+    label: 'Email',
+    type: 'string',
+    controlType: 'textbox'
+  }
   // {
   //   key: 'tipoDocumento',
   //   labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_tipodocumento',

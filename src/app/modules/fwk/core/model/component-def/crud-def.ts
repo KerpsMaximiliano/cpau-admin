@@ -16,6 +16,10 @@ export class CrudDef extends ComponentDef {
     displayGlobalActions?: DisplayActionsCondition [];
     filterInMemory?: boolean;
     serverPagination?: boolean;
+    pagination?: {
+      page: number,
+      pageSize: number 
+    };
     initFilter?: boolean;
     openLink?: string;
     exportCsv?: {
