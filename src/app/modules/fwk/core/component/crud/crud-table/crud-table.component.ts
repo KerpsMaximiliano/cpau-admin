@@ -28,6 +28,7 @@ import { DisplayCondition } from '../../../model/component-def/display-condition
 import { DynamicFieldConditionIf } from '../../../model/dynamic-form/dynamic-field-condition-if';
 import { Params } from '@angular/router';
 import { PARAMETERS } from '@angular/core/src/util/decorators';
+import { FilterService } from '../../../service/filter-service/filter.service';
 
 const ACTION_COLUMN = '_action';
 const DELETE_COLUMN = 'delete';
@@ -51,6 +52,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @Output() status =  new EventEmitter(true);
+  @Output() onChangePagination = new EventEmitter();
   genericHttpService: GenericHttpService;
   selectedRowIndex: number;
   _selects: boolean;
@@ -65,8 +67,15 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   private expressionService: ExpressionService;
   private actionDefService: ActionDefService;
   initOk: boolean;
+  // Paginador
+  public pageSize = 10;
+  public currentPage = 0;
+  public totalSize = 0;
+  
   @Input() selectable: boolean;
-  constructor(private  dialog: MatDialog, public injector: Injector) {
+  constructor(private  dialog: MatDialog,
+              public injector: Injector,
+              private filterService: FilterService) {
     super(injector);
     this.setUpI18n({
       name: 'crud_table',
@@ -471,7 +480,11 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
         this.status.emit(statustable);
       });
       setTimeout(() => {
-        this._datasource.paginator = this.paginator;
+        if (this.crud.crudDef.serverPagination) {
+          this.totalSize = this.filterService.totalReg;
+        } else {
+          this._datasource.paginator = this.paginator;
+        }
         this._datasource.sort = this.sort;
       }, 1);
 
@@ -566,6 +579,12 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
 
   getI18nName(): string {
     return 'crud_table';
+  }
+  
+  onPageFired(event){
+    this.crud.crudDef.pagination.page = event.pageIndex;
+    this.crud.crudDef.pagination.pageSize = event.pageSize;
+    this.onChangePagination.emit();
   }
 }
 

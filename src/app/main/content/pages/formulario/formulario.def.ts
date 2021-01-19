@@ -38,5 +38,10 @@ export const FORMULARIO_DEF: CrudDef = {
         width: '900px'
     },
     forceGetDetail: true,
-    filterInMemory: false 
+    filterInMemory: false,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };

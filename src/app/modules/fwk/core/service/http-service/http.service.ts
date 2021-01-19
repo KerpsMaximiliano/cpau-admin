@@ -146,12 +146,19 @@ export class HttpService extends BaseService {
         if (response.ok === false){
           this.subHandleError(observer, response);
         } else if (data) {
+            this.handlePaginator(response);
             observer.next(data);
         } else {
             observer.next(response);
         }
     }
   }
+
+  handlePaginator(response: any) {
+    if (response.page)
+      this.filterService.totalReg = response.page.totalReg;
+  }
+
   applyMemoryFilter(entities: any, filterEntity, fieldsDef: any): any {
         if (filterEntity && filterEntity !== null) {
             console.log('***** filter by entity ⬎');
