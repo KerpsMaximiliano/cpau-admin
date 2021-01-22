@@ -14,8 +14,16 @@ export const navigation = [
                     {
                         'title': 'Contactos',
                         'type': 'item',
-                        'url': '/' + environment.URL_PERFIL_IDENTIFICACION
-                        
+                        'url': '/' + environment.URL_PERFIL_IDENTIFICACION,
+                        'children': [
+                            {
+                                'id': 'domicilio',
+                                'title': 'Domicilios',
+                                'translate': 'NAV.SECCION.TITLE',
+                                'type': 'item',
+                                'url': '/' + environment.URL_DOMICILIOS,
+                            },
+                        ]
                     }
                 ]
             },

@@ -38,6 +38,7 @@ export const environment = {
     URL_PRODUCTO_EXTERNO : 'productoExterno',
     URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout',
     URL_PERFIL_IDENTIFICACION: 'perfilIdentificacion',
+    URL_DOMICILIOS: 'domicilio',
 
     AUTOCOMPLETE_WAITING_TIME: 700
 };

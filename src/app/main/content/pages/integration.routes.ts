@@ -22,6 +22,9 @@ import { FORM_RESPONSE_DEF } from './form_response/form_response.def';
 import { IntegrationComponent } from '../integration/integration.component';
 import { MODAL_DEF } from './modal/modal.def';
 import { PERFIL_IDENTIFICACION_DEF } from './perfil_identificacion/perfil_identificacion.def';
+import { PERFIL_DOMICILIO_DEF } from './perfil_domicilio/perfil_domicilio.def';
+import { PERFIL_EMAIL_DEF } from './perfil_email/perfil_email.def';
+import { PERFIL_TELEFONO_DEF } from './perfil_telefono/perfil_telefono.def';
 
 export const ROUTES: Routes = [
   {
@@ -126,6 +129,21 @@ export const ROUTES: Routes = [
   },
   {
     path: PERFIL_IDENTIFICACION_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PERFIL_DOMICILIO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PERFIL_EMAIL_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PERFIL_TELEFONO_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }

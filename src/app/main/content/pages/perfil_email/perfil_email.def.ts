@@ -27,5 +27,7 @@ export const PERFIL_EMAIL_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '400px'
-    }   
+    },
+    filterInMemory: false,
+    backButton: true   
 };

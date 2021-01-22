@@ -20,6 +20,9 @@ import { MAILING_DEF } from './mailing/mailing.def';
 import { FORM_RESPONSE_DEF } from './form_response/form_response.def';
 import { MODAL_DEF } from './modal/modal.def';
 import { PERFIL_IDENTIFICACION_DEF } from './perfil_identificacion/perfil_identificacion.def';
+import { PERFIL_DOMICILIO_DEF } from './perfil_domicilio/perfil_domicilio.def';
+import { PERFIL_EMAIL_DEF } from './perfil_email/perfil_email.def';
+import { PERFIL_TELEFONO_DEF } from './perfil_telefono/perfil_telefono.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -42,6 +45,9 @@ export const COMPONENTS: ComponentDef[] = [
   MAILING_DEF,
   FORM_RESPONSE_DEF,
   MODAL_DEF,
-  PERFIL_IDENTIFICACION_DEF
+  PERFIL_IDENTIFICACION_DEF,
+  PERFIL_DOMICILIO_DEF,
+  PERFIL_EMAIL_DEF,
+  PERFIL_TELEFONO_DEF
 ];
 

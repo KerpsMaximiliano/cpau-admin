@@ -53,6 +53,19 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     perfil_identificacion_grid_def_column_tipodocumento: 'Tipo Documento',
     perfil_identificacion_grid_def_column_numerodocumento: 'Numero Documento',
     perfil_identificacion_grid_def_column_usuario: 'Usuario',
-    perfil_identificacion_grid_def_column_fechanacimiento: 'Fecha Nacimiento'
+    perfil_identificacion_grid_def_column_fechanacimiento: 'Fecha Nacimiento',
+    perfil_identificacion_grid_def_button_action_matriculado: 'Matriculado',
+    matricula_create_form_fields_def_field_tipo: 'Tipo',
+    matricula_create_form_fields_def_field_editar: 'Actualizar',
+    matricula_create_form_fields_def_field_fechaEgreso: 'Fecha Egreso',
+    matricula_create_form_fields_def_field_fechaMatriculacion: 'Fecha Matriculación',
+    matricula_create_form_fields_def_field_pagoOnlinePermitido: 'Pago Online Permitido',
+    matricula_create_form_fields_def_field_universidad: 'Universidad',
+    matricula_create_form_fields_def_field_estado: 'Estado',
+    matricula_create_form_fields_def_field_numero: 'Número',
+    perfil_identificacion_grid_def_column_id: 'Id',
+    perfil_identificacion_grid_def_button_action_domicilio: 'Domicilio',
+    perfil_identificacion_grid_def_button_action_email: 'Email',
+    perfil_identificacion_grid_def_button_action_telefono: 'Teléfono',
   }
 };

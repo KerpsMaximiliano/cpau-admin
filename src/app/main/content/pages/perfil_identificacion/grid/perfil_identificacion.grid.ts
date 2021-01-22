@@ -1,5 +1,13 @@
+import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PERFIL_IDENTIFICACION_GRID_DEF = {
   columnsDef: [
+    {
+      columnDef: 'id',
+      id: true,
+      columnNameKey: 'perfil_identificacion_grid_def_column_id'
+    },
     {
       columnDef: 'tipo',
       columnNameKey: 'perfil_identificacion_grid_def_column_tipo'
@@ -53,5 +61,104 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     'numeroDocumento',
     'usuario',
     'fechaNacimiento'
-  ]
+  ],
+  actions: [
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_domicilio',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilDomicilio',
+        querystring: {
+          contactId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'home'
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_email',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilEmail',
+        querystring: {
+          contactId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'email'
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_telefono',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilTelefono',
+        querystring: {
+          contactId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'phone'
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_matriculado',
+      icon: 'description',
+      form: [
+        {
+          label: 'id',
+          key: 'id',
+          controlType: 'hidden',
+        },
+        {
+          labelKey: 'matricula_create_form_fields_def_field_tipo',
+          key: 'tipo',
+          controlType: 'textbox',
+          disabled: true
+        },
+        {
+          labelKey: 'matricula_create_form_fields_def_field_numero',
+          key: 'numero',
+          controlType: 'textbox',
+          disabled: true
+        },
+        {
+          labelKey: 'matricula_create_form_fields_def_field_estado',
+          key: 'estado',
+          controlType: 'textbox',
+          disabled: true
+        },
+        {
+          labelKey: 'matricula_create_form_fields_def_field_universidad',
+          key: 'universidad',
+          controlType: 'textbox',
+          disabled: true
+        },
+        {
+          labelKey: 'matricula_create_form_fields_def_field_pagoOnlinePermitido',
+          key: 'pagoOnlinePermitido',
+          type: 'boolean',
+          controlType: 'checkbox',
+          disabled: false
+        },
+        {
+          key: 'fechaMatriculacion',
+          labelKey: 'matricula_create_form_fields_def_field_fechaMatriculacion',
+          controlType: 'datepicker',
+          required: true,
+          disabled: false
+        },
+        {
+          key: 'fechaEgreso',
+          labelKey: 'matricula_create_form_fields_def_field_fechaEgreso',
+          controlType: 'datepicker',
+          required: true,
+          disabled: false
+        }
+      ],
+      ws: {
+        key: 'matricula_create_form_fields_def_field_editar',
+        url: PREFIX_DOMAIN_API + 'admin/personas/matriculado',
+        method: 'PUT'
+      }
+    },
+  ],
 };

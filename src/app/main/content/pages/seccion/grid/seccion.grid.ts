@@ -162,7 +162,7 @@ export const SECCION_GRID_DEF : GridDef = {
       form: [
         {
           label: 'id',
-          key: 'id',
+          key: 'idContact',
           controlType: 'hidden'
         },
         {
