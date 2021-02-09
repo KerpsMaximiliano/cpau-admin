@@ -7,6 +7,7 @@ import { PERFIL_EMAIL_GRID_DEF } from './grid/perfil_email.grid';
 import { PERFIL_EMAIL_I18N_DEF } from './i18n/perfil_email.i18n';
 import { PERFIL_EMAIL_NAV_DEF } from './navigation/perfil_email.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const PERFIL_EMAIL_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const PERFIL_EMAIL_DEF: CrudDef = {
     security: PERFIL_EMAIL_SECURITY_DEF,
     ws: {
         key: 'PERFIL_EMAIL_CRUD_URL',
-        url: '/admin/personas/contactos/email'
+        url: PREFIX_DOMAIN_API + 'admin/personas/contactos/email'
     },
     dialogConfig: {
         width: '400px'

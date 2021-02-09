@@ -1,3 +1,4 @@
+import { REGEX_KEY_ONLY_NUMBERS } from "app/modules/fwk/constants";
 import { REGEX_KEY_CODIGO_POSTAL } from "app/modules/fwk/core/service/dynamic-form/form.validator.service";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
@@ -29,6 +30,9 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     required: true,
     minLength: 1,
     maxLength: 7,
+    validation: {
+      regexKey: REGEX_KEY_ONLY_NUMBERS
+    }
   },
   {
     key: 'piso',
@@ -37,6 +41,9 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 2,
+    validation: {
+      regexKey: REGEX_KEY_ONLY_NUMBERS
+    }
   },
   {
     key: 'dpto',
@@ -45,7 +52,7 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     minLength: 1,
-    maxLength: 20,
+    maxLength: 20
   },
   {
     key: 'localidad',

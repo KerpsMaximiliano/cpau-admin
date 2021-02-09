@@ -1,8 +1,8 @@
 export const PERFIL_EMAIL_READ_FORM_FIELDS_DEF = [
   {
-    key: 'idContactData',
+    key: 'idContact',
     labelKey: 'PERFIL_EMAIL_READ_FORM_FIELDS_DEF_FIELD_idcontactdata',
-    label: 'idContactData',
+    label: 'idContact',
     type: 'string',
     disabled: true,
     controlType: 'textbox'

@@ -80,8 +80,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       redirect: {
         url: '/perfilEmail',
         querystring: {
-          contactId : 'id',
-          parentTitle: 'name'
+          idContact : 'idContact'
         }
       },
       icon: 'email'
@@ -92,8 +91,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       redirect: {
         url: '/perfilTelefono',
         querystring: {
-          contactId : 'id',
-          parentTitle: 'name'
+          idContact : 'idContact',
         }
       },
       icon: 'phone'

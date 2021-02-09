@@ -50,6 +50,7 @@ export const REGEX_VALIDATION = 'regex';
 export const OPTION_VALIDATION = 'optionRequired';
 export const EQUALS_VALIDATION = 'equals';
 export const GT_18_YEARS_OLD_VALIDATION = 'gt18YearsOld';
+export const REGEX_KEY_EMAIL = 'email';
 
 @Injectable()
 export class FormValidatorService {
@@ -187,7 +188,9 @@ export class FormValidatorService {
       } else if (field.validation.regexKey === REGEX_KEY_CUIT){
         return String.Format(this.i18n.translate('cuit_error_message'), nameField); 
       } else if (field.validation.regexKey === REGEX_KEY_CUIL){
-        return String.Format(this.i18n.translate('cuil_error_message'), nameField); 
+        return String.Format(this.i18n.translate('cuil_error_message'), nameField);
+      } else if (field.validation.regexKey === REGEX_KEY_EMAIL){
+        return String.Format(this.i18n.translate('email_format_error_message'), nameField); 
       }else{
         /* NEW IMPLEMENTATION MESSAGE REGEX PATTERN CODE */
         let message;
@@ -315,6 +318,8 @@ export class FormValidatorService {
         validators.push(Validators.pattern(CONSTANTS.REGEX_CUIT));
       }else if (field.validation.regexKey === REGEX_KEY_CUIL){
         validators.push(Validators.pattern(CONSTANTS.REGEX_CUIL));
+      }else if (field.validation.regexKey === REGEX_KEY_EMAIL){
+        validators.push(Validators.email);
       }else{
         /* NEW IMPLEMENTATION REGEX CODE */
         CONSTANTS.REGEXS.forEach(regex => {
@@ -400,7 +405,8 @@ export const VALIDATIONS_HELPER = {
   [REGEX_KEY_LETTERS_NUMBERS]: Validators.pattern(CONSTANTS.REGEX_LETTERS_NUMBERS),
   [REGEX_KEY_CODIGO_POSTAL]: Validators.pattern(CONSTANTS.REGEX_CODIGO_POSTAL),
   [REGEX_KEY_CUIT]: Validators.pattern(CONSTANTS.REGEX_CUIT),
-  [REGEX_KEY_CUIL]: Validators.pattern(CONSTANTS.REGEX_CUIL)
+  [REGEX_KEY_CUIL]: Validators.pattern(CONSTANTS.REGEX_CUIL),
+  [REGEX_KEY_EMAIL]: Validators.email,
 };
 
 export const ERROR_MESSAGES_HELPER = {
