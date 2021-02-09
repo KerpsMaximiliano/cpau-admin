@@ -1,4 +1,12 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
+  {
+    key: 'idContact',
+    labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_id',
+    label: 'ID',
+    controlType: 'hidden',
+  },
   // {
   //   key: 'tipo',
   //   labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_tipo',
@@ -66,7 +74,19 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     key: 'fechaNacimiento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_fechanacimiento',
     label: 'Fecha Nacimiento',
-    type: 'string',
-    controlType: 'textbox'
-  }
+    type: 'datepicker',
+    controlType: 'datepicker'
+  },
+  {
+    key: 'pais',
+    labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_pais',
+    controlType: 'select',
+    options: {
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromWs: {
+        url: PREFIX_DOMAIN_API + 'siteConsumer/pais',
+      }
+    }
+  },
 ];

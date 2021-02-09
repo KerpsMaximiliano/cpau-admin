@@ -67,5 +67,6 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     perfil_identificacion_grid_def_button_action_domicilio: 'Domicilio',
     perfil_identificacion_grid_def_button_action_email: 'Email',
     perfil_identificacion_grid_def_button_action_telefono: 'Teléfono',
+    PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_pais: 'País'
   }
 };

@@ -2,7 +2,7 @@ export const PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF = [
   {
     key: 'idContactData',
     labelKey: 'PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF_FIELD_idcontactdata',
-    label: 'idContactData',
+    label: 'idContact',
     type: 'string',
     disabled: true,
     controlType: 'textbox'
@@ -19,17 +19,17 @@ export const PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF = [
     key: 'altura',
     labelKey: 'PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF_FIELD_altura',
     label: 'Altura',
-    type: 'string',
+    type: 'number',
     disabled: true,
-    controlType: 'textbox'
+    controlType: 'number'
   },
   {
     key: 'piso',
     labelKey: 'PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF_FIELD_piso',
     label: 'Piso',
-    type: 'string',
+    type: 'number',
     disabled: true,
-    controlType: 'textbox'
+    controlType: 'number'
   },
   {
     key: 'dpto',
@@ -57,6 +57,14 @@ export const PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF = [
   },
   {
     key: 'tipoDomicilio',
+    labelKey: 'PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF_FIELD_tipodomicilio',
+    label: 'Tipo Domicilio',
+    type: 'string',
+    disabled: true,
+    controlType: 'textbox'
+  },
+  {
+    key: 'idTipoDomicilio',
     labelKey: 'PERFIL_DOMICILIO_READ_FORM_FIELDS_DEF_FIELD_tipodomicilio',
     label: 'Tipo Domicilio',
     type: 'string',

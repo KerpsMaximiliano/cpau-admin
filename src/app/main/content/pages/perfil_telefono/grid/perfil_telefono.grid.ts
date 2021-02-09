@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PERFIL_TELEFONO_GRID_DEF = {
     columnsDef: [
       {
@@ -18,5 +20,17 @@ export const PERFIL_TELEFONO_GRID_DEF = {
       'id',
       'telefono',
       'tipoTelefono',
+    ],
+    actions: [
+      {
+        actionNameKey: 'perfil_telefono_grid_def_button_action_delete',
+        icon: 'delete',
+        confirm: true,
+        ws: {
+          key: 'perfil_telefono_grid_def_button_action_delete',
+          url: PREFIX_DOMAIN_API + '/admin/personas/contactos/telefono',
+          method: 'DELETE'
+        }
+      },
     ]
 };

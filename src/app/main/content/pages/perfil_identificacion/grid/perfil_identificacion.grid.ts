@@ -69,8 +69,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       redirect: {
         url: '/perfilDomicilio',
         querystring: {
-          contactId : 'id',
-          parentTitle: 'name'
+          idContact : 'idContact'
         }
       },
       icon: 'home'
@@ -105,7 +104,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       form: [
         {
           label: 'id',
-          key: 'id',
+          key: 'idContact',
           controlType: 'hidden',
         },
         {

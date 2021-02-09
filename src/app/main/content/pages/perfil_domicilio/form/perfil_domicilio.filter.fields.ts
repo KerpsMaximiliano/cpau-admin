@@ -1,12 +1,5 @@
 export const PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF = [
   {
-    key: 'idContactData',
-    labelKey: 'PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF_FIELD_idcontactdata',
-    label: 'idContactData',
-    type: 'string',
-    controlType: 'textbox'
-  },
-  {
     key: 'calle',
     labelKey: 'PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF_FIELD_calle',
     label: 'Calle',
@@ -54,5 +47,12 @@ export const PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF = [
     label: 'Tipo Domicilio',
     type: 'string',
     controlType: 'textbox'
-  }
+  },
+  {
+    key: 'idContact',
+    labelKey: 'PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF_FIELD_idcontactdata',
+    label: 'idContact',
+    type: 'string',
+    controlType: 'hidden',
+  },
 ];
