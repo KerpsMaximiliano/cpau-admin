@@ -1,3 +1,4 @@
+import { REGEX_KEY_URL } from "app/modules/fwk/core/service/dynamic-form/form.validator.service";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_REDES_SOCIALES_UPDATE_FORM_FIELDS_DEF = [
@@ -16,9 +17,9 @@ export const PERFIL_REDES_SOCIALES_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     required: true,
-    // validation: {
-    //   regexKey: REGEX_KEY_redes_sociales
-    // },
+    validation: {
+      regexKey: REGEX_KEY_URL
+    },
     maxLength: 250
   },
   {

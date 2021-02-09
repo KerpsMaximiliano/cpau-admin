@@ -17,5 +17,8 @@ export const PERFIL_REDES_SOCIALES_I18N_DEF = {
     perfil_redes_sociales_update_form_fields_def_field_idcontactdata: 'Id',
     perfil_redes_sociales_update_form_fields_def_field_url: 'URL',
     perfil_redes_sociales_update_form_fields_def_field_tiporedsocial: 'Tipo Red Social',
+    PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF_FIELD_idcontactdata: 'Id',
+    PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF_FIELD_url: 'URL',
+    PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF_FIELD_tiporedsocial: 'Tipo Red Social',
   }
 };

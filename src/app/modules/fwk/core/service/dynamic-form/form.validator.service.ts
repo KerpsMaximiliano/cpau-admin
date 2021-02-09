@@ -51,6 +51,7 @@ export const OPTION_VALIDATION = 'optionRequired';
 export const EQUALS_VALIDATION = 'equals';
 export const GT_18_YEARS_OLD_VALIDATION = 'gt18YearsOld';
 export const REGEX_KEY_EMAIL = 'email';
+export const REGEX_KEY_URL = 'url';
 
 @Injectable()
 export class FormValidatorService {
@@ -84,7 +85,8 @@ export class FormValidatorService {
         error_message_not_set: 'Error desconocido',
         generic_error_message: 'El campo {0} es invalido',
         gt_18_years_old_error_message: 'Debe ser mayor de 18 años para registrarse',
-        date_hour_message: 'Debe ingresar una fecha y hora valida ej: 20/08/2018 17:00'
+        date_hour_message: 'Debe ingresar una fecha y hora valida ej: 20/08/2018 17:00',
+        url_format_error_message: 'El campo {0} no tiene un formato válido',
       }
     });
     i18nService.getByName('form-validator').subscribe(i18n => {
@@ -191,6 +193,8 @@ export class FormValidatorService {
         return String.Format(this.i18n.translate('cuil_error_message'), nameField);
       } else if (field.validation.regexKey === REGEX_KEY_EMAIL){
         return String.Format(this.i18n.translate('email_format_error_message'), nameField); 
+      } else if (field.validation.regexKey === REGEX_KEY_URL){
+        return String.Format(this.i18n.translate('url_format_error_message'), nameField); 
       }else{
         /* NEW IMPLEMENTATION MESSAGE REGEX PATTERN CODE */
         let message;
@@ -320,6 +324,8 @@ export class FormValidatorService {
         validators.push(Validators.pattern(CONSTANTS.REGEX_CUIL));
       }else if (field.validation.regexKey === REGEX_KEY_EMAIL){
         validators.push(Validators.email);
+      }else if (field.validation.regexKey === REGEX_KEY_URL){
+        validators.push(Validators.pattern(CONSTANTS.REGEX_URL));
       }else{
         /* NEW IMPLEMENTATION REGEX CODE */
         CONSTANTS.REGEXS.forEach(regex => {
@@ -407,6 +413,7 @@ export const VALIDATIONS_HELPER = {
   [REGEX_KEY_CUIT]: Validators.pattern(CONSTANTS.REGEX_CUIT),
   [REGEX_KEY_CUIL]: Validators.pattern(CONSTANTS.REGEX_CUIL),
   [REGEX_KEY_EMAIL]: Validators.email,
+  [REGEX_KEY_URL]: Validators.pattern(CONSTANTS.REGEX_URL),
 };
 
 export const ERROR_MESSAGES_HELPER = {

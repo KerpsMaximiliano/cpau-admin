@@ -19,6 +19,12 @@ export const CONSTANTS = {
     REGEX_EMAIL: '(\\s*?(.+)@(.+?)\\s)*', // Original ^\\s*?(.+)@(.+?)\\s*$
     REGEX_USER: '[a-z][a-z0-9\\_\\-]{4,15}', // Original ^[a-z][a-z0-9_-]{4,15}$
     REGEX_DATE: '([0-2][0-9]|3[0-1])(\/)(0[1-9]|1[0-2])(\/)(\d{4})', // Original ^([0-2][0-9]|3[0-1])(\/)(0[1-9]|1[0-2])\2(\d{4})$
+    REGEX_URL: '^((https?:\\/\\/)|(http?:\\/\\/))' + // protocol
+                    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+                    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+                    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+                    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+                    '(\\#[-a-z\\d_]*)?$',
 
     /* NEW IMPLEMENTATION */
     REGEXS: [{
