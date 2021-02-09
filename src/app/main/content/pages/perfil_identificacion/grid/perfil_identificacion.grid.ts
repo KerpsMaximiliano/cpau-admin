@@ -157,5 +157,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'PUT'
       }
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_redes',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilRedesSociales',
+        querystring: {
+          idContact : 'idContact',
+        }
+      },
+      icon: 'people'
+    },
   ],
 };

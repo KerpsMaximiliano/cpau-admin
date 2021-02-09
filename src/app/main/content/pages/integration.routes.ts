@@ -25,6 +25,7 @@ import { PERFIL_IDENTIFICACION_DEF } from './perfil_identificacion/perfil_identi
 import { PERFIL_DOMICILIO_DEF } from './perfil_domicilio/perfil_domicilio.def';
 import { PERFIL_EMAIL_DEF } from './perfil_email/perfil_email.def';
 import { PERFIL_TELEFONO_DEF } from './perfil_telefono/perfil_telefono.def';
+import { PERFIL_REDES_SOCIALES_DEF } from './perfil_redes_sociales/perfil_redes_sociales.def';
 
 export const ROUTES: Routes = [
   {
@@ -144,6 +145,11 @@ export const ROUTES: Routes = [
   },
   {
     path: PERFIL_TELEFONO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PERFIL_REDES_SOCIALES_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }
