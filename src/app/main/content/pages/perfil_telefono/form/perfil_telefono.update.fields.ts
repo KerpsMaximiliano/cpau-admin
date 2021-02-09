@@ -1,23 +1,35 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF = [
   {
-    key: 'id',
+    key: 'idContact',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_id',
-    label: 'Id',
+    label: 'idContact',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'hidden',
+    mappingQuerystring: true
   },
   {
     key: 'telefono',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_telefono',
     label: 'Teléfono',
     type: 'string',
-    controlType: 'number'
+    required: true,
+    minLength: 10,
+    maxLength: 10,
+    controlType: 'textbox'
   },
   {
-    key: 'tipoTelefono',
+    key: 'idTipoTelefono',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_tipoTelefono',
-    label: 'Tipo Teléfono',
-    type: 'string',
-    controlType: 'textbox'
+    controlType: 'select',
+    required: true,
+    options: {
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromWs: {
+        url: PREFIX_DOMAIN_API + 'siteConsumer/tipoContacto',
+      }
+    }
   }
 ];

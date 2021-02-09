@@ -1,12 +1,5 @@
 export const PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF = [
   {
-    key: 'id',
-    labelKey: 'PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF_FIELD_id',
-    label: 'Id',
-    type: 'string',
-    controlType: 'textbox'
-  },
-  {
     key: 'telefono',
     labelKey: 'PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF_FIELD_telefono',
     label: 'Teléfono',
@@ -19,5 +12,12 @@ export const PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF = [
     label: 'Tipo Teléfono',
     type: 'string',
     controlType: 'textbox'
-  }
+  },
+  {
+    key: 'idContact',
+    labelKey: 'PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF_FIELD_id',
+    label: 'idContact',
+    type: 'string',
+    controlType: 'hidden',
+  },
 ];

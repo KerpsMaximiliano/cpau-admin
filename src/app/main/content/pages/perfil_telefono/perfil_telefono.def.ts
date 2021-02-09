@@ -7,6 +7,7 @@ import { PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF } from './form/perfil_telefono.f
 import { PERFIL_TELEFONO_CREATE_FORM_FIELDS_DEF } from './form/perfil_telefono.create.fields';
 import { PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF } from './form/perfil_telefono.update.fields';
 import { PERFIL_TELEFONO_READ_FORM_FIELDS_DEF } from './form/perfil_telefono.read.fields';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const PERFIL_TELEFONO_DEF: CrudDef = { 
@@ -23,7 +24,7 @@ export const PERFIL_TELEFONO_DEF: CrudDef = {
     security: PERFIL_TELEFONO_SECURITY_DEF,
     ws: {
         key: 'PERFIL_TELEFONO_CRUD_URL',
-        url: '/admin/personas/contactos/telefono'
+        url: PREFIX_DOMAIN_API + 'admin/personas/contactos/telefono'
     },
     dialogConfig: {
         width: '400px'
