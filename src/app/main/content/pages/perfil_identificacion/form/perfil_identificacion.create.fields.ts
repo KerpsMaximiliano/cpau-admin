@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'tipo',
@@ -35,6 +37,18 @@ export const PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF = [
     controlType: 'textbox'
   },
   {
+    key: 'sexo',
+    labelKey: 'perfil_identificacion_create_form_fields_def_field_sexo',
+    controlType: 'select',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 'M', nombre: 'Masculino'},
+                 {id: 'F', nombre: 'Femenino'}]
+    }
+  },
+  {
     key: 'email',
     labelKey: 'perfil_identificacion_create_form_fields_def_field_email',
     label: 'Email',
@@ -42,11 +56,16 @@ export const PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF = [
     controlType: 'textbox'
   },
   {
-    key: 'tipoDocumento',
+    key: 'idTipoDocumento',
     labelKey: 'perfil_identificacion_create_form_fields_def_field_tipodocumento',
-    label: 'Tipo Documento',
-    type: 'string',
-    controlType: 'textbox'
+    controlType: 'select',
+    options: {
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromWs: {
+        url: PREFIX_DOMAIN_API + 'siteConsumer/tipoDocumento',
+      }
+    }
   },
   {
     key: 'numeroDocumento',
@@ -66,7 +85,7 @@ export const PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF = [
     key: 'fechaNacimiento',
     labelKey: 'perfil_identificacion_create_form_fields_def_field_fechanacimiento',
     label: 'Fecha Nacimiento',
-    type: 'string',
-    controlType: 'textbox'
+    type: 'datepicker',
+    controlType: 'datepicker'
   }
 ];

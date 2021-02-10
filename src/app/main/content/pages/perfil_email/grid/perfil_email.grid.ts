@@ -3,7 +3,7 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 export const PERFIL_EMAIL_GRID_DEF = {
   columnsDef: [
     {
-      columnDef: 'id',
+      columnDef: 'idContactData',
       columnNameKey: 'perfil_email_grid_def_column_idcontactdata'
     },
     {
@@ -29,7 +29,7 @@ export const PERFIL_EMAIL_GRID_DEF = {
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
+    'idContactData',
     'email',
     'tipoEmail'
   ]

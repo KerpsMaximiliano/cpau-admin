@@ -3,9 +3,9 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_REDES_SOCIALES_UPDATE_FORM_FIELDS_DEF = [
   {
-    key: 'idContact',
+    key: 'idContactData',
     labelKey: 'perfil_redes_sociales_update_form_fields_def_field_idcontactdata',
-    label: 'idContact',
+    label: 'idContactData',
     type: 'string',
     controlType: 'hidden',
     mappingQuerystring: true

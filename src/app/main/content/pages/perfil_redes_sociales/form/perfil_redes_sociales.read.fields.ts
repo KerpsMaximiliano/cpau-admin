@@ -1,8 +1,8 @@
 export const PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF = [
     {
-      key: 'idContact',
+      key: 'idContactData',
       labelKey: 'PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF_FIELD_idcontactdata',
-      label: 'idContact',
+      label: 'idContactData',
       type: 'string',
       disabled: true,
       controlType: 'textbox'

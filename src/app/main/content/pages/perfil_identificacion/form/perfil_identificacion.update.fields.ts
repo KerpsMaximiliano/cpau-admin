@@ -42,19 +42,30 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
-  // {
-  //   key: 'email',
-  //   labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_email',
-  //   label: 'Email',
-  //   type: 'string',
-  //   controlType: 'textbox'
-  // },
   {
-    key: 'tipoDocumento',
+    key: 'sexo',
+    labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_sexo',
+    controlType: 'select',
+    required: true,
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 'M', nombre: 'Masculino'},
+                 {id: 'F', nombre: 'Femenino'}]
+    }
+  },
+  {
+    key: 'idTipoDocumento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_tipodocumento',
-    label: 'Tipo Documento',
-    type: 'string',
-    controlType: 'textbox'
+    controlType: 'select',
+    options: {
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromWs: {
+        url: PREFIX_DOMAIN_API + 'siteConsumer/tipoDocumento',
+      }
+    }
   },
   {
     key: 'numeroDocumento',

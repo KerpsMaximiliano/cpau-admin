@@ -2,9 +2,9 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF = [
   {
-    key: 'idContact',
+    key: 'idContactData',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_id',
-    label: 'idContact',
+    label: 'idContactData',
     type: 'string',
     controlType: 'hidden',
     mappingQuerystring: true
