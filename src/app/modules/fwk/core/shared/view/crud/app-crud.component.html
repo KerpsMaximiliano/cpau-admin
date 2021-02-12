@@ -21,7 +21,7 @@
                 </span>
             </div>
             <app-search *ngIf='crudDef.forms.filter' [fields]='crudDef.forms.filter' (onChangeSearchEntity)='filterSearchEntity($event)' [forceFirstSubmit]='true'></app-search>
-            <a *ngIf="crudDef.openLink" mat-raised-button class="mat-white-bg my-12 mt-sm-0" target="_blank" [href]="crudDef.openLink">Panel Mailer</a>
+            <a *ngIf="crudDef.openLink" mat-raised-button class="mat-white-bg my-12 mt-sm-0" target="_blank" [href]="crudDef.openLink">{{crudDef.openLinkTitle ? crudDef.openLinkTitle : 'Panel Mailer'}}</a>
             <div class="header-buttons">
                 <!-- / APP TITLE -->
                 

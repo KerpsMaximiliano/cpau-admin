@@ -13,9 +13,6 @@ export const PERFIL_CUENTA_CORRIENTE_DEF: CrudDef = {
     grid: PERFIL_CUENTA_CORRIENTE_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
         filter: PERFIL_CUENTA_CORRIENTE_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        // create: PERFIL_REDES_SOCIALES_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        // update: PERFIL_REDES_SOCIALES_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
-        // read:  PERFIL_REDES_SOCIALES_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: PERFIL_CUENTA_CORRIENTE_NAV_DEF,
     security: PERFIL_CUENTA_CORRIENTE_SECURITY_DEF,
@@ -26,6 +23,8 @@ export const PERFIL_CUENTA_CORRIENTE_DEF: CrudDef = {
     dialogConfig: {
         width: '400px'
     },
+    openLink: "https://www.cpau.org/api/matriculados/imprimirboleta",
+    openLinkTitle: 'Imprimir Boleta',
     filterInMemory: false,
     backButton: true   
 };
