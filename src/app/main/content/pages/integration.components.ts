@@ -24,6 +24,7 @@ import { PERFIL_DOMICILIO_DEF } from './perfil_domicilio/perfil_domicilio.def';
 import { PERFIL_EMAIL_DEF } from './perfil_email/perfil_email.def';
 import { PERFIL_TELEFONO_DEF } from './perfil_telefono/perfil_telefono.def';
 import { PERFIL_REDES_SOCIALES_DEF } from './perfil_redes_sociales/perfil_redes_sociales.def';
+import { PERFIL_CUENTA_CORRIENTE_DEF } from './perfil_cuenta_corriente/perfil_cuenta_corriente.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -50,6 +51,7 @@ export const COMPONENTS: ComponentDef[] = [
   PERFIL_DOMICILIO_DEF,
   PERFIL_EMAIL_DEF,
   PERFIL_TELEFONO_DEF,
-  PERFIL_REDES_SOCIALES_DEF
+  PERFIL_REDES_SOCIALES_DEF,
+  PERFIL_CUENTA_CORRIENTE_DEF
 ];
 

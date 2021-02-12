@@ -168,5 +168,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       },
       icon: 'people'
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilCuentaCorriente',
+        querystring: {
+          idContact : 'idContact',
+        }
+      },
+      icon: 'account_balance'
+    },
   ],
 };
