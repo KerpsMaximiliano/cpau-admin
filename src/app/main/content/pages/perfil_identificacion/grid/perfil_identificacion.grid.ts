@@ -179,5 +179,73 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       },
       icon: 'account_balance'
     },
+    {
+      actionNameKey: 'seccion_grid_def_button_action_cuenta',
+      icon: 'person',
+      form: [
+        {
+          label: 'id',
+          key: 'idContact',
+          controlType: 'hidden'
+        },
+        {
+          labelKey: 'seccion_create_form_fields_def_field_seccion',
+          key: 'name',
+          controlType: 'textbox',
+          disabled: true
+        },
+        {
+          key: 'newParent',
+          labelKey: 'seccion_create_form_fields_def_field_seccion_mover',
+          label: 'Mover a la Sección',
+          controlType: 'autocomplete-desplegable',
+          options: {
+            transferIdToField: 'newParentId',
+            elementLabel: 'nombre',
+            elementValue: 'id',
+            useNativeFilter: false,
+            selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+          },
+          apiOptions: {
+            queryString: {
+              filter: 'newParent'
+            },
+            defaultShow: 20,
+            url: PREFIX_DOMAIN_API + 'Section/SeccionRuta'
+          }
+        },
+        {
+          key: 'newParentId',
+          controlType: 'hidden'
+        },
+      ],
+      ws: {
+        key: 'seccion_grid_def_button_action_nueva_mover_seccion',
+        url: PREFIX_DOMAIN_API + 'personas/cuenta',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_publicaciones',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilPublicaciones',
+        querystring: {
+          idContact : 'idContact',
+        }
+      },
+      icon: 'public'
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_newsletter',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfiNewsletter',
+        querystring: {
+          idContact : 'idContact',
+        }
+      },
+      icon: 'feed'
+    },
   ],
 };

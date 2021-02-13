@@ -71,6 +71,8 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     perfil_identificacion_grid_def_button_action_redes: 'Redes Sociales',
     perfil_identificacion_create_form_fields_def_field_sexo: 'Sexo',
     PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_sexo: 'Sexo',
-    perfil_identificacion_grid_def_button_action_cuentacorriente: 'Cuenta Corriernte'
+    perfil_identificacion_grid_def_button_action_cuentacorriente: 'Cuenta Corriernte',
+    perfil_identificacion_grid_def_button_action_publicaciones: 'Publicaciones',
+    perfil_identificacion_grid_def_button_action_newsletter: 'Newsletter'
   }
 };

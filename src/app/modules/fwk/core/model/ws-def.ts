@@ -6,6 +6,7 @@ export const HTTP_METHODS = {
     post: 'POST',
     put: 'PUT',
     delete: 'DELETE',
+    delete_ternaria: 'DELETE_TERNARIA',
     get: 'GET'
 };
 

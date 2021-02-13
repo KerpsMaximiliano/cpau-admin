@@ -17,6 +17,8 @@ export class GridDef{
     deleteAction?: boolean;
     actions?: ActionDef [];
     fromArrayField?: string;
+    deleteTernaria?: boolean;   
+    columnsTernaria?: string[];
     // Deprecated use delleteAction
     deleteColumn?: any;    
     titleKey?: string;
