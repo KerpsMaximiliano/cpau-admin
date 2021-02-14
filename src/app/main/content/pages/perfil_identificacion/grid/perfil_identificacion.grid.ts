@@ -240,7 +240,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_newsletter',
       actionType: 'redirect',
       redirect: {
-        url: '/perfiNewsletter',
+        url: '/perfilNewsletters',
         querystring: {
           idContact : 'idContact',
         }
