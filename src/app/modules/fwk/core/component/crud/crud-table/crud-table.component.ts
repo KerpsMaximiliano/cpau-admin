@@ -399,6 +399,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
         data: data
       });
       dialogRef.afterClosed().subscribe(result => {
+        this.crud.findAll();
         console.log('The dialog was closed');
       });
     }

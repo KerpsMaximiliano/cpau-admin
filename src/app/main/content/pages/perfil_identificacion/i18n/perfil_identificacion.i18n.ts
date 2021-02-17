@@ -73,6 +73,13 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_sexo: 'Sexo',
     perfil_identificacion_grid_def_button_action_cuentacorriente: 'Cuenta Corriernte',
     perfil_identificacion_grid_def_button_action_publicaciones: 'Publicaciones',
-    perfil_identificacion_grid_def_button_action_newsletter: 'Newsletter'
+    perfil_identificacion_grid_def_button_action_newsletter: 'Newsletter',
+    perfil_cuenta_create_form_fields_def_field_username: 'Usuario',
+    perfil_cuenta_create_form_fields_def_field_fechaAlta: 'Fecha alta',
+    perfil_cuenta_create_form_fields_def_field_solicitudPassword: 'Solicitudes reenvio password',
+    perfil_cuenta_create_form_fields_def_field_fechaUltimaActualizacion: 'Fecha última actualización',
+    perfil_cuenta_create_form_fields_def_field_fechaUltimoLogin: 'Fecha último login',
+    seccion_grid_def_button_action_cuenta: 'Cuenta',
+    seccion_grid_def_button_action_rol: 'Rol'
   }
 };

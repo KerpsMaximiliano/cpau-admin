@@ -1,4 +1,3 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_IDENTIFICACION_GRID_DEF = {
@@ -114,7 +113,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         },
         {
           labelKey: 'matricula_create_form_fields_def_field_numero',
-          key: 'numero',
+          key: 'matricula',
           controlType: 'textbox',
           disabled: true
         },
@@ -190,41 +189,54 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'hidden'
         },
         {
-          labelKey: 'seccion_create_form_fields_def_field_seccion',
-          key: 'name',
+          key: 'idUser',
+          controlType: 'hidden'
+        },
+        {
+          labelKey: 'perfil_cuenta_create_form_fields_def_field_username',
+          key: 'username',
           controlType: 'textbox',
+        },
+        {
+          labelKey: 'perfil_cuenta_create_form_fields_def_field_fechaAlta',
+          key: 'fechaAlta',
+          controlType: 'datepicker',
           disabled: true
         },
         {
-          key: 'newParent',
-          labelKey: 'seccion_create_form_fields_def_field_seccion_mover',
-          label: 'Mover a la Sección',
-          controlType: 'autocomplete-desplegable',
-          options: {
-            transferIdToField: 'newParentId',
-            elementLabel: 'nombre',
-            elementValue: 'id',
-            useNativeFilter: false,
-            selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
-          },
-          apiOptions: {
-            queryString: {
-              filter: 'newParent'
-            },
-            defaultShow: 20,
-            url: PREFIX_DOMAIN_API + 'Section/SeccionRuta'
-          }
+          labelKey: 'perfil_cuenta_create_form_fields_def_field_fechaUltimaActualizacion',
+          key: 'fechaUltimaActualizacion',
+          controlType: 'datepicker',
+          disabled: true
         },
         {
-          key: 'newParentId',
-          controlType: 'hidden'
+          labelKey: 'perfil_cuenta_create_form_fields_def_field_fechaUltimoLogin',
+          key: 'fechaUltimoLogin',
+          controlType: 'datepicker',
+          disabled: true
+        },
+        {
+          labelKey: 'perfil_cuenta_create_form_fields_def_field_solicitudPassword',
+          key: 'solicitudesReenviosPassword',
+          controlType: 'number',
         },
       ],
       ws: {
-        key: 'seccion_grid_def_button_action_nueva_mover_seccion',
-        url: PREFIX_DOMAIN_API + 'personas/cuenta',
+        key: 'seccion_grid_def_button_action_cuenta',
+        url: PREFIX_DOMAIN_API + 'admin/personas/cuenta',
         method: 'PUT'
       }
+    },
+    {
+      actionNameKey: 'seccion_grid_def_button_action_rol',
+      actionType: 'redirect',
+      redirect: {
+        url: '/perfilRol',
+        querystring: {
+          idUser : 'idUser',
+        }
+      },
+      icon: 'supervised_user_circle'
     },
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_publicaciones',
@@ -249,4 +261,20 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       icon: 'feed'
     },
   ],
+  displayedActionsCondition: [
+     {
+       key: 'seccion_grid_def_button_action_cuenta',
+       expression: {
+                     key: 'hasUserId',
+                     value: true
+                   }
+     },
+     {
+      key: 'seccion_grid_def_button_action_rol',
+      expression: {
+                    key: 'hasUserId',
+                    value: true
+                  }
+    },
+  ]
 };
