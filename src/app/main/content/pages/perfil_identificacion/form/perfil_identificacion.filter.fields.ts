@@ -40,7 +40,7 @@ export const PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF = [
     label: 'Email',
     type: 'string',
     controlType: 'textbox'
-  }
+  },
   // {
   //   key: 'tipoDocumento',
   //   labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_tipodocumento',
@@ -55,13 +55,13 @@ export const PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF = [
   //   type: 'string',
   //   controlType: 'textbox'
   // },
-  // {
-  //   key: 'usuario',
-  //   labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_usuario',
-  //   label: 'Usuario',
-  //   type: 'string',
-  //   controlType: 'textbox'
-  // },
+  {
+    key: 'username',
+    labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_usuario',
+    label: 'Usuario',
+    type: 'string',
+    controlType: 'textbox'
+  },
   // {
   //   key: 'fechaNacimiento',
   //   labelKey: 'PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF_FIELD_fechanacimiento',

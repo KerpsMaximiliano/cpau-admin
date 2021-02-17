@@ -40,7 +40,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       columnNameKey: 'perfil_identificacion_grid_def_column_numerodocumento'
     },
     {
-      columnDef: 'usuario',
+      columnDef: 'username',
       columnNameKey: 'perfil_identificacion_grid_def_column_usuario'
     },
     {
@@ -58,8 +58,8 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     'email',
     'tipoDocumento',
     'numeroDocumento',
-    'usuario',
-    'fechaNacimiento'
+    'username',
+    // 'fechaNacimiento'
   ],
   actions: [
     {
@@ -68,7 +68,8 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       redirect: {
         url: '/perfilDomicilio',
         querystring: {
-          idContact : 'idContact'
+          idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'home'
