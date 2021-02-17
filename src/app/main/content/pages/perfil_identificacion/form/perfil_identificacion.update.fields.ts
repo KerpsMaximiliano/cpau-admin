@@ -33,14 +33,16 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_nombre',
     label: 'Nombre',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true
   },
   {
     key: 'apellido',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_apellido',
     label: 'Apellido',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true
   },
   {
     key: 'sexo',
@@ -59,6 +61,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     key: 'idTipoDocumento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_tipodocumento',
     controlType: 'select',
+    required: true,
     options: {
       elementLabel: 'nombre',
       elementValue: 'id',
@@ -72,7 +75,8 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_numerodocumento',
     label: 'Numero Documento',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true
   },
   // {
   //   key: 'usuario',
@@ -92,6 +96,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     key: 'pais',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_pais',
     controlType: 'select',
+    required: true,
     options: {
       elementLabel: 'nombre',
       elementValue: 'id',

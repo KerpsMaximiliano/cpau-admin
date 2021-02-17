@@ -53,13 +53,12 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
+    'tipoDomicilio',
     'calle',
     'altura',
     'piso',
     'dpto',
     'localidad',
-    'codioPostal',
-    'tipoDomicilio',
+    'codioPostal'
   ]
 };
