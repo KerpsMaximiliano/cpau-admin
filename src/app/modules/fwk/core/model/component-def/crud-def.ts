@@ -28,4 +28,5 @@ export class CrudDef extends ComponentDef {
     };
     // Deprecado
     searchFields?: any;
+    initSearch?: boolean;
 }

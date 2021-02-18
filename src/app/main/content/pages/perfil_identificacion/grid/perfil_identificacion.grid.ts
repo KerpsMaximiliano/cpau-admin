@@ -33,11 +33,11 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       columnDef: 'tipoDocumento',
-      columnNameKey: 'perfil_identificacion_grid_def_column_tipodocumento'
+      columnNameKey: 'TD'
     },
     {
       columnDef: 'numeroDocumento',
-      columnNameKey: 'perfil_identificacion_grid_def_column_numerodocumento'
+      columnNameKey: 'ND'
     },
     {
       columnDef: 'username',
