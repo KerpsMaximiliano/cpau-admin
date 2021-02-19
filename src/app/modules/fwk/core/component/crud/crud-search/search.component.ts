@@ -7,6 +7,7 @@ import { MatButton } from '@angular/material';
 import { DialogService } from '../../../service/dialog-service/dialog.service';
 import { LocalStorageService } from '../../../service/local-storage/local-storage.service';
 import { FormService } from '../../../service/dynamic-form/form.service';
+import { CrudDef } from '../../../model/component-def/crud-def';
 
 
 const SEARCH_COMPONENT = 'search-component';
@@ -38,6 +39,7 @@ export class SearchComponent extends AbstractComponent implements OnInit {
   firstSubmitForced: boolean;
   @Input()
   fields: DynamicField<any>[];
+  @Input() crudDef: CrudDef;
   cacheFields: DynamicField<any>[];
   @Output()
   onChangeSearchEntity =  new EventEmitter(true);
@@ -88,9 +90,10 @@ export class SearchComponent extends AbstractComponent implements OnInit {
     }
     this.entity = this.formService.getEntityFromFields(this.cacheFields);
     if (this.forceFirstSubmit != null && this.forceFirstSubmit && this.firstSubmitForced === undefined) {
-      setTimeout(() => {
-        this.onSubmitSearch();
-      }, 1);
+      if (!this.crudDef.cancelInitSearch)
+        setTimeout(() => {
+          this.onSubmitSearch();
+        }, 1);
     }
   }
 
