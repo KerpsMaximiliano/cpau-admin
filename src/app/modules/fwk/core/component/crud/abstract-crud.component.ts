@@ -232,50 +232,53 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   }
 
   findAll() {
-    if (this.service) {
-      let filterInMemory = true;
-      let filter;
-      if (this.crudDef){
-        if (this.crudDef.filterInMemory !== undefined){
-          filterInMemory = this.crudDef.filterInMemory;
-        } 
-        if (this.crudDef.forms.filter){
-          filter = this.crudDef.forms.filter;
+    if (!this.crudDef.initSearch) {
+      if (this.service) {
+        let filterInMemory = true;
+        let filter;
+        if (this.crudDef){
+          if (this.crudDef.filterInMemory !== undefined){
+            filterInMemory = this.crudDef.filterInMemory;
+          } 
+          if (this.crudDef.forms.filter){
+            filter = this.crudDef.forms.filter;
+          }
         }
-      }
-      let page: {page: number, pageSize: number};
-      if (this.crudDef.filterInMemory == false && this.crudDef.serverPagination == true) {
-        page = {
-          page:  this.crudDef.pagination.page,
-          pageSize: this.crudDef.pagination.pageSize
-        };
-      }
-      this.spinnerControl.show();
-      this.service.findAll(this.filterEntity, filter, filterInMemory, page)
-      .subscribe(entities => {
-              this.entities = entities,
-              setTimeout(() => {
-                this.dataSource = new MatTableDataSource<E>(this.entities);
+        let page: {page: number, pageSize: number};
+        if (this.crudDef.filterInMemory == false && this.crudDef.serverPagination == true) {
+          page = {
+            page:  this.crudDef.pagination.page,
+            pageSize: this.crudDef.pagination.pageSize
+          };
+        }
+        this.spinnerControl.show();
+        this.service.findAll(this.filterEntity, filter, filterInMemory, page)
+        .subscribe(entities => {
+                this.entities = entities,
+                setTimeout(() => {
+                  this.dataSource = new MatTableDataSource<E>(this.entities);
 
-                this.dataSource.sortingDataAccessor = (item, property) => {
-                  var fecha = moment(item[property], 'DD/MM/YYYY');
-                  if (fecha.isValid()) {
-                    return fecha.format('YYYYMMDD');
-                  }
-                  if (isNaN(item[property])) {
-                    return item[property].toUpperCase();
-                  }
-                  return item[property];
-                };
+                  this.dataSource.sortingDataAccessor = (item, property) => {
+                    var fecha = moment(item[property], 'DD/MM/YYYY');
+                    if (fecha.isValid()) {
+                      return fecha.format('YYYYMMDD');
+                    }
+                    if (isNaN(item[property])) {
+                      return item[property].toUpperCase();
+                    }
+                    return item[property];
+                  };
 
-                this.postFindAll();
-                this.dataSource._renderChangesSubscription = new Subscription();
-                this.dataSource._renderChangesSubscription.add(() => {
-                  this.spinnerControl.hide();
-                });
-              }, 1);
-            });
+                  this.postFindAll();
+                  this.dataSource._renderChangesSubscription = new Subscription();
+                  this.dataSource._renderChangesSubscription.add(() => {
+                    this.spinnerControl.hide();
+                  });
+                }, 1);
+              });
+        }
     }
+    this.crudDef.initSearch = false;
   }
   postFindAll(){
     

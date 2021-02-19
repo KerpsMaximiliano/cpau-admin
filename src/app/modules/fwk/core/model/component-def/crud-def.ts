@@ -29,4 +29,5 @@ export class CrudDef extends ComponentDef {
     cancelInitSearch?: boolean;
     // Deprecado
     searchFields?: any;
+    initSearch?: boolean;
 }

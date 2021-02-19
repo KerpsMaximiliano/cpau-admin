@@ -18,7 +18,7 @@ export const PERFIL_EMAIL_DEF: CrudDef = {
         filter: PERFIL_EMAIL_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         create: PERFIL_EMAIL_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         update: PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
-        read:  PERFIL_EMAIL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        // read:  PERFIL_EMAIL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: PERFIL_EMAIL_NAV_DEF,
     security: PERFIL_EMAIL_SECURITY_DEF,

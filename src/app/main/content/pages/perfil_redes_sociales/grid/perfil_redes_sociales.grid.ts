@@ -29,9 +29,8 @@ export const PERFIL_REDES_SOCIALES_GRID_DEF = {
       ],
     sortAllColumns: true,
     displayedColumns: [
-      'id',
-      'url',
-      'tipoRedSocial'
+      'tipoRedSocial',
+      'url'
     ]
   };
   
