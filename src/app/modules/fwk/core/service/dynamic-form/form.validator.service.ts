@@ -52,6 +52,7 @@ export const EQUALS_VALIDATION = 'equals';
 export const GT_18_YEARS_OLD_VALIDATION = 'gt18YearsOld';
 export const REGEX_KEY_EMAIL = 'email';
 export const REGEX_KEY_URL = 'url';
+export const REGEX_KEY_NO_WHITE_SPACES = 'whitespace';
 
 @Injectable()
 export class FormValidatorService {
@@ -68,6 +69,7 @@ export class FormValidatorService {
         min_error_message: 'El campo {0} debe ser de un valor mínimo de {1} ',
         max_error_message: 'El campo {0} debe ser de un valor máximo de {1} ',
         email_format_error_message: 'El campo {0} no tiene un formato válido',
+        whitespace_format_error_message: 'El campo {0} no puede iniciar con espacios.',
         user_error_message: 'El campo {0} solo permite letras, números, guion bajo y medio',
         spaces_and_especial_characters_error_message: 'El campo {0} solo permite letras y espacios',
         spaces_and_especial_letters_numbers_slash_dot_error_message: 'El campo {0} solo se permite letras, números, guion medio y punto',
@@ -171,6 +173,8 @@ export class FormValidatorService {
       return errors['customError'].errorMessage;
     } else if (errors['regexError']) {
       return errors['regexError'].errorMessage;
+    } else if (errors['whitespace']) {
+      return String.Format(this.i18n.translate('whitespace_format_error_message'), nameField);
     } else if (errors['pattern']){ /* OLD IMPLEMENTATION REGEX PATTERN CODE */
       if (field.validation.regexKey === undefined && field.validation.errorMessage){
         return String.Format(field.validation.errorMessage, nameField, field.validation.regex); 
@@ -192,7 +196,7 @@ export class FormValidatorService {
       } else if (field.validation.regexKey === REGEX_KEY_CUIL){
         return String.Format(this.i18n.translate('cuil_error_message'), nameField);
       } else if (field.validation.regexKey === REGEX_KEY_EMAIL){
-        return String.Format(this.i18n.translate('email_format_error_message'), nameField); 
+        return String.Format(this.i18n.translate('email_format_error_message'), nameField);
       } else if (field.validation.regexKey === REGEX_KEY_URL){
         return String.Format(this.i18n.translate('url_format_error_message'), nameField); 
       }else{
@@ -324,6 +328,8 @@ export class FormValidatorService {
         validators.push(Validators.pattern(CONSTANTS.REGEX_CUIL));
       }else if (field.validation.regexKey === REGEX_KEY_EMAIL){
         validators.push(Validators.email);
+      }else if (field.validation.regexKey === REGEX_KEY_NO_WHITE_SPACES){
+        validators.push(CustomValidator.noWhitespaceValidator);
       }else if (field.validation.regexKey === REGEX_KEY_URL){
         validators.push(Validators.pattern(CONSTANTS.REGEX_URL));
       }else{
@@ -381,6 +387,12 @@ export const CUSTOMS_VALIDATORS_HELPER = {
         return !error ? {'email': {error: true} } : null;
       };
   },
+  noWhitespaceValidator: function (): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} | null => {
+      const isWhitespace = (control.value || '').trim().length === 0;
+      return isWhitespace ? {'whitespace': true } : null;
+    };
+  },
   length: function (length: number, required: boolean): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} | null => {
       let valueString = control.value;
@@ -414,6 +426,7 @@ export const VALIDATIONS_HELPER = {
   [REGEX_KEY_CUIL]: Validators.pattern(CONSTANTS.REGEX_CUIL),
   [REGEX_KEY_EMAIL]: Validators.email,
   [REGEX_KEY_URL]: Validators.pattern(CONSTANTS.REGEX_URL),
+  [REGEX_KEY_NO_WHITE_SPACES]: CUSTOMS_VALIDATORS_HELPER.noWhitespaceValidator,
 };
 
 export const ERROR_MESSAGES_HELPER = {
@@ -429,4 +442,107 @@ function isValidDate(control: AbstractControl, patternDate: string, errorMessage
 
   }
   return error ? {'date': {errorMessage: errorMessage, format: patternDate}} : null;
+}
+
+export class CustomValidator {
+   // Validates URL
+   static urlValidator(url): any {
+      if (url.pristine) {
+         return null;
+      }
+      const urlpattern = new RegExp('^((https?:\\/\\/)|(http?:\\/\\/))' + // protocol
+         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+         '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+         '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+         '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+      url.markAsTouched();
+      if (urlpattern.test(url.value)) {
+         return null;
+      }
+      return {
+         invalidUrl: true
+      };
+   }
+   // Validates passwords
+   static matchPassword(group): any {
+      const password = group.controls.password;
+      const confirm = group.controls.confirm;
+      if (password.pristine || confirm.pristine) {
+         return null;
+      }
+      group.markAsTouched();
+      if (password.value === confirm.value) {
+         return null;
+      }
+      return {
+         invalidPassword: true
+      };
+   }
+   // Validates numbers
+   static numberValidator(num: any): any {
+      if (num.pristine) {
+         return null;
+      }
+      const NUMBER_REGEXP = /^-?[\d.]+(?:e-?\d+)?$/;
+      num.markAsTouched();
+      if (NUMBER_REGEXP.test(num.value)) {
+         return null;
+      }
+      return {
+         invalidNumber: true
+      };
+   }
+   // Validates US SSN
+   static ssnValidator(ssn): any {
+      if (ssn.pristine) {
+         return null;
+      }
+      const SSN_REGEXP = /^(?!219-09-9999|078-05-1120)(?!666|000|9\d{2})\d{3}-(?!00)\d{2}-(?!0{4})\d{4}$/;
+      ssn.markAsTouched();
+      if (SSN_REGEXP.test(ssn.value)) {
+         return null;
+      }
+      return {
+         invalidSsn: true
+      };
+   }
+   // Validates US phone numbers
+   static phoneValidator(num: any): any {
+      if (num.pristine) {
+         return null;
+      }
+      const PHONE_REGEXP = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
+      num.markAsTouched();
+      if (PHONE_REGEXP.test(num.value)) {
+         return null;
+      }
+      return {
+         invalidNumber: true
+      };
+   }
+   // Validates zip codes
+   static zipCodeValidator(zip): any {
+      if (zip.pristine) {
+         return null;
+      }
+      const ZIP_REGEXP = /^[0-9]{5}(?:-[0-9]{4})?$/;
+      zip.markAsTouched();
+      if (ZIP_REGEXP.test(zip.value)) {
+         return null;
+      }
+      return {
+         invalidZip: true
+      };
+   }
+
+   static noWhitespaceValidator(control: FormControl) {
+      if (control.value && control.value.length > 0) {
+
+         const isWhitespace = (control.value || '').trim().length === 0;
+         const isValid = !isWhitespace;
+         return isValid ? null : { 'whitespace': true };
+      }
+      return null;
+   }
 }

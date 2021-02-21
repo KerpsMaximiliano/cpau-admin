@@ -25,6 +25,7 @@ export const CONSTANTS = {
                     '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
                     '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
                     '(\\#[-a-z\\d_]*)?$',
+    REGEX_NO_WHITE_SPACES: '',
 
     /* NEW IMPLEMENTATION */
     REGEXS: [{
