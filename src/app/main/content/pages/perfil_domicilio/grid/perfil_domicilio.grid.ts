@@ -59,6 +59,6 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
     'piso',
     'dpto',
     'localidad',
-    'codioPostal'
+    'codigoPostal'
   ]
 };
