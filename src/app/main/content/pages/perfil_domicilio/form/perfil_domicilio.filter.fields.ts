@@ -55,4 +55,8 @@ export const PERFIL_DOMICILIO_FILTER_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'hidden',
   },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
+  }
 ];

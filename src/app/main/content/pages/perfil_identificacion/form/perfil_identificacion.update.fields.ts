@@ -34,7 +34,8 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     label: 'Nombre',
     type: 'string',
     controlType: 'textbox',
-    required: true
+    required: true,
+    maxLength: 200
   },
   {
     key: 'apellido',
@@ -42,7 +43,8 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     label: 'Apellido',
     type: 'string',
     controlType: 'textbox',
-    required: true
+    required: true,
+    maxLength: 200
   },
   {
     key: 'sexo',
@@ -75,8 +77,9 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_numerodocumento',
     label: 'Numero Documento',
     type: 'string',
-    controlType: 'textbox',
-    required: true
+    controlType: 'number',
+    required: true,
+    maxLength: 10
   },
   // {
   //   key: 'usuario',
@@ -90,7 +93,8 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_fechanacimiento',
     label: 'Fecha Nacimiento',
     type: 'datepicker',
-    controlType: 'datepicker'
+    controlType: 'datepicker',
+    required: true
   },
   {
     key: 'pais',

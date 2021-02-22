@@ -16,7 +16,7 @@ export const PERFIL_IDENTIFICACION_DEF: CrudDef = {
     i18n: PERFIL_IDENTIFICACION_I18N_DEF,
     grid: PERFIL_IDENTIFICACION_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
-        filter: PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
+       filter: PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         //create: PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         update: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  PERFIL_IDENTIFICACION_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
