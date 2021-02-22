@@ -26,6 +26,7 @@ export class CrudDef extends ComponentDef {
     exportCsv?: {
       csvExportFileName: string
     };
+    cancelInitSearch?: boolean;
     // Deprecado
     searchFields?: any;
     initSearch?: boolean;

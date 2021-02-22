@@ -27,7 +27,7 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
       columnNameKey: 'perfil_domicilio_grid_def_column_localidad'
     },
     {
-      columnDef: 'codioPostal',
+      columnDef: 'codigoPostal',
       columnNameKey: 'perfil_domicilio_grid_def_column_codiopostal'
     },
     {
@@ -59,6 +59,6 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
     'piso',
     'dpto',
     'localidad',
-    'codioPostal'
+    'codigoPostal'
   ]
 };

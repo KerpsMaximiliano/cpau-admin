@@ -35,5 +35,6 @@ export const PERFIL_IDENTIFICACION_DEF: CrudDef = {
     pagination: {
         page: 0,
         pageSize: 10
-    }
+    },
+    cancelInitSearch: true
 };

@@ -1,5 +1,5 @@
 import { REGEX_KEY_ONLY_NUMBERS } from "app/modules/fwk/constants";
-import { REGEX_KEY_CODIGO_POSTAL } from "app/modules/fwk/core/service/dynamic-form/form.validator.service";
+import { REGEX_KEY_CODIGO_POSTAL, REGEX_KEY_NO_WHITE_SPACES } from "app/modules/fwk/core/service/dynamic-form/form.validator.service";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
@@ -20,6 +20,9 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     required: true,
     minLength: 1,
     maxLength: 100,
+    validation: {
+      regexKey: REGEX_KEY_NO_WHITE_SPACES
+    }
   },
   {
     key: 'altura',
@@ -63,6 +66,9 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     required: true,
     minLength: 1,
     maxLength: 100,
+    validation: {
+      regexKey: REGEX_KEY_NO_WHITE_SPACES
+    }
   },
   {
     key: 'codigoPostal',
