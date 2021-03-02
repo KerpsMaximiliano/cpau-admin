@@ -260,6 +260,22 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       },
       icon: 'feed'
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_uploadPhoto',
+      icon: 'photo',
+      form: [
+        {               
+          key: 'foto',
+          labelKey: 'Foto (solo jpg)',
+          controlType: 'file'
+        }
+      ],
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_subirFoto',
+        url: PREFIX_DOMAIN_API + 'perfilFoto',
+        method: 'PUT'
+      }
+    },
   ],
   displayedActionsCondition: [
      {
