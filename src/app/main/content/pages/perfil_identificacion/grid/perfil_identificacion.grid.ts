@@ -3,7 +3,7 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 export const PERFIL_IDENTIFICACION_GRID_DEF = {
   columnsDef: [
     {
-      columnDef: 'id',
+      columnDef: 'idUser',
       id: true,
       columnNameKey: 'perfil_identificacion_grid_def_column_id'
     },
@@ -265,15 +265,19 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       icon: 'photo',
       form: [
         {               
-          key: 'foto',
+          key: 'image',
           labelKey: 'Foto (solo jpg)',
           controlType: 'file'
-        }
+        },
+        {               
+          key: 'idUser',
+          controlType: 'textbox'
+        },
       ],
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_subirFoto',
-        url: PREFIX_DOMAIN_API + 'perfilFoto',
-        method: 'PUT'
+        url: PREFIX_DOMAIN_API + 'admin/saveimage',
+        method: 'POST'
       }
     },
   ],
