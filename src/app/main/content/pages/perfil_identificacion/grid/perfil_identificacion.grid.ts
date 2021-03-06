@@ -8,6 +8,10 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       columnNameKey: 'perfil_identificacion_grid_def_column_id'
     },
     {
+      columnDef: 'idContact',
+      columnNameKey: 'perfil_identificacion_grid_def_column_idContact'
+    },
+    {
       columnDef: 'tipo',
       columnNameKey: 'perfil_identificacion_grid_def_column_tipo'
     },
@@ -270,8 +274,8 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'file'
         },
         {               
-          key: 'idUser',
-          controlType: 'textbox'
+          key: 'idContact',
+          controlType: 'hidden',
         },
       ],
       ws: {
