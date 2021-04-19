@@ -36,5 +36,12 @@ export const CONTENIDO_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '800px'
-    }   
+    },
+    filterInMemory: false,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
+    cancelInitSearch: true
 };
