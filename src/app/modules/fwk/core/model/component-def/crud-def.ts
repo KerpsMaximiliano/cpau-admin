@@ -19,7 +19,7 @@ export class CrudDef extends ComponentDef {
       page: number,
       pageSize: number 
     };
-    cancelInitSearch: boolean;
+    cancelInitSearch?: boolean;
     serverPagination?: boolean;
     initFilter?: boolean;
     openLink?: string;
