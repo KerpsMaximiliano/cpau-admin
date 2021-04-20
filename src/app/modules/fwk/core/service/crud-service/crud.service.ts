@@ -83,8 +83,8 @@ export abstract class CrudService<E extends Entity> extends HttpService implemen
             });
             const nroParams = Object.getOwnPropertyNames(filter).length - 1;
             Object.getOwnPropertyNames(filter).forEach( (prop, index) => {
-                params = params.append(index === 0 ? 'search=\[' + prop : prop,
-                                       index === nroParams ? filter[prop] + '\]' : filter[prop]);
+                params = params.append(index === 0 ? prop : prop,
+                                        index === nroParams ? filter[prop] : filter[prop]);
             });
 
             // return params;

@@ -54,7 +54,7 @@
                                 [selectable]="crudDef.crudActions"
                                 [urlDelete]="crudDef.ws.url"
                                 (status)="statusChanged($event)"
-                                >
+                                (onChangePagination)='findAll()'>
                 </app-crud-table>
         </div>
             <!-- / CONTENT CARD -->

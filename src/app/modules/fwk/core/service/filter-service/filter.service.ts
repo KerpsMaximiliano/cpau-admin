@@ -8,6 +8,16 @@ const STRING = 'string';
 @Injectable()
 export class FilterService{
 
+    private _totalReg: number;
+
+
+    public set totalReg(v : number) {
+        this._totalReg = v;
+    }
+    
+    public get totalReg() : number {
+        return this._totalReg;
+    }
     private convertValue(value, field){
         if (value === undefined || value === null || value === ''){
             return value;
