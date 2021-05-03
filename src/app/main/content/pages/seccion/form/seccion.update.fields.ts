@@ -131,6 +131,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       elementLabel: 'nombre',
       elementValue: 'id',
       fromData: [{id: 1, nombre: 'Agenda'},
+                 {id: 6, nombre: 'Agenda con Tags'},
                  {id: 2, nombre: 'Noticias con Imagen'},
                  {id: 3, nombre: 'Beneficios'},
                  {id: 4, nombre: 'Noticias sin Imagen'},
