@@ -48,7 +48,7 @@ export class SearchComponent extends AbstractComponent implements OnInit {
   @ViewChild('ngformElement')
   ngFormElement: NgForm;
   dialogService: DialogService;
-  generalField: DynamicField<any>;
+  generalField: DynamicField<any>[];
   generalFields: DynamicField<any>[];
   localStorageService: LocalStorageService;
   fieldsOptions: DynamicField<any>[];
@@ -71,9 +71,7 @@ export class SearchComponent extends AbstractComponent implements OnInit {
     this.resetCacheFields();
     this.generalField = this.getGeneralField(this.cacheFields);
     if (this.generalField != undefined) {
-      this.generalFields = [
-        this.generalField
-      ];
+      this.generalFields = this.generalField;
     } else {
       this.generalFields = undefined;
     }
@@ -109,19 +107,21 @@ export class SearchComponent extends AbstractComponent implements OnInit {
         }
         return false;
     });
-    let field;
+    let fieldx;
     if (filtered && filtered.length > 0){
-      field = filtered[0];
+      fieldx = filtered[0];
     }else{
-      field = fields[0];
-      if (field != undefined) {
-        if (field.options === undefined){
-          field.options = {};
+      // field = fields[0];
+      fields.forEach(field => {
+        if (field !== undefined) {
+          if (field.options === undefined){
+            field.options = {};
+          }
+          field.options.baseFilter = true;
         }
-        field.options.baseFilter = true;
-      }
+      });
     }
-    return field;
+    return fields;
   }
 
   onChangeEntity(entity){

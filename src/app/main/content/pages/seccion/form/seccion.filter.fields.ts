@@ -5,7 +5,7 @@ export const SECCION_FILTER_FORM_FIELDS_DEF = [
     labelKey: 'SECCION_FILTER_FORM_FIELDS_DEF_FIELD_name',
     label: 'Sección',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
   },
   {
     key: 'seName',
