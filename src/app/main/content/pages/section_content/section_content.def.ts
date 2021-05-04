@@ -38,5 +38,11 @@ export const SECTION_CONTENT_DEF: CrudDef = {
         width: '800px'
     },
     filterInMemory: false,
-    backButton: true   
+    backButton: true,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
+    cancelInitSearch: true   
 };
