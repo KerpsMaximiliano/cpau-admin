@@ -81,4 +81,12 @@ form:first-child{
         width: 100% !important;
         margin-left: 0px;
     }
+    .content-buttons {
+        position: absolute;
+        right: -25%;
+        bottom: 50%;
+    }
+    ::ng-deep.mat-form-field-label {
+        color: white;
+    }
 }
