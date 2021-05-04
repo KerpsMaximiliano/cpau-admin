@@ -152,7 +152,7 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
     } else if (this.isEdit) {
       this.data.crud.validationEdit(this.entity).subscribe(r => {
         this.data.crud.edit(this.entity).subscribe(ok => {
-          if (ok.success) {
+          if (ok) {
             this.dialogRef.close();
             this.globalSpinnerControl.hide();
             this.notificationService.notifySuccess(this.translate('success_message'));
