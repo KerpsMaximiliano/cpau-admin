@@ -90,7 +90,7 @@ export class SearchComponent extends AbstractComponent implements OnInit {
     }
     this.entity = this.formService.getEntityFromFields(this.cacheFields);
     if (this.forceFirstSubmit != null && this.forceFirstSubmit && this.firstSubmitForced === undefined) {
-      if (!this.crudDef.cancelInitSearch)
+      if (!this.crudDef.cancelInitSearch || this.userChangeOptions())
         setTimeout(() => {
           this.onSubmitSearch();
         }, 1);
