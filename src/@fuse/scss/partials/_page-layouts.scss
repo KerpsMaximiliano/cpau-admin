@@ -1,10 +1,10 @@
 // Page Layouts
-$carded-header-height: 200px !default;
-$carded-header-height-sm: 160px !default;
+$carded-header-height: 130px !default;
+$carded-header-height-sm: 40px !default;
 $carded-toolbar-height: 64px !default;
 
-$header-height: 120px !default;
-$header-height-sm: 100px !default;
+$header-height: 20px !default;
+$header-height-sm: 10px !default;
 
 // Calculate toolbarless header height
 $carded-header-height-without-toolbar: $carded-header-height - $carded-toolbar-height;

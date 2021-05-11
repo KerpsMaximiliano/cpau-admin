@@ -3,7 +3,7 @@
     <!-- <div flex>   -->
       <mat-grid-list [cols]="generalFields.length <= 4 ? generalFields.length : 4" rowHeight="2:1">
         <div *ngFor="let gf of generalFields;let i = index" >
-          <mat-grid-tile>
+          <mat-grid-tile [ngClass]="{'first-tile': i==0}">
             <app-dynamic-form-component [entity]="[entity[i]]"    
                     [isEdit]="true"
                     [fields]="[gf]"
