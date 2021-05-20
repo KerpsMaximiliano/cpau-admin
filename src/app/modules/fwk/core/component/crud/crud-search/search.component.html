@@ -1,9 +1,7 @@
-<form *ngIf="generalFields" #ngformElement="ngForm" (ngSubmit)="onSubmitSearch()" (keyup)="submitOnEnter($event)" name="{{subFormName}}" [formGroup]="form" novalidate>
-  <div class="search-input-wrapper">
-    <!-- <div flex>   -->
-      <mat-grid-list [cols]="generalFields.length <= 4 ? generalFields.length : 4" rowHeight="2:1">
+<form *ngIf="generalFields" #ngformElement="ngForm" (ngSubmit)="onSubmitSearch()" (keyup)="submitOnEnter($event)" name="{{subFormName}}" [formGroup]="form" novalidate class="search-content">
+      <mat-grid-list [cols]="generalFields.length <= 4 ? generalFields.length : 4" rowHeight="fit">
         <div *ngFor="let gf of generalFields;let i = index" >
-          <mat-grid-tile [ngClass]="{'first-tile': i==0}">
+          <mat-grid-tile>
             <app-dynamic-form-component [entity]="[entity[i]]"    
                     [isEdit]="true"
                     [fields]="[gf]"
@@ -14,11 +12,11 @@
         </div>
     
         <div class="content-buttons">
-          <button #submitbutton  mat-icon-button class="search" cdkFocusInitial>
-            <mat-icon class="secondary-text">search</mat-icon>  
+          <button #submitbutton  mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted search" cdkFocusInitial>
+            <mat-icon caria-label="icon">search</mat-icon>  
           </button>
-          <button mat-icon-button class="clear" (click)="clearForm()">
-            <mat-icon class="secondary-text">clear</mat-icon>  
+          <button mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted clear" (click)="clearForm()">
+            <mat-icon aria-label="icon">clear</mat-icon>  
           </button>
           <button *ngIf="hasOptions()" type="button" mat-icon-button class="drop_down" (click)="openOptions()" >
               <mat-icon *ngIf="userChangeOptions()" style="color: red !important" class="secondary-text">arrow_drop_down</mat-icon>  
@@ -26,6 +24,4 @@
           </button>
         </div>
       </mat-grid-list>
-    <!-- </div> -->
-  </div>
 </form>

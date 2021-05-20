@@ -3,6 +3,12 @@
 // :host {
     .page-layout{
         height: 100vh;
+
+        .btn-link {
+            top: 50px;
+            right: -90px;
+            height: 35%;
+        }
     }
     .header {
         .search-input-wrapper {
@@ -16,7 +22,12 @@
             max-height: 192px !important;
         }
     }
-
+    .header-buttons.content-buttons {
+        position: absolute;
+        right: 25px;
+        top: 5px;
+    }
+    
     .top-bg {
         @include media-breakpoint-down(xs) {
             height: 240px;
@@ -105,12 +116,17 @@
 } 
 app-search{
     margin-bottom: 3px;
-    width: 100%;
+    width: 80%;
     app-dynamic-form-component{
         width: 50% !important;
     }
 }
 
+.btn-add {
+    mat-icon {
+        vertical-align: sub !important;
+    }
+}
 .header-buttons{
     // width: 100%;
 }

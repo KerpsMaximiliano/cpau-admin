@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 import { FuseConfigService } from '@fuse/services/config.service';
@@ -51,7 +51,7 @@ export class FuseToolbarComponent extends CrudComponent implements OnInit, OnDes
         private authService: AuthService,
         injector: Injector,
         configService: FuseConfigService,
-
+        activatedRoute: ActivatedRoute
     )
     {
         // super(injector);
@@ -206,8 +206,12 @@ export class FuseToolbarComponent extends CrudComponent implements OnInit, OnDes
     // onInit() {
     // }
     getParentTitle(){
-        if (this.filterEntity != undefined && this.filterEntity['parentTitle']) {
-          return " - " + this.filterEntity['parentTitle'];
-        } return "";
-      }
+        var title = '';
+        this.activatedRoute.queryParams.subscribe(params => {
+           if (params && params.parentTitle) {
+            title = params.parentTitle;
+           }
+        });
+        return title ? " - " + title : '';
+    }
 }
