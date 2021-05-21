@@ -37,7 +37,14 @@ export const SECTION_CONTENT_CREATE_FORM_FIELDS_DEF = [
     controlType: 'hidden'
   },
 
-  
+  {
+    key: 'displayOrder',
+    labelKey: 'section_content_update_form_fields_def_field_displayorder',
+    label: 'Orden',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
   {
     key: 'highlighted',
     labelKey: 'section_content_create_form_fields_def_field_highlighted',
