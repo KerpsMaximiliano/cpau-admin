@@ -55,7 +55,6 @@ import { ColorPickerComponent } from './component/color-picker/color-picker.comp
 import { TagsComponent } from './component/tags/tags.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ImportImageComponent } from './component/import-image/import-image.component';
-import { BackButtonComponent } from './component/back-button/backbutton.component';
 import { AppCrudComponent } from './shared/view/crud/app-crud.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
@@ -79,7 +78,6 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
   ],
   entryComponents: [
     ColorPickerComponent,
-    BackButtonComponent,
     ImportImageComponent,
     TagsComponent,
     DynamicFormComponent,
@@ -108,7 +106,6 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
     DynamicFormComponent,
     CrudModalComponent,
     ImportImageComponent,
-    BackButtonComponent,
     BasicModalComponent,
     AutocompleteComponent,
     CrudTableComponent,
@@ -138,7 +135,6 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
     DynamicFormComponent,
     CrudModalComponent,
     ImportImageComponent,
-    BackButtonComponent,
     BasicModalComponent,
     CrudTableComponent,
     AutocompleteComponent,
