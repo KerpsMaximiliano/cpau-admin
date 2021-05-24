@@ -12,10 +12,10 @@
         </div>
     
         <div class="content-buttons">
-          <button #submitbutton  mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted search" cdkFocusInitial>
+          <button #submitbutton  mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted search" cdkFocusInitial title="Buscar">
             <mat-icon caria-label="icon">search</mat-icon>  
           </button>
-          <button mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted clear" (click)="clearForm()">
+          <button mat-icon-button class="btns icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted clear" (click)="clearForm()" title="Limpiar">
             <mat-icon aria-label="icon">clear</mat-icon>  
           </button>
           <button *ngIf="hasOptions()" type="button" mat-icon-button class="drop_down" (click)="openOptions()" >
