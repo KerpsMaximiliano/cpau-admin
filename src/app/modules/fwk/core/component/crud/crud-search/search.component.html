@@ -1,6 +1,6 @@
 <form *ngIf="generalFields" #ngformElement="ngForm" (ngSubmit)="onSubmitSearch()" (keyup)="submitOnEnter($event)" name="{{subFormName}}" [formGroup]="form" novalidate class="search-content">
       <mat-grid-list [cols]="generalFields.length <= 4 ? generalFields.length : 4" rowHeight="fit">
-        <div *ngFor="let gf of generalFields;let i = index" >
+        <div *ngFor="let gf of generalFields;let i = index">
           <mat-grid-tile>
             <app-dynamic-form-component [entity]="[entity[i]]"    
                     [isEdit]="true"

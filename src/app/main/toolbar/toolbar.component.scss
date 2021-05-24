@@ -1373,7 +1373,12 @@ cursor: pointer;
 	width: 100%;
 	.logo-text {
 		color: black;
-		margin: 2%;
+		// margin: 2%;
 		font-weight: bold;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 600px;
+		display: inherit;
 	}
 }

@@ -13,15 +13,20 @@
                     fxLayout="column" fxLayoutAlign="center center"
                     fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="baseline">
             <!-- APP TITLE -->
-            <div class="logo my-12 m-sm-0"
+            <!-- <div class="logo my-12 m-sm-0"
                   fxLayout="row" fxLayoutAlign="start center">
                 <back-button *ngIf='crudDef.backButton' style= "margin-right: 10px;"></back-button>
-            </div>
+            </div> -->
             <app-search *ngIf='crudDef.forms.filter' [fields]='crudDef.forms.filter' (onChangeSearchEntity)='filterSearchEntity($event)' [forceFirstSubmit]='true' [crudDef]="crudDef"></app-search>
     
-            <a *ngIf="crudDef.openLink" mat-raised-button class="mat-white-bg my-12 mt-sm-0 btn-link" target="_blank" [href]="crudDef.openLink">Panel Mailer</a>
             <div class="header-buttons content-buttons">
                 <!-- / APP TITLE -->
+                <button mat-icon-button
+                        *ngIf="crudDef.openLink"
+                        (click)="goToLink(crudDef.openLink)"
+                        class="icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted btn-add" title='Mail'>
+                    <mat-icon aria-label="icon">mail</mat-icon>  
+                </button>
                 
                 <button 
                     *ngIf="crudDef.exportCsv"

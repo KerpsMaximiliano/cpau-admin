@@ -3,12 +3,6 @@
 // :host {
     .page-layout{
         height: 100vh;
-
-        .btn-link {
-            top: 50px;
-            right: -90px;
-            height: 35%;
-        }
     }
     .header {
         .search-input-wrapper {
@@ -24,8 +18,8 @@
     }
     .header-buttons.content-buttons {
         position: absolute;
-        right: 25px;
-        top: 5px;
+        right: 30px;
+        top: 15px;
     }
     
     .top-bg {
@@ -123,6 +117,11 @@ app-search{
 }
 
 .btn-add {
+    mat-icon {
+        vertical-align: sub !important;
+    }
+}
+.btn-link {
     mat-icon {
         vertical-align: sub !important;
     }

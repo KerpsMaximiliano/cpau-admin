@@ -80,6 +80,11 @@ form:first-child{
 }
 ::ng-deep mat-grid-list {
     height: 100px;
+    top: 10px;
+}
+::ng-deep .mat-grid-tile .mat-figure {
+    justify-content: flex-start !important ;
+    align-items: flex-start !important;
 }
 .search-content{
     width: 100% !important;
@@ -89,7 +94,7 @@ form:first-child{
         margin-left: 0px;
     }
     .content-buttons {
-        right: -160px;
+        right: -130px;
         position: absolute;
         top: 5px;
     }
