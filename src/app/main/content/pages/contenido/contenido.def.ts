@@ -43,5 +43,5 @@ export const CONTENIDO_DEF: CrudDef = {
         page: 0,
         pageSize: 10
     },
-    cancelInitSearch: true
+    cancelInitSearch: false
 };
