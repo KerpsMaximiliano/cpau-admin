@@ -9,7 +9,7 @@ export const CONTENIDO_FILTER_FORM_FIELDS_DEF = [
   {
     key: 'id',
     label: 'contentId',
-    controlType: 'number'
+    controlType: 'hidden'
   }
 
 ];
