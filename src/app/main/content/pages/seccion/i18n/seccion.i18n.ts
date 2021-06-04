@@ -66,6 +66,7 @@ export const SECCION_I18N_DEF = {
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_Policy: 'Políticas',
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_title: 'Título',
     seccion_grid_def_button_action_politicas: 'Políticas',
-    section_content_grid_def_button_action_delete: 'Eliminar'
+    section_content_grid_def_button_action_delete: 'Eliminar',
+    SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_filterDate: 'Filtro de fechas por defecto'
   }
 };
