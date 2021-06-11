@@ -174,7 +174,9 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
                  {id: 1, nombre: 'Esta semana'},
                  {id: 2, nombre: 'Este Mes'},
                  {id: 3, nombre: 'Este año'},
-                 {id: 4, nombre: 'Últimos Dos años'}]
+                 {id: 4, nombre: 'Últimos Dos años'},
+                 {id: 5, nombre: 'Todos'}]
+
       }
   },
   {
