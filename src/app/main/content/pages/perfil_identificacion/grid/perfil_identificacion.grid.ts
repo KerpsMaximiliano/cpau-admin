@@ -4,11 +4,11 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
   columnsDef: [
     {
       columnDef: 'idUser',
-      id: true,
       columnNameKey: 'perfil_identificacion_grid_def_column_id'
     },
     {
       columnDef: 'idContact',
+      id: true,
       columnNameKey: 'perfil_identificacion_grid_def_column_idContact'
     },
     {
@@ -84,7 +84,8 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       redirect: {
         url: '/perfilEmail',
         querystring: {
-          idContact : 'idContact'
+          idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'email'
@@ -96,6 +97,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilTelefono',
         querystring: {
           idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'phone'
@@ -168,6 +170,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilRedesSociales',
         querystring: {
           idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'people'
@@ -179,6 +182,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilCuentaCorriente',
         querystring: {
           idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'account_balance'
@@ -238,6 +242,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilRol',
         querystring: {
           idUser : 'idUser',
+          parentTitle: 'apellido'
         }
       },
       icon: 'supervised_user_circle'
@@ -249,6 +254,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilPublicaciones',
         querystring: {
           idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'public'
@@ -260,6 +266,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         url: '/perfilNewsletters',
         querystring: {
           idContact : 'idContact',
+          parentTitle: 'apellido'
         }
       },
       icon: 'feed'
@@ -297,6 +304,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       key: 'seccion_grid_def_button_action_rol',
       expression: {
                     key: 'hasUserId',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
+      expression: {
+                    key: 'isMatriculado',
                     value: true
                   }
     },

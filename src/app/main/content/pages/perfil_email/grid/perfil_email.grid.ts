@@ -4,6 +4,7 @@ export const PERFIL_EMAIL_GRID_DEF = {
   columnsDef: [
     {
       columnDef: 'idContactData',
+      id: true,
       columnNameKey: 'perfil_email_grid_def_column_idcontactdata'
     },
     {
@@ -29,8 +30,9 @@ export const PERFIL_EMAIL_GRID_DEF = {
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'idContactData',
+    //'idContactData',
+    'tipoEmail',
     'email',
-    'tipoEmail'
+    
   ]
 };

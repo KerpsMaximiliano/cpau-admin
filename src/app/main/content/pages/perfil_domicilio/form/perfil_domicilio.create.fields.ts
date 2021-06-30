@@ -49,7 +49,7 @@ export const PERFIL_DOMICILIO_CREATE_FORM_FIELDS_DEF = [
     }
   },
   {
-    key: 'dpto',
+    key: 'depto',
     labelKey: 'perfil_domicilio_create_form_fields_def_field_dpto',
     label: 'Departamento',
     type: 'string',

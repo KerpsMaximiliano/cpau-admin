@@ -3,7 +3,8 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 export const PERFIL_DOMICILIO_GRID_DEF = {
   columnsDef: [
     {
-      columnDef: 'id',
+      columnDef: 'contactDataId',
+      id: true,
       columnNameKey: 'perfil_domicilio_grid_def_column_idcontactdata'
     },
     {
@@ -19,7 +20,7 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
       columnNameKey: 'perfil_domicilio_grid_def_column_piso'
     },
     {
-      columnDef: 'dpto',
+      columnDef: 'depto',
       columnNameKey: 'perfil_domicilio_grid_def_column_dpto'
     },
     {
@@ -57,7 +58,7 @@ export const PERFIL_DOMICILIO_GRID_DEF = {
     'calle',
     'altura',
     'piso',
-    'dpto',
+    'depto',
     'localidad',
     'codigoPostal'
   ]

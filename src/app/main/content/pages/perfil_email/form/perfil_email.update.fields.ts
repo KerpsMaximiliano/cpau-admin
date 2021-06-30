@@ -10,13 +10,6 @@ export const PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF = [
     mappingQuerystring: true
   },
   {
-    key: 'email',
-    labelKey: 'PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_email',
-    label: 'Email',
-    type: 'string',
-    controlType: 'textbox'
-  },
-  {
     key: 'idTipoEmail',
     labelKey: 'PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_tipoemail',
     controlType: 'select',
@@ -28,5 +21,12 @@ export const PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF = [
         url: PREFIX_DOMAIN_API + 'siteConsumer/tipoContacto',
       }
     }
+  },
+  {
+    key: 'email',
+    labelKey: 'PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_email',
+    label: 'Email',
+    type: 'string',
+    controlType: 'textbox'
   },
 ];

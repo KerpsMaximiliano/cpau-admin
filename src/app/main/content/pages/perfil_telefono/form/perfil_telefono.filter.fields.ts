@@ -20,4 +20,8 @@ export const PERFIL_TELEFONO_FILTER_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'hidden',
   },
+  {
+    key: 'parentTitle',
+    controlType: 'hidden'
+  }
 ];

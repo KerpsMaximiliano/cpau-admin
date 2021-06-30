@@ -6,5 +6,9 @@ export const PERFIL_CUENTA_CORRIENTE_FILTER_FORM_FIELDS_DEF = [
       type: 'string',
       controlType: 'hidden',
     },
+    {
+      key: 'parentTitle',
+      controlType: 'hidden'
+    }
   ];
   

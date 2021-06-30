@@ -20,5 +20,9 @@ export const PERFIL_REDES_SOCIALES_FILTER_FORM_FIELDS_DEF = [
       type: 'string',
       controlType: 'hidden',
     },
+    {
+      key: 'parentTitle',
+      controlType: 'hidden'
+    }
   ];
   

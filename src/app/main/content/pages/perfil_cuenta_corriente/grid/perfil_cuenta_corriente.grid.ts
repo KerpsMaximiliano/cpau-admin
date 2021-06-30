@@ -51,7 +51,6 @@ export const PERFIL_CUENTA_CORRIENTE_GRID_DEF = {
     //   ],
     sortAllColumns: true,
     displayedColumns: [
-      'id',
       'periodo',
       'tipoDocumento',
       'numeroDocumento',

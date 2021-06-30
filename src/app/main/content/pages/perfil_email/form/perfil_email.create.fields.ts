@@ -11,18 +11,6 @@ export const PERFIL_EMAIL_CREATE_FORM_FIELDS_DEF = [
     mappingQuerystring: true
   },
   {
-    key: 'email',
-    labelKey: 'perfil_email_create_form_fields_def_field_email',
-    label: 'Email',
-    type: 'string',
-    controlType: 'textbox',
-    required: true,
-    validation: {
-      regexKey: REGEX_KEY_EMAIL
-    },
-    maxLength: 250
-  },
-  {
     key: 'idTipoEmail',
     labelKey: 'perfil_email_create_form_fields_def_field_tipoemail',
     controlType: 'select',
@@ -35,4 +23,17 @@ export const PERFIL_EMAIL_CREATE_FORM_FIELDS_DEF = [
       }
     }
   },
+  {
+    key: 'email',
+    labelKey: 'perfil_email_create_form_fields_def_field_email',
+    label: 'Email',
+    type: 'string',
+    controlType: 'textbox',
+    required: true,
+    validation: {
+      regexKey: REGEX_KEY_EMAIL
+    },
+    maxLength: 250
+  },
+
 ];

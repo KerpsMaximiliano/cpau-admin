@@ -10,16 +10,6 @@ export const PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF = [
     mappingQuerystring: true
   },
   {
-    key: 'telefono',
-    labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_telefono',
-    label: 'Teléfono',
-    type: 'string',
-    required: true,
-    minLength: 10,
-    maxLength: 10,
-    controlType: 'textbox'
-  },
-  {
     key: 'idTipoTelefono',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_tipoTelefono',
     controlType: 'select',
@@ -31,5 +21,16 @@ export const PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF = [
         url: PREFIX_DOMAIN_API + 'siteConsumer/tipoContacto',
       }
     }
-  }
+  },
+  {
+    key: 'telefono',
+    labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_telefono',
+    label: 'Teléfono',
+    type: 'string',
+    required: true,
+    minLength: 10,
+    maxLength: 10,
+    controlType: 'textbox'
+  },
+  
 ];

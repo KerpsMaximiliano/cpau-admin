@@ -4,9 +4,9 @@ import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_DOMICILIO_UPDATE_FORM_FIELDS_DEF = [
   {
-    key: 'idContact',
+    key: 'contactDataId',
     labelKey: 'perfil_domicilio_create_form_fields_def_field_idcontactdata',
-    label: 'idContact',
+    label: 'contactDataId',
     type: 'string',
     controlType: 'hidden',
     mappingQuerystring: true
@@ -46,7 +46,7 @@ export const PERFIL_DOMICILIO_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
-    key: 'dpto',
+    key: 'depto',
     labelKey: 'PERFIL_DOMICILIO_UPDATE_FORM_FIELDS_DEF_FIELD_dpto',
     label: 'Departamento',
     type: 'string',
