@@ -49,7 +49,7 @@ export class ActionDefService {
     });
   }
 
-  submitAction(action: ActionDef, entity, i18n, dialogConfig){
+  submitAction(action: ActionDef, entity, i18n, dialogConfig): any{
     const observable = new Observable(obs => {
       if (action.formDef){
         const data = {
