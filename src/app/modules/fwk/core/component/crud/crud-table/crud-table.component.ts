@@ -184,10 +184,16 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     if (action.gridModal){
       this.dialogService.showGridModal(action.actionName, entity[action.gridModal.fromArrayField], action.gridModal.gridDef);
     }else if (action.confirm){
-        this.actionDefService.submitAction(action, entity, this.crud.i18nCurrentCrudComponent, undefined).subscribe(r => {
+        this.actionDefService.submitAction(action, entity, this.crud.i18nCurrentCrudComponent, undefined)
+        .subscribe(r => {
+          if (r && r.success) {
             this.crud.findAll(); 
             this.spinnerGeneralControl.hide();
             this.notificationService.notifySuccess(this.crud.translate('success_message'));
+          } else {
+            this.spinnerGeneralControl.hide();
+            this.notificationService.notifyError(r.message);
+          }
       });
     }else if (action.form){
       action.submitButtonKey = 'Guardar';
