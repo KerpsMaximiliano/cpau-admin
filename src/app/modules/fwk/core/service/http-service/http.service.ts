@@ -164,11 +164,6 @@ export class HttpService extends BaseService {
     }
   }
 
-  handlePaginator(response: any) {
-    if (response.page)
-      this.filterService.totalReg = response.page.totalReg;
-  }
-
   applyMemoryFilter(entities: any, filterEntity, fieldsDef: any): any {
         if (filterEntity && filterEntity !== null) {
             console.log('***** filter by entity ⬎');

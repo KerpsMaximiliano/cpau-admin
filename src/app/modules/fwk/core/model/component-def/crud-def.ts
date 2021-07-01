@@ -21,17 +21,12 @@ export class CrudDef extends ComponentDef {
     };
     cancelInitSearch?: boolean;
     serverPagination?: boolean;
-    pagination?: {
-      page: number,
-      pageSize: number 
-    };
     initFilter?: boolean;
     openLink?: string;
     openLinkTitle?: string;
     exportCsv?: {
       csvExportFileName: string
     };
-    cancelInitSearch?: boolean;
     // Deprecado
     searchFields?: any;
     initSearch?: boolean;
