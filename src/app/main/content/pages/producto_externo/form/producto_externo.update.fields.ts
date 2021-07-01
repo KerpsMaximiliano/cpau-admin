@@ -82,5 +82,23 @@ export const PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF = [
     type: 'number',
     controlType: 'number',
     required: true
-  }
+  },
+  {
+    key: 'linkTarget',
+    labelKey: 'PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_linktarget',
+    type: 'select',
+    controlType: 'select',
+    required: true,
+    value: 0,
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 0, nombre: '_self'},
+                 {id: 1, nombre: '_blank'},
+                 {id: 2, nombre: '_parent'},
+                 {id: 3, nombre: '_top'},
+                 {id: 4, nombre: '_search'}]
+      }
+  }
 ];

@@ -9,7 +9,7 @@
             [required]="config.required"
             [readonly]="config.disabled"
             [placeholder]="config.label" 
-            (blur)="changeInput(value)">
+            (blur)="changeInput()">
 
     <mat-error *ngIf="formGroup.get(name).errors?.required">{{config.options.requiredMessage}}</mat-error>
     <mat-error *ngIf="formGroup.get(name).errors?.invalidValue">{{config.options.invalidValueMessage}}</mat-error>

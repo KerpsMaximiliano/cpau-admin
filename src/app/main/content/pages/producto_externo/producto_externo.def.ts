@@ -15,7 +15,10 @@ export const PRODUCTO_EXTERNO_DEF: CrudDef = {
     i18n: PRODUCTO_EXTERNO_I18N_DEF,
     grid: PRODUCTO_EXTERNO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     formsDef: {
-        
+      create: {
+        fields: PRODUCTO_EXTERNO_CREATE_FORM_FIELDS_DEF,
+        showSubmitContinue: true
+      },        
       update: {
           fields: PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF,
           showSubmitContinue: true

@@ -41,6 +41,7 @@ export const PRODUCTO_EXTERNO_I18N_DEF = {
     producto_externo_grid_def_column_imageurl: 'Imagen',
     PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_tooltip : 'Tootltip',
     PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_orden : 'Orden',
+    PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_linktarget : 'Link Target',
     producto_externo_grid_def_column_orden: 'Orden',
     PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_textcolor: 'Color de Texto',
     prodcuto_externo_grid_def_button_action_bajar: 'Bajar',

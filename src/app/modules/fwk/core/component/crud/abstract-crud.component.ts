@@ -353,9 +353,9 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
 
   filterSearchEntity(filterEntity){
     this.filterEntity = filterEntity;
-    if ( this.crudDef.pagination)
+    if (this.crudDef.pagination) {
       this.crudDef.pagination.page = 0;
-
+    }
     this.findAll();
   }
 

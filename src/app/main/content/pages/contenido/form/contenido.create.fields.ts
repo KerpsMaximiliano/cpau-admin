@@ -102,6 +102,12 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'datetimepicker',
   },
   {
+    key: 'showEventStartDate',
+    labelKey: 'Mostrar Fecha Inicio',
+    type: 'checkbox',
+    controlType: 'checkbox'
+  },
+  {
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_beneficios',
     title: 'Beneficios',

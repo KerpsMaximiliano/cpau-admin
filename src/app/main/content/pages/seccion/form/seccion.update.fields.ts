@@ -131,6 +131,7 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       elementLabel: 'nombre',
       elementValue: 'id',
       fromData: [{id: 1, nombre: 'Agenda'},
+                 {id: 6, nombre: 'Agenda con Tags'},
                  {id: 2, nombre: 'Noticias con Imagen'},
                  {id: 3, nombre: 'Beneficios'},
                  {id: 4, nombre: 'Noticias sin Imagen'},
@@ -158,7 +159,26 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
         ]
     }
   },
+  {
+    key: 'filterDate',
+    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_filterDate',
+    label: 'FilterDate',
+    type: 'select',
+    required: false,
+    controlType: 'select',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 0, nombre: 'Hoy'},
+                 {id: 1, nombre: 'Esta semana'},
+                 {id: 2, nombre: 'Este Mes'},
+                 {id: 3, nombre: 'Este año'},
+                 {id: 4, nombre: 'Últimos Dos años'},
+                 {id: 5, nombre: 'Todos'}]
 
+      }
+  },
   {
     key: 'contactName',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_ContactName',

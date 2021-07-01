@@ -50,6 +50,18 @@
     }
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
+
+    .linkTargetDiv{
+        display: inline-block;
+        width:45%;
+        margin-right: 5%;
+    }
+
     
+
+    .ordenDiv{
+        display: inline-block !important;
+        width:45% !important;
+    }
 
 }

@@ -214,4 +214,10 @@ export class HttpService extends BaseService {
       }
       return url.concat(param).concat('=').concat(value);
   }
+
+  handlePaginator(response: any) {
+    if (response.page) {
+      this.filterService.totalReg = response.page.totalReg;
+    }
+  }
 }

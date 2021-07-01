@@ -115,14 +115,18 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Fecha Inicio',
     controlType: 'datetimepicker'
   },
-
+  {
+    key: 'showEventStartDate',
+    labelKey: 'Mostrar Fecha Inicio',
+    type: 'checkbox',
+    controlType: 'checkbox'
+  },
   {
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_beneficios',
     title: 'Beneficios',
     controlType: 'checkbox'
   },
-
   {
     key: 'percent',
     labelKey: 'contenido_create_form_fields_def_field_porcentaje',

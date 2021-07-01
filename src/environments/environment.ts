@@ -42,4 +42,3 @@ export const environment = {
 
     AUTOCOMPLETE_WAITING_TIME: 700
 };
-

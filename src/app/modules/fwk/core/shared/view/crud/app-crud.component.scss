@@ -16,7 +16,12 @@
             max-height: 192px !important;
         }
     }
-
+    .header-buttons.content-buttons {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+    
     .top-bg {
         @include media-breakpoint-down(xs) {
             height: 240px;
@@ -105,12 +110,22 @@
 } 
 app-search{
     margin-bottom: 3px;
-    width: 55%;
+    width: 80%;
     app-dynamic-form-component{
         width: 50% !important;
     }
 }
 
+.btn-add {
+    mat-icon {
+        vertical-align: sub !important;
+    }
+}
+.btn-link {
+    mat-icon {
+        vertical-align: sub !important;
+    }
+}
 .header-buttons{
     // width: 100%;
 }
