@@ -28,6 +28,7 @@ import { PERFIL_CUENTA_CORRIENTE_DEF } from './perfil_cuenta_corriente/perfil_cu
 import { PERFIL_PUBLICACIONES_DEF } from './perfil_publicaciones/perfil_publicaciones.def';
 import { PERFIL_NEWSLETTERS_DEF } from './perfil_newsletters/perfil_newsletters.def';
 import { PERFIL_ROL_DEF } from './perfil_rol/perfil_rol.def';
+import { IDENTIFICACION_BUSQUEDA_DEF } from './identificacion_busqueda/identificacion_busqueda.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -58,6 +59,7 @@ export const COMPONENTS: ComponentDef[] = [
   PERFIL_CUENTA_CORRIENTE_DEF,
   PERFIL_PUBLICACIONES_DEF,
   PERFIL_NEWSLETTERS_DEF,
-  PERFIL_ROL_DEF
+  PERFIL_ROL_DEF,
+  IDENTIFICACION_BUSQUEDA_DEF
 ];
 

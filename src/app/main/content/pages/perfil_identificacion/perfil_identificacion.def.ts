@@ -11,14 +11,14 @@ import { environment } from 'environments/environment.prod';
 import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
-export const PERFIL_IDENTIFICACION_DEF: CrudDef = { 
+export const PERFIL_IDENTIFICACION_DEF: CrudDef = {
     name: 'PERFIL_IDENTIFICACION',
     i18n: PERFIL_IDENTIFICACION_I18N_DEF,
     grid: PERFIL_IDENTIFICACION_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
        filter: PERFIL_IDENTIFICACION_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        //create: PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+       // create: PERFIL_IDENTIFICACION_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+       // update: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  PERFIL_IDENTIFICACION_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: PERFIL_IDENTIFICACION_NAV_DEF,
@@ -31,10 +31,5 @@ export const PERFIL_IDENTIFICACION_DEF: CrudDef = {
         width: '400px'
     },
     filterInMemory: false,
-    serverPagination: true,
-    pagination: {
-        page: 0,
-        pageSize: 10
-    },
-    cancelInitSearch: true
+    backButton: true
 };

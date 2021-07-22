@@ -6,6 +6,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_id',
     label: 'ID',
     controlType: 'hidden',
+    readonly: true
   },
   // {
   //   key: 'tipo',
@@ -35,7 +36,8 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     required: true,
-    maxLength: 200
+    maxLength: 200,
+    readonly: true
   },
   {
     key: 'apellido',
@@ -44,10 +46,12 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     required: true,
-    maxLength: 200
+    maxLength: 200,
+    readonly: true
   },
   {
     key: 'sexo',
+    readonly: true,
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_sexo',
     controlType: 'select',
     required: true,
@@ -60,6 +64,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    readonly: true,
     key: 'idTipoDocumento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_tipodocumento',
     controlType: 'select',
@@ -73,6 +78,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    readonly: true,
     key: 'numeroDocumento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_numerodocumento',
     label: 'Numero Documento',
@@ -89,6 +95,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
   //   controlType: 'textbox'
   // },
   {
+    readonly: true,
     key: 'fechaNacimiento',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_fechanacimiento',
     label: 'Fecha Nacimiento',
@@ -97,6 +104,7 @@ export const PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF = [
     required: true
   },
   {
+    readonly: true,
     key: 'pais',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_pais',
     controlType: 'select',
