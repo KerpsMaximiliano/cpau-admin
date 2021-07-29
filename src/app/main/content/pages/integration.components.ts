@@ -29,6 +29,7 @@ import { PERFIL_PUBLICACIONES_DEF } from './perfil_publicaciones/perfil_publicac
 import { PERFIL_NEWSLETTERS_DEF } from './perfil_newsletters/perfil_newsletters.def';
 import { PERFIL_ROL_DEF } from './perfil_rol/perfil_rol.def';
 import { IDENTIFICACION_BUSQUEDA_DEF } from './identificacion_busqueda/identificacion_busqueda.def';
+import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -60,6 +61,7 @@ export const COMPONENTS: ComponentDef[] = [
   PERFIL_PUBLICACIONES_DEF,
   PERFIL_NEWSLETTERS_DEF,
   PERFIL_ROL_DEF,
-  IDENTIFICACION_BUSQUEDA_DEF
+  IDENTIFICACION_BUSQUEDA_DEF,
+  MESSAGE_TEMPLATE_DEF
 ];
 

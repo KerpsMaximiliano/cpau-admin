@@ -1,0 +1,6 @@
+export const MESSAGE_TEMPLATE_SECURITY_DEF = {
+  readAccess: 'MESSAGE_TEMPLATE_READ',
+  updateAccess: 'MESSAGE_TEMPLATE_UPDATE',
+  createAccess: 'MESSAGE_TEMPLATE_CREATE',
+  deleteAccess: 'MESSAGE_TEMPLATE_DELETE'
+};

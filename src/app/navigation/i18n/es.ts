@@ -15,6 +15,7 @@ export const locale = {
             'BOLETIN': { 'TITLE': 'Boletines' },
             'INDICE': { 'TITLE': 'Índice' },
             'MAILING': { 'TITLE': 'Mailing' },
+            'MESSAGETEMPLATE': { 'TITLE': 'Email Template' },
             'MENU_HERRAMIENTAS': { 'TITLE': 'Herramientas' },
             'FORMULARIO': { 'TITLE': 'Formularios' },
             'PUBLICIDAD': { 'TITLE': 'Publicidades' },

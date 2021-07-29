@@ -115,6 +115,13 @@ export const navigation = [
                                 'translate': 'NAV.ABMMODAL.TITLE',
                                 'type': 'item',
                                 'url': '/' + environment.URL_ABM_MODAL,
+                            },
+                            {
+                                'id': 'messageTemplate',
+                                'title': 'Email Template',
+                                'translate': 'NAV.MESSAGETEMPLATE.TITLE',
+                                'type': 'item',
+                                'url': '/' + environment.URL_MESSAGE_TEMPLATE,
                             }
                         ]
                     },

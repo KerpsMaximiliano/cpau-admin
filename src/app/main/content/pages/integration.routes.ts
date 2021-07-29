@@ -31,6 +31,7 @@ import { PERFIL_PUBLICACIONES_DEF } from './perfil_publicaciones/perfil_publicac
 import { PERFIL_NEWSLETTERS_DEF } from './perfil_newsletters/perfil_newsletters.def';
 import { PERFIL_ROL_DEF } from './perfil_rol/perfil_rol.def';
 import { IDENTIFICACION_BUSQUEDA_DEF } from './identificacion_busqueda/identificacion_busqueda.def';
+import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
 
 export const ROUTES: Routes = [
   {
@@ -180,6 +181,11 @@ export const ROUTES: Routes = [
   },
   {
     path: IDENTIFICACION_BUSQUEDA_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: MESSAGE_TEMPLATE_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }
