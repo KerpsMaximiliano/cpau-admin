@@ -23,6 +23,21 @@ export const PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'celufijo',
+    labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_clase',
+    label: 'Clase',
+    type: 'select',
+    required: true,
+    controlType: 'select',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 'Celular', nombre: 'Celular'},
+                 {id: 'Fijo', nombre: 'Fijo'}]
+      }
+  },
+  {
     key: 'telefono',
     labelKey: 'PERFIL_TELEFONO_UPDATE_FORM_FIELDS_DEF_FIELD_telefono',
     label: 'Teléfono',

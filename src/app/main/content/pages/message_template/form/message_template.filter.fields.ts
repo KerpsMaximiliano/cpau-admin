@@ -3,8 +3,8 @@ export const MESSAGE_TEMPLATE_FILTER_FORM_FIELDS_DEF = [
     key: 'name',
     labelKey: 'MESSAGE_TEMPLATE_FILTER_FORM_FIELDS_DEF_FIELD_name',
     label: 'Nombre',
-    type: 'number',
-    controlType: 'number'
+    type: 'textbox',
+    controlType: 'textbox'
   },
   {
     key: 'subject',

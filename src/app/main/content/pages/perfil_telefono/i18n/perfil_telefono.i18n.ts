@@ -20,6 +20,8 @@ export const PERFIL_TELEFONO_I18N_DEF = {
       PERFIL_TELEFONO_READ_FORM_FIELDS_DEF_FIELD_tipoTelefono: 'Tipo Teléfono',
       PERFIL_TELEFONO_READ_FORM_FIELDS_DEF_FIELD_telefono: 'Teléfono',
       PERFIL_TELEFONO_READ_FORM_FIELDS_DEF_FIELD_id: 'Id',
+      SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_clase : 'Clase',
+      perfil_telefono_grid_def_column_celufijo : 'Clase'
     }
   };
   

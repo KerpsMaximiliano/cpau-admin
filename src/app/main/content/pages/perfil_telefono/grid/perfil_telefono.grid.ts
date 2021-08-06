@@ -11,6 +11,10 @@ export const PERFIL_TELEFONO_GRID_DEF = {
         columnNameKey: 'perfil_telefono_grid_def_column_telefono'
       },
       {
+        columnDef: 'celufijo',
+        columnNameKey: 'perfil_telefono_grid_def_column_celufijo'
+      },
+      {
         columnDef: 'tipoTelefono',
         columnNameKey: 'perfil_telefono_grid_def_column_tipoTelefono'
       },
@@ -18,6 +22,7 @@ export const PERFIL_TELEFONO_GRID_DEF = {
     sortAllColumns: true,
     displayedColumns: [
       'tipoTelefono',
+      'celufijo',
       'telefono',
     ],
     actions: [
