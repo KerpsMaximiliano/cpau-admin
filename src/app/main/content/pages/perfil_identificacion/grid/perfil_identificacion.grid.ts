@@ -138,23 +138,23 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         {
           labelKey: 'matricula_create_form_fields_def_field_pagoOnlinePermitido',
           key: 'pagoOnlinePermitido',
-          type: 'boolean',
-          controlType: 'checkbox',
+          type: 'hidden',
+          controlType: 'hidden',
           disabled: false
         },
         {
           key: 'fechaMatriculacion',
           labelKey: 'matricula_create_form_fields_def_field_fechaMatriculacion',
-          controlType: 'datepicker',
+          controlType: 'textbox',
           required: true,
-          disabled: false
+          disabled: true
         },
         {
           key: 'fechaEgreso',
           labelKey: 'matricula_create_form_fields_def_field_fechaEgreso',
-          controlType: 'datepicker',
+          controlType: 'textbox',
           required: true,
-          disabled: false
+          disabled: true
         }
       ],
       ws: {

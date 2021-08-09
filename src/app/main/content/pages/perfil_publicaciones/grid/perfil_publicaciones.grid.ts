@@ -15,7 +15,6 @@ export const PERFIL_PUBLICACIONES_GRID_DEF = {
     ],
     sortAllColumns: true,
     displayedColumns: [
-      'idSuscripcion',
       'name',
     ],
     deleteAction: true,

@@ -15,7 +15,7 @@ export const PERFIL_PUBLICACIONES_DEF: CrudDef = {
     forms: {
         filter: PERFIL_PUBLICACIONES_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         create: PERFIL_PUBLICACIONES_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        read:  PERFIL_PUBLICACIONES_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        // read:  PERFIL_PUBLICACIONES_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: PERFIL_PUBLICACIONES_NAV_DEF,
     security: PERFIL_PUBLICACIONES_SECURITY_DEF,

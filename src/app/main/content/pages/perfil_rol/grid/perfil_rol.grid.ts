@@ -25,7 +25,7 @@ export const PERFIL_ROL_GRID_DEF = {
     //   ],
     sortAllColumns: true,
     displayedColumns: [
-      'idRole',
+      // 'idRole',
       'name',
     ],
     deleteAction: true,
