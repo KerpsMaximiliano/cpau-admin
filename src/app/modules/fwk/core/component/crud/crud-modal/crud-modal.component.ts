@@ -135,7 +135,8 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
     if (this.isAdd) {
       this.data.crud.validationAdd(this.entity).subscribe(r => {
         this.data.crud.add(this.entity).subscribe(ok => {
-          if (ok || ok.success) {
+          const hasProperty = ok.hasOwnProperty('success');
+          if ((ok && !hasProperty) || (hasProperty && ok.success)) {
             this.dialogRef.close();
             this.globalSpinnerControl.hide();
             this.notificationService.notifySuccess(this.translate('success_message'));
@@ -158,7 +159,8 @@ export class CrudModalComponent extends AbstractComponent implements OnInit {
     } else if (this.isEdit) {
       this.data.crud.validationEdit(this.entity).subscribe(r => {
         this.data.crud.edit(this.entity).subscribe(ok => {
-          if (ok || ok.success) {
+          const hasProperty = ok.hasOwnProperty('success');
+          if ((ok && !hasProperty) || (hasProperty && ok.success)) {
             this.dialogRef.close();
             this.globalSpinnerControl.hide();
             this.notificationService.notifySuccess(this.translate('success_message'));
