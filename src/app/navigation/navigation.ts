@@ -15,7 +15,14 @@ export const navigation = [
                         'title': 'Contactos',
                         'type': 'item',
                         'url': '/' + environment.URL_IDENTIFICACION_BUSQUEDA
-                    }
+                    },
+                    {
+                        'id': 'imagen',
+                        'title': 'Subir Imágenes',
+                        'translate': 'NAV.IMAGEN.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_IMAGEN_SUBIR,
+                    },
                 ]
             },
             {
