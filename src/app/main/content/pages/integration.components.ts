@@ -30,6 +30,7 @@ import { PERFIL_NEWSLETTERS_DEF } from './perfil_newsletters/perfil_newsletters.
 import { PERFIL_ROL_DEF } from './perfil_rol/perfil_rol.def';
 import { IDENTIFICACION_BUSQUEDA_DEF } from './identificacion_busqueda/identificacion_busqueda.def';
 import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
+import { PERFIL_MATRICULADO_UPLOAD_DEF } from './perfil_matriculado_upload/perfil_matriculado_upload.def';
 import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
 
 
@@ -64,6 +65,7 @@ export const COMPONENTS: ComponentDef[] = [
   PERFIL_ROL_DEF,
   IDENTIFICACION_BUSQUEDA_DEF,
   MESSAGE_TEMPLATE_DEF,
-  EMAIL_ACCOUNT_DEF
+  EMAIL_ACCOUNT_DEF,
+  PERFIL_MATRICULADO_UPLOAD_DEF
 ];
 
