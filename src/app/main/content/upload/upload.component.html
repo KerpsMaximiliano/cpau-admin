@@ -20,8 +20,6 @@
           Subir
         </button>
 
-        <mat-divider></mat-divider>
-
         <div class="alert alert-light" role="alert">{{ message }}</div>
 
       </div>
@@ -31,8 +29,7 @@
         <mat-card-content>
           <ul
             class="list-group list-group-flush"
-            *ngFor="let file of fileInfos | async"
-          >
+            *ngFor="let file of fileInfos | async">
             <li class="list-group-item">
               <a href="{{ file.url }}">{{ file.name }}</a>
             </li>

@@ -12,7 +12,7 @@ export const PREFIX_OLDSITE = '';
 export const environment = {
     localAuth: false,
     
-    production: true,
+    production: false,
     hmr: false,
     // pasar a true para evitar ws
     /** URLs of Services **/
@@ -41,6 +41,7 @@ export const environment = {
     URL_IDENTIFICACION_BUSQUEDA: 'identificacionBusqueda',
     URL_DOMICILIOS: 'domicilio',
     URL_MESSAGE_TEMPLATE: 'messageTemplate',
+    URL_IMAGEN_SUBIR: 'perfilMatriculadoUpload',
 
     AUTOCOMPLETE_WAITING_TIME: 700
 };
