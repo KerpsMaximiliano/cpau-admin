@@ -89,44 +89,51 @@ export const navigation = [
                             },
                         ]
                     },
-                    {
-                        'title': 'Herramientas',
-                        'translate': 'NAV.MENU_HERRAMIENTAS',
-                        'type': 'collapse',
-                        'icon': 'settings',
-                        'children': [
-                            {
-                                'id': 'formulario',
-                                'title': 'Formularios',
-                                'translate': 'NAV.FORMULARIO.TITLE',
-                                'type': 'item',
-                                'url': '/' + environment.URL_FORMULARIO,
-                            },
-                            {
-                                'id': 'publicidad',
-                                'title': 'Publicidades',
-                                'translate': 'NAV.PUBLICIDAD.TITLE',
-                                'type': 'item',
-                                'url': '/' + environment.URL_PUBLICIDAD,
-                            },
-                            {
-                                'id': 'abmModal',
-                                'title': 'ABM Modal',
-                                'translate': 'NAV.ABMMODAL.TITLE',
-                                'type': 'item',
-                                'url': '/' + environment.URL_ABM_MODAL,
-                            },
-                            {
-                                'id': 'messageTemplate',
-                                'title': 'Email Template',
-                                'translate': 'NAV.MESSAGETEMPLATE.TITLE',
-                                'type': 'item',
-                                'url': '/' + environment.URL_MESSAGE_TEMPLATE,
-                            }
-                        ]
-                    },
-                ]
+                ],
             },
+            {
+                'title': 'Herramientas',
+                'translate': 'NAV.MENU_HERRAMIENTAS',
+                'type': 'collapse',
+                'icon': 'settings',
+                'children': [
+                    {
+                        'id': 'formulario',
+                        'title': 'Formularios',
+                        'translate': 'NAV.FORMULARIO.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_FORMULARIO,
+                    },
+                    {
+                        'id': 'publicidad',
+                        'title': 'Publicidades',
+                        'translate': 'NAV.PUBLICIDAD.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_PUBLICIDAD,
+                    },
+                    {
+                        'id': 'abmModal',
+                        'title': 'Modal Home',
+                        'translate': 'NAV.ABMMODAL.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_ABM_MODAL,
+                    },
+                    {
+                        'id': 'messageTemplate',
+                        'title': 'Message Template',
+                        'translate': 'NAV.MESSAGETEMPLATE.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_MESSAGE_TEMPLATE,
+                    },
+                    {
+                        'id': 'emailAccount',
+                        'title': 'Email Account',
+                        'translate': 'NAV.EMAILACCOUNT.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_EMAIL_ACCOUNT,
+                    }
+                ]
+            }
 
         ]
     }
