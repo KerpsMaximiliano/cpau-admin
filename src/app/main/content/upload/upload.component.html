@@ -23,19 +23,6 @@
         <div class="alert alert-light" role="alert">{{ message }}</div>
 
       </div>
-
-      <mat-card>
-        <mat-card-header>Lista de archivos</mat-card-header>
-        <mat-card-content>
-          <ul
-            class="list-group list-group-flush"
-            *ngFor="let file of fileInfos | async">
-            <li class="list-group-item">
-              <a href="{{ file.url }}">{{ file.name }}</a>
-            </li>
-          </ul>
-        </mat-card-content>
-      </mat-card>
     </mat-card-content>
   </mat-card>
 </div>

@@ -1,5 +1,6 @@
 import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NotificationService } from 'app/modules/fwk/core/service/notification/notification.service';
 import { Observable } from 'rxjs/Observable';
 import { UploadService } from './upload.service';
 
@@ -8,7 +9,7 @@ import { UploadService } from './upload.service';
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss']
 })
-export class UploadComponent implements OnInit {
+export class UploadComponent {
 
   selectedFiles: FileList;
   progressInfos = [];
@@ -16,11 +17,8 @@ export class UploadComponent implements OnInit {
 
   fileInfos: Observable<any>;
 
-  constructor(private uploadService: UploadService) { }
-
-  ngOnInit() {
-    this.fileInfos = this.uploadService.getFiles();
-  }
+  constructor(private uploadService: UploadService,
+              private notificationService: NotificationService) { }
 
   selectFiles(event) {
     this.progressInfos = [];
@@ -43,12 +41,13 @@ export class UploadComponent implements OnInit {
         if (event.type === HttpEventType.UploadProgress) {
           this.progressInfos[idx].value = Math.round(100 * event.loaded / event.total);
         } else if (event instanceof HttpResponse) {
-          this.fileInfos = this.uploadService.getFiles();
+          this.notificationService.notifySuccess('Archivos subidos correctamente');
         }
       },
       err => {
         this.progressInfos[idx].value = 0;
         this.message = 'Error al subir el archivo:' + file.name;
+        this.notificationService.notifyError(this.message);
       });
   }
 
