@@ -8,11 +8,10 @@ export class UploadService {
 
   constructor(private http: HttpClient) { }
 
-  upload(file: File, fileName: string): Observable<HttpEvent<any>> {
+  upload(file: File): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
 
     formData.append('file', file);
-    formData.append('fileName', fileName);
 
     const req = new HttpRequest('POST', `${PREFIX_DOMAIN_API}admin/bulkUpload`, formData, {
       reportProgress: true,

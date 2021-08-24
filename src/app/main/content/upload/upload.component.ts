@@ -38,7 +38,7 @@ export class UploadComponent implements OnInit {
   upload(idx, file) {
     this.progressInfos[idx] = { value: 0, fileName: file.name };
   
-    this.uploadService.upload(file, file.name).subscribe(
+    this.uploadService.upload(file).subscribe(
       event => {
         if (event.type === HttpEventType.UploadProgress) {
           this.progressInfos[idx].value = Math.round(100 * event.loaded / event.total);
