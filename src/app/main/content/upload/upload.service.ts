@@ -14,7 +14,7 @@ export class UploadService {
     formData.append('file', file);
     formData.append('fileName', fileName);
 
-    const req = new HttpRequest('POST', `${PREFIX_DOMAIN_API}/upload`, formData, {
+    const req = new HttpRequest('POST', `${PREFIX_DOMAIN_API}admin/bulkUpload`, formData, {
       reportProgress: true,
       responseType: 'json'
     });
