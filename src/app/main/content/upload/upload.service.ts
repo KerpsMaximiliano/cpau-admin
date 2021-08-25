@@ -21,8 +21,4 @@ export class UploadService {
     return this.http.request(req);
   }
 
-  getFiles(): Observable<any> {
-    return this.http.get(`${PREFIX_DOMAIN_API}/files`);
-  }
-
 }
