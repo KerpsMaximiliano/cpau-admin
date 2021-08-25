@@ -35,6 +35,7 @@ import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
 import { PERFIL_MATRICULADO_UPLOAD_DEF } from './perfil_matriculado_upload/perfil_matriculado_upload.def';
 import { UploadComponent } from '../upload/upload.component';
 import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
+import { ABM_ROLES_DEF } from './abm_roles/abm_roles.def';
 
 export const ROUTES: Routes = [
   {
@@ -201,6 +202,12 @@ export const ROUTES: Routes = [
     path: EMAIL_ACCOUNT_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
-  }];
+  },
+  {
+    path: ABM_ROLES_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  }
+];
 
 

@@ -24,7 +24,7 @@ export const EMAIL_ACCOUNT_DEF: CrudDef = {
     security: EMAIL_ACCOUNT_SECURITY_DEF,
     ws: {
         key: 'EMAIL_ACCOUNT_CRUD_URL',
-        url: PREFIX_DOMAIN_API +  '/EmailAccount'
+        url: PREFIX_DOMAIN_API +  'EmailAccount'
     },
     dialogConfig: {
         width: '400px'

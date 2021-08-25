@@ -2,7 +2,7 @@ export const MESSAGE_TEMPLATE_I18N_DEF = {
   name: 'MESSAGE_TEMPLATE_I18N_DEF',
   lang: 'es',
   words: {
-    page_title: 'Message Template',
+    page_title: 'Plantillas de Mensajes',
     message_template_nav_def: 'MessageTemplate',
     message_template_create_form_fields_def_field_id: 'Id',
     message_template_create_form_fields_def_field_name: 'Nombre',

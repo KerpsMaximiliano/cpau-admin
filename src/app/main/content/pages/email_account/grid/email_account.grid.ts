@@ -14,6 +14,7 @@ export const EMAIL_ACCOUNT_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
+  deleteAction: true,
   displayedColumns: [
     'email',
     'displayName'

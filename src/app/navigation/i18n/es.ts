@@ -15,12 +15,15 @@ export const locale = {
             'BOLETIN': { 'TITLE': 'Boletines' },
             'INDICE': { 'TITLE': 'Índice' },
             'MAILING': { 'TITLE': 'Mailing' },
-            'MESSAGETEMPLATE': { 'TITLE': 'Message Template' },
-            'EMAILACCOUNT': { 'TITLE': 'Email Account' },
+            'MESSAGETEMPLATE': { 'TITLE': 'Plantillas de Mensajes' },
+            'EMAILACCOUNT': { 'TITLE': 'Cuentas de Correo' },
             'MENU_HERRAMIENTAS': { 'TITLE': 'Herramientas' },
+            'MENU_SISTEMA': { 'TITLE': 'Sistema' },
             'FORMULARIO': { 'TITLE': 'Formularios' },
             'PUBLICIDAD': { 'TITLE': 'Publicidades' },
-            'ABMMODAL': { 'TITLE': 'Modal' }
+            'ABMMODAL': { 'TITLE': 'Modal' },
+            'ABMROLES': { 'TITLE': 'Roles' }
+
         }
     }
 };

@@ -32,6 +32,7 @@ import { IDENTIFICACION_BUSQUEDA_DEF } from './identificacion_busqueda/identific
 import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
 import { PERFIL_MATRICULADO_UPLOAD_DEF } from './perfil_matriculado_upload/perfil_matriculado_upload.def';
 import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
+import { ABM_ROLES_DEF } from './abm_roles/abm_roles.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -66,6 +67,7 @@ export const COMPONENTS: ComponentDef[] = [
   IDENTIFICACION_BUSQUEDA_DEF,
   MESSAGE_TEMPLATE_DEF,
   EMAIL_ACCOUNT_DEF,
-  PERFIL_MATRICULADO_UPLOAD_DEF
+  PERFIL_MATRICULADO_UPLOAD_DEF,
+  ABM_ROLES_DEF
 ];
 

@@ -30,9 +30,11 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
+  deleteAction: true,
   displayedColumns: [
     'name',
     'subject',
     'bccEmailAddresses'
-  ]
+  ],
+  
 };

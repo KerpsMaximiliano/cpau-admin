@@ -117,7 +117,16 @@ export const navigation = [
                         'translate': 'NAV.PUBLICIDAD.TITLE',
                         'type': 'item',
                         'url': '/' + environment.URL_PUBLICIDAD,
-                    },
+                    }
+                    
+                ]
+            },
+            {
+                'title': 'Sistema',
+                'translate': 'NAV.MENU_SISTEMA',
+                'type': 'collapse',
+                'icon': 'settings',
+                'children': [
                     {
                         'id': 'abmModal',
                         'title': 'Modal Home',
@@ -127,20 +136,28 @@ export const navigation = [
                     },
                     {
                         'id': 'messageTemplate',
-                        'title': 'Message Template',
+                        'title': 'Plantillas de Mensajes',
                         'translate': 'NAV.MESSAGETEMPLATE.TITLE',
                         'type': 'item',
                         'url': '/' + environment.URL_MESSAGE_TEMPLATE,
                     },
                     {
                         'id': 'emailAccount',
-                        'title': 'Email Account',
+                        'title': 'Cuentas de Correo',
                         'translate': 'NAV.EMAILACCOUNT.TITLE',
                         'type': 'item',
                         'url': '/' + environment.URL_EMAIL_ACCOUNT,
+                    },
+                    {
+                        'id': 'abmRoles',
+                        'title': 'Roles',
+                        'translate': 'NAV.ABMROLES.TITLE',
+                        'type': 'item',
+                        'url': '/' + environment.URL_ABM_ROLES,
                     }
                 ]
             }
+
 
         ]
     }

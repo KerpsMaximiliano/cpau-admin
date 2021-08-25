@@ -2,7 +2,7 @@ export const EMAIL_ACCOUNT_I18N_DEF = {
   name: 'EMAIL_ACCOUNT_I18N_DEF',
   lang: 'es',
   words: {
-    page_title: 'Email Account',
+    page_title: 'Cuentas de Correo',
     email_account_nav_def: 'EmailAccount',
     email_account_create_form_fields_def_field_id: 'Id',
     email_account_create_form_fields_def_field_email: 'Email',

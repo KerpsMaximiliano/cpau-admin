@@ -43,5 +43,6 @@ export const environment = {
     URL_MESSAGE_TEMPLATE: 'messageTemplate',
 	URL_IMAGEN_SUBIR: 'perfilMatriculadoUpload',
 	URL_EMAIL_ACCOUNT: 'emailAccount',
+    URL_ABM_ROLES: 'abmrole',
     AUTOCOMPLETE_WAITING_TIME: 700
 };
