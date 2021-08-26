@@ -22,7 +22,10 @@ export const locale = {
             'FORMULARIO': { 'TITLE': 'Formularios' },
             'PUBLICIDAD': { 'TITLE': 'Publicidades' },
             'ABMMODAL': { 'TITLE': 'Modal' },
-            'ABMROLES': { 'TITLE': 'Roles' }
+            'ABMROLES': { 'TITLE': 'Roles' },
+            'MATRICULA_TIPO': { 'TITLE': 'Tipos de Matrícula' }
+
+            
 
         }
     }

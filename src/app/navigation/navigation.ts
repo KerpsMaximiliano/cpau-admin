@@ -1,3 +1,4 @@
+import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
 import { environment } from 'environments/environment';
 export const navigation = [
     {
@@ -23,6 +24,13 @@ export const navigation = [
                         'type': 'item',
                         'url': '/' + environment.URL_IMAGEN_SUBIR,
                     },
+                    {
+                        'id': 'matriculaTipo',
+                        'title': 'Tipos de Matrícula',
+                        'translate': 'NAV.MATRICULA_TIPO.TITLE',
+                        'type': 'item',
+                        'url': MATRICULA_TIPO_NAV_DEF.url,
+                    }
                 ]
             },
             {

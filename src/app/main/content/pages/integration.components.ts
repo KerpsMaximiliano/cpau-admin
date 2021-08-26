@@ -33,6 +33,7 @@ import { MESSAGE_TEMPLATE_DEF } from './message_template/message_template.def';
 import { PERFIL_MATRICULADO_UPLOAD_DEF } from './perfil_matriculado_upload/perfil_matriculado_upload.def';
 import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
 import { ABM_ROLES_DEF } from './abm_roles/abm_roles.def';
+import { MATRICULA_TIPO_DEF } from './matricula_tipo/matricula_tipo.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -68,6 +69,7 @@ export const COMPONENTS: ComponentDef[] = [
   MESSAGE_TEMPLATE_DEF,
   EMAIL_ACCOUNT_DEF,
   PERFIL_MATRICULADO_UPLOAD_DEF,
-  ABM_ROLES_DEF
+  ABM_ROLES_DEF,
+  MATRICULA_TIPO_DEF
 ];
 
