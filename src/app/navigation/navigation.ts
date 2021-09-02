@@ -1,3 +1,5 @@
+import { CONTACT_LIST_DEF } from 'app/main/content/pages/contact_list/contact_list.def';
+import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/navigation/contact_list.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
 import { environment } from 'environments/environment';
 export const navigation = [
@@ -17,6 +19,11 @@ export const navigation = [
                         'type': 'item',
                         'url': '/' + environment.URL_IDENTIFICACION_BUSQUEDA
                     },
+                    {
+                        'title': 'Listas de Contactos',
+                        'type': 'item',
+                        'url': CONTACT_LIST_NAV_DEF.url
+                    },  
                     {
                         'id': 'imagen',
                         'title': 'Subir Imágenes',

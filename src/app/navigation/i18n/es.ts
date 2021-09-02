@@ -23,7 +23,8 @@ export const locale = {
             'PUBLICIDAD': { 'TITLE': 'Publicidades' },
             'ABMMODAL': { 'TITLE': 'Modal' },
             'ABMROLES': { 'TITLE': 'Roles' },
-            'MATRICULA_TIPO': { 'TITLE': 'Tipos de Matrícula' }
+            'MATRICULA_TIPO': { 'TITLE': 'Tipos de Matrícula' },
+            'CONTACT_LIST': { 'TITLE': 'Listas de Contactos' }
 
             
 

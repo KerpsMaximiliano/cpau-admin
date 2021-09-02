@@ -34,6 +34,7 @@ import { PERFIL_MATRICULADO_UPLOAD_DEF } from './perfil_matriculado_upload/perfi
 import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
 import { ABM_ROLES_DEF } from './abm_roles/abm_roles.def';
 import { MATRICULA_TIPO_DEF } from './matricula_tipo/matricula_tipo.def';
+import { CONTACT_LIST_DEF } from './contact_list/contact_list.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -70,6 +71,7 @@ export const COMPONENTS: ComponentDef[] = [
   EMAIL_ACCOUNT_DEF,
   PERFIL_MATRICULADO_UPLOAD_DEF,
   ABM_ROLES_DEF,
-  MATRICULA_TIPO_DEF
+  MATRICULA_TIPO_DEF,
+  CONTACT_LIST_DEF
 ];
 
