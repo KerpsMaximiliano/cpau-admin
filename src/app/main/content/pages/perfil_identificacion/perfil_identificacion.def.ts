@@ -7,7 +7,6 @@ import { PERFIL_IDENTIFICACION_GRID_DEF } from './grid/perfil_identificacion.gri
 import { PERFIL_IDENTIFICACION_I18N_DEF } from './i18n/perfil_identificacion.i18n';
 import { PERFIL_IDENTIFICACION_NAV_DEF } from './navigation/perfil_identificacion.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
-import { environment } from 'environments/environment.prod';
 import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
