@@ -69,7 +69,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
       icon: 'person_off',
-      confirm: false,
+      confirm: true,
       ws: {
         key: 'section_content_grid_def_button_action_marcar_destacado',
         url: PREFIX_DOMAIN_API + '/admin/personas/contactos/',
