@@ -29,4 +29,12 @@ export const PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
+  {
+    key: 'enviarNotificacion',
+    labelKey: 'PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_enviarNotificacion',
+    label: 'Solicitar confirmación',
+    type: 'boolean',
+    value: true,
+    controlType: 'checkbox'
+  },
 ];

@@ -67,6 +67,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
   ],
   actions: [
     {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
+      icon: 'person_off',
+      confirm: false,
+      ws: {
+        key: 'section_content_grid_def_button_action_marcar_destacado',
+        url: PREFIX_DOMAIN_API + '/admin/personas/contactos/',
+        method: 'DELETE'
+      }
+    },
+    {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_domicilio',
       actionType: 'redirect',
       redirect: {
@@ -311,6 +321,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       key: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
       expression: {
                     key: 'isMatriculado',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
+      expression: {
+                    key: 'permiteBorrado',
                     value: true
                   }
     },
