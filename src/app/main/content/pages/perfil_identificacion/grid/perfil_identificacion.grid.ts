@@ -285,6 +285,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_uploadPhoto',
       icon: 'photo',
       form: [
+        {
+          key: 'foto',
+          labelKey: 'foto_contacto',
+          label: 'foto_contacto',
+          type: 'image_preview_src',
+          controlType: 'image_preview_src',
+        },
         {               
           key: 'image',
           labelKey: 'Foto (solo jpg)',

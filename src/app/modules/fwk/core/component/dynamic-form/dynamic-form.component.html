@@ -22,6 +22,10 @@
       </mat-form-field>
 
       <img width="600" src="https://static.cpau.org{{field.value}}" alt="Ruta de imagen inválida" *ngIf="field.controlType == 'image_preview'" align="center" />
+      
+      <div *ngIf="field.controlType == 'image_preview_src'" >
+        <img width="600" src="data:image/jpg;base64,{{field.value}}" alt="Imagen inválida" aling="center" />
+      </div>
 
       <mat-form-field class="lineheight135" *ngIf="field.controlType == 'textbox'" [floatLabel]="getFloatLabel(field)">
             <mat-label *ngIf="field.options && field.options.matLabel">{{field.options.matLabel}}</mat-label>
