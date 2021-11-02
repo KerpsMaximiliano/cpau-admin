@@ -308,6 +308,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'POST'
       }
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_recover_password',
+      icon: 'password',      
+      confirm: true,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_recoverPassword',
+        url: PREFIX_DOMAIN_API + 'admin/recoverPassword',
+        method: 'POST'
+      }
+    },
   ],
   displayedActionsCondition: [
      {
@@ -337,6 +347,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
                     key: 'permiteBorrado',
                     value: true
                   }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_recover_password',
+      expression: {
+        key: 'hasUserId',
+        value: true
+      }
     },
   ]
 };

@@ -3,9 +3,9 @@
 
         #tipoHeader,
         #tipoCell{
-            width: 70px;
-            min-width: 70px;
-            max-width: 70px;
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
         }
 
         #matriculaHeader,
@@ -30,7 +30,12 @@
         }
 
         #estadoHeader,
-        #estadoCell,
+        #estadoCell {
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
+        }
+
         #nombreHeader,
         #nombreCell,
         #apellidoHeader,
@@ -43,9 +48,13 @@
         }
 
         .action-cell {
-            width: 400px !important;
-            min-width: 400px !important;
-            max-width: 400px !important;
+            width: 230px !important;
+            min-width: 230px !important;
+            max-width: 230px !important;
+            overflow-wrap: break-word;
+            flex-wrap: wrap;
+            padding-bottom: 4px;
+            padding-top: 4px;
         }
     }
 }
