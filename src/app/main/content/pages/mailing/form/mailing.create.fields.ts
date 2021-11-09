@@ -184,13 +184,13 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'Incluye parámetros',
     type: 'boolean',
     controlType: 'checkbox'
-  },
+  }
 
-  {
-    key: 'incluirDesuscriptos',
-    labelKey: 'Incluir Desuscriptos',
-    type: 'boolean',
-    controlType: 'checkbox'
-  },
+  // {
+  //   key: 'incluirDesuscriptos',
+  //   labelKey: 'Incluir Desuscriptos',
+  //   type: 'boolean',
+  //   controlType: 'checkbox'
+  // },
 
 ];
