@@ -24,7 +24,8 @@ export const MODAL_DEF = {
         }
     },
     forms: {
-        read: MODAL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        read: MODAL_READ_FORM_FIELDS_DEF, // Si existe un formulario de edicion no exite uno de solo lectura
+        filter: MODAL_FILTER_FORM_FIELDS_DEF
     },
     navigation: MODAL_NAV_DEF,
     security: MODAL_SECURITY_DEF,

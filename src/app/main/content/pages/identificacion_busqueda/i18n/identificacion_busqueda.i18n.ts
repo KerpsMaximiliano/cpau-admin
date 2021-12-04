@@ -144,6 +144,7 @@ export const IDENTIFICACION_BUSQUEDA_I18N_DEF = {
     seccion_grid_def_button_action_rol: 'Rol',
     perfil_identificacion_grid_def_button_action_uploadPhoto: 'Foto perfil',
     perfil_identificacion_grid_def_button_action_subirFoto: 'Subir',
-    perfil_identificacion_grid_def_column_idContact: 'ID Contact'
+    perfil_identificacion_grid_def_column_idContact: 'ID Contact',
+    perfil_identificacion_grid_def_button_action_recover_password : 'Recuperar contraseña'
   }
 };

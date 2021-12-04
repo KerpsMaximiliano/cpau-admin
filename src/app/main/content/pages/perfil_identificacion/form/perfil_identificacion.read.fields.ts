@@ -97,6 +97,18 @@ export const PERFIL_IDENTIFICACION_READ_FORM_FIELDS_DEF = [
     required: true
   },
   {
+    key: 'sexo',
+    labelKey: 'perfil_identificacion_create_form_fields_def_field_sexo',
+    controlType: 'select',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 'M', nombre: 'Masculino'},
+                 {id: 'F', nombre: 'Femenino'}]
+    }
+  },
+  {
     key: 'pais',
     labelKey: 'PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF_FIELD_pais',
     controlType: 'select',
