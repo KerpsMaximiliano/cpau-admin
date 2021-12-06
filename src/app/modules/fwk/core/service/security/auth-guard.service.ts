@@ -22,6 +22,7 @@ export class AuthGuardService implements CanActivate {
         obs.next(true)
       } else {
         var role = this.authService.getUserLocalStorage() ? this.authService.getUserLocalStorage().role : '';
+        console.log('Role:' + role);
         if (role != 'Administrators') {
           window.location.href = 'contenido-no-disponible';
         }
