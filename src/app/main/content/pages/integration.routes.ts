@@ -38,6 +38,9 @@ import { EMAIL_ACCOUNT_DEF } from './email_account/email_account.def';
 import { ABM_ROLES_DEF } from './abm_roles/abm_roles.def';
 import { MATRICULA_TIPO_DEF } from './matricula_tipo/matricula_tipo.def';
 import { CONTACT_LIST_DEF } from './contact_list/contact_list.def';
+import { CONTACT_LIST_DESUSCRIPTION_DEF } from './contact_list_desuscription/contact_list_desuscription.def';
+import { CONTACT_LIST_MEMBERS_DEF } from './contact_list_members/contact_list_members.def';
+
 
 export const ROUTES: Routes = [
   {
@@ -217,6 +220,16 @@ export const ROUTES: Routes = [
   },
   {
     path: CONTACT_LIST_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: CONTACT_LIST_DESUSCRIPTION_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: CONTACT_LIST_MEMBERS_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }

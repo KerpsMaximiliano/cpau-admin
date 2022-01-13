@@ -166,6 +166,34 @@ export const CONTENIDO_GRID_DEF: GridDef = {
         }
       },
       icon: 'filter_none'
-    }
+    },
+    {
+      actionNameKey: 'contenido_grid_def_button_action_duplicate',
+      icon: 'control_point_duplicate',
+      formDef: {
+        showSubmitContinue: false,
+        fields:[
+          {
+            key: 'title',
+            labelKey: 'CONTENIDO_FILTER_FORM_FIELDS_DEF_FIELD_title',
+            label: 'T�tulo',
+            controlType: 'textbox'
+          }, 
+          {
+            key: 'id',
+            labelKey: 'CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_id',
+            label: 'Id',
+            controlType: 'hidden'
+          }
+        ]
+      },
+      ws: {
+        key: 'contenido_grid_def_button_action_duplicate',
+        url: PREFIX_DOMAIN_API + 'Content/Duplicate',
+        method: 'POST'
+        
+        
+      }
+    },
   ]
 };
