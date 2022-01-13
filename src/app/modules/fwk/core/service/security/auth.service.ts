@@ -9,6 +9,7 @@ import { SpinnerService } from '../../module/spinner/service/spinner.service';
 
 
 const USER_DATA = 'user_data';
+const CURRENT_USER = 'currentUser';
 @Injectable()
 export class AuthService extends HttpService {
   
@@ -73,6 +74,10 @@ export class AuthService extends HttpService {
 
   getUserLocalStorage(): any {
     return this.localStorageService.get(USER_DATA);
+  }
+
+  getUserAdmin(): any {
+    return this.localStorageService.get(CURRENT_USER);
   }
 }
 

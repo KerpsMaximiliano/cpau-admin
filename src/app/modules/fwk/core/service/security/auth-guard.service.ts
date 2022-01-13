@@ -21,6 +21,12 @@ export class AuthGuardService implements CanActivate {
       if(environment["security"] == false){
         obs.next(true)
       } else {
+        var role = this.authService.getUserAdmin() ? this.authService.getUserAdmin().role : '';
+        console.log('Role:' + role);
+        if (role != 'Administrators') {
+          window.location.href = 'contenido-no-disponible';
+        }
+
         this.authService.isTokenExpired().subscribe(isTokenExpired => {  
           console.log('Guard isTokenExpired:' + isTokenExpired);
           console.log('Guard path:' + route.routeConfig.path);
