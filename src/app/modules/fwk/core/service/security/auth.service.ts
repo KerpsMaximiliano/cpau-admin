@@ -77,7 +77,7 @@ export class AuthService extends HttpService {
   }
 
   getUserAdmin(): any {
-    return this.localStorageService.get(CURRENT_USER);
+    return this.localStorageService.get(USER_DATA);
   }
 }
 

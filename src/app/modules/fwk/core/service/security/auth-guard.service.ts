@@ -24,7 +24,12 @@ export class AuthGuardService implements CanActivate {
         var role = this.authService.getUserAdmin() ? this.authService.getUserAdmin().role : '';
         console.log('Role:' + role);
         if (role != 'Administrators') {
-          window.location.href = 'contenido-no-disponible';
+          if(environment["localAuth"] == true){
+            console.log('Guard navigated');
+            this.router.navigate(['/auth/login']);
+          } else {
+            window.location.href = 'contenido-no-disponible';
+          }
         }
 
         this.authService.isTokenExpired().subscribe(isTokenExpired => {  
