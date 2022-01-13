@@ -104,6 +104,7 @@ export const CONTENIDO_I18N_DEF = {
     contenido_create_form_fields_def_title_info : 'INFO',
     contenido_create_form_fields_def_title_agenda : 'AGENDA',
     contenido_grid_def_button_action_imagenes : 'Imágenes',
+    contenido_grid_def_button_action_duplicate: 'Duplicar',
     contenido_create_form_fields_def_field_porcentaje : 'Porcentaje',
     contenido_create_form_fields_def_field_showPublishDate : 'Mostrar Fecha Publicación',
     contenido_create_form_fields_def_title_beneficios: 'BENEFICIOS'

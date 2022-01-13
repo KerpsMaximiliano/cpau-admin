@@ -3,17 +3,29 @@ import { RADIO_BUTTON, IMPORT_IMAGE } from "app/modules/fwk/core/model/dynamic-f
 
 export const MAILING_CREATE_FORM_FIELDS_DEF = [
   {
-    key: 'accountId',
+    key: 'accountList',
     labelKey: 'mailing_create_form_fields_def_field_cuenta',
     label: 'Cuenta',
-    controlType: 'select',
+    controlType: 'autocomplete-desplegable',
+
     options: {
+      transferIdToField: 'accountId',
       elementLabel: 'friendlyName',
       elementValue: 'id',
-      fromWs: {
-        url: PREFIX_DOMAIN_API + 'EmailAccount',
-      }
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        title: 'accountList'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'EmailAccount/accounts'
     }
+  },
+  {
+    key: 'accountId',
+    controlType: 'hidden'
   },
   {
     key: 'subject',
