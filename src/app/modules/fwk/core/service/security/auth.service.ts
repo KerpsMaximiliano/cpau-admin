@@ -8,8 +8,8 @@ import { GenericHttpService } from '../generic-http-service/generic-http.service
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
 
 
-const USER_DATA = 'user_data';
-const CURRENT_USER = 'currentUser';
+const USER_DATA = 'currentUser';
+
 @Injectable()
 export class AuthService extends HttpService {
   
