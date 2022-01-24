@@ -85,6 +85,8 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     perfil_identificacion_grid_def_button_action_subirFoto: 'Subir',
     perfil_identificacion_grid_def_column_idContact: 'ID Contact',
     perfil_identificacion_grid_def_button_action_borrar_contacto : 'Borrar contacto',
-    perfil_identificacion_grid_def_button_action_recover_password : 'Recuperar contraseña'
+    perfil_identificacion_grid_def_button_action_recover_password : 'Recuperar contraseña',
+    perfil_identificacion_grid_def_button_action_bloquear_pagoonline: 'Bloquear Pago Online',
+    perfil_identificacion_grid_def_button_action_habilitar_pagoonline: 'Habilitar Pago Online'
   }
 };

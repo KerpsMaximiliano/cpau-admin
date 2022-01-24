@@ -50,6 +50,14 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       columnDef: 'fechaNacimiento',
       columnNameKey: 'perfil_identificacion_grid_def_column_fechanacimiento'
+    },
+    {
+      columnDef: 'bloquearPagoOnline',
+      columnNameKey: 'perfil_identificacion_grid_def_column_bloquearPagoOnline'
+    },
+    {
+      columnDef: 'habilitarPagoOnline',
+      columnNameKey: 'perfil_identificacion_grid_def_column_habilitarPagoOnline'
     }
   ],
   sortAllColumns: true,
@@ -318,6 +326,26 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'POST'
       }
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_habilitar_pagoonline',
+      icon: 'credit_card',
+      confirm: false,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_habilitar_pagoonline',
+        url: PREFIX_DOMAIN_API + 'Matricula/habilitarPagoOnline',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_bloquear_pagoonline',
+      icon: 'credit_card_off',
+      confirm: false,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_bloquear_pagoonline',
+        url: PREFIX_DOMAIN_API + 'Matricula/bloquearPagoOnline',
+        method: 'PUT'
+      }
+    },
   ],
   displayedActionsCondition: [
      {
@@ -349,9 +377,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
                   }
     },
     {
-      key: 'perfil_identificacion_grid_def_button_action_recover_password',
+      key: 'perfil_identificacion_grid_def_button_action_bloquear_pagoonline',
       expression: {
-        key: 'hasUserId',
+        key: 'bloquearPagoOnline',
+        value: true
+      }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_habilitar_pagoonline',
+      expression: {
+        key: 'habilitarPagoOnline',
         value: true
       }
     },
