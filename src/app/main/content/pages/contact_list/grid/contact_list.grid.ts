@@ -43,7 +43,7 @@ export const CONTACT_LIST_GRID_DEF = {
         }
       },
       icon: 'auto_stories'
-    }/* ,
+    } ,
     {
       actionNameKey: 'contact_list_grid_def_column_members',
       actionType: 'redirect',
@@ -90,7 +90,7 @@ export const CONTACT_LIST_GRID_DEF = {
         method: 'POST'        
       }
     }
- */
+ 
 
 
 
