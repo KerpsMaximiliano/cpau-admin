@@ -26,5 +26,10 @@ export const CONTACT_LIST_MEMBERS_DEF: CrudDef = {
         width: '400px'
     },
     filterInMemory: false,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
     backButton: true     
 };
