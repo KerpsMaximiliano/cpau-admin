@@ -183,7 +183,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     }else if (action.confirm){
         this.actionDefService.submitAction(action, entity, this.crud.i18nCurrentCrudComponent, undefined)
         .subscribe(r => {
-          if (r && r.success) {
+          if ((r && r.success) || r == true) {
             this.crud.findAll(); 
             this.spinnerGeneralControl.hide();
             this.notificationService.notifySuccess(this.crud.translate('success_message'));
