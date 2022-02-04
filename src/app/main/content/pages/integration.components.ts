@@ -37,6 +37,7 @@ import { MATRICULA_TIPO_DEF } from './matricula_tipo/matricula_tipo.def';
 import { CONTACT_LIST_DEF } from './contact_list/contact_list.def';
 import { CONTACT_LIST_DESUSCRIPTION_DEF } from './contact_list_desuscription/contact_list_desuscription.def';
 import { CONTACT_LIST_MEMBERS_DEF } from './contact_list_members/contact_list_members.def';
+import { NOTICIA_CARROUSEL_DEF } from './noticiaCarrousel/noticiaCarrousel.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -54,6 +55,7 @@ export const COMPONENTS: ComponentDef[] = [
   INDICE_DEF,
   CONTENIDO_DEF,
   PRODUCTO_EXTERNO_DEF,
+  NOTICIA_CARROUSEL_DEF,
   CONTENT_IMAGE_DEF,
   TAG_SELECTION_DEF,
   MAILING_DEF,

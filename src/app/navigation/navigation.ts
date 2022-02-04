@@ -81,6 +81,13 @@ export const navigation = [
                                 'type': 'item',
                                 'url': '/' + environment.URL_PRODUCTO_EXTERNO,
                             },
+                            {
+                                'id': 'noticiaCarrousel',
+                                'title': 'Notas Carrousel',
+                                'translate': 'NAV.NOTASCARROUSEL.TITLE',
+                                'type': 'item',
+                                'url': '/' + environment.URL_NOTICIA_CARROUSEL,
+                            },
                         ]
                     },
                     {

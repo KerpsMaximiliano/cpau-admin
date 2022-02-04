@@ -27,6 +27,7 @@ export const environment = {
     URL_ABM_MODAL: 'modalHome',
     URL_PUBLICIDAD: 'bannerCampaing',
     URL_PRODUCTO_EXTERNO : 'productoExterno',
+    URL_NOTICIA_CARROUSEL : 'noticiaCarrousel',
     URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout',
     URL_PERFIL_IDENTIFICACION: 'perfilIdentificacion',
     URL_IDENTIFICACION_BUSQUEDA: 'identificacionBusqueda',

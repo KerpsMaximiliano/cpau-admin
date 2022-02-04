@@ -1,0 +1,6 @@
+export const NOTICIA_CARROUSEL_SECURITY_DEF = {
+  readAccess: 'NOTICIA_CARROUSEL_READ',
+  updateAccess: 'NOTICIA_CARROUSEL_UPDATE',
+  createAccess: 'NOTICIA_CARROUSEL_CREATE',
+  deleteAccess: 'NOTICIA_CARROUSEL_DELETE'
+};

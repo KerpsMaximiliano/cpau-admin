@@ -1,4 +1,5 @@
-export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
+// export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
+export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
 export const PREFIX_INSTITUCIONAL = '/Content/institucional';
 export const PREFIX_OLDSITE = '';
 
@@ -27,6 +28,7 @@ export const environment = {
     URL_ABM_MODAL: 'modalHome',
     URL_PUBLICIDAD: 'bannerCampaing',
     URL_PRODUCTO_EXTERNO : 'productoExterno',
+    URL_NOTICIA_CARROUSEL : 'noticiaCarrousel',
     URL_LOGOUT_API: PREFIX_DOMAIN_API + 'user/logout',
     URL_PERFIL_IDENTIFICACION: 'perfilIdentificacion',
     URL_IDENTIFICACION_BUSQUEDA: 'identificacionBusqueda',
