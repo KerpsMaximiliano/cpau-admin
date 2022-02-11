@@ -25,6 +25,7 @@ export const locale = {
             'ABMMODAL': { 'TITLE': 'Modal' },
             'ABMROLES': { 'TITLE': 'Roles' },
             'MATRICULA_TIPO': { 'TITLE': 'Tipos de Matrícula' },
+            'MATRICULA_ESTADO': { 'TITLE': 'Estados de Matrícula' },
             'CONTACT_LIST': { 'TITLE': 'Listas de Contactos' }
 
             

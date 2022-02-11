@@ -1,6 +1,7 @@
 import { CONTACT_LIST_DEF } from 'app/main/content/pages/contact_list/contact_list.def';
 import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/navigation/contact_list.nav';
 import { CONTACT_LIST_DESUSCRIPTION_NAV_DEF } from 'app/main/content/pages/contact_list_desuscription/navigation/contact_list_desuscription.nav';
+import { MATRICULADO_ESTADO_NAV_DEF } from 'app/main/content/pages/matriculado_estado/navigation/matriculado_estado.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
 import { environment } from 'environments/environment';
 export const navigation = [
@@ -38,6 +39,14 @@ export const navigation = [
                         'translate': 'NAV.MATRICULA_TIPO.TITLE',
                         'type': 'item',
                         'url': MATRICULA_TIPO_NAV_DEF.url,
+                    },
+                    {
+                        'id': 'matriculadoEstado',
+                        'title': 'Estados de Matrícula',
+                        'translate': 'NAV.MATRICULA_ESTADO.TITLE',
+                        'type': 'item',
+                        'url': MATRICULADO_ESTADO_NAV_DEF.url,
+
                     }
                 ]
             },

@@ -38,6 +38,7 @@ import { CONTACT_LIST_DEF } from './contact_list/contact_list.def';
 import { CONTACT_LIST_DESUSCRIPTION_DEF } from './contact_list_desuscription/contact_list_desuscription.def';
 import { CONTACT_LIST_MEMBERS_DEF } from './contact_list_members/contact_list_members.def';
 import { NOTICIA_CARROUSEL_DEF } from './noticiaCarrousel/noticiaCarrousel.def';
+import { MATRICULADO_ESTADO_DEF } from './matriculado_estado/matriculado_estado.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -78,6 +79,7 @@ export const COMPONENTS: ComponentDef[] = [
   MATRICULA_TIPO_DEF,
   CONTACT_LIST_DEF,
   CONTACT_LIST_DESUSCRIPTION_DEF,
-  CONTACT_LIST_MEMBERS_DEF
+  CONTACT_LIST_MEMBERS_DEF,
+  MATRICULADO_ESTADO_DEF
 ];
 
