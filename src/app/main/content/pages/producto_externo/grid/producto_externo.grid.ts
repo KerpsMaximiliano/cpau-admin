@@ -37,6 +37,7 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
+  deleteAction: true,
   displayedColumns: [
     'title',
     'orden'

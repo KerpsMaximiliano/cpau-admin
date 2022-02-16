@@ -81,7 +81,9 @@ export const NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF = [
     label: 'Orden',
     type: 'number',
     controlType: 'number',
-    required: true
+    required: true,
+    minValue: 1,
+    minValueMessage: 'La posición debe ser mayor o igual 1',
   },
   {
     key: 'linkTarget',
