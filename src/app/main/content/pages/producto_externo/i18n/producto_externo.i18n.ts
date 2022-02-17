@@ -45,6 +45,9 @@ export const PRODUCTO_EXTERNO_I18N_DEF = {
     producto_externo_grid_def_column_orden: 'Orden',
     PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_textcolor: 'Color de Texto',
     prodcuto_externo_grid_def_button_action_bajar: 'Bajar',
-    prodcuto_externo_grid_def_button_action_subir: 'Subir'
+    prodcuto_externo_grid_def_button_action_subir: 'Subir',
+    producto_externo_grid_def_column_active: 'Publicado',
+    producto_externo_grid_def_button_action_publicar: 'Publicar',
+    producto_externo_grid_def_button_action_despublicar: 'Despublicar'
   }
 };
