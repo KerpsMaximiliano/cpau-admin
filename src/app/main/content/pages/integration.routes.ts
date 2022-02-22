@@ -42,7 +42,7 @@ import { CONTACT_LIST_DESUSCRIPTION_DEF } from './contact_list_desuscription/con
 import { CONTACT_LIST_MEMBERS_DEF } from './contact_list_members/contact_list_members.def';
 import { NOTICIA_CARROUSEL_DEF } from './noticiaCarrousel/noticiaCarrousel.def';
 import { MATRICULADO_ESTADO_DEF } from './matriculado_estado/matriculado_estado.def';
-
+import { CERTIFICADO_MATRICULADO_DEF } from './certificado_matriculado/certificado_matriculado.def';
 
 export const ROUTES: Routes = [
   {
@@ -107,6 +107,11 @@ export const ROUTES: Routes = [
   },
   {
     path: INDICE_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: CERTIFICADO_MATRICULADO_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   },

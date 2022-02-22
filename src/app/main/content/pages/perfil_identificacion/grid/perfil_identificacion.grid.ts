@@ -346,6 +346,31 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'PUT'
       }
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_credencial',
+      actionType: 'file-download',
+      icon: 'assignment_ind',
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_credencial',
+        url: PREFIX_DOMAIN_API + 'Admin/GenerarCredencial',
+        method: 'GET',
+        querystring: {
+          id: 'id'
+        }
+      }
+    },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_certificados',
+      actionType: 'redirect',
+      redirect: {
+        url: '/CertificadoMatriculado',
+        querystring: {
+          idContact : 'idContact',
+          parentTitle: 'apellido'
+        }
+      },
+      icon: 'collections_bookmark'
+    },
   ],
   displayedActionsCondition: [
      {
@@ -364,6 +389,20 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       key: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
+      expression: {
+                    key: 'isMatriculado',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_credencial',
+      expression: {
+                    key: 'isMatriculado',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_certificados',
       expression: {
                     key: 'isMatriculado',
                     value: true
