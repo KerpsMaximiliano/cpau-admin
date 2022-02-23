@@ -11,7 +11,12 @@ export const CONTACT_LIST_MEMBERS_I18N_DEF = {
     CONTACT_LIST_MEMBERS_READ_FORM_FIELDS_DEF_FIELD_active: 'Activo',
     CONTACT_LIST_MEMBERS_READ_FORM_FIELDS_DEF_FIELD_listCode: 'Codigo de Lista',
     contact_list_members_grid_def_column_eliminar: 'Quitar',
-    contact_list_members_def_column_eliminar: 'Quitar'
+    contact_list_members_def_column_eliminar: 'Quitar',
+    contact_list_members_create_form_fields_def_field_isNew: 'Miembro',
+    contact_list_members_create_form_fields_def_field_name: 'Nombre',
+    contact_list_members_create_form_fields_def_field_lastName: 'Apellido',
+    contact_list_members_create_form_fields_def_field_email: 'Email'
+
   }
 
 };
