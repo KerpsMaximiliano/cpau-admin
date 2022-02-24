@@ -22,8 +22,8 @@ export const CONTACT_LIST_UPDATE_FORM_FIELDS_DEF = [
     key: 'allowsJoin',
     labelKey: 'CONTACT_LIST_UPDATE_FORM_FIELDS_DEF_FIELD_allowsjoin',
     label: 'Permite suscripci�n',
-    type: 'string',
-    controlType: 'textbox'
+    type: 'checkbox',
+    controlType: 'checkbox'
   },
   {
     key: 'codeList',

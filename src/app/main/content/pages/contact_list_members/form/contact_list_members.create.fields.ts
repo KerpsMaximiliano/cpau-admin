@@ -62,8 +62,8 @@ export const CONTACT_LIST_MEMBERS_CREATE_FORM_FIELDS_DEF = [
   },
   {
     key: 'listId',
-    value: self.location.search.substring(self.location.search.indexOf("listId")+7,self.location.search.indexOf("&", self.location.search.indexOf("listId"))),
-    controlType: 'hidden'
+    controlType: 'hidden',
+    mappingQuerystring: true
   },
   {
     key: 'row',
