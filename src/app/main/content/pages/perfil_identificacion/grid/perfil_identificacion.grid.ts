@@ -374,12 +374,19 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
   ],
   displayedActionsCondition: [
      {
-       key: 'seccion_grid_def_button_action_cuenta',
+       key: 'perfil_identificacion_grid_def_button_action_recover_password',
        expression: {
                      key: 'hasUserId',
                      value: true
                    }
      },
+     {
+      key: 'seccion_grid_def_button_action_cuenta',
+      expression: {
+                    key: 'hasUserId',
+                    value: true
+                  }
+    },
      {
       key: 'seccion_grid_def_button_action_rol',
       expression: {
@@ -389,6 +396,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       key: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
+      expression: {
+                    key: 'isMatriculado',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_matriculado',
       expression: {
                     key: 'isMatriculado',
                     value: true

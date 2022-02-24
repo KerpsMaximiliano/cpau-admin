@@ -24,6 +24,7 @@ export const CERTIFICADO_MATRICULADO_I18N_DEF = {
     certificado_matriculado_grid_def_column_codigo: 'Codigo',
     certificado_matriculado_grid_def_column_fechahora: 'Fecha y Hora',
     certificado_matriculado_grid_def_column_numero: 'Numero',
-    certificado_matriculado_grid_button_action_file_download: 'Descargar Certificado'
+    certificado_matriculado_grid_button_action_file_download: 'Descargar Certificado',
+    certificado_matriculado_create_form_fields_def_field_generar: 'Generar nuevo certificado para el día de la fecha'
   }
 };

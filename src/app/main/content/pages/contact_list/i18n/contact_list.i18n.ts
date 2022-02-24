@@ -31,7 +31,7 @@ export const CONTACT_LIST_I18N_DEF = {
     contact_list_grid_def_column_codelist: 'Código',
     contact_list_grid_def_column_desuscription: 'Historial Desuscripcion',
     contact_list_grid_def_column_members: 'Miembros',
-    contact_list_grid_button_action_file_members: 'Exportar',
-    contact_list_grid_button_action_file_import_members: 'Importar'
+    contact_list_grid_button_action_file_members: 'Descargar Miembros',
+    contact_list_grid_button_action_file_import_members: 'Importar Miembros'
   }
 };

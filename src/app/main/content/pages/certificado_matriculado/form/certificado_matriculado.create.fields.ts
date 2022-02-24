@@ -9,9 +9,9 @@ export const CERTIFICADO_MATRICULADO_CREATE_FORM_FIELDS_DEF = [
   },
   {
     key: 'empty',
-    labelKey: 'certificado_matriculado_create_form_fields_def_field_id',
-    label: 'empty',
-    controlType: 'textbox',
+    labelKey: 'certificado_matriculado_create_form_fields_def_field_generar',
+    label: 'Generar Certificado',
+    controlType: 'checkbox',
     required: false
   }
 ];

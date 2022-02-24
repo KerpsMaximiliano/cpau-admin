@@ -59,7 +59,7 @@ export const CONTACT_LIST_GRID_DEF = {
     {
       actionNameKey: 'contact_list_grid_button_action_file_members',
       actionType: 'file-download',
-      icon: 'launch',
+      icon: 'file_download',
       ws: {
         key: 'indice_grid_button_action_file_inscriptos',
         url: PREFIX_DOMAIN_API + 'ContactList/Export',
@@ -72,7 +72,7 @@ export const CONTACT_LIST_GRID_DEF = {
     {
       actionNameKey: 'contact_list_grid_button_action_file_import_members',
       actionType: 'file-upload',
-      icon: 'save_alt',
+      icon: 'file_upload',
       form: [
         {               
           key: 'file',
