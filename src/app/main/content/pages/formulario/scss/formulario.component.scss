@@ -116,19 +116,26 @@
 
     .placeDiv{
         display: inline-block !important;
-        width:30% !important;
+        width:22% !important;
         margin-right: 3% !important;
     }
     .dateStringDiv{
         display: inline-block !important;
-        width:30% !important;
-        max-width: 30% !important;
+        width:22% !important;
+        max-width: 22% !important;
         margin-right: 3% !important;
     }
 
     .contactDiv{
         display: inline-block !important;
-        width:34% !important;
+        width:22% !important;
+        max-width: 22% !important;
+        margin-right: 3% !important;
+    }
+
+    .isCursoDiv {
+        display: inline-block !important;
+        width:25% !important;
     }
 
     

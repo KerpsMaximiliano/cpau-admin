@@ -124,5 +124,12 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 500
+  },
+  {
+    key: 'isCurso',
+    labelKey: 'formulario_create_form_fields_def_field_isCurso',
+    label: 'Es curso',
+    type: 'boolean',
+    controlType: 'checkbox'
   }
 ];

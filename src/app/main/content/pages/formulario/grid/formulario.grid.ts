@@ -138,6 +138,10 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       columnDef: 'isPublished',
       columnNameKey: 'formulario_grid_def_column_isPublished'
+    },
+    {
+      columnDef: 'isCurso',
+      columnNameKey: 'formulario_grid_def_column_isCurso'
     }
   ],
   sortAllColumns: true,
@@ -147,7 +151,9 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     'name',
     'fromDate',
     'toDate',
-    'inscriptos'
+    'inscriptos',
+    'isCurso',
+    'date'
   ],
   actions: [
     {

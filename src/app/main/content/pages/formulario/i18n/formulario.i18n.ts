@@ -25,6 +25,8 @@ export const FORMULARIO_I18N_DEF = {
     formulario_create_form_fields_def_field_place: 'Lugar',
     formulario_create_form_fields_def_field_date: 'Fecha',
     formulario_create_form_fields_def_field_contact: 'Contacto',
+    formulario_create_form_fields_def_field_isCurso: 'Es curso',
+    formulario_update_form_fields_def_field_isCurso: 'Es curso',
     formulario_update_form_fields_def_field_id: 'ID',
     formulario_update_form_fields_def_field_name: 'Nombre',
     formulario_update_form_fields_def_field_description: 'Descripción',
@@ -119,6 +121,9 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_button_action_copiar : 'Duplicar',
     formulario_grid_def_button_action_despublicar : 'Despublicar',
     formulario_grid_def_button_action_publicar : 'Publicar',
-    formulario_grid_button_action_file_export : ' Exportar Inscriptos'
+    formulario_grid_button_action_file_export : ' Exportar Inscriptos',
+    formulario_grid_def_column_isCurso: 'Es Curso'
+    
+    
   }
 };

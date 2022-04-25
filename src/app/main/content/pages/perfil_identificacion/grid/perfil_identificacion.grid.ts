@@ -371,6 +371,35 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       },
       icon: 'collections_bookmark'
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_bloqueos_cursos',
+      icon: 'free_cancellation',
+      form: [
+        {
+          key: 'bloqueoCursoPrimerSemestre',
+          labelKey: 'perfil_identificacion_label_bloqueo_primer_semestre',
+          label: 'Primer Semestre Bloqueado',
+          type: 'boolean',
+          controlType: 'checkbox',
+        },
+        {
+          key: 'bloqueoCursoSegundoSemestre',
+          labelKey: 'perfil_identificacion_label_bloqueo_segundo_semestre',
+          label: 'Segundo Semestre Bloqueado',
+          type: 'boolean',
+          controlType: 'checkbox',
+        },
+        {               
+          key: 'idContact',
+          controlType: 'hidden',
+        },
+      ],
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_bloqueos_cursos',
+        url: PREFIX_DOMAIN_API + 'admin/personas/bloqueocursos',
+        method: 'PUT'
+      }
+    },
   ],
   displayedActionsCondition: [
      {
