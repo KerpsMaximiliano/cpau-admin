@@ -400,6 +400,28 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'PUT'
       }
     },
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_linkcpaumail',
+      icon: 'alternate_email',
+      form: [
+        {
+          key: 'monto',
+          labelKey: 'perfil_identificacion_label_monto_abono_anual_cpaumail',
+          label: 'Monto Abono Anual CPAU Mail',
+          type: 'number',
+          controlType: 'number',
+        },
+        {               
+          key: 'idContact',
+          controlType: 'hidden',
+        },
+      ],
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_linkcpaumail',
+        url: PREFIX_DOMAIN_API + 'admin/personas/linkcpaumail',
+        method: 'POST'
+      }
+    }
   ],
   displayedActionsCondition: [
      {
@@ -446,6 +468,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       key: 'perfil_identificacion_grid_def_button_action_certificados',
+      expression: {
+                    key: 'isMatriculado',
+                    value: true
+                  }
+    },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_linkcpaumail',
       expression: {
                     key: 'isMatriculado',
                     value: true
