@@ -50,6 +50,7 @@ export const CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF = [
                  {id: 2, nombre: 'Boletin'},
                  //{id: 3, nombre: 'RSS'},
                  {id: 4, nombre: 'Nota'},
+                 {id: 5, nombre: 'Galería'}
                 ]
       }
   }

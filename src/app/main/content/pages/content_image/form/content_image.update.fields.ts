@@ -53,7 +53,8 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
       fromData: [{id: 1, nombre: 'Sección'},
                  {id: 2, nombre: 'Boletin'},
                  //{id: 3, nombre: 'RSS'},
-                 {id: 4, nombre: 'Nota'}
+                 {id: 4, nombre: 'Nota'},
+                 {id: 5, nombre: 'Galería'}
                 ]
       }
   }

@@ -70,12 +70,21 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
                  {id: 4, nombre: '_search'}]
       }
   },
-  /*{
-    key: 'allowAnonymous',
-    labelKey: 'contenido_create_form_fields_def_field_allowanonymous',
-    type: 'checkbox',
-    controlType: 'checkbox'
-  },*/
+  {
+    key: 'posicionGaleria',
+    labelKey: 'contenido_create_form_fields_def_field_linktarget_posiciongaleria',
+    label: 'Galería',
+    controlType: 'select',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 1, nombre: 'No Mostrar'},
+                 {id: 2, nombre: 'Mostrar Arriba'},
+                 {id: 3, nombre: 'Mostrar Abajo'}
+                ]
+      }
+  },
   
  
 
