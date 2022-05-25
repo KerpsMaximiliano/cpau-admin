@@ -29,6 +29,19 @@ export const IMAGEN_UPDATE_FORM_FIELDS_DEF = [
     showPreview: true
   },
   {
+    key: 'thumbnailurl',
+    labelKey: 'imagen_create_form_fields_def_field_thumbnailurl',
+    label: 'URL',
+    type: 'string',
+    controlType: 'import_image',
+    maxLength: 200,
+    icon: 'add_photo_alternate',
+    options: {
+      resourceType: 'Images'
+    },
+    showPreview: true
+  },
+  {
     key: 'epigraph',
     labelKey: 'imagen_create_form_fields_def_field_epigraph',
     label: 'Ep&iacute;grafe',

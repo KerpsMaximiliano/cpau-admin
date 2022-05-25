@@ -28,6 +28,7 @@ export const IMAGEN_I18N_DEF = {
     imagen_grid_def_column_name: 'Nombre',
     imagen_grid_def_column_url: 'URL',
     imagen_grid_def_column_epigraph: 'Epígrafe',
-    imagen_grid_def_column_createdate: 'Fecha Creación'
+    imagen_grid_def_column_createdate: 'Fecha Creación',
+    imagen_create_form_fields_def_field_thumbnailurl: 'Url Miniatura'
   }
 };
