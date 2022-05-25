@@ -85,6 +85,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'posicionGaleria',
     labelKey: 'contenido_create_form_fields_def_field_linktarget_posiciongaleria',
     label: 'Galería',
+    value: 1,
     controlType: 'select',
     options: {
       handlerSourceData: false,

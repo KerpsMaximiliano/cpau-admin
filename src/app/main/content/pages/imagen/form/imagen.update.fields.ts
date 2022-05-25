@@ -29,7 +29,7 @@ export const IMAGEN_UPDATE_FORM_FIELDS_DEF = [
     showPreview: true
   },
   {
-    key: 'thumbnailurl',
+    key: 'thumbnailUrl',
     labelKey: 'imagen_create_form_fields_def_field_thumbnailurl',
     label: 'URL',
     type: 'string',
