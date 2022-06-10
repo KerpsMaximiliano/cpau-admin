@@ -7,7 +7,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'mailing_create_form_fields_def_field_cuenta',
     label: 'Cuenta',
     controlType: 'autocomplete-desplegable',
-
+    required: true,
     options: {
       transferIdToField: 'accountId',
       elementLabel: 'friendlyName',
@@ -32,8 +32,29 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'mailing_create_form_fields_def_field_asunto',
     label: 'Asunto',
     type: 'string',
+    required: true,
     controlType: 'textbox'
   },
+  {
+    key: 'agenda_title',
+    labelKey: 'Parámetros',
+    title: 'Parámetros',
+    controlType: 'checkbox'
+  },
+  {
+    key: 'hasParameters',
+    labelKey: 'Detalle Deuda',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
+
+  {
+    key: 'includeAddress',
+    labelKey: 'Domicilio (solo para Matriculados por estado)',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
+
 
   {
     key: 'agenda_title',
@@ -191,12 +212,9 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     showPreview: true
   },
 
-  {
-    key: 'hasParameters',
-    labelKey: 'Incluye parámetros',
-    type: 'boolean',
-    controlType: 'checkbox'
-  }
+  
+
+
 
   // {
   //   key: 'incluirDesuscriptos',

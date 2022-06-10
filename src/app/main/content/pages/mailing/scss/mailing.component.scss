@@ -34,5 +34,19 @@
     }
 }
 .control-mat-dialog .dynamicFormDiv[name=subForm]{
-        
+       
+    .hasParametersDiv {
+        display: inline-block !important;
+        width:45% !important;
+        max-width:45% !important;
+        min-width:45% !important;
+    }
+
+    .includeAddressDiv {
+        display: inline-block !important;
+        width:45% !important;
+        max-width:45% !important;
+        min-width:45% !important;
+    }
+
 }
