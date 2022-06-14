@@ -56,7 +56,6 @@ import { TagsComponent } from './component/tags/tags.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { ImportImageComponent } from './component/import-image/import-image.component';
 import { AppCrudComponent } from './shared/view/crud/app-crud.component';
-import { CKEditorModule } from 'ckeditor4-angular';
 import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
 import { AutocompleteService } from './component/autocomplete/autocomplete.service';
 import { AutocompleteDesplegableComponent } from './component/autocomplete-desplegable/autocomplete-desplegable.component';
@@ -71,7 +70,6 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    CKEditorModule,
     ColorPickerModule,
     RouterModule,
     DpDatePickerModule

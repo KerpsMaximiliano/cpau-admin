@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import { OnInit } from '@angular/core';
-import '@ckeditor/ckeditor5-build-classic/build/translations/es';
 import { FormGroup } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Injector } from '@angular/core';
@@ -10,7 +9,6 @@ import { EventEmitter } from '@angular/core';
 import {defaultFormat as _rollupMoment} from 'moment';
 import { ViewChildren } from '@angular/core';
 import { QueryList } from '@angular/core';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { FormService } from '../../service/dynamic-form/form.service';
 import { AbstractComponent } from '../abstract-component.component';
 import { DynamicField, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
@@ -41,24 +39,6 @@ import { AutocompleteService } from '../autocomplete/autocomplete.service';
   ],
 })
 export class DynamicFormComponent extends AbstractComponent implements OnInit {
-
-  ckeditorConfig = {
-    language: 'es',
-    /*
-      Reference config: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
-      http://www.cpau.org/Content/ckeditor/samples/toolbarconfigurator/index.html#basic
-    */
-    // toolbar: [ 'ckfinder', 'Styles', 'Format', 'Font', 'FontSize', 'Table', '-', 'Link', 'TextColor', 'BGColor', 'Source', 
-    //            'Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', '-', 'Outdent', 'Indent', '-', 'Print',
-    //            'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
-    // ],
-    // ckfinder: {
-    //   options: {
-    //     resourceType: 'Images'
-    //   }
-    // }
-  };
-
   public searchTermInterface(field: ApiAutocompleteConfiguration) {
     return {
       search: (term) => this.autocompleteService.autocompleteSearch(this.form, field)
@@ -103,21 +83,6 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   onInit(): void {
     this.onInitWithFields(this.fields, this.entity);
-    // @ts-ignore
-    if (CKEDITOR) {
-      // @ts-ignore
-      CKEDITOR.config.defaultLanguage = 'es';
-      // @ts-ignore
-      CKEDITOR.config.allowedContent = true;
-    }
-    // @ts-ignore
-    const ckfinder = CKFinder;
-    if (ckfinder) {
-      ckfinder.setupCKEditor(null, '/Content/ckfinder/', {
-        startupPath: "Files:.newsite",
-        rememberLastFolder: false
-      });
-    }
   }
 
   onInitWithFields(fields, entity): void {
@@ -147,9 +112,9 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
     });
   }
 
-  getEditor() {
-    return ClassicEditor;
-  }
+  // getEditor() {
+  //   return ClassicEditor;
+  // }
 
   setUpFields() {
     this.entity = this.formService.injectToEntity({}, this.form, this.fields);
