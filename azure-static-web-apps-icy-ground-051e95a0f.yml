@@ -29,7 +29,7 @@ jobs:
       azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_GROUND_051E95A0F)
       app_location: "/" # App source code path
       api_location: "" # Api source code path - optional
-      app_build_command: "npm install -g @angular/cli&& npm install && npm run build-prod"
+      app_build_command: "npm install -g @angular/cli&& npm install && ng build --env=prod"
       output_location: "dist" # Built app content directory - optional
 
 
