@@ -3,7 +3,7 @@ export const PREFIX_INSTITUCIONAL = '/Content/institucional';
 export const PREFIX_OLDSITE = '';
 
 export const environment = {
-    localAuth: false,
+    localAuth: true,
     
     production: true,
     hmr: false,
@@ -14,7 +14,7 @@ export const environment = {
 
     /* Config General URl*/
     URL_ROOT: '',
-    URL_LOGIN: PREFIX_INSTITUCIONAL,
+    URL_LOGIN: 'auth/login',
     // Business
 
     URL_SECCIONES: 'seccion',
