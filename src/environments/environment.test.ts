@@ -3,7 +3,7 @@ export const PREFIX_INSTITUCIONAL = '/Content/institucional';
 export const PREFIX_OLDSITE = '';
 
 export const environment = {
-    localAuth: false,
+    localAuth: true,
     
     production: true,
     hmr: false,
