@@ -1,3 +1,5 @@
+import { AUTORES_NAV_DEF } from "app/main/content/pages/revistanotas/autores/navigation/autores.nav";
+
 // export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
 export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
 export const PREFIX_INSTITUCIONAL = '/Content/institucional';
