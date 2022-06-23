@@ -61,6 +61,7 @@ import { AutocompleteService } from './component/autocomplete/autocomplete.servi
 import { AutocompleteDesplegableComponent } from './component/autocomplete-desplegable/autocomplete-desplegable.component';
 import { DpDatePickerModule } from 'ng2-date-picker';
 import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-time/datepicker-time.component';
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
 @NgModule({
   imports: [
@@ -72,7 +73,8 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
     FlexLayoutModule,
     ColorPickerModule,
     RouterModule,
-    DpDatePickerModule
+    DpDatePickerModule,
+    EditorModule
   ],
   entryComponents: [
     ColorPickerComponent,
@@ -196,6 +198,7 @@ import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-tim
       useClass: JwkInterceptor,
       multi: true,
     },
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' },
   ],
 })
 export class FwkModule { }
