@@ -1,0 +1,33 @@
+export const AUTORES_I18N_DEF = {
+  name: 'AUTORES_I18N_DEF',
+  lang: 'es',
+  words: {
+    page_title: 'Autores',
+    autores_nav_def: 'Autores',
+    autores_create_form_fields_def_field_id: 'Id',
+    autores_create_form_fields_def_field_nombre: 'Nombre',
+    autores_create_form_fields_def_field_shortbio: 'Bio Corta',
+    autores_create_form_fields_def_field_bio: 'Bio',
+    autores_create_form_fields_def_field_imagenperfil: 'Imagen Perfil',
+    autores_update_form_fields_def_field_id: 'Id',
+    autores_update_form_fields_def_field_nombre: 'Nombre',
+    autores_update_form_fields_def_field_shortbio: 'Bio Corta',
+    autores_update_form_fields_def_field_bio: 'Bio',
+    autores_update_form_fields_def_field_imagenperfil: 'Imagen Perfil',
+    autores_read_form_fields_def_field_id: 'Id',
+    autores_read_form_fields_def_field_nombre: 'Nombre',
+    autores_read_form_fields_def_field_shortbio: 'Bio Corta',
+    autores_read_form_fields_def_field_bio: 'Bio',
+    autores_read_form_fields_def_field_imagenperfil: 'Imagen Perfil',
+    autores_filter_form_fields_def_field_id: 'Id',
+    autores_filter_form_fields_def_field_nombre: 'Nombre',
+    autores_filter_form_fields_def_field_shortbio: 'Bio Corta',
+    autores_filter_form_fields_def_field_bio: 'Bio',
+    autores_filter_form_fields_def_field_imagenperfil: 'Imagen Perfil',
+    autores_grid_def_column_id: 'Id',
+    autores_grid_def_column_nombre: 'Nombre',
+    autores_grid_def_column_shortbio: 'Bio Corta',
+    autores_grid_def_column_bio: 'Bio',
+    autores_grid_def_column_imagenperfil: 'Imagen Perfil'
+  }
+};
