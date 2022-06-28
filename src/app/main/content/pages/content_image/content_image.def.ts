@@ -14,10 +14,20 @@ export const CONTENT_IMAGE_DEF: CrudDef = {
     name: 'CONTENT_IMAGE',
     i18n: CONTENT_IMAGE_I18N_DEF,
     grid: CONTENT_IMAGE_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef: {
+        create: {
+            showSubmitContinue: true,
+            fields: CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF
+        },
+        update: {
+            showSubmitContinue: true,
+            fields: CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF
+        }
+    },
     forms: {
         filter: CONTENT_IMAGE_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+        // create: CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        // update: CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         //read:  CONTENT_IMAGE_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: CONTENT_IMAGE_NAV_DEF,
@@ -27,7 +37,7 @@ export const CONTENT_IMAGE_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'ContentImage'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

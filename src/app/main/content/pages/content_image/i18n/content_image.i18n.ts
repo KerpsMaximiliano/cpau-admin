@@ -25,6 +25,7 @@ export const CONTENT_IMAGE_I18N_DEF = {
     content_image_grid_def_column_imageid: 'Imagen',
     content_image_grid_def_column_typeid: 'Tipo',
     content_image_grid_def_column_typeidString : 'Tipo',
-    SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid : 'Imagen'
+    SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid : 'Imagen',
+    content_image_grid_def_column_imageOrder: 'Orden'
   }
 };

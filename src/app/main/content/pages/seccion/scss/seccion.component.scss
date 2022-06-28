@@ -60,11 +60,11 @@
     }
 
     .imageDiv{
-        display: inline-block !important;
-        width:62% !important;
-        max-width:62% !important;
-        min-width:62% !important;
-        margin-right: 3%;
+        // display: inline-block !important;
+        // width:62% !important;
+        // max-width:62% !important;
+        // min-width:62% !important;
+        // margin-right: 3%;
     }
 
 
@@ -77,16 +77,16 @@
 
     .allowAnonymousDiv{
         display: inline-block !important;
-        width:15% !important;
-        max-width:15% !important;
-        min-width:15% !important;
+        width:10% !important;
+        max-width:10% !important;
+        min-width:10% !important;
     }
 
     .templateIdDiv{
         display: inline-block !important;
-        width:48% !important;
-        max-width:48% !important;
-        min-width:48% !important;
+        width:25% !important;
+        max-width:25% !important;
+        min-width:25% !important;
         margin-right: 2%;
     }
 
@@ -106,7 +106,8 @@
         margin-right: 0 !important;
     }
     .filterDateDiv {
-        width: 48%;
+        width: 15%;
+        display: inline-block !important;
     }
 
     .import-image-input {
@@ -116,9 +117,10 @@
 
     .orderItemsByDiv{
         display: inline-block !important;
-        width:50% !important;
-        max-width:50% !important;
-        min-width:50% !important;
+        width:25% !important;
+        max-width:25% !important;
+        min-width:25% !important;
+        margin-right: 2% !important;
     }
 
     .contactNameDiv{

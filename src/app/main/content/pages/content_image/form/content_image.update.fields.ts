@@ -46,6 +46,7 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF_FIELD_typeid',
     label: 'Tipo',
     controlType: 'select',
+    required: true,
     options: {
       handlerSourceData: false,
       elementLabel: 'nombre',
@@ -57,5 +58,13 @@ export const CONTENT_IMAGE_UPDATE_FORM_FIELDS_DEF = [
                  {id: 5, nombre: 'Galería'}
                 ]
       }
-  }
+  },
+  {
+    key: 'imageOrder',
+    labelKey: 'content_image_create_form_fields_def_field_Orden',
+    label: 'Orden',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
 ];
