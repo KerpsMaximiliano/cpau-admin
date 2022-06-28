@@ -114,6 +114,9 @@
           [formControlName]="field.key"
           initialValue="{{field.value}}"
           [init]="{
+          custom_elements:'style',
+          allow_unsafe_link_target: true,
+          allow_html_in_named_anchor: true,
           height: 300,
           menubar: true,
           plugins: [
