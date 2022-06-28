@@ -26,6 +26,6 @@ export const PERFIL_MATRICULADO_DEF: CrudDef = {
         url: '/admin/personas/matriculado'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     }   
 };

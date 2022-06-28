@@ -51,9 +51,6 @@ export const CONTENIDOS_UPDATE_FORM_FIELDS_DEF = [
     key: 'imagen',
     labelKey: 'contenidos_create_form_fields_def_field_imagen',
     label: 'Imagen',
-    controlType: 'import_image',
-    maxLength: 500,
-    icon: 'attach_file',
-    showPreview: true,
+    controlType: 'textbox',
   }
 ];

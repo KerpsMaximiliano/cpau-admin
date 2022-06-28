@@ -14,6 +14,12 @@ export const CONTENIDO_TAGS_DEF: CrudDef = {
     name: 'CONTENIDO_TAGS',
     i18n: CONTENIDO_TAGS_I18N_DEF,
     grid: CONTENIDO_TAGS_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create : {
+            fields : CONTENIDO_TAGS_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        }
+    },
     forms: {
         filter: CONTENIDO_TAGS_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         create: CONTENIDO_TAGS_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
@@ -27,7 +33,7 @@ export const CONTENIDO_TAGS_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + '/ContenidoTags'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     cancelInitSearch: false,
     filterInMemory: false,

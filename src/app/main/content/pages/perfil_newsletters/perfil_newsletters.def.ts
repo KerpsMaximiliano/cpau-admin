@@ -24,7 +24,7 @@ export const PERFIL_NEWSLETTERS_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/personas/newsletters/'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

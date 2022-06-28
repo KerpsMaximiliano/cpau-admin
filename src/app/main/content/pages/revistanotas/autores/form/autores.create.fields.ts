@@ -13,9 +13,7 @@ export const AUTORES_CREATE_FORM_FIELDS_DEF = [
     key: 'imagenPerfil',
     labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_imagenperfil',
     label: 'Imagen Perfil',
-    controlType: 'import_image',
-    maxLength: 500,
-    icon: 'attach_file',
-    showPreview: true,
+    controlType: 'textbox',
+    required: true
   }
 ];

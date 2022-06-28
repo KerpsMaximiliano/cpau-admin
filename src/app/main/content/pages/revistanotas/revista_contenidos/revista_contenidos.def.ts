@@ -14,6 +14,12 @@ export const REVISTA_CONTENIDOS_DEF: CrudDef = {
     name: 'REVISTA_CONTENIDOS',
     i18n: REVISTA_CONTENIDOS_I18N_DEF,
     grid: REVISTA_CONTENIDOS_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create : {
+            fields : REVISTA_CONTENIDOS_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        }
+    },
     forms: {
         filter: REVISTA_CONTENIDOS_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
         create: REVISTA_CONTENIDOS_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.

@@ -27,7 +27,7 @@ export const CONTACT_LIST_MEMBERS_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'ContactList/Members/'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     serverPagination: true,

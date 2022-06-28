@@ -14,9 +14,15 @@ export const CONTENIDO_AUTORES_DEF: CrudDef = {
     name: 'CONTENIDO_AUTORES',
     i18n: CONTENIDO_AUTORES_I18N_DEF,
     grid: CONTENIDO_AUTORES_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create : {
+            fields : CONTENIDO_AUTORES_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        }
+    },
     forms: {
         filter: CONTENIDO_AUTORES_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: CONTENIDO_AUTORES_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        // create: CONTENIDO_AUTORES_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
         // update: CONTENIDO_AUTORES_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         // read:  CONTENIDO_AUTORES_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
@@ -27,7 +33,7 @@ export const CONTENIDO_AUTORES_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'ContenidoAutores'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     cancelInitSearch: false,
     filterInMemory: false,

@@ -61,6 +61,7 @@ export const REVISTAS_I18N_DEF = {
     revistas_grid_def_column_ispublished: 'Publicado',
     revistas_create_form_fields_def_field_posicion:'Posición',
     revistas_grid_def_column_posicion: 'Posición',
-    revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa: 'Tapa'
+    revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa: 'Tapa',
+    revistas_UPDATE_FORM_FIELDS_DEF_FIELD_contenidos: 'Contenidos'
   }
 };

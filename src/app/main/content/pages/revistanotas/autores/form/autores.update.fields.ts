@@ -11,15 +11,14 @@ export const AUTORES_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_nombre',
     label: 'Nombre',
     type: 'string',
+    required: true,
     controlType: 'textbox'
   },
   {
     key: 'imagenPerfil',
     labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_imagenperfil',
     label: 'Imagen Perfil',
-    controlType: 'import_image',
-    maxLength: 500,
-    icon: 'attach_file',
-    showPreview: true,
+    controlType: 'textbox',
+    required: true
   }
 ];

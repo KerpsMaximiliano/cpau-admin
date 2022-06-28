@@ -12,7 +12,6 @@ export const CONTENIDOS_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'contenidos_create_form_fields_def_field_url',
     label: 'URL',
     controlType: 'import_image',
-    maxLength: 500,
     icon: 'attach_file',
     showPreview: true,
   },
@@ -44,9 +43,6 @@ export const CONTENIDOS_CREATE_FORM_FIELDS_DEF = [
     key: 'imagen',
     labelKey: 'contenidos_create_form_fields_def_field_imagen',
     label: 'Imagen',
-    controlType: 'import_image',
-    maxLength: 500,
-    icon: 'attach_file',
-    showPreview: true,
+    controlType: 'textbox'
   }
 ];

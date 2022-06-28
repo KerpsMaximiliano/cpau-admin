@@ -14,10 +14,20 @@ export const CONTENIDOS_DEF: CrudDef = {
     name: 'CONTENIDOS',
     i18n: CONTENIDOS_I18N_DEF,
     grid: CONTENIDOS_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
+    formsDef : {
+        create : {
+            fields : CONTENIDOS_CREATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        },
+        update : {
+            fields : CONTENIDOS_UPDATE_FORM_FIELDS_DEF,
+            showSubmitContinue: true
+        } 
+    },
     forms: {
         filter: CONTENIDOS_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: CONTENIDOS_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: CONTENIDOS_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+        // create: CONTENIDOS_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        // update: CONTENIDOS_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
         read:  CONTENIDOS_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: CONTENIDOS_NAV_DEF,

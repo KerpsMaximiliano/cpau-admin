@@ -68,11 +68,7 @@ export const REVISTAS_CREATE_FORM_FIELDS_DEF = [
     key: 'imagenTapa',
     labelKey: 'revistas_create_form_fields_def_field_imagentapa',
     label: 'ImagenTapa',
-    controlType: 'import_image',
-    maxLength: 500,
-    icon: 'attach_file',
-    showPreview: true,
-    required: true
+    controlType: 'textbox'
   },
  
   

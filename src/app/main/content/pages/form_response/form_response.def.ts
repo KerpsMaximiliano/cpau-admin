@@ -27,7 +27,7 @@ export const FORM_RESPONSE_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'FormResponse'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true
