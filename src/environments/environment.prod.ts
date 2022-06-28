@@ -15,7 +15,7 @@ export const environment = {
 
     /* Config General URl*/
     URL_ROOT: '',
-    URL_LOGIN: 'auth/login',
+    URL_LOGIN: PREFIX_INSTITUCIONAL,
     // Business
 
     URL_SECCIONES: 'seccion',
