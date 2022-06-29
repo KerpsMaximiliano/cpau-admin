@@ -141,12 +141,28 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'textbox',
           disabled: true
         },
-        {
+
+
+        
+      
+
+        {               
+          key: 'estadoId',
           labelKey: 'matricula_create_form_fields_def_field_estado',
-          key: 'estado',
-          controlType: 'textbox',
-          disabled: true
+          label: 'Estado',
+          controlType: 'select',
+          options: {
+              handlerSourceData: false,
+              elementLabel: 'nombre',
+              elementValue: 'id',
+              fromWs: {
+                key: 'matricula_create_form_fields_def_field_estado',
+                url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
+              }
+          }
         },
+
+
         {
           labelKey: 'matricula_create_form_fields_def_field_universidad',
           key: 'universidad',
@@ -177,7 +193,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       ],
       ws: {
         key: 'matricula_create_form_fields_def_field_editar',
-        url: PREFIX_DOMAIN_API + 'admin/personas/matriculado',
+        url: PREFIX_DOMAIN_API + 'admin/matriculado/updateestado',
         method: 'PUT'
       }
     },
