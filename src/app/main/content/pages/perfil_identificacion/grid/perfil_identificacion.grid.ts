@@ -333,6 +333,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       }
     },
     {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+      icon: 'image_not_supported',
+      confirm: true,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+        url: PREFIX_DOMAIN_API + 'admin/deleteimage',
+        method: 'DELETE'
+      }
+    },
+    {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_recover_password',
       icon: 'password',      
       confirm: true,
@@ -446,6 +456,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
                      key: 'hasUserId',
                      value: true
                    }
+     },
+     {
+      key: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+      expression: {
+                    key: 'mostrarBorrarFoto',
+                    value: true
+                  }
      },
      {
       key: 'seccion_grid_def_button_action_cuenta',
