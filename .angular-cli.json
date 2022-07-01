@@ -8,7 +8,10 @@
             "root": "src",
             "outDir": "dist",
             "assets": [
-                { "glob": "**/*", "input": "../node_modules/tinymce", "output": "./tinymce/" },
+                { "glob": "**/*", "input": "../node_modules/tinymce/icons", "output": "./tinymce/icons/" },
+                { "glob": "**/*", "input": "../node_modules/tinymce/skins", "output": "./tinymce/skins/" },
+                { "glob": "**/*", "input": "../node_modules/tinymce/themes", "output": "./tinymce/themes/" },
+                { "glob": "**/*", "input": "../node_modules/tinymce/plugins", "output": "./tinymce/plugins/" },
                 "assets",
                 "favicon.ico"
             ],

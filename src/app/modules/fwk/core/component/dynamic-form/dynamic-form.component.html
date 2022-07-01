@@ -114,6 +114,8 @@
           [formControlName]="field.key"
           initialValue="{{field.value}}"
           [init]="{
+          base_url: '/tinymce',
+          suffix: '.min',
           custom_elements:'style',
           allow_unsafe_link_target: true,
           allow_html_in_named_anchor: true,
