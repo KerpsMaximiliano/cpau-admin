@@ -61,6 +61,7 @@ export const REVISTAS_GRID_DEF = {
       columnNameKey: 'revistas_grid_def_column_posicion'
     }
   ],
+  deleteAction: true,
   sortAllColumns: true,
   displayedColumns: [
     'numeroNro',

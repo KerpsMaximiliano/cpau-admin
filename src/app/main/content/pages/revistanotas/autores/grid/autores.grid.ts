@@ -25,6 +25,7 @@ export const AUTORES_GRID_DEF = {
   displayedColumns: [
     'nombre'
   ],
+  deleteAction: true,
   actions: [
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',

@@ -54,6 +54,7 @@ export const CONTENIDOS_GRID_DEF = {
     'titulo',
     'tipoString'
   ],
+  deleteAction: true,
   actions: [
     {
       actionNameKey: 'contenidos_grid_def_column_texto',
