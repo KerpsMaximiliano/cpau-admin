@@ -325,9 +325,13 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   }
 
   deleteAll(entities: E[]): Observable<E> {
-
+    
+    const columnDefId = this.crudDef.grid.columnsDef.find(c => c.id)
     entities.forEach((element) => {
-          this.del(element);
+      if (columnDefId){
+        element.id = element[columnDefId.columnDef];
+      }
+      this.del(element);
     });
     const observable = new Observable<E>((observer) => {
       this.service.deleteAll(entities).subscribe(response => {
