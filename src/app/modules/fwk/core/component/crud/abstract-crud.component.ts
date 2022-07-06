@@ -325,25 +325,46 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   }
 
   deleteAll(entities: E[]): Observable<E> {
-    
-    const columnDefId = this.crudDef.grid.columnsDef.find(c => c.id)
-    entities.forEach((element) => {
-      if (columnDefId){
-        element.id = element[columnDefId.columnDef];
-      }
-      this.del(element);
-    });
-    const observable = new Observable<E>((observer) => {
-      this.service.deleteAll(entities).subscribe(response => {
-        observer.next(response);
-      }, error => {
-        observer.error(error);
-      }, () => {
-
-        observer.complete();
+    let observable: Observable<E>;
+    if(this.crudDef.grid.deleteTernaria == true){
+      const columnDefSingleId = this.crudDef.grid.columnsDef.find(c => c.singleId).columnDef;
+      const columnDefMultiId = this.crudDef.grid.columnsDef.find(c => c.multiId).columnDef;
+      entities.forEach((element) => {
+        if (columnDefSingleId){
+          element.singleId = element[columnDefSingleId];
+        }
+        if (columnDefMultiId){
+          element.multiId = element[columnDefMultiId];
+        } 
+      }); 
+      observable = new Observable<E>((observer) => {
+        this.service.deleteAllTernario(entities, columnDefSingleId, columnDefMultiId).subscribe(response => {
+            observer.next(response);
+          }, error => {
+            observer.error(error);
+          }, () => {  
+            observer.complete();
+          });
       });
-    });
-
+    }else{
+      const columnDefId = this.crudDef.grid.columnsDef.find(c => c.id)
+      entities.forEach((element) => {
+        if (columnDefId){
+          element.id = element[columnDefId.columnDef];
+        }
+        this.del(element);
+      });
+      observable = new Observable<E>((observer) => {
+        this.service.deleteAll(entities).subscribe(response => {
+            observer.next(response);
+          }, error => {
+            observer.error(error);
+          }, () => {
+  
+            observer.complete();
+          });
+      });
+    }    
     return observable;
   }
 

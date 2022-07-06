@@ -141,6 +141,11 @@ export abstract class CrudService<E extends Entity> extends HttpService implemen
         }
     }
 
+    /** DELETE: delete the E from the server */
+    deleteAllTernario (entities: E[], columnDefSingleId: String, columnDefMultiId: String): Observable<E> {
+        return this.multipleDeleteTernario(entities, columnDefSingleId, columnDefMultiId);
+    }
+
     /* GET Es whose name contains search term */
     search(term: string): Observable<E[]> {
         if (!term.trim()) {
