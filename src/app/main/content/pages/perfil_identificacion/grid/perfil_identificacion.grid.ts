@@ -1,4 +1,5 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
+import { PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF } from "../form/perfil_identificacion.update.fields";
 
 export const PERFIL_IDENTIFICACION_GRID_DEF = {
   columnsDef: [
@@ -74,6 +75,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     // 'fechaNacimiento'
   ],
   actions: [
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+      icon: 'edit_note',
+      form: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+        url: PREFIX_DOMAIN_API + 'admin/personas',
+        method: 'PUT'
+      }
+    },
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
       icon: 'person_off',
@@ -332,6 +343,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'POST'
       }
     },
+   
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrarfoto',
       icon: 'image_not_supported',
@@ -534,5 +546,14 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         value: true
       }
     },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+      expression: {
+        key: 'isNotMatriculado',
+        value: true
+      }
+    },
   ]
 };
+
+
