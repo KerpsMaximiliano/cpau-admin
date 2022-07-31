@@ -73,7 +73,8 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
       options: [
         {value: 'ContactList', label: 'Lista de Contactos' },
         {value: 'MatriculadoEstados', label: 'Matrículados por Estado' },
-        {value: 'MatriculadoActividades', label: 'Matrículados por Actividades' }
+        {value: 'MatriculadoActividades', label: 'Matrículados por Actividades' },
+        {value: 'fromFile', label: 'Importar desde Archivo' }
       ]
     }
   },
@@ -130,7 +131,13 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
         }
     }
   },
-
+  {
+    key: 'file',
+    label: 'Importart',
+    labelKey: 'Archivo (solo xls, xlsx)',
+    controlType: 'file',
+    icon: 'file_upload'    
+  },
   {
     key: 'info_title',
     labelKey: 'Contenido',
@@ -210,8 +217,9 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     controlType: 'import_image',
     icon: 'attach_file',
     showPreview: true
-  },
-
+  }
+  
+  
   
 
 

@@ -62,5 +62,11 @@ export const MAILING_READ_FORM_FIELDS_DEF = [
     type: 'string',
     disabled: true,
     controlType: 'textbox'
+  },
+  {
+    key: 'file',
+    label: 'Importar',
+    labelKey: 'Archivo (solo xls, xlsx)',
+    controlType: 'file'
   }
 ];

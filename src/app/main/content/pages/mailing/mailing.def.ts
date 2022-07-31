@@ -30,6 +30,6 @@ export const MAILING_DEF: CrudDef = {
     },
     openLink: "https://t2r34jbcni.execute-api.us-east-1.amazonaws.com/prod/estado-envio",
     dialogConfig: {
-        width: '700px'
+        width: '900px'
     }   
 };

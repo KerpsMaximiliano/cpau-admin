@@ -25,6 +25,10 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
          {
           key: 'matriculadoActividadesIds',
           controlType: 'hidden'
+        },
+        {
+          key: 'file',
+          controlType: 'hidden'
         }
       ],
       else: [
@@ -52,6 +56,10 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
         },
          {
           key: 'matriculadoActividadesIds',
+          controlType: 'hidden'
+        },
+        {
+          key: 'file',
           controlType: 'hidden'
         }
       ],
@@ -81,7 +89,44 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
            {
             key: 'matriculadoActividadesIds',
             controlType: 'pick-list'
+          },
+          {
+            key: 'file',
+            controlType: 'hidden'
           }
+        ],
+        else: [
+          
+        ]            
+      }
+  },
+  {
+      fieldKey: 'to',
+      condition: {
+        if: [
+          {
+            key: 'to',
+            value: 'fromFile',
+          } 
+        ],
+        then: [
+          {
+            key: 'contactList',
+            controlType: 'hidden'
+          },
+          {
+            key: 'matriculadoEstadosIds',
+            controlType: 'hidden'
+          },
+           {
+            key: 'matriculadoActividadesIds',
+            controlType: 'hidden'
+          },
+          {
+            key: 'file',
+            controlType: 'file'
+          }
+          
         ],
         else: [
           
