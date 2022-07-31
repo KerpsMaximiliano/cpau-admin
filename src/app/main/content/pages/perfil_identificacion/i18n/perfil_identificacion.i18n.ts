@@ -92,6 +92,7 @@ export const PERFIL_IDENTIFICACION_I18N_DEF = {
     perfil_identificacion_grid_def_button_action_credencial: 'Credencial',
     perfil_identificacion_grid_def_button_action_bloqueos_cursos: 'Bloqueo de Cursos por Semestre',
     perfil_identificacion_grid_def_button_action_linkcpaumail: 'Link Pago CPAU Mail',
-    perfil_identificacion_grid_def_button_action_borrarfoto: 'Borrar foto perfil'
+    perfil_identificacion_grid_def_button_action_borrarfoto: 'Borrar foto perfil',
+    perfil_identificacion_grid_def_button_action_editarnomatriculado: 'Actualizar Datos No Matriculado'
   }
 };
