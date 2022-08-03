@@ -1,9 +1,9 @@
 name: Azure Static Web Apps CI/CD
 
-pr:
-  branches:
-    include:
-      - migracion-admin
+# pr:
+#  branches:
+#    include:
+#      - migracion-admin
 # trigger:
 #   branches:
 #     include:
