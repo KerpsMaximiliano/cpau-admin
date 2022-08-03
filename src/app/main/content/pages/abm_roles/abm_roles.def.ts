@@ -27,6 +27,6 @@ export const ABM_ROLES_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Role'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     }   
 };

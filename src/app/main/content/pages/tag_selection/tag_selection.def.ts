@@ -26,6 +26,6 @@ export const TAG_SELECTION_DEF: CrudDef = {
         url: 'http://localhost:5000/api/TagSelection/'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     }   
 };

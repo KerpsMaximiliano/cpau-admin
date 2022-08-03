@@ -40,6 +40,14 @@ import { CONTACT_LIST_MEMBERS_DEF } from './contact_list_members/contact_list_me
 import { NOTICIA_CARROUSEL_DEF } from './noticiaCarrousel/noticiaCarrousel.def';
 import { MATRICULADO_ESTADO_DEF } from './matriculado_estado/matriculado_estado.def';
 import { CERTIFICADO_MATRICULADO_DEF } from './certificado_matriculado/certificado_matriculado.def';
+import { AUTORES_DEF } from './revistanotas/autores/autores.def';
+import { CONTENIDO_AUTORES_DEF } from './revistanotas/contenido_autores/contenido_autores.def';
+import { CONTENIDO_TAGS_DEF } from './revistanotas/contenido_tags/contenido_tags.def';
+import { CONTENIDOS_DEF } from './revistanotas/contenidos/contenidos.def';
+import { REVISTA_CONTENIDOS_DEF } from './revistanotas/revista_contenidos/revista_contenidos.def';
+import { REVISTAS_DEF } from './revistanotas/revistas/revistas.def';
+import { TAGS } from 'app/modules/fwk/core/model/dynamic-form/dynamic-field';
+import { TAGS_DEF } from './revistanotas/tags/tags.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -82,6 +90,13 @@ export const COMPONENTS: ComponentDef[] = [
   CONTACT_LIST_DESUSCRIPTION_DEF,
   CONTACT_LIST_MEMBERS_DEF,
   MATRICULADO_ESTADO_DEF,
-  CERTIFICADO_MATRICULADO_DEF
+  CERTIFICADO_MATRICULADO_DEF,
+  AUTORES_DEF,
+  CONTENIDO_AUTORES_DEF,
+  CONTENIDO_TAGS_DEF,
+  CONTENIDOS_DEF,
+  REVISTA_CONTENIDOS_DEF,
+  REVISTAS_DEF,
+  TAGS_DEF
 ];
 

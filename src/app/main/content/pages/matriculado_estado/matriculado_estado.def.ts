@@ -27,6 +27,6 @@ export const MATRICULADO_ESTADO_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     }   
 };
