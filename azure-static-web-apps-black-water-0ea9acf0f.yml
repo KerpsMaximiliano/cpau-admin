@@ -1,13 +1,13 @@
 name: Azure Static Web Apps CI/CD
 
-#pr:
-#  branches:
-#    include:
-#      - production
-#trigger:
-#  branches:
-#    include:
-#      - production
+pr:
+  branches:
+    include:
+      - production
+trigger:
+  branches:
+    include:
+      - production
 
 jobs:
 - job: build_and_deploy_job
@@ -27,6 +27,7 @@ jobs:
 # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
       app_location: "/" # App source code path
       api_location: "" # Api source code path - optional
-      output_location: "" # Built app content directory - optional
+      app_build_command: "npm install -g @angular/cli&& npm install && ng build --env=prod"
+      output_location: "dist" # Built app content directory - optional
 ###### End of Repository/Build Configurations ######
 
