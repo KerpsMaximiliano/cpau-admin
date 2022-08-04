@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from 'environments/environment';
+
 export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'idFormField',
@@ -43,6 +45,13 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'value',
+    labelKey: 'CAMPO_UPDATE_FORM_FIELDS_DEF_FIELD_value',
+    label: 'Valor',
+    type: 'string',
+    controlType: 'textbox'
+  },
+  {
     key: 'required',
     labelKey: 'CAMPO_UPDATE_FORM_FIELDS_DEF_FIELD_required',
     label: 'Requerido',
@@ -50,9 +59,29 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
-    key: 'value',
-    labelKey: 'CAMPO_UPDATE_FORM_FIELDS_DEF_FIELD_value',
-    label: 'Valor',
+    key: 'dependentField',
+    labelKey: 'campo_update_form_fields_def_field_dependentField',
+    label: 'Campo del cual depende',
+    controlType: 'autocomplete-desplegable',
+    options: {
+      elementLabel: 'name',
+      elementValue: 'idFormField',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        idForm: 'idForm'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'FormField'
+    }
+    
+  },
+  {
+    key: 'dependentValue',
+    labelKey: 'campo_update_form_fields_def_field_dependentValue',
+    label: 'Valor necesario',
     type: 'string',
     controlType: 'textbox'
   }

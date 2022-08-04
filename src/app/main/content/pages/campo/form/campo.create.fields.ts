@@ -1,3 +1,5 @@
+import { PREFIX_DOMAIN_API } from 'environments/environment';
+
 export const CAMPO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'name',
@@ -32,6 +34,13 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'value',
+    labelKey: 'campo_create_form_fields_def_field_value',
+    label: 'Valor',
+    type: 'string',
+    controlType: 'textbox'
+  },
+  {
     key: 'required',
     labelKey: 'campo_create_form_fields_def_field_required',
     label: 'Requerido',
@@ -39,9 +48,30 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
-    key: 'value',
-    labelKey: 'campo_create_form_fields_def_field_value',
-    label: 'Valor',
+    key: 'dependentField',
+    labelKey: 'campo_create_form_fields_def_field_dependentField',
+    label: 'Campo del cual depende',
+    controlType: 'autocomplete-desplegable',
+    options: {
+      transferIdToField: 'dependentFieldId',
+      elementLabel: 'name',
+      elementValue: 'idFormField',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        idForm: 'idForm'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'FormField'
+    }
+    
+  },
+  {
+    key: 'dependentValue',
+    labelKey: 'campo_create_form_fields_def_field_dependentValue',
+    label: 'Valor necesario',
     type: 'string',
     controlType: 'textbox'
   },
@@ -52,6 +82,10 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     type: 'text',
     controlType: 'hidden',
     mappingQuerystring: true
+  },
+  {
+    key: 'dependentFieldId',
+    controlType: 'hidden'
   },
 
 ];
