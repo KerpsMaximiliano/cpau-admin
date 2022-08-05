@@ -48,6 +48,8 @@ import { REVISTA_CONTENIDOS_DEF } from './revistanotas/revista_contenidos/revist
 import { REVISTAS_DEF } from './revistanotas/revistas/revistas.def';
 import { TAGS } from 'app/modules/fwk/core/model/dynamic-form/dynamic-field';
 import { TAGS_DEF } from './revistanotas/tags/tags.def';
+import { CATEGORIA_DEF } from './categoria/categoria.def';
+import { PRODUCTO_DEF } from './producto/producto.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -97,6 +99,8 @@ export const COMPONENTS: ComponentDef[] = [
   CONTENIDOS_DEF,
   REVISTA_CONTENIDOS_DEF,
   REVISTAS_DEF,
-  TAGS_DEF
+  TAGS_DEF,
+  CATEGORIA_DEF,
+  PRODUCTO_DEF
 ];
 

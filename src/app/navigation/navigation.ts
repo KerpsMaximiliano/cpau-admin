@@ -1,8 +1,10 @@
+import { CATEGORIA_DEF } from 'app/main/content/pages/categoria/categoria.def';
 import { CONTACT_LIST_DEF } from 'app/main/content/pages/contact_list/contact_list.def';
 import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/navigation/contact_list.nav';
 import { CONTACT_LIST_DESUSCRIPTION_NAV_DEF } from 'app/main/content/pages/contact_list_desuscription/navigation/contact_list_desuscription.nav';
 import { MATRICULADO_ESTADO_NAV_DEF } from 'app/main/content/pages/matriculado_estado/navigation/matriculado_estado.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
+import { PRODUCTO_DEF } from 'app/main/content/pages/producto/producto.def';
 import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores.def';
 import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
 import { CONTENIDOS_NAV_DEF } from 'app/main/content/pages/revistanotas/contenidos/navigation/contenidos.nav';
@@ -221,7 +223,29 @@ export const navigation = [
                         'url': '/' + environment.URL_ABM_ROLES,
                     }
                 ]
-            }
+            },
+            {
+                'title': 'Ventas',
+                'translate': 'NAV.MENU_VENTAS',
+                'type': 'collapse',
+                'icon': 'construction',
+                'children': [
+                    {
+                        'id': 'producto',
+                        'title': 'Productos',
+                        'translate': 'NAV.PRODUCTOS.TITLE',
+                        'type': 'item',
+                        'url': '/' + PRODUCTO_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'categoria',
+                        'title': 'Categorias',
+                        'translate': 'NAV.PUBLICIDAD.TITLE',
+                        'type': 'item',
+                        'url': '/' + CATEGORIA_DEF.navigation.url,
+                    }
+                ]
+            },
 
 
         ]
