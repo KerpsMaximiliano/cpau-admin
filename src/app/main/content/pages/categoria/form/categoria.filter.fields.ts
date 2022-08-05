@@ -1,0 +1,23 @@
+export const CATEGORIA_FILTER_FORM_FIELDS_DEF = [
+  {
+    key: 'id',
+    labelKey: 'CATEGORIA_FILTER_FORM_FIELDS_DEF_FIELD_id',
+    label: 'Id',
+    type: 'number',
+    controlType: 'number'
+  },
+  {
+    key: 'nombre',
+    labelKey: 'CATEGORIA_FILTER_FORM_FIELDS_DEF_FIELD_nombre',
+    label: 'Nombre',
+    type: 'string',
+    controlType: 'textbox'
+  },
+  {
+    key: 'descripcion',
+    labelKey: 'CATEGORIA_FILTER_FORM_FIELDS_DEF_FIELD_descripcion',
+    label: 'Descripcion',
+    type: 'string',
+    controlType: 'textbox'
+  }
+];
