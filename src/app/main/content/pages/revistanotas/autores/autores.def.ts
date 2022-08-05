@@ -36,6 +36,10 @@ export const AUTORES_DEF: CrudDef = {
         key: 'AUTORES_CRUD_URL',
         url: PREFIX_DOMAIN_API + 'Autores'
     },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
     dialogConfig: {
         width: '800px'
     }   
