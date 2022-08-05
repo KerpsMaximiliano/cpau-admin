@@ -35,5 +35,9 @@ export const MODAL_DEF = {
     },
     dialogConfig: {
         width: '900px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
     }
 } as CrudDef;

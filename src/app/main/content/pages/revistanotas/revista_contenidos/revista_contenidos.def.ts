@@ -37,5 +37,9 @@ export const REVISTA_CONTENIDOS_DEF: CrudDef = {
     },
     cancelInitSearch: false,
     filterInMemory: false,
-    backButton: true   
+    backButton: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
 };
