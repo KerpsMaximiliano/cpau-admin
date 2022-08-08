@@ -55,6 +55,8 @@ export const PRODUCTO_I18N_DEF = {
     producto_grid_def_column_enviable: 'Permite Envio',
     producto_grid_def_column_publicado: 'Publicado',
     producto_grid_def_button_action_uploadPhoto: 'Imagen',
-    producto_grid_def_button_action_descripcionLarga: 'Descripción Larga'
+    producto_grid_def_button_action_descripcionLarga: 'Descripción Larga',
+    producto_create_form_fields_def_field_temporal: 'Temporal',
+    producto_grid_def_column_temporal: 'Temporal'
   }
 };

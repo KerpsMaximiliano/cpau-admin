@@ -42,6 +42,10 @@ export const PRODUCTO_GRID_DEF = {
     {
       columnDef: 'publicado',
       columnNameKey: 'producto_grid_def_column_publicado'
+    },
+    {
+      columnDef: 'temporal',
+      columnNameKey: 'producto_grid_def_column_temporal'
     }
   ],
   sortAllColumns: true,
@@ -51,7 +55,8 @@ export const PRODUCTO_GRID_DEF = {
     'precio',
     'precioMatriculadoActivo',
     'enviable',
-    'publicado'
+    'publicado',
+    'temporal'
   ],
   actions: [
     {

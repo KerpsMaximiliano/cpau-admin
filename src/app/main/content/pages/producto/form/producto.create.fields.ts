@@ -58,5 +58,11 @@ export const PRODUCTO_CREATE_FORM_FIELDS_DEF = [
     label: 'Publicado',
     type: 'string',
     controlType: 'checkbox'
+  },
+  {
+    key: 'temporal',
+    labelKey: 'producto_create_form_fields_def_field_temporal',
+    type: 'string',
+    controlType: 'checkbox'
   }
 ];
