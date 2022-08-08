@@ -15,7 +15,6 @@ export const CATEGORIA_GRID_DEF = {
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
     'nombre',
     'descripcion'
   ]

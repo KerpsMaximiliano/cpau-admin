@@ -50,6 +50,8 @@ import { CONTENIDOS_DEF } from './revistanotas/contenidos/contenidos.def';
 import { REVISTA_CONTENIDOS_DEF } from './revistanotas/revista_contenidos/revista_contenidos.def';
 import { REVISTAS_DEF } from './revistanotas/revistas/revistas.def';
 import { TAGS_DEF } from './revistanotas/tags/tags.def';
+import { CATEGORIA_DEF } from './categoria/categoria.def';
+import { PRODUCTO_DEF } from './producto/producto.def';
 
 export const ROUTES: Routes = [
   {
@@ -289,6 +291,16 @@ export const ROUTES: Routes = [
   },
   {
     path: TAGS_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: CATEGORIA_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: PRODUCTO_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
   }

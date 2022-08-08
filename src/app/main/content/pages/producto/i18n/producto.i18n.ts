@@ -53,6 +53,8 @@ export const PRODUCTO_I18N_DEF = {
     producto_grid_def_column_precio: 'Precio',
     producto_grid_def_column_preciomatriculadoactivo: 'Precio Matriculado Activo',
     producto_grid_def_column_enviable: 'Permite Envio',
-    producto_grid_def_column_publicado: 'Publicado'
+    producto_grid_def_column_publicado: 'Publicado',
+    producto_grid_def_button_action_uploadPhoto: 'Imagen',
+    producto_grid_def_button_action_descripcionLarga: 'Descripción Larga'
   }
 };

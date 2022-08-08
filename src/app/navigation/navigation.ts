@@ -228,12 +228,13 @@ export const navigation = [
                 'title': 'Ventas',
                 'translate': 'NAV.MENU_VENTAS',
                 'type': 'collapse',
-                'icon': 'construction',
+                'icon': 'storefront',
                 'children': [
                     {
                         'id': 'producto',
                         'title': 'Productos',
                         'translate': 'NAV.PRODUCTOS.TITLE',
+                        'icon': 'inventory_2',
                         'type': 'item',
                         'url': '/' + PRODUCTO_DEF.navigation.url,
                     },
@@ -241,6 +242,7 @@ export const navigation = [
                         'id': 'categoria',
                         'title': 'Categorias',
                         'translate': 'NAV.PUBLICIDAD.TITLE',
+                        'icon': 'category',
                         'type': 'item',
                         'url': '/' + CATEGORIA_DEF.navigation.url,
                     }

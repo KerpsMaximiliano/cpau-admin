@@ -9,6 +9,7 @@ export const locale = {
             'MENU_CONTENIDOS': { 'TITLE': 'Contenidos' },
             'SECCION': { 'TITLE': 'Secciones' },
             'CONTENIDO': { 'TITLE': 'Contenidos' },
+            'MENU_VENTAS': { 'TITLE': 'Ventas' },
             'IMAGEN': { 'TITLE': 'Imágenes' },
             'PRODUCTOEXTERNO': { 'TITLE': 'Productos' },
             'NOTASCARROUSEL': { 'TITLE': 'Notas Carrousel' },
@@ -30,7 +31,8 @@ export const locale = {
             'MENU_REVISTAS_NOTAS': { 'TITLE': 'Revistas notas' },
             'AUTORES.TITLE': { 'TITLE': 'Autores' },
             'CONTENIDOS.TITLE': { 'TITLE': 'Contenidos' },
-            'REVISTAS.TITLE': { 'TITLE': 'Revistas' }
+            'REVISTAS.TITLE': { 'TITLE': 'Revistas' },
+            'PRODUCTOS.TITLE': { 'TITLE': 'Productos' }
 
             
 

@@ -7,6 +7,7 @@ import { PRODUCTO_GRID_DEF } from './grid/producto.grid';
 import { PRODUCTO_I18N_DEF } from './i18n/producto.i18n';
 import { PRODUCTO_NAV_DEF } from './navigation/producto.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const PRODUCTO_DEF: CrudDef = { 
@@ -23,9 +24,13 @@ export const PRODUCTO_DEF: CrudDef = {
     security: PRODUCTO_SECURITY_DEF,
     ws: {
         key: 'PRODUCTO_CRUD_URL',
-        url: 'Producto'
+        url: PREFIX_DOMAIN_API +  'Producto'
     },
     dialogConfig: {
-        width: '400px'
-    }   
+        width: '800px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };
