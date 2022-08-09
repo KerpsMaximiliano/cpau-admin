@@ -30,6 +30,8 @@ export interface AutocompleteOptions {
    useNativeFilter?: boolean;
    // Usado para pasar el id a otro campo
    transferIdToField: string;
+   // Filtra el form que esta actualmente
+   useFormSenderFilter?: boolean;
 }
 
 export interface AutocompleteChangeValue {

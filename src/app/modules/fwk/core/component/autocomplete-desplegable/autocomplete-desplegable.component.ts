@@ -128,6 +128,9 @@ export class AutocompleteDesplegableComponent implements OnInit, OnChanges, Cont
       if (this.listObj && this.listObj.length && (this.config.options.useNativeFilter === undefined || this.config.options.useNativeFilter === true)) {
         this.listObj = this.listObj.filter(t => t[this.config.options.elementLabel].includes(this.term));
       }
+      if (this.listObj && this.listObj.length && this.config.options.useFormSenderFilter) {
+        this.listObj = this.listObj.filter(o => o.idFormField !== this.formGroup.value.idFormField);
+      }
     });
   }
 
