@@ -2,6 +2,14 @@ import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 export const CAMPO_CREATE_FORM_FIELDS_DEF = [
   {
+    key: 'idForm',
+    labelKey: 'campo_create_form_fields_def_field_idform',
+    label: 'ID Form',
+    type: 'text',
+    controlType: 'hidden',
+    mappingQuerystring: true
+  },
+  {
     key: 'name',
     labelKey: 'campo_create_form_fields_def_field_name',
     label: 'Nombre',
@@ -74,14 +82,6 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     label: 'Valor necesario',
     type: 'string',
     controlType: 'textbox'
-  },
-  {
-    key: 'idForm',
-    labelKey: 'campo_create_form_fields_def_field_idform',
-    label: 'ID Form',
-    type: 'text',
-    controlType: 'hidden',
-    mappingQuerystring: true
   },
   {
     key: 'dependentFieldId',

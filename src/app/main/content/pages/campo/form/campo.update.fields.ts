@@ -11,7 +11,9 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     key: 'idForm',
     labelKey: 'CAMPO_UPDATE_FORM_FIELDS_DEF_FIELD_idform',
     label: 'ID Form',
-    controlType: 'hidden'
+    type: 'text',
+    controlType: 'hidden',
+    mappingQuerystring: true
   },
   {
     key: 'name',
@@ -64,15 +66,17 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Campo del cual depende',
     controlType: 'autocomplete-desplegable',
     options: {
+      transferIdToField: 'dependentFieldId',
       elementLabel: 'name',
       elementValue: 'idFormField',
       useNativeFilter: false,
+      useFormSenderFilter: true,
       selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
     },
     apiOptions: {
       queryString: {
-        idForm: 'idForm'
-      },
+      idForm: 'idForm'
+    },
       defaultShow: 20,
       url: PREFIX_DOMAIN_API + 'FormField'
     }
@@ -84,5 +88,9 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     label: 'Valor necesario',
     type: 'string',
     controlType: 'textbox'
-  }
+  },
+  {
+    key: 'dependentFieldId',
+    controlType: 'hidden'
+  },
 ];
