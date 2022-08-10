@@ -50,6 +50,12 @@ import { TAGS } from 'app/modules/fwk/core/model/dynamic-form/dynamic-field';
 import { TAGS_DEF } from './revistanotas/tags/tags.def';
 import { CATEGORIA_DEF } from './categoria/categoria.def';
 import { PRODUCTO_DEF } from './producto/producto.def';
+import { VENTA_DEF } from './venta/venta.def';
+import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
+import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anual.def';
+import { VENTA_PRODUCTO_DEF } from './venta_producto/venta_producto.def';
+import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
+import { VENTA_ENVIO_DEF } from './venta_envio/venta_envio.def';
 
 
 export const COMPONENTS: ComponentDef[] = [
@@ -101,6 +107,12 @@ export const COMPONENTS: ComponentDef[] = [
   REVISTAS_DEF,
   TAGS_DEF,
   CATEGORIA_DEF,
-  PRODUCTO_DEF
+  PRODUCTO_DEF,
+  VENTA_DEF,
+  DETALLE_ENVIO_DEF,
+  VENTA_DERECHO_ANUAL_DEF,
+  VENTA_PRODUCTO_DEF,
+  VENTA_TRAMITE_DEF,
+  VENTA_ENVIO_DEF
 ];
 

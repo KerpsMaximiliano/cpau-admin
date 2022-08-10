@@ -52,6 +52,12 @@ import { REVISTAS_DEF } from './revistanotas/revistas/revistas.def';
 import { TAGS_DEF } from './revistanotas/tags/tags.def';
 import { CATEGORIA_DEF } from './categoria/categoria.def';
 import { PRODUCTO_DEF } from './producto/producto.def';
+import { VENTA_ENVIO_DEF } from './venta_envio/venta_envio.def';
+import { VENTA_PRODUCTO_DEF } from './venta_producto/venta_producto.def';
+import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
+import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anual.def';
+import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
+import { VENTA_DEF } from './venta/venta.def';
 
 export const ROUTES: Routes = [
   {
@@ -303,7 +309,38 @@ export const ROUTES: Routes = [
     path: PRODUCTO_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]
+  },
+  {
+    path: VENTA_ENVIO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: VENTA_PRODUCTO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: VENTA_TRAMITE_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: VENTA_DERECHO_ANUAL_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: DETALLE_ENVIO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: VENTA_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
   }
+
 ];
 
 

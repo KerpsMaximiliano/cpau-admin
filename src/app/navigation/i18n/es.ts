@@ -14,6 +14,8 @@ export const locale = {
             'PRODUCTOEXTERNO': { 'TITLE': 'Productos' },
             'NOTASCARROUSEL': { 'TITLE': 'Notas Carrousel' },
             'MENU_BOLETINES': { 'TITLE': 'Newsletter' },
+            'CATEGORIAS': { 'TITLE': 'Categorías' },
+            'OPERACIONES': { 'TITLE': 'Operaciones' },
             'BOLETIN': { 'TITLE': 'Boletines' },
             'INDICE': { 'TITLE': 'Índice' },
             'MAILING': { 'TITLE': 'Mailing' },

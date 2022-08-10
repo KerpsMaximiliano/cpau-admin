@@ -9,6 +9,7 @@ import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores
 import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
 import { CONTENIDOS_NAV_DEF } from 'app/main/content/pages/revistanotas/contenidos/navigation/contenidos.nav';
 import { REVISTAS_NAV_DEF } from 'app/main/content/pages/revistanotas/revistas/navigation/revistas.nav';
+import { VENTA_DEF } from 'app/main/content/pages/venta/venta.def';
 import { environment } from 'environments/environment';
 export const navigation = [
     {
@@ -241,10 +242,18 @@ export const navigation = [
                     {
                         'id': 'categoria',
                         'title': 'Categorias',
-                        'translate': 'NAV.PUBLICIDAD.TITLE',
+                        'translate': 'NAV.CATEGORIAS.TITLE',
                         'icon': 'category',
                         'type': 'item',
                         'url': '/' + CATEGORIA_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'ventas',
+                        'title': 'Operaciones',
+                        'translate': 'NAV.OPERACIONES.TITLE',
+                        'icon': 'point_of_sale',
+                        'type': 'item',
+                        'url': '/' + VENTA_DEF.navigation.url,
                     }
                 ]
             },

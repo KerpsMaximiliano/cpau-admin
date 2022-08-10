@@ -1,0 +1,33 @@
+export const VENTA_PRODUCTO_I18N_DEF = {
+  name: 'VENTA_PRODUCTO_I18N_DEF',
+  lang: 'es',
+  words: {
+    page_title: 'VentaProducto',
+    venta_producto_nav_def: 'VentaProducto',
+    venta_producto_create_form_fields_def_field_id: 'Id',
+    venta_producto_create_form_fields_def_field_idventa: 'idVenta',
+    venta_producto_create_form_fields_def_field_idproducto: 'idProducto',
+    venta_producto_create_form_fields_def_field_cantidad: 'Monto',
+    venta_producto_create_form_fields_def_field_precio: 'Precio',
+    venta_producto_update_form_fields_def_field_id: 'Id',
+    venta_producto_update_form_fields_def_field_idventa: 'idVenta',
+    venta_producto_update_form_fields_def_field_idproducto: 'idProducto',
+    venta_producto_update_form_fields_def_field_cantidad: 'Monto',
+    venta_producto_update_form_fields_def_field_precio: 'Precio',
+    venta_producto_read_form_fields_def_field_id: 'Id',
+    venta_producto_read_form_fields_def_field_idventa: 'idVenta',
+    venta_producto_read_form_fields_def_field_idproducto: 'idProducto',
+    venta_producto_read_form_fields_def_field_cantidad: 'Monto',
+    venta_producto_read_form_fields_def_field_precio: 'Precio',
+    venta_producto_filter_form_fields_def_field_id: 'Id',
+    venta_producto_filter_form_fields_def_field_idventa: 'idVenta',
+    venta_producto_filter_form_fields_def_field_idproducto: 'idProducto',
+    venta_producto_filter_form_fields_def_field_cantidad: 'Monto',
+    venta_producto_filter_form_fields_def_field_precio: 'Precio',
+    venta_producto_grid_def_column_id: 'Id',
+    venta_producto_grid_def_column_idventa: 'idVenta',
+    venta_producto_grid_def_column_idproducto: 'idProducto',
+    venta_producto_grid_def_column_cantidad: 'Monto',
+    venta_producto_grid_def_column_precio: 'Precio'
+  }
+};
