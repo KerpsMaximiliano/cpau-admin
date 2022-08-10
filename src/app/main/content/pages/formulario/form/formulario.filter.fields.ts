@@ -8,9 +8,9 @@ export const FORMULARIO_FILTER_FORM_FIELDS_DEF = [
     value: true
   },
   {
-    key: 'id',
+    key: 'idSearch',
     labelKey: 'formulario_grid_def_column_id',
-    controlType: 'textbox'
+    controlType: 'number'
   },
   {
     key: 'name',

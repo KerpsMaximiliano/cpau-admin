@@ -2,6 +2,9 @@ export const CONTENIDO_I18N_DEF = {
   name: 'CONTENIDO_I18N_DEF',
   lang: 'es',
   words: {
+    contenido_grid_def_column_lastEditDateString: 'Fecha Modificación',
+    contenido_grid_def_column_createUser: 'Usuario Creación',
+    contenido_grid_def_column_lastEditUser: 'Usuario Modificación',
     page_title: 'Contenidos',
     contenido_nav_def: 'Contenidos',
     contenido_create_form_fields_def_field_title: 'Título',

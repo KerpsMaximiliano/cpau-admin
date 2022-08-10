@@ -13,6 +13,8 @@ export interface CRUD<E extends Entity> {
     delete (entity: E | number): Observable<E>;
     /** DELETE: delete entities*/
     deleteAll (entities: E[]): Observable<E>;
+    /** DELETE: delete entities*/
+    deleteAllTernario (entities: E[], columnDefSingleId: String, columnDefMultiId: String): Observable<E>;
     /* GET Entity whose name contains search term */
     search(term: string): Observable<E[]>;
 }

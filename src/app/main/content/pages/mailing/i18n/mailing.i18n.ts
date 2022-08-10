@@ -11,6 +11,7 @@ export const MAILING_I18N_DEF = {
     mailing_create_form_fields_def_field_matriculadosactividades: 'Matriculados por Actividades',
     mailing_create_form_fields_def_field_boletin: 'Boletin',
     mailing_create_form_fields_def_field_paginasitio: 'Página del Sitio',
+    mailing_create_form_fields_def_field_importFromFile: 'Importar contacto de un archivo',
     mailing_create_form_fields_def_field_url: 'URL',
     mailing_update_form_fields_def_field_cuenta: 'Cuenta',
     mailing_update_form_fields_def_field_asunto: 'Asunto',

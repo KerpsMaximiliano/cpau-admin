@@ -36,5 +36,9 @@ export const SECCION_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '900px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
     }
 };

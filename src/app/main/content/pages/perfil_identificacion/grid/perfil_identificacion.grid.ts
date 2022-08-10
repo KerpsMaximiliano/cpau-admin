@@ -1,4 +1,5 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
+import { PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF } from "../form/perfil_identificacion.update.fields";
 
 export const PERFIL_IDENTIFICACION_GRID_DEF = {
   columnsDef: [
@@ -75,6 +76,16 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
   ],
   actions: [
     {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+      icon: 'edit_note',
+      form: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+        url: PREFIX_DOMAIN_API + 'admin/personas',
+        method: 'PUT'
+      }
+    },
+    {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
       icon: 'person_off',
       confirm: true,
@@ -141,12 +152,28 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'textbox',
           disabled: true
         },
-        {
+
+
+        
+      
+
+        {               
+          key: 'estadoId',
           labelKey: 'matricula_create_form_fields_def_field_estado',
-          key: 'estado',
-          controlType: 'textbox',
-          disabled: true
+          label: 'Estado',
+          controlType: 'select',
+          options: {
+              handlerSourceData: false,
+              elementLabel: 'nombre',
+              elementValue: 'id',
+              fromWs: {
+                key: 'matricula_create_form_fields_def_field_estado',
+                url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
+              }
+          }
         },
+
+
         {
           labelKey: 'matricula_create_form_fields_def_field_universidad',
           key: 'universidad',
@@ -177,7 +204,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       ],
       ws: {
         key: 'matricula_create_form_fields_def_field_editar',
-        url: PREFIX_DOMAIN_API + 'admin/personas/matriculado',
+        url: PREFIX_DOMAIN_API + 'admin/matriculado/updateestado',
         method: 'PUT'
       }
     },
@@ -316,6 +343,17 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         method: 'POST'
       }
     },
+   
+    {
+      actionNameKey: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+      icon: 'image_not_supported',
+      confirm: true,
+      ws: {
+        key: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+        url: PREFIX_DOMAIN_API + 'admin/deleteimage',
+        method: 'DELETE'
+      }
+    },
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_recover_password',
       icon: 'password',      
@@ -432,6 +470,13 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
                    }
      },
      {
+      key: 'perfil_identificacion_grid_def_button_action_borrarfoto',
+      expression: {
+                    key: 'mostrarBorrarFoto',
+                    value: true
+                  }
+     },
+     {
       key: 'seccion_grid_def_button_action_cuenta',
       expression: {
                     key: 'hasUserId',
@@ -501,5 +546,14 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         value: true
       }
     },
+    {
+      key: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+      expression: {
+        key: 'isNotMatriculado',
+        value: true
+      }
+    },
   ]
 };
+
+

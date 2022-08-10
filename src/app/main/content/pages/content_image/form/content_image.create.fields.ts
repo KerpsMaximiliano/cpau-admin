@@ -42,6 +42,7 @@ export const CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'content_image_create_form_fields_def_field_typeid',
     label: 'Tipo',
     controlType: 'select',
+    required: true,
     options: {
       handlerSourceData: false,
       elementLabel: 'nombre',
@@ -53,5 +54,15 @@ export const CONTENT_IMAGE_CREATE_FORM_FIELDS_DEF = [
                  {id: 5, nombre: 'Galería'}
                 ]
       }
-  }
+  },
+
+  {
+    key: 'imageOrder',
+    labelKey: 'content_image_create_form_fields_def_field_Orden',
+    label: 'Orden',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
+
 ];

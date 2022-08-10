@@ -146,6 +146,24 @@ export class HttpService extends BaseService {
         return observable;
     }
 
+  multipleDeleteTernario(entities: any[], columnDefSingleId: String, columnDefMultiId: String): Observable<any> {
+    const observable = new Observable<any>((observer) => {
+      let singleId = '' + entities[0].singleId;
+      let multiId = '' + entities[0].multiId;
+      entities.splice(1, entities.length).forEach(element => {
+        multiId = multiId + ',' + element.multiId;
+      });
+      const url = this.baseUrl + columnDefSingleId + "/" + singleId + "/" + columnDefMultiId + "/" + multiId;
+      console.log('****** multiples delete ternario-> ' + url);
+      this.http.delete(url, this.httpOptions).subscribe(
+        response => this.subHandleResponse(observer, response),
+        e => this.subHandleError(observer, e),
+        () => observer.complete()
+      );
+    });
+    return observable;
+  }
+  
   subHandleResponse(observer, response) {
     console.log('****** server response ⬎');
     console.log(response);

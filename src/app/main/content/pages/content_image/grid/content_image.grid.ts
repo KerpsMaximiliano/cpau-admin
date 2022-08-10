@@ -24,12 +24,17 @@ export const CONTENT_IMAGE_GRID_DEF = {
     {
       columnDef: 'typeIdString',
       columnNameKey: 'content_image_grid_def_column_typeidString'
+    },
+    {
+      columnDef: 'imageOrder',
+      columnNameKey: 'content_image_grid_def_column_imageOrder'
     }
   ],
   sortAllColumns: true,
   displayedColumns: [
     'imageName',
     'typeIdString',
+    'imageOrder'
   ],
   deleteAction: true
 };

@@ -16,10 +16,10 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       columnDef: 'subTitle',
       columnNameKey: 'contenido_grid_def_column_subtitle'
     },
-    {
-      columnDef: 'source',
-      columnNameKey: 'contenido_grid_def_column_source'
-    },
+    // {
+    //   columnDef: 'source',
+    //   columnNameKey: 'contenido_grid_def_column_source'
+    // },
     {
       columnDef: 'summary',
       columnNameKey: 'contenido_grid_def_column_summary'
@@ -88,15 +88,30 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       columnDef: 'id',
       key: true,
       columnNameKey: 'contenido_grid_def_column_id'
+    },
+    {
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'contenido_grid_def_column_lastEditDateString'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'contenido_grid_def_column_createUser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'contenido_grid_def_column_lastEditUser'
     }
   ],
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
     'title',
-    'createDateString',
     'publishDateString',
-    'expirationDateString'
+    'expirationDateString',
+    'createUser',
+    'createDateString',
+    'lastEditUser',
+    'lastEditDateString',
   ],
   actions: [
     {

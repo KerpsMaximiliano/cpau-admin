@@ -54,5 +54,11 @@ export const MAILING_UPDATE_FORM_FIELDS_DEF = [
     label: 'URL',
     type: 'string',
     controlType: 'textbox'
+  },
+  {
+    key: 'file',
+    label: 'Importar',
+    labelKey: 'Archivo (solo xls, xlsx)',
+    controlType: 'file'
   }
 ];

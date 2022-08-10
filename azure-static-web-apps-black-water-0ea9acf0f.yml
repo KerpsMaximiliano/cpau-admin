@@ -3,11 +3,11 @@ name: Azure Static Web Apps CI/CD
 pr:
   branches:
     include:
-      - migracion-admin
+      - production
 trigger:
   branches:
     include:
-      - migracion-admin
+      - production
 
 jobs:
 - job: build_and_deploy_job
@@ -16,20 +16,18 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   variables:
-  - group: Azure-Static-Web-Apps-icy-ground-051e95a0f-variable-group
+  - group: Azure-Static-Web-Apps-black-water-0ea9acf0f-variable-group
   steps:
   - checkout: self
     submodules: true
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '14.x'
-    displayName: 'Install Node.js'
   - task: AzureStaticWebApp@0
     inputs:
-      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_GROUND_051E95A0F)
+      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_WATER_0EA9ACF0F)
+###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+# For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
       app_location: "/" # App source code path
       api_location: "" # Api source code path - optional
-      app_build_command: "npm install -g @angular/cli@6.0.8 && npm install && ng build --env=test"
+      app_build_command: "npm install -g @angular/cli@6.0.8 && npm install && ng build --env=prod"
       output_location: "dist" # Built app content directory - optional
-
+###### End of Repository/Build Configurations ######
 
