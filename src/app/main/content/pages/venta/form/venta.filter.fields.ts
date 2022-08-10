@@ -28,11 +28,11 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
     controlType: 'textbox'
   },
   {
-    key: 'userId',
+    key: 'username',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_userid',
-    label: 'UserId',
-    type: 'number',
-    controlType: 'number'
+    label: 'Username',
+    type: 'string',
+    controlType: 'textbox'
   },
   {
     key: 'fechaCompra',
