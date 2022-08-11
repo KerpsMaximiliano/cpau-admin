@@ -48,6 +48,8 @@ export const VENTA_I18N_DEF = {
     venta_grid_def_column_estadopago: 'Estado Pago',
     venta_grid_def_column_estadopagoenvio: 'Estado Pago Envio',
     venta_grid_def_column_userid: 'UserId',
-    venta_grid_def_column_fechacompra: 'Fecha Compra'
+    venta_grid_def_column_fechacompra: 'Fecha Compra',
+    venta_grid_def_column_fechacomprastring: 'Fecha Compra',
+    venta_grid_def_column_username: 'USuario'
   }
 };

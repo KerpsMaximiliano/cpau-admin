@@ -35,6 +35,14 @@ export const VENTA_GRID_DEF = {
     {
       columnDef: 'fechaCompra',
       columnNameKey: 'venta_grid_def_column_fechacompra'
+    },
+    {
+      columnDef: 'username',
+      columnNameKey: 'venta_grid_def_column_username'
+    },
+    {
+      columnDef: 'fechaCompraString',
+      columnNameKey: 'venta_grid_def_column_fechacomprastring'
     }
   ],
   sortAllColumns: true,
