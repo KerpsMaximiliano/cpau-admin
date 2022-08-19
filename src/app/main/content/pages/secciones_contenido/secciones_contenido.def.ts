@@ -14,7 +14,7 @@ export const SECCIONES_CONTENIDO_DEF: CrudDef = {
     grid: SECCIONES_CONTENIDO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.   
     forms: {
         filter: SECCIONES_CONTENIDO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        read:  SECCIONES_CONTENIDO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        //read:  SECCIONES_CONTENIDO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: SECCIONES_CONTENIDO_NAV_DEF,
     security: SECCIONES_CONTENIDO_SECURITY_DEF,

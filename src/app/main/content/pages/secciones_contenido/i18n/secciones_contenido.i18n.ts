@@ -2,8 +2,8 @@ export const SECCIONES_CONTENIDO_I18N_DEF = {
   name: 'SECCIONES_CONTENIDO_I18N_DEF',
   lang: 'es',
   words: {
-    page_title: 'Seccion Contenido',
-    secciones_contenido_nav_def: 'Seccion Contenido',
+    page_title: 'Secciones Asociadas',
+    secciones_contenido_nav_def: 'Secciones Asociadas',
     seccion_grid_def_column_id: 'ID',
     seccion_grid_def_column_name: 'Nombre',
     seccion_grid_def_column_sename: 'Ruta',

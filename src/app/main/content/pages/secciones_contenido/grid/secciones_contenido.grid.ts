@@ -76,5 +76,19 @@ export const SECCIONES_CONTENIDO_GRID_DEF = {
     'name',
     'seName',
     'published'
+  ],
+  actions: [
+    {
+      actionNameKey: 'Ir a los contenidos de la sección',
+      actionType: 'redirect',
+      redirect: {
+        url: '/sectionContent',
+        querystring: {
+          sectionId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'library_books'
+    }
   ]
 };
