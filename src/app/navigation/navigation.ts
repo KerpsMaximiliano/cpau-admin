@@ -72,19 +72,22 @@ export const navigation = [
                                 'translate': 'NAV.SECCION.TITLE',
                                 'type': 'item',
                                 'url': '/' + environment.URL_SECCIONES,
+                                'icon': 'dashboard'
                             },
                             {
                                 'id': 'contenido',
                                 'title': 'Contenidos',
                                 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_CONTENIDOS,
+                                'icon': 'library_books',
+                                'url': '/' + environment.URL_CONTENIDOS
                             },
                             {
                                 'id': 'imagen',
                                 'title': 'Imágenes',
                                 'translate': 'NAV.IMAGEN.TITLE',
                                 'type': 'item',
+                                'icon': 'photo_library',
                                 'url': '/' + environment.URL_IMAGEN,
                             },
                             {
@@ -92,6 +95,7 @@ export const navigation = [
                                 'title': 'Productos',
                                 'translate': 'NAV.PRODUCTOEXTERNO.TITLE',
                                 'type': 'item',
+                                'icon': 'extension',
                                 'url': '/' + environment.URL_PRODUCTO_EXTERNO,
                             },
                             {
@@ -99,6 +103,7 @@ export const navigation = [
                                 'title': 'Notas Carrousel',
                                 'translate': 'NAV.NOTASCARROUSEL.TITLE',
                                 'type': 'item',
+                                'icon': 'burst_mode',
                                 'url': '/' + environment.URL_NOTICIA_CARROUSEL,
                             },
                         ]
