@@ -9,7 +9,7 @@
   <ng-container *ngIf='hasActions()' matColumnDef="{{getActionsColumnName()}}">
       <mat-header-cell *matHeaderCellDef class="action-cell"></mat-header-cell>
       <mat-cell  *matCellDef="let element" (click)="$event.stopPropagation()" class="action-cell">
-        <button  class="icon-button" *ngFor="let action of getActionsByElement(element)" matTooltip="{{action.actionName}}" mat-mini-fab (click)="submitAction(action, element)" class="icon-button_style-">
+        <button  class="icon-button" *ngFor="let action of getActionsByElement(element)" matTooltip="{{action.actionName}}" mat-mini-fab (click)="submitAction(action, element, $event)" class="icon-button_style-">
           <span *ngIf="action.icon === undefined" class="actionName_pad">{{action.actionName | slice :0:1}}</span>
           <mat-icon *ngIf="action.icon" aria-label="icon">{{action.icon}}</mat-icon>
         </button>
