@@ -48,6 +48,7 @@ import { REVISTA_CONTENIDOS_DEF } from './revistanotas/revista_contenidos/revist
 import { REVISTAS_DEF } from './revistanotas/revistas/revistas.def';
 import { TAGS } from 'app/modules/fwk/core/model/dynamic-form/dynamic-field';
 import { TAGS_DEF } from './revistanotas/tags/tags.def';
+import { SECCIONES_CONTENIDO_DEF } from './secciones_contenido/secciones_contenido.def';
 import { CATEGORIA_DEF } from './categoria/categoria.def';
 import { PRODUCTO_DEF } from './producto/producto.def';
 import { VENTA_DEF } from './venta/venta.def';
@@ -56,7 +57,6 @@ import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anu
 import { VENTA_PRODUCTO_DEF } from './venta_producto/venta_producto.def';
 import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
 import { VENTA_ENVIO_DEF } from './venta_envio/venta_envio.def';
-
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -104,8 +104,8 @@ export const COMPONENTS: ComponentDef[] = [
   CONTENIDO_TAGS_DEF,
   CONTENIDOS_DEF,
   REVISTA_CONTENIDOS_DEF,
-  REVISTAS_DEF,
   TAGS_DEF,
+  SECCIONES_CONTENIDO_DEF,
   CATEGORIA_DEF,
   PRODUCTO_DEF,
   VENTA_DEF,
@@ -113,6 +113,5 @@ export const COMPONENTS: ComponentDef[] = [
   VENTA_DERECHO_ANUAL_DEF,
   VENTA_PRODUCTO_DEF,
   VENTA_TRAMITE_DEF,
-  VENTA_ENVIO_DEF
-];
+  VENTA_ENVIO_DEF];
 

@@ -1,0 +1,33 @@
+.component-SECCIONES_CONTENIDO{
+    app-search .drop_down {
+        display: none;
+    }
+    
+    .crud-table{
+
+        .action-cell {
+            width: 100px !important;
+            min-width: 100px !important;
+            max-width: 100px !important;
+        }
+
+        #ordenHeader,
+        #ordenCell{
+            width: 115px;
+            min-width: 115px;
+            max-width: 115px;
+        }
+
+        
+        mat-header-cell.checkbox-cell {
+            display: none;
+        }
+        
+        mat-row.mat-row > mat-cell:nth-child(1) {
+            display: none;
+        }
+
+
+    }
+}
+
