@@ -9,7 +9,15 @@ export const VENTA_GRID_DEF = {
       columnNameKey: 'venta_grid_def_column_tipo'
     },
     {
+      columnDef: 'tipoString',
+      columnNameKey: 'venta_grid_def_column_tipo'
+    },
+    {
       columnDef: 'montoTotal',
+      columnNameKey: 'venta_grid_def_column_montototal'
+    },
+    {
+      columnDef: 'montoTotalString',
       columnNameKey: 'venta_grid_def_column_montototal'
     },
     {
@@ -26,6 +34,14 @@ export const VENTA_GRID_DEF = {
     },
     {
       columnDef: 'estadoPagoEnvio',
+      columnNameKey: 'venta_grid_def_column_estadopagoenvio'
+    },
+    {
+      columnDef: 'estadoPagoString',
+      columnNameKey: 'venta_grid_def_column_estadopago'
+    },
+    {
+      columnDef: 'estadoPagoEnvioString',
       columnNameKey: 'venta_grid_def_column_estadopagoenvio'
     },
     {
@@ -48,13 +64,13 @@ export const VENTA_GRID_DEF = {
   sortAllColumns: true,
   displayedColumns: [
     'id',
-    'tipo',
-    'montoTotal',
+    'tipoString',
+    'montoTotalString',
     'tarjeta',
     'cuotas',
-    'estadoPago',
-    'estadoPagoEnvio',
-    'userId',
-    'fechaCompra'
+    'estadoPagoString',
+    'estadoPagoEnvioString',
+    'username',
+    'fechaCompraString'
   ]
 };

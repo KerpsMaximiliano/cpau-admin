@@ -4,7 +4,7 @@ export const VENTA_I18N_DEF = {
   words: {
     page_title: 'Operaciones',
     venta_nav_def: 'Operaciones',
-    venta_create_form_fields_def_field_id: 'Id',
+    venta_create_form_fields_def_field_id: 'Nro. Operación',
     venta_create_form_fields_def_field_tipo: 'Tipo',
     venta_create_form_fields_def_field_montototal: 'Monto Total',
     venta_create_form_fields_def_field_tarjeta: 'Tarjeta',
@@ -50,6 +50,6 @@ export const VENTA_I18N_DEF = {
     venta_grid_def_column_userid: 'UserId',
     venta_grid_def_column_fechacompra: 'Fecha Compra',
     venta_grid_def_column_fechacomprastring: 'Fecha Compra',
-    venta_grid_def_column_username: 'USuario'
+    venta_grid_def_column_username: 'Usuario'
   }
 };
