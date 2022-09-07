@@ -174,7 +174,10 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   getActionsByElement(element){
     return this.actionDefService.getActions(this.grid.displayedActionsCondition, this.grid.actions, element);
   }
-  submitAction(action, entity){
+  submitAction(action, entity, $event){
+
+    console.log($event);
+
     if (this.columnDefId){
       entity.id = entity[this.columnDefId];
     }
@@ -286,7 +289,31 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
           win.focus();
 
         } else {
-          this.router.navigate([url], { queryParams });
+          if($event.ctrlKey) {
+            let queryParamsString = "";
+            if (queryParams && queryParams != undefined) {
+              if (action.redirect.idUrl != undefined && action.redirect.idUrl && queryParams['id'] != undefined){
+                queryParamsString = "/" + queryParams['id'];
+              } else {
+                let first = true;
+                Object.getOwnPropertyNames(queryParams).forEach(param => { 
+                  if (param != 'externalUrl') {
+                    if (!first) {
+                      queryParamsString = queryParamsString + "&";
+                    } else {
+                      queryParamsString = queryParamsString + "?";
+                      first = false;
+                    }
+                    queryParamsString = queryParamsString + param + "=" + queryParams[param]
+                  }
+                });
+              }
+            }
+            let win = window.open(url + queryParamsString, '_blank');
+            win.focus();
+          } else {
+            this.router.navigate([url], { queryParams });
+          }
         }
       }else{
           this.spinnerGeneralControl.show();
