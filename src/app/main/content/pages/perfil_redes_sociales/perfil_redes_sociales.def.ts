@@ -27,7 +27,7 @@ export const PERFIL_REDES_SOCIALES_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/personas/redsocial'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

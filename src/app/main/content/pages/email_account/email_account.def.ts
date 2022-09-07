@@ -27,6 +27,10 @@ export const EMAIL_ACCOUNT_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API +  'EmailAccount'
     },
     dialogConfig: {
-        width: '400px'
-    }   
+        width: '800px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };

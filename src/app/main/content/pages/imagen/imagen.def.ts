@@ -36,5 +36,9 @@ export const IMAGEN_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '800px'
-    }   
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
 };

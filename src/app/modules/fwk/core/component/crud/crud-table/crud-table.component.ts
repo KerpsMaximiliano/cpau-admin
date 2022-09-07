@@ -175,7 +175,9 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     return this.actionDefService.getActions(this.grid.displayedActionsCondition, this.grid.actions, element);
   }
   submitAction(action, entity, $event){
+
     console.log($event);
+
     if (this.columnDefId){
       entity.id = entity[this.columnDefId];
     }

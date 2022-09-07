@@ -210,5 +210,16 @@ export const CONTENIDO_GRID_DEF: GridDef = {
         
       }
     },
+    {
+      actionNameKey: 'Secciones',
+      actionType: 'redirect',
+      redirect: {
+        url: "/seccionesContenido",
+        querystring: {
+          contenidoId : 'id'
+        }
+      },
+      icon: 'dashboard'
+    }
   ]
 };

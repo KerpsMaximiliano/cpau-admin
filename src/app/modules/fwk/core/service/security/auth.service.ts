@@ -6,6 +6,7 @@ import { HttpService } from '../http-service/http.service';
 import { environment } from 'environments/environment';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
+import { Router } from '@angular/router';
 
 
 const USER_DATA = 'currentUser';
@@ -15,7 +16,7 @@ export class AuthService extends HttpService {
   
   private genericHttpService: GenericHttpService;
   private spinnerService: SpinnerService;
-  constructor(protected injector: Injector) { 
+  constructor(protected injector: Injector, private router: Router) { 
     super(injector, '');
     this.spinnerService = injector.get(SpinnerService);
     this.genericHttpService = injector.get(GenericHttpService);
@@ -27,7 +28,11 @@ export class AuthService extends HttpService {
     this.genericHttpService.basicPost(environment.URL_LOGOUT_API, {}).subscribe(() => {
       this.localStorageService.remove(USER_DATA);
       this.localStorageService.cleanUserSession();
-      window.location.href = environment.URL_LOGIN;
+      if(environment["localAuth"] == true){
+        this.router.navigate(['/auth/login']);
+      } else {
+        window.location.href = environment.URL_LOGIN; 
+      }
       this.spinnerService.getControlGlobalSpinner().hide();
     });
   }

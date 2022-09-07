@@ -27,7 +27,7 @@ export const PERFIL_EMAIL_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/personas/contactos/email'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

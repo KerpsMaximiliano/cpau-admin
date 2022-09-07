@@ -3,6 +3,10 @@ import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/naviga
 import { CONTACT_LIST_DESUSCRIPTION_NAV_DEF } from 'app/main/content/pages/contact_list_desuscription/navigation/contact_list_desuscription.nav';
 import { MATRICULADO_ESTADO_NAV_DEF } from 'app/main/content/pages/matriculado_estado/navigation/matriculado_estado.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
+import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores.def';
+import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
+import { CONTENIDOS_NAV_DEF } from 'app/main/content/pages/revistanotas/contenidos/navigation/contenidos.nav';
+import { REVISTAS_NAV_DEF } from 'app/main/content/pages/revistanotas/revistas/navigation/revistas.nav';
 import { environment } from 'environments/environment';
 export const navigation = [
     {
@@ -14,7 +18,7 @@ export const navigation = [
             {
                 'title': 'Personas',
                 'type': 'collapse',
-                'icon': 'settings',
+                'icon': 'group',
                 'children': [
                     {
                         'title': 'Contactos',
@@ -54,13 +58,13 @@ export const navigation = [
                 'title': 'Gestión de Contenido',
                 'translate': 'NAV.GESTION_CONTENIDOS',
                 'type': 'collapse',
-                'icon': 'settings',
+                'icon': 'backup_table',
                 'children': [
                     {
                         'title': 'Contenidos',
                         'translate': 'NAV.MENU_CONTENIDOS',
                         'type': 'collapse',
-                        'icon': 'settings',
+                        'icon': 'source',
                         'children': [
                             {
                                 'id': 'seccion',
@@ -68,19 +72,22 @@ export const navigation = [
                                 'translate': 'NAV.SECCION.TITLE',
                                 'type': 'item',
                                 'url': '/' + environment.URL_SECCIONES,
+                                'icon': 'dashboard'
                             },
                             {
                                 'id': 'contenido',
                                 'title': 'Contenidos',
                                 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_CONTENIDOS,
+                                'icon': 'library_books',
+                                'url': '/' + environment.URL_CONTENIDOS
                             },
                             {
                                 'id': 'imagen',
                                 'title': 'Imágenes',
                                 'translate': 'NAV.IMAGEN.TITLE',
                                 'type': 'item',
+                                'icon': 'photo_library',
                                 'url': '/' + environment.URL_IMAGEN,
                             },
                             {
@@ -88,6 +95,7 @@ export const navigation = [
                                 'title': 'Productos',
                                 'translate': 'NAV.PRODUCTOEXTERNO.TITLE',
                                 'type': 'item',
+                                'icon': 'extension',
                                 'url': '/' + environment.URL_PRODUCTO_EXTERNO,
                             },
                             {
@@ -95,6 +103,7 @@ export const navigation = [
                                 'title': 'Notas Carrousel',
                                 'translate': 'NAV.NOTASCARROUSEL.TITLE',
                                 'type': 'item',
+                                'icon': 'burst_mode',
                                 'url': '/' + environment.URL_NOTICIA_CARROUSEL,
                             },
                         ]
@@ -103,7 +112,7 @@ export const navigation = [
                         'title': 'Newsletter',
                         'translate': 'NAV.MENU_BOLETINES',
                         'type': 'collapse',
-                        'icon': 'settings',
+                        'icon': 'newspaper',
                         'children': [
                             {
                                 'id': 'boletin',
@@ -134,7 +143,7 @@ export const navigation = [
                 'title': 'Herramientas',
                 'translate': 'NAV.MENU_HERRAMIENTAS',
                 'type': 'collapse',
-                'icon': 'settings',
+                'icon': 'construction',
                 'children': [
                     {
                         'id': 'formulario',
@@ -151,6 +160,35 @@ export const navigation = [
                         'url': '/' + environment.URL_PUBLICIDAD,
                     }
                     
+                ]
+            },
+            {
+                'title': 'Revistas Notas',
+                'translate': 'NAV.MENU_REVISTAS_NOTAS',
+                'type': 'collapse',
+                'icon': 'menu_book',
+                'children': [
+                    {
+                        'id': 'autores',
+                        'title': 'Autores',
+                        'translate': 'NAV.AUTORES.TITLE',
+                        'type': 'item',
+                        'url': AUTORES_NAV_DEF.url,
+                    },
+                    {
+                        'id': 'contenidos',
+                        'title': 'Contenidos',
+                        'translate': 'NAV.CONTENIDOS.TITLE',
+                        'type': 'item',
+                        'url': CONTENIDOS_NAV_DEF.url,
+                    },
+                    {
+                        'id': 'revistas',
+                        'title': 'Revistas',
+                        'translate': 'NAV.REVISTAS.TITLE',
+                        'type': 'item',
+                        'url': REVISTAS_NAV_DEF.url,
+                    }                        
                 ]
             },
             {

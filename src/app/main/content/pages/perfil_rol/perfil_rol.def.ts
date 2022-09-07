@@ -23,7 +23,7 @@ export const PERFIL_ROL_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/personas/roles/'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

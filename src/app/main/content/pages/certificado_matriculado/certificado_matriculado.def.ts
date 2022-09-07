@@ -27,7 +27,7 @@ export const CERTIFICADO_MATRICULADO_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/certificados'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     filterInMemory: false,
     backButton: true   

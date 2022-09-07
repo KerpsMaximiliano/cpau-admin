@@ -26,7 +26,15 @@ export const locale = {
             'ABMROLES': { 'TITLE': 'Roles' },
             'MATRICULA_TIPO': { 'TITLE': 'Tipos de Matrícula' },
             'MATRICULA_ESTADO': { 'TITLE': 'Estados de Matrícula' },
-            'CONTACT_LIST': { 'TITLE': 'Listas de Contactos' }
+            'CONTACT_LIST': { 'TITLE': 'Listas de Contactos' },
+            'MENU_REVISTAS_NOTAS': { 'TITLE': 'Revistas notas' },
+            'AUTORES.TITLE': { 'TITLE': 'Autores' },
+            'CONTENIDOS.TITLE': { 'TITLE': 'Contenidos' },
+            'REVISTAS.TITLE': { 'TITLE': 'Revistas' }
+
+            
+
+            
 
             
 

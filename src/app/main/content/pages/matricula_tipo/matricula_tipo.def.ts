@@ -27,6 +27,10 @@ export const MATRICULA_TIPO_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'MatriculaTipo'
     },
     dialogConfig: {
-        width: '400px'
-    }   
+        width: '800px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };

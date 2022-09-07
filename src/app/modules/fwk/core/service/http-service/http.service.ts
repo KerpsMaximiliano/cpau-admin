@@ -136,7 +136,7 @@ export class HttpService extends BaseService {
         entities.splice(1, entities.length).forEach(element => {
             ids = ids + ',' + element.id;
         });
-        const url = this.baseUrl.substring(0, this.baseUrl.length - 1) + '?ids=' + ids;
+        const url = this.baseUrl.substring(0, this.baseUrl.length) + '/' + ids;
         console.log('****** multiples delete -> ' + url);
         this.http.delete(url, this.httpOptions).subscribe(
             response => this.subHandleResponse(observer, response),

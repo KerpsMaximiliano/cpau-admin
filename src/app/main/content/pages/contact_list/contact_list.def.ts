@@ -27,6 +27,10 @@ export const CONTACT_LIST_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'ContactList'
     },
     dialogConfig: {
-        width: '400px'
-    }   
+        width: '800px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };

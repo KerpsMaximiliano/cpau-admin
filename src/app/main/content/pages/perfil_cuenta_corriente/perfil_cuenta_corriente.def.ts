@@ -21,7 +21,7 @@ export const PERFIL_CUENTA_CORRIENTE_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'admin/personas/cuentacorriente'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
     openLink: "https://www.cpau.org/api/matriculados/imprimirboleta",
     openLinkTitle: 'Imprimir Boleta',

@@ -28,6 +28,10 @@ export const INDICE_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Indice'
     },
     dialogConfig: {
-        width: '400px'
-    }   
+        width: '800px'
+    },
+    pagination: {
+        page: 0,
+        pageSize: 10
+    }
 };
