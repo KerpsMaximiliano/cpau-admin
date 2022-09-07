@@ -34,6 +34,7 @@
                 "test": "environments/environment.test.ts",
                 "hmr": "environments/environment.hmr.ts",
                 "prod": "environments/environment.prod.ts"
+				"migracion": "environments/environment.migracion.ts"
             }
         }
     ],
