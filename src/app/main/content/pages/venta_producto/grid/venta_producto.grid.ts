@@ -2,6 +2,7 @@ export const VENTA_PRODUCTO_GRID_DEF = {
   columnsDef: [
     {
       columnDef: 'id',
+      id: true,
       columnNameKey: 'venta_producto_grid_def_column_id'
     },
     {
@@ -13,20 +14,32 @@ export const VENTA_PRODUCTO_GRID_DEF = {
       columnNameKey: 'venta_producto_grid_def_column_idproducto'
     },
     {
+      columnDef: 'producto',
+      columnNameKey: 'venta_producto_grid_def_column_producto'
+    },
+    {
       columnDef: 'cantidad',
       columnNameKey: 'venta_producto_grid_def_column_cantidad'
     },
     {
       columnDef: 'precio',
       columnNameKey: 'venta_producto_grid_def_column_precio'
+    },
+    {
+      columnDef: 'precioString',
+      columnNameKey: 'venta_producto_grid_def_column_precio'
+    },
+    {
+      columnDef: 'total',
+      columnNameKey: 'venta_producto_grid_def_column_total'
     }
+
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
-    'idVenta',
-    'idProducto',
+    'producto',
     'cantidad',
-    'precio'
+    'precioString',
+    'total'
   ]
 };

@@ -1,3 +1,5 @@
+import { FILTER_TYPE } from "app/modules/fwk/core/service/filter-service/filter.service";
+
 export const VENTA_GRID_DEF = {
   columnsDef: [
     {
@@ -72,5 +74,81 @@ export const VENTA_GRID_DEF = {
     'estadoPagoEnvioString',
     'username',
     'fechaCompraString'
+  ],
+  actions : [
+    {
+      actionNameKey: 'venta_grid_def_column_accion_venta_envio',
+      actionType: 'redirect',
+      redirect: {
+        url: '/VentaEnvio',
+        querystring: {
+          ventaId : 'id',
+          parentTitle: 'id'
+        }
+      },
+      icon: 'local_shipping'
+    },
+    {
+      actionNameKey: 'venta_grid_def_column_accion_venta_derecho_anual',
+      actionType: 'redirect',
+      redirect: {
+        url: '/VentaDetalleDerechoAnual',
+        querystring: {
+          ventaId : 'id',
+          parentTitle: 'id'
+        }
+      },
+      icon: 'card_membership'
+    },
+    {
+      actionNameKey: 'venta_grid_def_column_accion_venta_productos',
+      actionType: 'redirect',
+      redirect: {
+        url: '/VentaProducto',
+        querystring: {
+          ventaId : 'id',
+          parentTitle: 'id'
+        }
+      },
+      icon: 'inventory_2'
+    },
+    {
+      actionNameKey: 'venta_grid_def_column_accion_venta_tramites',
+      actionType: 'redirect',
+      redirect: {
+        url: '/VentaTramite',
+        querystring: {
+          ventaId : 'id',
+          parentTitle: 'id'
+        }
+      },
+      icon: 'business_center'
+    },
+  ],
+  displayedActionsCondition: [
+    {
+      key: 'venta_grid_def_column_accion_venta_productos',
+      expression: {
+                    key: 'tipo',
+                    value: 'PRODUCTO',
+                    compare: FILTER_TYPE.LIKE
+                  }
+    },
+    {
+      key: 'venta_grid_def_column_accion_venta_derecho_anual',
+      expression: {
+                    key: 'tipo',
+                    value: 'DERECHOANUAL',
+                    compare: FILTER_TYPE.LIKE
+                  }
+    },
+    {
+      key: 'venta_grid_def_column_accion_venta_tramites',
+      expression: {
+                    key: 'tipo',
+                    value: 'TRAMITE',
+                    compare: FILTER_TYPE.LIKE
+                  }
+    }
   ]
 };

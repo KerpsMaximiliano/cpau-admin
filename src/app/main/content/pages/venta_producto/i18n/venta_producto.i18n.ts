@@ -27,7 +27,9 @@ export const VENTA_PRODUCTO_I18N_DEF = {
     venta_producto_grid_def_column_id: 'Id',
     venta_producto_grid_def_column_idventa: 'idVenta',
     venta_producto_grid_def_column_idproducto: 'idProducto',
-    venta_producto_grid_def_column_cantidad: 'Monto',
-    venta_producto_grid_def_column_precio: 'Precio'
+    venta_producto_grid_def_column_cantidad: 'Cantidad',
+    venta_producto_grid_def_column_precio: 'Precio',
+    venta_producto_grid_def_column_producto: 'Producto',
+    venta_producto_grid_def_column_total: 'Total'
   }
 };

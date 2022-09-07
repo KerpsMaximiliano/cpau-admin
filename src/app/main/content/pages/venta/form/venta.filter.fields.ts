@@ -9,26 +9,55 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
   {
     key: 'tipo',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_tipo',
-    label: 'Tipo',
-    type: 'string',
-    controlType: 'textbox'
+    type: 'select',
+    controlType: 'select',
+    value: '',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: '', nombre: 'Todos'},
+                 {id: 'PRODUCTO', nombre: 'Producto'},
+                 {id: 'DERECHOANUAL', nombre: 'Derecho Anual'},
+                 {id: 'TRAMITE', nombre: 'Trámite'}]
+      }
   },
   {
     key: 'estadoPago',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_estadopago',
-    label: 'EstadoPago',
-    type: 'string',
-    controlType: 'textbox'
+    type: 'select',
+    controlType: 'select',
+    value: '',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: '', nombre: 'Todos'},
+                 {id: 'PENDIENTE', nombre: 'Pendiente'},
+                 {id: 'APROBADA', nombre: 'Aprobada'},
+                 {id: 'RECHAZADA', nombre: 'Rechazada'}]
+      }
   },
   {
     key: 'estadoPagoEnvio',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_estadopagoenvio',
-    label: 'EstadoPagoEnvio',
-    type: 'string',
-    controlType: 'textbox'
+    type: 'select',
+    controlType: 'select',
+    value: '',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: '', nombre: 'Todos'},
+                 {id: 'PENDGEN', nombre: 'Pendiente de Generación'},
+                 {id: 'PENDCOBRO', nombre: 'Pendiente de Cobro'},
+                 {id: 'APROBADA', nombre: 'Aprobada'},
+                 {id: 'RECHAZADA', nombre: 'Rechazada'},
+                 {id: 'NOAPLICA', nombre: 'No Aplica'}]
+      }
   },
   {
-    key: 'username',
+    key: 'usuario',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_userid',
     label: 'Username',
     type: 'string',

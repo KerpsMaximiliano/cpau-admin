@@ -31,16 +31,16 @@ export const VENTA_I18N_DEF = {
     venta_read_form_fields_def_field_estadopagoenvio: 'Estado Pago Envio',
     venta_read_form_fields_def_field_userid: 'UserId',
     venta_read_form_fields_def_field_fechacompra: 'Fecha Compra',
-    venta_filter_form_fields_def_field_id: 'Id',
+    venta_filter_form_fields_def_field_id: 'Nro. Operación',
     venta_filter_form_fields_def_field_tipo: 'Tipo',
     venta_filter_form_fields_def_field_montototal: 'Monto Total',
     venta_filter_form_fields_def_field_tarjeta: 'Tarjeta',
     venta_filter_form_fields_def_field_cuotas: 'Cuotas',
     venta_filter_form_fields_def_field_estadopago: 'Estado Pago',
     venta_filter_form_fields_def_field_estadopagoenvio: 'Estado Pago Envio',
-    venta_filter_form_fields_def_field_userid: 'UserId',
+    venta_filter_form_fields_def_field_userid: 'Usuario',
     venta_filter_form_fields_def_field_fechacompra: 'Fecha Compra',
-    venta_grid_def_column_id: 'Id',
+    venta_grid_def_column_id: 'Nro. Operación',
     venta_grid_def_column_tipo: 'Tipo',
     venta_grid_def_column_montototal: 'Monto Total',
     venta_grid_def_column_tarjeta: 'Tarjeta',
@@ -50,6 +50,10 @@ export const VENTA_I18N_DEF = {
     venta_grid_def_column_userid: 'UserId',
     venta_grid_def_column_fechacompra: 'Fecha Compra',
     venta_grid_def_column_fechacomprastring: 'Fecha Compra',
-    venta_grid_def_column_username: 'Usuario'
+    venta_grid_def_column_username: 'Usuario',
+    venta_grid_def_column_accion_venta_envio: 'Envío',
+    venta_grid_def_column_accion_venta_derecho_anual: 'Detalle Derecho Anual',
+    venta_grid_def_column_accion_venta_productos: 'Detalle Productos',
+    venta_grid_def_column_accion_venta_tramites: 'Detalle Trámites'
   }
 };

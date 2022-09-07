@@ -16,17 +16,25 @@ export const VENTA_PRODUCTO_DEF: CrudDef = {
     grid: VENTA_PRODUCTO_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
         filter: VENTA_PRODUCTO_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: VENTA_PRODUCTO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: VENTA_PRODUCTO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
-        read:  VENTA_PRODUCTO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        // create: VENTA_PRODUCTO_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        // update: VENTA_PRODUCTO_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+        // read:  VENTA_PRODUCTO_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: VENTA_PRODUCTO_NAV_DEF,
     security: VENTA_PRODUCTO_SECURITY_DEF,
     ws: {
         key: PREFIX_DOMAIN_API + 'VENTA_PRODUCTO_CRUD_URL',
-        url: 'VentaProducto'
+        url: PREFIX_DOMAIN_API + 'VentaProducto'
     },
     dialogConfig: {
         width: '400px'
-    }   
+    },
+    filterInMemory: false,
+    backButton: true,
+    serverPagination: false,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
+    cancelInitSearch: false   
 };
