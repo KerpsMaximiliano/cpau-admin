@@ -23,13 +23,13 @@ export const OPCION_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'OPCION_UPDATE_FORM_FIELDS_DEF_FIELD_text',
     label: 'Texto',
     type: 'string',
+    required: true,
     controlType: 'textbox'
   },
   {
     key: 'value',
     labelKey: 'OPCION_UPDATE_FORM_FIELDS_DEF_FIELD_value',
     label: 'Valor',
-    type: 'select',
     controlType: 'textbox'
   },
   {
