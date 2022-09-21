@@ -72,21 +72,21 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     type: 'boolean',
     controlType: 'checkbox'
   },
-  {
-    key: 'showUserData',
-    labelKey: 'formulario_create_form_fields_def_field_showuserdata',
-    label: 'Mostrar Datos de Usuario',
-    type: 'boolean',
-    controlType: 'checkbox'
-  },
+  // {
+  //   key: 'showUserData',
+  //   labelKey: 'formulario_create_form_fields_def_field_showuserdata',
+  //   label: 'Mostrar Datos de Usuario',
+  //   type: 'boolean',
+  //   controlType: 'checkbox'
+  // },
   
-  {
-    key: 'allowUpdates',
-    labelKey: 'formulario_create_form_fields_def_field_allowupdates',
-    label: 'Permitir Actualizaci�n de Datos',
-    type: 'boolean',
-    controlType: 'checkbox'
-  },
+  // {
+  //   key: 'allowUpdates',
+  //   labelKey: 'formulario_create_form_fields_def_field_allowupdates',
+  //   label: 'Permitir Actualizaci�n de Datos',
+  //   type: 'boolean',
+  //   controlType: 'checkbox'
+  // },
   {
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',

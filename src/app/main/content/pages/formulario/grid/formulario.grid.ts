@@ -128,6 +128,10 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       columnNameKey: 'formulario_grid_def_column_date'
     },
     {
+      columnDef: 'dateString',
+      columnNameKey: 'formulario_grid_def_column_date'
+    },
+    {
       columnDef: 'contact',
       columnNameKey: 'formulario_grid_def_column_contact'
     },
@@ -153,7 +157,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     'toDate',
     'inscriptos',
     'isCurso',
-    'date'
+    'dateString'
   ],
   actions: [
     {

@@ -38,5 +38,9 @@ export const CAMPO_DEF: CrudDef = {
         width: '500px'
     },
     filterInMemory: false,
-    backButton: true
+    backButton: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
 };

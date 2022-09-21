@@ -61,6 +61,14 @@ export const CAMPO_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
+    key: 'position',
+    labelKey: 'campo_create_form_fields_def_field_position',
+    label: 'Posición',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
+  {
     key: 'dependentField',
     labelKey: 'campo_update_form_fields_def_field_dependentField',
     label: 'Campo del cual depende',

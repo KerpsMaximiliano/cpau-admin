@@ -29,6 +29,10 @@ export const CAMPO_GRID_DEF = {
     {
       columnDef: 'value',
       columnNameKey: 'campo_grid_def_column_value'
+    },
+    {
+      columnDef: 'position',
+      columnNameKey: 'campo_grid_def_column_position'
     }
   ],
   sortAllColumns: true,
@@ -37,7 +41,8 @@ export const CAMPO_GRID_DEF = {
     'name',
     'type',
     'required',
-    'value'
+    'value',
+    'position'
   ],
   actions : [
     {
@@ -67,32 +72,32 @@ export const CAMPO_GRID_DEF = {
         }
       }
     },
-    {
-      actionNameKey: 'campo_grid_def_button_action_bajar',
-      icon: 'arrow_downward',
-      ws: {
-        key: 'campo_grid_def_button_action_bajar',
-        url: PREFIX_DOMAIN_API + 'FormField/bajar',
-        method: 'GET',
-        querystring: {
-          idFormField: 'idFormField',
-          idForm : 'idForm',
-        }
-      }
-    },
-    {
-      actionNameKey: 'campo_grid_def_button_action_subir',
-      icon: 'arrow_upward',
-      ws: {
-        key: 'campo_grid_def_button_action_subir',
-        url: PREFIX_DOMAIN_API + 'FormField/subir',
-        method: 'GET',
-        querystring: {
-          idForm : 'idForm',
-          idFormField: 'idFormField'
-        }
-      }
-    },
+    // {
+    //   actionNameKey: 'campo_grid_def_button_action_bajar',
+    //   icon: 'arrow_downward',
+    //   ws: {
+    //     key: 'campo_grid_def_button_action_bajar',
+    //     url: PREFIX_DOMAIN_API + 'FormField/bajar',
+    //     method: 'GET',
+    //     querystring: {
+    //       idFormField: 'idFormField',
+    //       idForm : 'idForm',
+    //     }
+    //   }
+    // },
+    // {
+    //   actionNameKey: 'campo_grid_def_button_action_subir',
+    //   icon: 'arrow_upward',
+    //   ws: {
+    //     key: 'campo_grid_def_button_action_subir',
+    //     url: PREFIX_DOMAIN_API + 'FormField/subir',
+    //     method: 'GET',
+    //     querystring: {
+    //       idForm : 'idForm',
+    //       idFormField: 'idFormField'
+    //     }
+    //   }
+    // },
 
 
     
