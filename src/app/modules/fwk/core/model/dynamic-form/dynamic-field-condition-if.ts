@@ -14,6 +14,8 @@ export class DynamicFieldConditionIf{
   // Si no se pasa nada por defecto es la generica
   key?: string;
   value?: any;
+  // Evita la ejecucion del then si el valor es 0, null, undefined, empty
+  avoidIfValueNull?: boolean;
   compare?: string;
   toField?: string;
   group?: DynamicFieldConditionIf[];

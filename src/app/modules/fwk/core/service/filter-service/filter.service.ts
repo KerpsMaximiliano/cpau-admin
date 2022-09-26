@@ -46,6 +46,8 @@ export class FilterService{
                     case FILTER_TYPE.EQUALS : return this.filterEquals(filterValue, entityValue);
                     case FILTER_TYPE.LESS_EQUALS: return this.filterLessEquals(filterValue, entityValue);
                     case FILTER_TYPE.GREATER_EQUALS: return this.filterGreaterEquals(filterValue, entityValue);
+                    case FILTER_TYPE.LESS: return this.filterLess(filterValue, entityValue);
+                    case FILTER_TYPE.GREATER: return this.filterGreater(filterValue, entityValue);
                     default: console.warn('filterType -> ' + filterType + ' not exist...');
                 }
             }else{
@@ -77,6 +79,21 @@ export class FilterService{
             return valueA.isSameOrBefore(valueB);
         }
         return valueA <= valueB;
+    }
+    
+    private filterLess(valueA: any, valueB: any){
+        if (valueA._f || valueA._isAMomentObject){
+            return valueA.isBefore(valueB);
+        }
+        return valueA < valueB;
+    }
+
+    private filterGreater(valueA: any, valueB: any){
+        if (valueA._f || valueA._isAMomentObject){
+            return valueA.isAfter(valueB);
+        }
+
+        return valueA > valueB;
     }
 
     private filterIncludes(valueA: any, valueB: any){

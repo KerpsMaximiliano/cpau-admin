@@ -42,6 +42,26 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'minValue',
+    labelKey: 'campo_create_form_fields_def_field_minValue',
+    label: 'Minimo seleccionado',
+    type: 'number',
+    controlType: 'number',
+    value: null,
+    minValue: 0,
+    minValueMessage: 'No puedes ingresar un valor menor a 0'
+  },
+  {
+    key: 'maxValue',
+    labelKey: 'campo_create_form_fields_def_field_maxValue',
+    label: 'Maximo seleccionado',
+    type: 'number',
+    controlType: 'number',
+    value: null,
+    minValue: 0,
+    minValueMessage: 'No puedes ingresar un valor menor a 0'
+  },
+  {
     key: 'value',
     labelKey: 'campo_create_form_fields_def_field_value',
     label: 'Valor',
