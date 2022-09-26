@@ -230,38 +230,38 @@ export const navigation = [
                     }
                 ]
             },
-            // {
-            //     'title': 'Ventas',
-            //     'translate': 'NAV.MENU_VENTAS',
-            //     'type': 'collapse',
-            //     'icon': 'storefront',
-            //     'children': [
-            //         {
-            //             'id': 'producto',
-            //             'title': 'Productos',
-            //             'translate': 'NAV.PRODUCTOS.TITLE',
-            //             'icon': 'inventory_2',
-            //             'type': 'item',
-            //             'url': '/' + PRODUCTO_DEF.navigation.url,
-            //         },
-            //         {
-            //             'id': 'categoria',
-            //             'title': 'Categorias',
-            //             'translate': 'NAV.CATEGORIAS.TITLE',
-            //             'icon': 'category',
-            //             'type': 'item',
-            //             'url': '/' + CATEGORIA_DEF.navigation.url,
-            //         },
-            //         {
-            //             'id': 'ventas',
-            //             'title': 'Operaciones',
-            //             'translate': 'NAV.OPERACIONES.TITLE',
-            //             'icon': 'point_of_sale',
-            //             'type': 'item',
-            //             'url': '/' + VENTA_DEF.navigation.url,
-            //         }
-            //     ]
-            // },
+            {
+                'title': 'Ventas',
+                'translate': 'NAV.MENU_VENTAS',
+                'type': 'collapse',
+                'icon': 'storefront',
+                'children': [
+                    {
+                        'id': 'producto',
+                        'title': 'Productos',
+                        'translate': 'NAV.PRODUCTOS.TITLE',
+                        'icon': 'inventory_2',
+                        'type': 'item',
+                        'url': '/' + PRODUCTO_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'categoria',
+                        'title': 'Categorias',
+                        'translate': 'NAV.CATEGORIAS.TITLE',
+                        'icon': 'category',
+                        'type': 'item',
+                        'url': '/' + CATEGORIA_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'ventas',
+                        'title': 'Operaciones',
+                        'translate': 'NAV.OPERACIONES.TITLE',
+                        'icon': 'point_of_sale',
+                        'type': 'item',
+                        'url': '/' + VENTA_DEF.navigation.url,
+                    }
+                ]
+            },
 
 
         ]

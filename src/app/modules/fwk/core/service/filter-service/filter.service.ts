@@ -44,6 +44,7 @@ export class FilterService{
             if (filterType !== FILTER_TYPE.LIKE){
                 switch (filterType){
                     case FILTER_TYPE.EQUALS : return this.filterEquals(filterValue, entityValue);
+                    case FILTER_TYPE.NOTEQUALS : return this.filterNotEquals(filterValue, entityValue);
                     case FILTER_TYPE.LESS_EQUALS: return this.filterLessEquals(filterValue, entityValue);
                     case FILTER_TYPE.GREATER_EQUALS: return this.filterGreaterEquals(filterValue, entityValue);
                     default: console.warn('filterType -> ' + filterType + ' not exist...');
@@ -62,6 +63,15 @@ export class FilterService{
         return Number(valueA) === Number(valueB); 
         }
         return valueA === valueB;
+    }
+
+    private filterNotEquals(valueA: any, valueB: any){
+        if (typeof valueA === BOOLEAN || typeof valueB === BOOLEAN){
+            return Boolean(valueA) !== Boolean(valueB); 
+        }else if (typeof valueA === NUMBER || typeof valueB === NUMBER){
+            return Number(valueA) !== Number(valueB); 
+        }
+        return valueA !== valueB;
     }
 
     private filterGreaterEquals(valueA: any, valueB: any){
@@ -94,6 +104,7 @@ export class FilterService{
 export const enum FILTER_TYPE {
     LIKE = 'LIKE',
     EQUALS = 'EQUALS',
+    NOTEQUALS = 'NOTEQUALS',
     LESS_EQUALS = 'LESS-EQUALS',
     LESS = 'LESS',
     GREATER_EQUALS = 'GREATER-EQUALS',
