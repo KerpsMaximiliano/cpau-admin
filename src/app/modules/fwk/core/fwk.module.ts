@@ -62,6 +62,7 @@ import { AutocompleteDesplegableComponent } from './component/autocomplete-despl
 import { DpDatePickerModule } from 'ng2-date-picker';
 import { DatepickerTimeComponent } from './component/dynamic-form/datepicker-time/datepicker-time.component';
 import { EditorModule} from '@tinymce/tinymce-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -74,7 +75,8 @@ import { EditorModule} from '@tinymce/tinymce-angular';
     ColorPickerModule,
     RouterModule,
     DpDatePickerModule,
-    EditorModule
+    EditorModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [
     ColorPickerComponent,

@@ -26,6 +26,7 @@ import { DynamicFieldConditionIf } from '../../../model/dynamic-form/dynamic-fie
 import { Params } from '@angular/router';
 import { PARAMETERS } from '@angular/core/src/util/decorators';
 import { FilterService } from '../../../service/filter-service/filter.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 const ACTION_COLUMN = '_action';
 const DELETE_COLUMN = 'delete';
@@ -34,11 +35,24 @@ const DELETE_COLUMN = 'delete';
   selector: 'app-crud-table',
   templateUrl: './crud-table.component.html',
   styleUrls: ['./crud-table.component.scss'],
-  animations: fuseAnimations
+  animations: [
+    fuseAnimations,
+    trigger('groupButtons', [
+      state('true', style({
+        opacity: '1'
+      })),
+      state('false', style({
+        opacity: '0'
+      })),
+      transition('true => false', animate('300ms ease')),
+      transition('false => true', animate('300ms ease')),
+    ])]
 })
 export class CrudTableComponent extends AbstractComponent implements OnInit {
   resetSelects: any;
+  openActionsArray: Array<boolean> = [];
 
+  @Input() groupActions: boolean;
   @Input() crud: any;
   statustable: StatusTable<any>;
   @Input() editForm: any;
@@ -93,6 +107,15 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     this.dialogService = injector.get(DialogService);
     this.expressionService = injector.get(ExpressionService);
     this.actionDefService = injector.get(ActionDefService);
+  }
+
+  groupActionButton(index) {
+    if(this.openActionsArray[index] == true) {
+      this.openActionsArray.fill(false);
+    } else {
+      this.openActionsArray.fill(false);
+      this.openActionsArray[index] = true;
+    }
   }
 
   onInit() {
@@ -509,6 +532,9 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   set datasource(datasource: MatTableDataSource<any>) {
     if (datasource) {
       this._datasource = datasource;
+      for (let index = 0; index < datasource.filteredData.length; index++) {
+        this.openActionsArray.push(false);
+      }
       this.statustable.statusChanges.subscribe((statustable) => {
         this.status.emit(statustable);
       });
