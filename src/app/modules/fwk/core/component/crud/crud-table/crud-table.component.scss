@@ -40,6 +40,9 @@ mat-cell{
 
 mat-row:hover {
     background: rgb(240, 240, 240);
+    .action-buttons-div {
+        background-color: rgba(240, 240, 240, 255);
+    }
 }
 
 .action-cell{
@@ -75,4 +78,6 @@ mat-row:hover {
     padding: 0px 0px !important;
 }
 
-
+.action-buttons-div {
+    background-color: white;
+}
