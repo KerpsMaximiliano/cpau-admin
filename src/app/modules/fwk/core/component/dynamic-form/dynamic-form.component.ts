@@ -25,7 +25,7 @@ import { AutocompleteService } from '../autocomplete/autocomplete.service';
   // tslint:disable-next-line:component-selector
   selector: 'app-dynamic-form-component',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.css'],
+  styleUrls: ['./dynamic-form.component.scss'],
   providers: [
     // The locale would typically be provided on the root module of your application. We do it at
     // the component level here, due to limitations of our example generation script.

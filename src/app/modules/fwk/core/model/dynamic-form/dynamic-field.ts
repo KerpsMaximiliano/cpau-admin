@@ -110,6 +110,7 @@ export class DynamicField<T>{
   minValueMessage?: string;
   maxValueMessage?: string;
   lengthMessage?: string;
+  cssClass?: string;
   // Deprecated
   order?: number;
   conditions?: any;
@@ -120,7 +121,8 @@ export class DynamicField<T>{
       label?: string,
       required?: boolean,
       order?: number,
-      controlType?: string
+      controlType?: string,
+      cssClass?: string
     } = {}) {
     this.value = options.value;
     this.key = options.key || '';
@@ -128,6 +130,7 @@ export class DynamicField<T>{
     this.required = !!options.required;
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
+    this.cssClass = options.cssClass || '';
   }
 
 }
