@@ -52,7 +52,6 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   resetSelects: any;
   openActionsArray: Array<boolean> = [];
 
-  @Input() groupActions: boolean;
   @Input() crud: any;
   statustable: StatusTable<any>;
   @Input() editForm: any;
