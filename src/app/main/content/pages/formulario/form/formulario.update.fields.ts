@@ -64,13 +64,13 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     required: true
   },
   
-  // {
-  //   key: 'validateUser',
-  //   labelKey: 'formulario_create_form_fields_def_field_validateuser',
-  //   label: 'Validate User',
-  //   type: 'boolean',
-  //   controlType: 'checkbox'
-  // },
+  {
+    key: 'validateUser',
+    labelKey: 'formulario_create_form_fields_def_field_validateuser',
+    label: 'Validate User',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
   // {
   //   key: 'showUserData',
   //   labelKey: 'formulario_create_form_fields_def_field_showuserdata',
@@ -79,13 +79,13 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
   //   controlType: 'checkbox'
   // },
   
-  {
-    key: 'allowUpdates',
-    labelKey: 'formulario_create_form_fields_def_field_allowupdates',
-    label: 'Permitir Actualizaci�n de Datos',
-    type: 'boolean',
-    controlType: 'checkbox'
-  },
+  // {
+  //   key: 'allowUpdates',
+  //   labelKey: 'formulario_create_form_fields_def_field_allowupdates',
+  //   label: 'Permitir Actualizaci�n de Datos',
+  //   type: 'boolean',
+  //   controlType: 'checkbox'
+  // },
   {
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',
