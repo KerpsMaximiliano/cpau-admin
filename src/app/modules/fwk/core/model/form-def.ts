@@ -16,4 +16,5 @@ export class FormDef{
     actions?: ActionDef[];
     displayActionsCondition?: DisplayActionsCondition[];
     showSubmitContinue?: boolean = false;
+    showSubmitButton?: boolean = true;
 }

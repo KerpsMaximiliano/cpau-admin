@@ -1,10 +1,8 @@
 import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
-import { CONTENIDO_HISTORY_DEF } from "../../contenidoHistory/contenidoHistory.def";
-import { CONTENIDO_HISTORY_NAV_DEF } from "../../contenidoHistory/navigation/contenidoHistory.nav";
 
-export const CONTENIDO_GRID_DEF: GridDef = {
+export const CONTENIDO_HISTORY_GRID_DEF: GridDef = {
   columnsDef: [
     {
       columnDef: 'title',
@@ -105,13 +103,8 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     }
   ],
   sortAllColumns: true,
-  deleteAction: true,
+  deleteAction: false,
   displayedColumns: [
-    'title',
-    'publishDateString',
-    'expirationDateString',
-    'createUser',
-    'createDateString',
     'lastEditUser',
     'lastEditDateString',
   ],
@@ -120,7 +113,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       actionNameKey: 'contenido_grid_def_button_action_resumen',
       icon: 'notes',
       formDef: {
-        showSubmitContinue: true,
+        showSubmitButton: false,
         fields:[
           {
             key: 'summary',
@@ -130,18 +123,13 @@ export const CONTENIDO_GRID_DEF: GridDef = {
             maxLength: 8000
           }
         ]
-      },
-      ws: {
-        key: 'contenido_grid_def_button_action_resumen',
-        url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',
-        method: 'PUT'
       }
     },
     {
       actionNameKey: 'contenido_grid_def_button_action_texto',
       icon: 'menu_book',
       formDef: {
-        showSubmitContinue: true,
+        showSubmitButton: false,
         fields:[
           {
             key: 'text',
@@ -150,51 +138,43 @@ export const CONTENIDO_GRID_DEF: GridDef = {
             controlType: HTML_EDITOR
           }
         ]
-      },
-      
-      ws: {
-        key: 'contenido_grid_def_button_action_texto',
-        url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',
-        method: 'PUT'
       }
     },
     {
-      actionNameKey: 'contenido_grid_def_button_action_imagenes',
-      icon: 'photo_album',
-      actionType: 'redirect',
-      redirect: {
-        url: '/contentImage',
-        querystring: {
-          contentId : 'id',
-          parentTitle: 'title'
-        }
-      }
-    },
-    {
-      actionNameKey: 'Previsualizar',
-      actionType: 'redirect',
-      redirect: {
-        externalUrl: true,
-        openTab: true,
-        idUrl: true,
-        url: PREFIX_INSTITUCIONAL + '?redirectToPage=/notaPreview',
-        querystring: {
-          id : 'id'
-        }
-      },
-      icon: 'filter_none'
-    },
-    {
-      actionNameKey: 'contenido_grid_def_button_action_duplicate',
-      icon: 'control_point_duplicate',
+      actionNameKey: 'contenido_grid_def_button_action_restore',
+      icon: 'repartition',
       formDef: {
         showSubmitContinue: false,
         fields:[
           {
-            key: 'title',
-            labelKey: 'CONTENIDO_FILTER_FORM_FIELDS_DEF_FIELD_title',
-            label: 'T�tulo',
-            controlType: 'textbox'
+            key: 'info',
+            labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_INFO',
+            label: 'Restaurar Info',
+            controlType: 'checkbox'
+          },
+          {
+            key: 'agenda',
+            labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_AGENDA',
+            label: 'Restaurar Agemda',
+            controlType: 'checkbox'
+          },  
+          {
+            key: 'beneficios',
+            labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_BENEFICIOS',
+            label: 'Restaurar Beneficios',
+            controlType: 'checkbox'
+          }, 
+          {
+            key: 'resumen',
+            labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_RESUMEN',
+            label: 'Restaurar Resumen',
+            controlType: 'checkbox'
+          }, 
+          {
+            key: 'texto',
+            labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_TEXTO',
+            label: 'Restaurar Texto',
+            controlType: 'checkbox'
           }, 
           {
             key: 'id',
@@ -205,36 +185,10 @@ export const CONTENIDO_GRID_DEF: GridDef = {
         ]
       },
       ws: {
-        key: 'contenido_grid_def_button_action_duplicate',
-        url: PREFIX_DOMAIN_API + 'Content/Duplicate',
-        method: 'POST'
-        
-        
+        key: 'contenido_grid_def_button_action_restore',
+        url: PREFIX_DOMAIN_API + 'Content/RestoreVersion',
+        method: 'PUT'
       }
-    },
-    {
-      actionNameKey: 'Secciones',
-      actionType: 'redirect',
-      redirect: {
-        url: "/seccionesContenido",
-        querystring: {
-          contenidoId : 'id'
-        }
-      },
-      icon: 'dashboard'
-    },
-    {
-      actionNameKey: 'Versiones Anteriores',
-      actionType: 'redirect',
-      redirect: {
-        url: CONTENIDO_HISTORY_NAV_DEF.url,
-        querystring: {
-          contentId : 'id',
-          parentTitle: 'title'
-        }
-      },
-      icon: 'manage_history'
-    },
-    
+    }
   ]
 };

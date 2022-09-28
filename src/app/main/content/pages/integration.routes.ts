@@ -59,6 +59,7 @@ import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
 import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anual.def';
 import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
 import { VENTA_DEF } from './venta/venta.def';
+import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -343,7 +344,13 @@ export const ROUTES: Routes = [
   {
     path: VENTA_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
-    canActivate: [AuthGuardService]  }
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: CONTENIDO_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  }
 
 ];
 

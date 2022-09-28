@@ -57,6 +57,7 @@ import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anu
 import { VENTA_PRODUCTO_DEF } from './venta_producto/venta_producto.def';
 import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
 import { VENTA_ENVIO_DEF } from './venta_envio/venta_envio.def';
+import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -113,5 +114,7 @@ export const COMPONENTS: ComponentDef[] = [
   VENTA_DERECHO_ANUAL_DEF,
   VENTA_PRODUCTO_DEF,
   VENTA_TRAMITE_DEF,
-  VENTA_ENVIO_DEF];
+  VENTA_ENVIO_DEF,
+  CONTENIDO_HISTORY_DEF
+];
 
