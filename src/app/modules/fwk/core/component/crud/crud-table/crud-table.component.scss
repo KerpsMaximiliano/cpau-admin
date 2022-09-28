@@ -46,6 +46,16 @@ mat-row:hover {
     overflow: visible;
     min-width: 120px;
     padding:0px 10px 0px 0px;
+    //position: absolute;
+    //z-index: 1;
+    //background-color: white;
+    //overflow-x: visible;
+}
+
+.action-cell-elevated {
+    overflow: visible;
+    width: 80px;
+    z-index: 1;
 }
 
 .action-cell *{
