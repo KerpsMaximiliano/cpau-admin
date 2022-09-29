@@ -94,8 +94,6 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
   //   controlType: 'checkbox'
   // },
   {
-    controlType: 'checkbox',
-	cssClass: 'formulario_allowupdates'
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',
     type: 'boolean',
