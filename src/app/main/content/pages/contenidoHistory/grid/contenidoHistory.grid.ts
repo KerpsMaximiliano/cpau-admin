@@ -155,7 +155,7 @@ export const CONTENIDO_HISTORY_GRID_DEF: GridDef = {
           {
             key: 'agenda',
             labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_AGENDA',
-            label: 'Restaurar Agemda',
+            label: 'Restaurar Agenda',
             controlType: 'checkbox'
           },  
           {
