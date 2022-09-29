@@ -28,7 +28,7 @@ export const SECTION_CONTENT_CREATE_FORM_FIELDS_DEF = [
         title: 'content'
       },
       defaultShow: 20,
-      url: PREFIX_DOMAIN_API + 'Content/GetSelectByProp'
+      url: PREFIX_DOMAIN_API + 'Content/FilterContentByTitle'
     }
   },
 

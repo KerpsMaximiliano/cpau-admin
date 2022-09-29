@@ -1,19 +1,29 @@
 .component-CONTENIDO{
     .crud-table{
-        /* @media screen and (max-width:899px) {
-            .mat-header-row, .mat-row {
-                width: max-content;
-            }
-        } */
-
-        .action-cell {
-            width: 250px !important;
-            min-width: 250px !important;
-            max-width: 250px !important;
+       
+        #lastEditDateStringHeader,
+        #lastEditDateStringCell{
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
         }
 
         #createDateStringHeader,
         #createDateStringCell{
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+
+        #lastEditUserHeader,
+        #lastEditUserCell{
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+
+        #createUserHeader,
+        #createUserCell{
             width: 120px;
             min-width: 120px;
             max-width: 120px;

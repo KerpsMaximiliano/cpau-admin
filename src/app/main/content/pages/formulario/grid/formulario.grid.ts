@@ -72,10 +72,6 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       columnNameKey: 'formulario_grid_def_column_minquota'
     },
     {
-      columnDef: 'quota',
-      columnNameKey: 'formulario_grid_def_column_quota'
-    },
-    {
       columnDef: 'allowQueue',
       columnNameKey: 'formulario_grid_def_column_allowqueue'
     },
@@ -140,6 +136,10 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       columnNameKey: 'formulario_grid_def_column_inscriptos'
     },
     {
+      columnDef: 'quota',
+      columnNameKey: 'formulario_grid_def_column_quotacol'
+    },
+    {
       columnDef: 'isPublished',
       columnNameKey: 'formulario_grid_def_column_isPublished'
     },
@@ -149,13 +149,16 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     }
   ],
   sortAllColumns: true,
+  groupActions: true,
   deleteAction: true,
   displayedColumns: [
     'id',
     'name',
     'fromDate',
     'toDate',
+    'minQuota',
     'inscriptos',
+    'quota',
     'isCurso',
     'dateString'
   ],

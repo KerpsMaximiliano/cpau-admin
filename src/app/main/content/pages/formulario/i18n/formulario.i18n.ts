@@ -95,8 +95,6 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_column_description: 'Descripción',
     formulario_grid_def_column_remarks: 'Aclaraciones',
     formulario_grid_def_column_finalmessage: 'Mensaje Final',
-    formulario_grid_def_column_minquota: 'Cupo Mínimo (0 = sin cupo)',
-    formulario_grid_def_column_quota: 'Cupo (0 = sin cupo)',
     formulario_grid_def_column_allowqueue: 'Lista de Espera',
     formulario_grid_def_column_fromdate: 'Fecha Desde',
     formulario_grid_def_column_todate: 'Fecha Hasta',
@@ -122,7 +120,10 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_button_action_despublicar : 'Despublicar',
     formulario_grid_def_button_action_publicar : 'Publicar',
     formulario_grid_button_action_file_export : ' Exportar Inscriptos',
-    formulario_grid_def_column_isCurso: 'Es Curso'
+    formulario_grid_def_column_isCurso: 'Es Curso',
+    formulario_grid_def_column_minquota : 'Cupo Mínimo',
+    formulario_grid_def_column_quotacol : 'Cupo',
+
     
     
   }

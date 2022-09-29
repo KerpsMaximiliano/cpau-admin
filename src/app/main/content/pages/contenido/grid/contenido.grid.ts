@@ -104,6 +104,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       columnNameKey: 'contenido_grid_def_column_lastEditUser'
     }
   ],
+  groupActions: true,
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
@@ -133,7 +134,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'contenido_grid_def_button_action_resumen',
-        url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',
+        url: PREFIX_DOMAIN_API + 'Content/UpdateSummary',
         method: 'PUT'
       }
     },
@@ -154,7 +155,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       
       ws: {
         key: 'contenido_grid_def_button_action_texto',
-        url: PREFIX_DOMAIN_API + 'Content/UpdateByProps',
+        url: PREFIX_DOMAIN_API + 'Content/UpdateText',
         method: 'PUT'
       }
     },

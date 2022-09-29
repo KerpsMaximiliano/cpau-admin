@@ -61,6 +61,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       columnNameKey: 'perfil_identificacion_grid_def_column_habilitarPagoOnline'
     }
   ],
+  groupActions: true,
   sortAllColumns: true,
   displayedColumns: [
     'tipo',
