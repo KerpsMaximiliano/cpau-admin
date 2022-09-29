@@ -27,7 +27,6 @@ export const REVISTA_CONTENIDOS_CREATE_FORM_FIELDS_DEF = [
       url: PREFIX_DOMAIN_API + 'Contenidos/GetSelectByProp'
     }
   },
-
   {
     key: 'contenidoId',
     controlType: 'hidden'

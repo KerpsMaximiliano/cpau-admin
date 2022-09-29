@@ -28,11 +28,42 @@
 
         #inscriptosHeader,
         #inscriptosCell{
-            width: 115px;
-            min-width: 115px;
-            max-width: 115px;
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
+            text-align: center;
         }
 
+        #minQuotaHeader,
+        #minQuotaCell{
+            width: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            text-align: center;
+        }
+        #quotaHeader,
+        #quotaCell{
+            width: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            text-align: center;
+        }
+
+        #isCursoHeader,
+        #isCursoCell{
+            width: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            text-align: center;
+        }
+
+        #dateStringHeader,
+        #dateStringCell{
+            width: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            text-align: center;
+        }
         
         mat-header-cell.checkbox-cell {
             display: none;
