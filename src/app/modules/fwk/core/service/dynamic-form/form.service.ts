@@ -568,7 +568,7 @@ export class FormService {
             result = this.filterService.filter(entityValue, conditionValue, compare, field);
           }else{
             conditionValue = entity[condition.key];
-            if ( (conditionValue === null || conditionValue === 0 || conditionValue === undefined || conditionValue === "" ) && condition.avoidIfValueNull){
+            if ( (conditionValue === null || conditionValue === 0 || conditionValue === undefined || conditionValue === "" ) && condition.avoidThenOnValueNull){
               result = false;
             }else {
               result = this.filterService.filter(entityValue, conditionValue, compare, field);

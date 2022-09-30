@@ -42,7 +42,7 @@ export const CAMPO_CREATE_BEHAVIOR =
           key: 'maxValue',
           compare: 'LESS',
           toField: 'minValue',
-          avoidIfValueNull: true,
+          avoidThenOnValueNull: true,
         } 
       ],
       then: [
@@ -54,6 +54,31 @@ export const CAMPO_CREATE_BEHAVIOR =
       ],
       else: [
         
+      ]            
+    }
+  },
+  {
+    fieldKey: 'dependentField',
+    condition: {
+      if: [
+        {
+          key: 'dependentField',
+          compare: 'HAS-VALUE'
+        } 
+      ],
+      then: [
+        {
+          key: 'dependentValue',
+          controlType: 'autocomplete-desplegable',
+          value: null,
+        },
+      ],
+      else: [
+        {
+          key: 'dependentValue',
+          controlType: 'hidden',
+          value: null,
+        }
       ]            
     }
   },

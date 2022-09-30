@@ -35,6 +35,9 @@ export class FilterService{
     filter(entityValue, filterValue, filterType, fieldDef){
         entityValue = this.convertValue(entityValue, fieldDef);
         filterValue = this.convertValue(filterValue, fieldDef);
+        if (filterType === FILTER_TYPE.HAS_VALUE) {
+            return this.filterHasValue(entityValue);
+        }
         // Si no hay valores para el filtro entonces no se filtra esto incluye undefined, nulos o longitud
         if (filterValue === null || filterValue === undefined || filterValue.length === 0){
             return true;
@@ -96,6 +99,10 @@ export class FilterService{
         return valueA > valueB;
     }
 
+    private filterHasValue(value){
+        return value === null || value === undefined || value.length === 0 ? false : true;
+    }
+
     private filterIncludes(valueA: any, valueB: any){
         if (typeof valueA === BOOLEAN || typeof valueB === BOOLEAN || 
             typeof valueA === NUMBER || typeof valueB === NUMBER ||
@@ -114,5 +121,6 @@ export const enum FILTER_TYPE {
     LESS_EQUALS = 'LESS-EQUALS',
     LESS = 'LESS',
     GREATER_EQUALS = 'GREATER-EQUALS',
-    GREATER = 'GREATER'
+    GREATER = 'GREATER',
+    HAS_VALUE = 'HAS-VALUE',
 }
