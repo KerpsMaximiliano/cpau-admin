@@ -59,6 +59,8 @@ export const VENTA_I18N_DEF = {
     venta_grid_def_column_domicilioenvio: 'Domicilio',
     venta_grid_def_column_nombreenvio: 'Nombre',
     venta_grid_def_column_medioPago: 'Medio de Pago',
-    venta_grid_def_column_accion_venta_datosenvio: 'Datos de Envío'
+    venta_grid_def_column_accion_venta_datosenvio: 'Datos de Envío',
+    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email: 'Email',
+    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula: 'Matrícula'
   }
 };

@@ -70,19 +70,34 @@ export const VENTA_GRID_DEF = {
     {
       columnDef: 'domicilioEnvio',
       columnNameKey: 'venta_grid_def_column_domicilioenvio'
+    },
+    {
+      columnDef: 'email',
+      columnNameKey: 'Email'
+    },
+    {
+      columnDef: 'matricula',
+      columnNameKey: 'Matrícula'
+    },
+    {
+      columnDef: 'matriculaTipo',
+      columnNameKey: 'Tipo'
     }
   ],
   sortAllColumns: true,
   displayedColumns: [
     'id',
     'tipoString',
+    'fechaCompraString',
     'montoTotalString',
     'tarjeta',
     'cuotas',
     'estadoPagoString',
     'estadoPagoEnvioString',
     'username',
-    'fechaCompraString'
+    'email',
+    'matricula',
+    'matriculaTipo'
   ],
   actions : [
     {

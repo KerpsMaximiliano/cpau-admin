@@ -28,5 +28,13 @@ export const VENTA_TRAMITE_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '400px'
-    }   
+    },
+    filterInMemory: false,
+    backButton: true,
+    serverPagination: false,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
+    cancelInitSearch: false      
 };

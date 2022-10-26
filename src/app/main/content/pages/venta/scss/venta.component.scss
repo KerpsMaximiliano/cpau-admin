@@ -22,5 +22,27 @@
             padding: 3px;
         }
 
+        .action-cell {
+            width: 100px !important;
+            min-width: 100px !important;
+            max-width: 100px !important;
+        }
+
+        #idHeader,
+        #idCell{
+            width: 85px;
+            min-width: 85px;
+            max-width: 85px;
+            text-align: center;
+        }
+
+        #cuotasHeader,
+        #cuotasCell{
+            width: 30px;
+            min-width: 30px;
+            max-width: 30px;
+            text-align: center;
+        }
+
     }
 }
