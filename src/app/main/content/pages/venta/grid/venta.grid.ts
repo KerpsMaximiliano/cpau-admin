@@ -82,6 +82,10 @@ export const VENTA_GRID_DEF = {
     {
       columnDef: 'matriculaTipo',
       columnNameKey: 'Tipo'
+    },
+    {
+      columnDef: 'puedeGenerarEnvio',
+      columnNameKey: 'puedeGenerarEnvio'
     }
   ],
   sortAllColumns: true,
@@ -249,8 +253,8 @@ export const VENTA_GRID_DEF = {
     {
       key: 'venta_grid_def_column_accion_venta_generarenvio',
       expression: {
-                    key: 'estadoPagoEnvio',
-                    value: 'PENDGEN',
+                    key: 'puedeGenerarEnvio',
+                    value: true,
                     compare: FILTER_TYPE.EQUALS
                   }
     },
