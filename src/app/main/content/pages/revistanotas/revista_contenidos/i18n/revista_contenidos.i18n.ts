@@ -20,6 +20,8 @@ export const REVISTA_CONTENIDOS_I18N_DEF = {
     revista_contenidos_grid_def_column_revistaid: 'RevistaId',
     revista_contenidos_grid_def_column_contenidoid: 'Contenido',
     revista_contenidos_create_form_fields_def_field_contenido: 'Contenido',
-    revista_contenidos_grid_def_column_eliminar: 'Eliminar'
+    revista_contenidos_grid_def_column_eliminar: 'Eliminar',
+    revista_contenidos_grid_def_column_listIndex: 'Posición',
+    revista_contenidos_create_form_fields_def_field_listIndex: 'Posición'
   }
 };

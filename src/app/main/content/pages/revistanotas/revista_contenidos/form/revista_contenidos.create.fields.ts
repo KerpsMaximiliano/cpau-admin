@@ -28,6 +28,14 @@ export const REVISTA_CONTENIDOS_CREATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'listIndex',
+    labelKey: 'revista_contenidos_create_form_fields_def_field_listIndex',
+    label: 'Posición',
+    type: 'number',
+    controlType: 'number',
+    required: true
+  },
+  {
     key: 'contenidoId',
     controlType: 'hidden'
   },

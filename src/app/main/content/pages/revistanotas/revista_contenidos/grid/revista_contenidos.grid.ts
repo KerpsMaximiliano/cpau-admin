@@ -18,11 +18,17 @@ export const REVISTA_CONTENIDOS_GRID_DEF = {
     {
       columnDef: 'contenidoString',
       columnNameKey: 'revista_contenidos_grid_def_column_contenidoid'
+    },
+    {
+      columnDef: 'listIndex',
+      columnNameKey: 'revista_contenidos_grid_def_column_listIndex'
     }
+
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'contenidoString'
+    'contenidoString',
+    'listIndex'
   ],
   actions : [
     {
