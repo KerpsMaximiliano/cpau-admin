@@ -19,6 +19,7 @@ export const PERFIL_EMAIL_I18N_DEF = {
     perfil_email_grid_def_column_idcontactdata: 'Id',
     perfil_email_grid_def_column_email: 'Email',
     perfil_email_grid_def_column_tipoemail: 'Tipo Email',
-    PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_enviarNotificacion: 'Solicitar confirmación'
+    PERFIL_EMAIL_UPDATE_FORM_FIELDS_DEF_FIELD_enviarNotificacion: 'Solicitar confirmación',
+    perfil_email_grid_action_setearparticular: 'Setear como Particular'
   }
 };

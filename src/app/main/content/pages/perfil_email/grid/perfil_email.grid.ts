@@ -1,3 +1,4 @@
+import { FILTER_TYPE } from "app/modules/fwk/core/service/filter-service/filter.service";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PERFIL_EMAIL_GRID_DEF = {
@@ -27,12 +28,31 @@ export const PERFIL_EMAIL_GRID_DEF = {
         method: 'DELETE'
       }
     },
+    {
+      actionNameKey: 'perfil_email_grid_action_setearparticular',
+      icon: 'mark_email_read',
+      confirm: true,
+      ws: {
+        key: 'perfil_email_grid_action_setearparticular',
+        url: PREFIX_DOMAIN_API + 'admin/personas/contact/email/particular',
+        method: 'PUT'
+      }
+    },
   ],
   sortAllColumns: true,
   displayedColumns: [
     //'idContactData',
     'tipoEmail',
     'email',
-    
+  ],
+  displayedActionsCondition: [
+    {
+      key: 'perfil_email_grid_action_setearparticular',
+      expression: {
+        key: 'tipoEmail',
+        value: 'Particular',
+        compare: FILTER_TYPE.NOT_EQUALS
+      }
+    }
   ]
 };

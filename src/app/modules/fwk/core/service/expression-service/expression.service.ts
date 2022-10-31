@@ -17,6 +17,7 @@ export class ExpressionService{
                 const compare = condition.compare ? condition.compare.toUpperCase() : FILTER_TYPE.EQUALS; 
                 switch (compare){
                     case FILTER_TYPE.EQUALS: return valueA === valueB;
+                    case FILTER_TYPE.NOT_EQUALS: return valueA !== valueB;
                     case FILTER_TYPE.GREATER_EQUALS: return valueA >= valueB;
                     case FILTER_TYPE.GREATER: return valueA > valueB;
                     case FILTER_TYPE.LESS_EQUALS: return valueA <= valueB;
