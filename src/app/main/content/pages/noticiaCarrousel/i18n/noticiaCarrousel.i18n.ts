@@ -45,6 +45,8 @@ export const NOTICIA_CARROUSEL_I18N_DEF = {
     noticia_carrousel_grid_def_column_orden: 'Orden',
     noticia_carrousel_UPDATE_FORM_FIELDS_DEF_FIELD_textcolor: 'Color de Texto',
     prodcuto_externo_grid_def_button_action_bajar: 'Bajar',
-    prodcuto_externo_grid_def_button_action_subir: 'Subir'
+    prodcuto_externo_grid_def_button_action_subir: 'Subir',
+    NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_urlHeader: 'URL Header',
+    NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader: 'Link Target Header'
   }
 };

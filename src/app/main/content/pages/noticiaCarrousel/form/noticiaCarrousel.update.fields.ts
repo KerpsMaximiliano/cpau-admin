@@ -16,6 +16,32 @@ export const NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF = [
     maxLength: 100
   },
   {
+    key: 'url',
+    labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_url',
+    label: 'URL',
+    controlType: 'import_image',
+    required: true,
+    maxLength: 1000
+  },
+  {
+        key: 'linkTarget',
+        labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktarget',
+        type: 'select',
+        controlType: 'select',
+        required: true,
+        value: 0,
+        options: {
+          handlerSourceData: false,
+          elementLabel: 'nombre',
+          elementValue: 'id',
+          fromData: [{id: 0, nombre: '_self'},
+                     {id: 1, nombre: '_blank'},
+                     {id: 2, nombre: '_parent'},
+                     {id: 3, nombre: '_top'},
+                     {id: 4, nombre: '_search'}]
+          }
+      },
+  {
     key: 'tooltip',
     labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_tooltip',
     label: 'Tooltip',
@@ -34,14 +60,32 @@ export const NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF = [
     maxLength: 100
   },
   {
-    key: 'url',
-    labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_url',
+    key: 'urlHeader',
+    labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_urlHeader',
     label: 'URL',
-    type: 'string',
-    controlType: 'textbox',
+    controlType: 'import_image',
     required: true,
     maxLength: 1000
   },
+  {
+    key: 'linkTargetHeader',
+    labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader',
+    type: 'select',
+    controlType: 'select',
+    required: true,
+    value: 0,
+    options: {
+    handlerSourceData: false,
+      elementLabel: 'nombre',
+      elementValue: 'id',
+      fromData: [{id: 0, nombre: '_self'},
+                 {id: 1, nombre: '_blank'},
+                 {id: 2, nombre: '_parent'},
+                 {id: 3, nombre: '_top'},
+                 {id: 4, nombre: '_search'}]
+      }
+  },
+ 
   {
     key: 'description',
     labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_description',
@@ -85,22 +129,5 @@ export const NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF = [
     minValue: 1,
     minValueMessage: 'La posición debe ser mayor o igual 1',
   },
-  {
-    key: 'linkTarget',
-    labelKey: 'NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktarget',
-    type: 'select',
-    controlType: 'select',
-    required: true,
-    value: 0,
-    options: {
-      handlerSourceData: false,
-      elementLabel: 'nombre',
-      elementValue: 'id',
-      fromData: [{id: 0, nombre: '_self'},
-                 {id: 1, nombre: '_blank'},
-                 {id: 2, nombre: '_parent'},
-                 {id: 3, nombre: '_top'},
-                 {id: 4, nombre: '_search'}]
-      }
-  }
+  
 ];
