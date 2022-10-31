@@ -20,6 +20,11 @@ export const MODAL_I18N_DEF = {
         modal_read_form_fields_def_field_title: 'Titulo',
         modal_read_form_fields_def_field_content: 'Contenido',
         modal_update_form_fields_def_field_title: 'Titulo',
-        modal_update_form_fields_def_field_content: 'Contenido'
+        modal_update_form_fields_def_field_content: 'Contenido',
+        modal_grid_def_column_UpdateDateString: 'Fecha Actualización',
+        modal_grid_def_column_CreationDateString: 'Fecha Creación',
+        modal_grid_def_column_UpdateUser: 'Usuario Actualización',
+        modal_grid_def_column_CreationUser: 'Usuario Creación'
+
     }
 };

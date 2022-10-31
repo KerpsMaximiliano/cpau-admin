@@ -22,6 +22,22 @@ export const MODAL_GRID_DEF = {
         {
             columnDef: 'dateEnd',
             columnNameKey: 'modal_grid_def_column_enddate'
+        },
+        {
+            columnDef: 'creationUser',
+            columnNameKey: 'modal_grid_def_column_CreationUser'
+        },
+        {
+            columnDef: 'updateUser',
+            columnNameKey: 'modal_grid_def_column_UpdateUser'
+        },
+        {
+            columnDef: 'creationDateString',
+            columnNameKey: 'modal_grid_def_column_CreationDateString'
+        },
+        {
+            columnDef: 'updateDateString',
+            columnNameKey: 'modal_grid_def_column_UpdateDateString'
         }
     ],
     sortAllColumns: true,
@@ -29,6 +45,10 @@ export const MODAL_GRID_DEF = {
     displayedColumns: [
         'title',
         'dateStart',
-        'dateEnd'
+        'dateEnd',
+        'creationUser',
+        'updateUser',
+        'creationDateString',
+        'updateDateString'
     ]
 } as GridDef;
