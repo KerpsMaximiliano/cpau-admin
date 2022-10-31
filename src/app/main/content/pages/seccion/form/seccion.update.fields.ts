@@ -135,7 +135,8 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
                  {id: 2, nombre: 'Noticias con Imagen'},
                  {id: 3, nombre: 'Beneficios'},
                  {id: 4, nombre: 'Noticias sin Imagen'},
-                 {id: 5, nombre: 'Noticias sin Imagen sin Filtro'}
+                 {id: 5, nombre: 'Noticias sin Imagen sin Filtro'},
+                 {id: 7, nombre: 'Noticias con Imagen sin Filtro'}
                 ]              
     }
   },
