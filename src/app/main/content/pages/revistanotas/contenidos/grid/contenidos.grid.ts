@@ -48,11 +48,29 @@ export const CONTENIDOS_GRID_DEF = {
       columnDef: 'imagenes',
       columnNameKey: 'contenidos_grid_def_column_imagenes'
     }
+    ,
+    {
+      columnDef: 'usuarioAlta',
+      columnNameKey: 'contenidos_grid_def_column_usuarioAlta'
+    },
+    {
+      columnDef: 'usuarioUltimaModificacion',
+      columnNameKey: 'contenidos_grid_def_column_usuarioUltimaModificacion'
+    },
+    {
+      columnDef: 'fechaAltaString',
+      columnNameKey: 'contenidos_grid_def_column_fechaAltaString'
+    },
+    {
+      columnDef: 'fechaUltimaModificacionString',
+      columnNameKey: 'contenidos_grid_def_column_fechaUltimaModificacionString'
+    }
   ],
   sortAllColumns: true,
   displayedColumns: [
     'titulo',
-    'tipoString'
+    'tipoString',
+    'usuarioAlta','fechaAltaString','usuarioUltimaModificacion','fechaUltimaModificacionString'
   ],
   deleteAction: true,
   actions: [

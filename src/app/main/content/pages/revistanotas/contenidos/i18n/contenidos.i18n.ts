@@ -52,6 +52,11 @@ export const CONTENIDOS_I18N_DEF = {
     contenidos_grid_def_column_esNota: 'Es nota',
     contenidos_create_form_fields_def_field_esnota: 'Es nota',
     contenidos_create_form_fields_def_field_autores: 'Autores',
-    contenidos_create_form_fields_def_field_tags: 'Tags'
+    contenidos_create_form_fields_def_field_tags: 'Tags',
+    contenidos_grid_def_column_usuarioAlta: 'Usuario Creación',
+    contenidos_grid_def_column_usuarioUltimaModificacion: 'Usuario Modificación',
+    contenidos_grid_def_column_fechaAltaString: 'Fecha Creación',
+    contenidos_grid_def_column_fechaUltimaModificacionString: 'Fecha Modificación'
+
   }
 };
