@@ -60,6 +60,7 @@ import { VENTA_DERECHO_ANUAL_DEF } from './venta_derecho_anual/venta_derecho_anu
 import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
 import { VENTA_DEF } from './venta/venta.def';
 import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
+import { CONTENIDOS_HISTORY_DEF } from './revistanotas/contenidos_history/contenidos_history.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -348,6 +349,11 @@ export const ROUTES: Routes = [
   },
   {
     path: CONTENIDO_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: CONTENIDOS_HISTORY_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
   }

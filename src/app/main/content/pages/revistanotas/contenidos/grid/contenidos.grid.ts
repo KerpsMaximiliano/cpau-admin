@@ -1,5 +1,7 @@
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
+import { CONTENIDOS_HISTORY_DEF } from "../../contenidos_history/contenidos_history.def";
+import { CONTENIDOS_HISTORY_NAV_DEF } from "../../contenidos_history/navigation/contenidos_history.nav";
 
 export const CONTENIDOS_GRID_DEF = {
   columnsDef: [
@@ -118,6 +120,18 @@ export const CONTENIDOS_GRID_DEF = {
         }
       },
       icon: 'people'
+    },
+    {
+      actionNameKey: 'Versiones Anteriores',
+      actionType: 'redirect',
+      redirect: {
+        url: CONTENIDOS_HISTORY_NAV_DEF.url,
+        querystring: {
+          contenidosId : 'id',
+          parentTitle: 'titulo'
+        }
+      },
+      icon: 'manage_history'
     },
   ]
 };

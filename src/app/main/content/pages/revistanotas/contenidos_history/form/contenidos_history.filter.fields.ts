@@ -1,4 +1,4 @@
-export const CONTENIDO_AUTORES_FILTER_FORM_FIELDS_DEF = [
+export const CONTENIDOS_HISTORY_FILTER_FORM_FIELDS_DEF = [
   {
     key: 'contenidosId',
     label: 'contenidosId',

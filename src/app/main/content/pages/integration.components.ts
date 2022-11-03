@@ -58,6 +58,7 @@ import { VENTA_PRODUCTO_DEF } from './venta_producto/venta_producto.def';
 import { VENTA_TRAMITE_DEF } from './venta_tramite/venta_tramite.def';
 import { VENTA_ENVIO_DEF } from './venta_envio/venta_envio.def';
 import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
+import { CONTENIDOS_HISTORY_DEF } from './revistanotas/contenidos_history/contenidos_history.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -116,6 +117,7 @@ export const COMPONENTS: ComponentDef[] = [
   VENTA_PRODUCTO_DEF,
   VENTA_TRAMITE_DEF,
   VENTA_ENVIO_DEF,
-  CONTENIDO_HISTORY_DEF
+  CONTENIDO_HISTORY_DEF,
+  CONTENIDOS_HISTORY_DEF
 ];
 
