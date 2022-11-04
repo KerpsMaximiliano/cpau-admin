@@ -10,6 +10,8 @@ export const CAMPO_I18N_DEF = {
     campo_create_form_fields_def_field_type: 'Tipo',
     campo_create_form_fields_def_field_required: 'Requerido',
     campo_create_form_fields_def_field_value: 'Valor',
+    campo_create_form_fields_def_field_minValue: 'Cantidad minima de elementos seleccionados',
+    campo_create_form_fields_def_field_maxValue: 'Cantidad maxima de elementos seleccionados',
     campo_create_form_fields_def_field_dependentField: 'Campo del cual depende',
     campo_create_form_fields_def_field_dependentValue: 'Valor necesario',
     campo_update_form_fields_def_field_id: 'ID',
@@ -18,6 +20,8 @@ export const CAMPO_I18N_DEF = {
     campo_update_form_fields_def_field_type: 'Tipo',
     campo_update_form_fields_def_field_required: 'Requerido',
     campo_update_form_fields_def_field_value: 'Valor',
+    campo_update_form_fields_def_field_minValue: 'Cantidad minima de elementos seleccionados',
+    campo_update_form_fields_def_field_maxValue: 'Cantidad maxima de elementos seleccionados',
     campo_update_form_fields_def_field_dependentField: 'Campo del cual depende',
     campo_update_form_fields_def_field_dependentValue: 'Valor necesario',
     campo_read_form_fields_def_field_id: 'ID',
@@ -40,6 +44,8 @@ export const CAMPO_I18N_DEF = {
     campo_grid_def_column_value: 'Valor',
     campo_grid_def_button_action_opciones : 'Opciones',
     campo_grid_def_button_action_subir: 'Subir',
-    campo_grid_def_button_action_bajar: 'Bajar'
+    campo_grid_def_button_action_bajar: 'Bajar',
+    campo_grid_def_column_position: 'Posición',
+    campo_create_form_fields_def_field_position: 'Posición'
   }
 };

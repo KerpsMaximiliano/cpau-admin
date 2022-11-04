@@ -32,6 +32,13 @@ export const OPCION_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'opcion_create_form_fields_def_field_allowComments',
     label: 'Permitir Comentarios',
     controlType: 'checkbox'
+  },
+  {
+    key: 'position',
+    labelKey: 'opcion_create_form_fields_def_field_position',
+    label: 'Posición',
+    controlType: 'number',
+    required: true
   }
 
   

@@ -27,7 +27,9 @@ export const OPCION_I18N_DEF = {
     opcion_create_form_fields_def_field_allowComments : 'Permitir Comentarios',
     opcion_grid_def_column_allowComments : 'Permitir Comentarios',
     section_topic_grid_def_button_action_bajar : 'Bajar',
-    section_topic_grid_def_button_action_subir : 'Subir'
+    section_topic_grid_def_button_action_subir : 'Subir',
+    opcion_grid_def_column_position: 'Posición',
+    opcion_create_form_fields_def_field_position: 'Posición'
 
   }
 };

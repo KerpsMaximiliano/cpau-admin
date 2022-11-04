@@ -563,12 +563,16 @@ export class FormService {
       const field = fields.find(f => f.key === condition.key);
       if (condition.toField){
           const entityValue = entity[condition.toField];
-          let conditionValue = condition.value;
+            let conditionValue = condition.value;
           if (conditionValue){
             result = this.filterService.filter(entityValue, conditionValue, compare, field);
           }else{
             conditionValue = entity[condition.key];
-            result = this.filterService.filter(entityValue, conditionValue, compare, field);
+            if ( (conditionValue === null || conditionValue === 0 || conditionValue === undefined || conditionValue === "" ) && condition.avoidThenOnValueNull){
+              result = false;
+            }else {
+              result = this.filterService.filter(entityValue, conditionValue, compare, field);
+            }
           }
       }else{
           result = this.filterService.filter(entity[condition.key], condition.value, compare, field);
