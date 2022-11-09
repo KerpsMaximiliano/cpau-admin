@@ -80,12 +80,13 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       }
   },
   
+
+
   {
     key: 'image',
     labelKey: 'SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_imageid',
-    controlType: 'autocomplete',
-    label: 'Imagen',
-    required: false,
+    controlType: 'autocomplete-desplegable',
+    required: true,
     options: {
       transferIdToField: 'imageId',
       elementLabel: 'name',
@@ -97,10 +98,10 @@ export const SECCION_UPDATE_FORM_FIELDS_DEF = [
       queryString: {
         name: 'image'
       },
+      defaultShow: 20,
       url: PREFIX_DOMAIN_API + 'Image/GetSelectByProp'
     }
   },
-  
   {
     key: 'imageId',
     controlType: 'hidden'
