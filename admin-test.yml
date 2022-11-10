@@ -34,6 +34,6 @@ jobs:
       app_location: "/" # App source code path
       api_location: "" # Api source code path - optional
       # app_build_command: "npm install -g @angular/cli@6.0.8 && npm install && ng build --env=test"
-      app_build_command: "npm install && ng build --env=test"
+      app_build_command: "npm install -g @angular/cli@6.0.8 && npm install --save-dev --unsafe-perm node-sass && npm install && ng build --env=test"
       output_location: "dist" # Built app content directory - optional
 
