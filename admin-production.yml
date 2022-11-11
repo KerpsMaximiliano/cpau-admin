@@ -41,7 +41,7 @@ jobs:
         customCommand: 'run build-prod'
   - task: AzureStaticWebApp@0
     inputs:
-      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_MUSHROOM_05DA17C0F)
+      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_WATER_0EA9ACF0F)
       app_location: "/dist" # App source code path
       skip_app_build: true
       skip_api_build: true
