@@ -38,7 +38,7 @@ jobs:
         command: custom
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
-        customCommand: 'run build-test'
+        customCommand: 'run build-prod-test'
         # customCommand: 'run build-prod'
   - task: AzureStaticWebApp@0
     inputs:
