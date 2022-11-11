@@ -33,19 +33,19 @@ jobs:
      workingDir: '$(System.DefaultWorkingDirectory)'
      verbose: false
   - task: Npm@1
-    displayName: 'npm build'
+    displayName: 'npm build-test'
     inputs:
         command: custom
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
-        customCommand: 'run build'
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: 'dist'
-      ArtifactName: 'app'
-      publishLocation: 'Container'
-  - bash: cd $(System.DefaultWorkingDirectory); echo $(ls)
-  - bash: $(System.DefaultWorkingDirectory)/app; echo $(ls)
+        customCommand: 'run build-test'
+  # - task: PublishBuildArtifacts@1
+  #   inputs:
+  #     PathtoPublish: 'dist'
+  #     ArtifactName: 'app'
+  #     publishLocation: 'Container'
+  # - bash: cd $(System.DefaultWorkingDirectory); echo $(ls)
+  # - bash: $(System.DefaultWorkingDirectory)/app; echo $(ls)
   - task: AzureStaticWebApp@0
     inputs:
       azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_MUSHROOM_05DA17C0F)
