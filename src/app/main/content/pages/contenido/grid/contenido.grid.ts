@@ -127,8 +127,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
             key: 'summary',
             labelKey: 'contenido_create_form_fields_def_field_summary',
             label: 'Resumen',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },

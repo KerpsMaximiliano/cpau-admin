@@ -96,8 +96,7 @@ export const PRODUCTO_GRID_DEF = {
             key: 'descripcionLarga',
             labelKey: 'producto_grid_def_button_action_descripcionLarga',
             label: 'Descripción Larga',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },

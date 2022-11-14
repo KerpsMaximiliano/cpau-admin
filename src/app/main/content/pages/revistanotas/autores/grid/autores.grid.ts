@@ -37,8 +37,7 @@ export const AUTORES_GRID_DEF = {
             key: 'shortBio',
             labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',
             label: 'Short Bio',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },
@@ -58,8 +57,7 @@ export const AUTORES_GRID_DEF = {
             key: 'bio',
             labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
             label: 'Bio',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },
