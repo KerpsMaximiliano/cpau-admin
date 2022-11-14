@@ -81,8 +81,7 @@ export const REVISTAS_GRID_DEF = {
             key: 'html',
             labelKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
             label: 'HTML',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },

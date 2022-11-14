@@ -7,24 +7,21 @@ const form_descripcion =
     key: 'description',
     labelKey: 'formulario_create_form_fields_def_field_description',
     label: 'Descripción',
-    controlType: HTML_EDITOR,
-    maxLength: 4000
+    controlType: HTML_EDITOR
   }
 
 const form_finalMessage = {
   key: 'finalMessage',
   labelKey: 'formulario_create_form_fields_def_field_finalmessage',
   label: 'Mensaje Final',
-  controlType: HTML_EDITOR,
-  maxLength: 8000
+  controlType: HTML_EDITOR
 }
 
 const form_receipt = {
     key: 'receiptFooter',
     labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
     label: 'Pie del Comprobante',
-    controlType: HTML_EDITOR,
-    maxLength: 8000
+    controlType: HTML_EDITOR
   }
 
 /*const form_receipt = [
@@ -205,8 +202,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
             key: 'receiptFooter',
             labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
             label: 'Pie del Comprobante',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },

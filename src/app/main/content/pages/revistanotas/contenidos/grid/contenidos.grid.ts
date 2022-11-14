@@ -86,8 +86,7 @@ export const CONTENIDOS_GRID_DEF = {
             key: 'texto',
             labelKey: 'contenidos_grid_def_column_texto',
             label: 'Texto',
-            controlType: HTML_EDITOR,
-            maxLength: 8000
+            controlType: HTML_EDITOR
           }
         ]
       },
