@@ -127,6 +127,14 @@ export const VENTA_GRID_DEF = {
   ],
   displayedActionsCondition: [
     {
+      key: 'venta_grid_def_column_accion_venta_envio',
+      expression: {
+                    key: 'estadoPagoEnvio',
+                    value: 'NOAPLICA',
+                    compare: FILTER_TYPE.NOT_EQUALS
+                  }
+    },
+    {
       key: 'venta_grid_def_column_accion_venta_productos',
       expression: {
                     key: 'tipo',

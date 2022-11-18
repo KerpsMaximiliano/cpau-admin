@@ -65,10 +65,10 @@ export const PRODUCTO_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'checkbox'
   },
-  {
-    key: 'temporal',
-    labelKey: 'producto_create_form_fields_def_field_temporal',
-    type: 'string',
-    controlType: 'checkbox'
-  }
+  // {
+  //   key: 'temporal',
+  //   labelKey: 'producto_create_form_fields_def_field_temporal',
+  //   type: 'string',
+  //   controlType: 'checkbox'
+  // }
 ];

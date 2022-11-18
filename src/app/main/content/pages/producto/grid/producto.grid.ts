@@ -56,7 +56,7 @@ export const PRODUCTO_GRID_DEF = {
     'precioMatriculadoActivo',
     'enviable',
     'publicado',
-    'temporal'
+    // 'temporal'
   ],
   actions: [
     {
