@@ -8,6 +8,8 @@ import { CAMPO_I18N_DEF } from './i18n/campo.i18n';
 import { CAMPO_NAV_DEF } from './navigation/campo.nav';
 import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
 import { PREFIX_DOMAIN_API } from 'environments/environment';
+import { CAMPO_CREATE_BEHAVIOR } from './form/campo.create.behavior';
+import { CAMPO_UPDATE_BEHAVIOR } from './form/campo.update.behavior';
 
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const CAMPO_DEF: CrudDef = { 
@@ -17,11 +19,13 @@ export const CAMPO_DEF: CrudDef = {
     formsDef: {
         create: {
             fields: CAMPO_CREATE_FORM_FIELDS_DEF,
+            fieldsBehavior: CAMPO_CREATE_BEHAVIOR,
             showSubmitContinue: true
         },
         update: {
             showSubmitContinue: true,
             fields: CAMPO_UPDATE_FORM_FIELDS_DEF,
+            fieldsBehavior: CAMPO_UPDATE_BEHAVIOR
         }
     },
     forms: {

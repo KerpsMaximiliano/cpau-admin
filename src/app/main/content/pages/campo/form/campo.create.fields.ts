@@ -42,6 +42,26 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'minValue',
+    labelKey: 'campo_create_form_fields_def_field_minValue',
+    label: 'Minimo seleccionado',
+    type: 'number',
+    controlType: 'number',
+    value: null,
+    minValue: 0,
+    minValueMessage: 'No puedes ingresar un valor menor a 0'
+  },
+  {
+    key: 'maxValue',
+    labelKey: 'campo_create_form_fields_def_field_maxValue',
+    label: 'Maximo seleccionado',
+    type: 'number',
+    controlType: 'number',
+    value: null,
+    minValue: 0,
+    minValueMessage: 'No puedes ingresar un valor menor a 0'
+  },
+  {
     key: 'value',
     labelKey: 'campo_create_form_fields_def_field_value',
     label: 'Valor',
@@ -88,8 +108,22 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     key: 'dependentValue',
     labelKey: 'campo_create_form_fields_def_field_dependentValue',
     label: 'Valor necesario',
-    type: 'string',
-    controlType: 'textbox'
+    controlType: 'autocomplete-desplegable',
+    options: {
+      elementLabel: 'text',
+      elementValue: 'value',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        idForm: 'idForm',
+        // idFormField: 'dependentField'
+        idFormField: 'dependentFieldId'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'FormFieldOption'
+    }
   },
   {
     key: 'dependentFieldId',

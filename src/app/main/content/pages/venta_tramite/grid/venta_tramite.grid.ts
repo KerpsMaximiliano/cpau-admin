@@ -19,14 +19,17 @@ export const VENTA_TRAMITE_GRID_DEF = {
     {
       columnDef: 'monto',
       columnNameKey: 'venta_tramite_grid_def_column_monto'
+    },
+    {
+      columnDef: 'montoString',
+      columnNameKey: 'venta_tramite_grid_def_column_monto'
     }
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
     'idVenta',
     'idTramite',
     'detalle',
-    'monto'
+    'montoString'
   ]
 };

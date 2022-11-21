@@ -64,6 +64,20 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
     controlType: 'textbox'
   },
   {
+    key: 'email',
+    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email',
+    label: 'Email',
+    type: 'string',
+    controlType: 'textbox'
+  },
+  {
+    key: 'matricula',
+    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula',
+    label: 'Matrícula',
+    type: 'string',
+    controlType: 'textbox'
+  },
+  {
     key: 'fechaCompra',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacompra',
     label: 'Fecha Compra',

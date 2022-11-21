@@ -35,6 +35,9 @@ export class FilterService{
     filter(entityValue, filterValue, filterType, fieldDef){
         entityValue = this.convertValue(entityValue, fieldDef);
         filterValue = this.convertValue(filterValue, fieldDef);
+        if (filterType === FILTER_TYPE.HAS_VALUE) {
+            return this.filterHasValue(entityValue);
+        }
         // Si no hay valores para el filtro entonces no se filtra esto incluye undefined, nulos o longitud
         if (filterValue === null || filterValue === undefined || filterValue.length === 0){
             return true;
@@ -44,9 +47,11 @@ export class FilterService{
             if (filterType !== FILTER_TYPE.LIKE){
                 switch (filterType){
                     case FILTER_TYPE.EQUALS : return this.filterEquals(filterValue, entityValue);
-                    case FILTER_TYPE.NOT_EQUALS : return this.filterNotEquals(filterValue, entityValue);
-                    case FILTER_TYPE.LESS_EQUALS: return this.filterLessEquals(filterValue, entityValue);
+
+					case FILTER_TYPE.NOTEQUALS : return this.filterNotEquals(filterValue, entityValue);                    case FILTER_TYPE.LESS_EQUALS: return this.filterLessEquals(filterValue, entityValue);
                     case FILTER_TYPE.GREATER_EQUALS: return this.filterGreaterEquals(filterValue, entityValue);
+                    case FILTER_TYPE.LESS: return this.filterLess(filterValue, entityValue);
+                    case FILTER_TYPE.GREATER: return this.filterGreater(filterValue, entityValue);
                     default: console.warn('filterType -> ' + filterType + ' not exist...');
                 }
             }else{
@@ -65,16 +70,14 @@ export class FilterService{
         return valueA === valueB;
     }
 
-    private filterNotEquals(valueA: any, valueB: any){
+	private filterNotEquals(valueA: any, valueB: any){
         if (typeof valueA === BOOLEAN || typeof valueB === BOOLEAN){
         return Boolean(valueA) != Boolean(valueB); 
         }else if (typeof valueA === NUMBER || typeof valueB === NUMBER){
         return Number(valueA) != Number(valueB); 
         }
         return valueA != valueB;
-    }
-
-    private filterGreaterEquals(valueA: any, valueB: any){
+    }    private filterGreaterEquals(valueA: any, valueB: any){
         if (valueA._f || valueA._isAMomentObject){
             return valueA.isSameOrAfter(valueB);
         }
@@ -87,6 +90,25 @@ export class FilterService{
             return valueA.isSameOrBefore(valueB);
         }
         return valueA <= valueB;
+    }
+
+    private filterLess(valueA: any, valueB: any){
+        if (valueA._f || valueA._isAMomentObject){
+            return valueA.isBefore(valueB);
+        }
+        return valueA < valueB;
+    }
+
+    private filterGreater(valueA: any, valueB: any){
+        if (valueA._f || valueA._isAMomentObject){
+            return valueA.isAfter(valueB);
+        }
+
+        return valueA > valueB;
+    }
+
+    private filterHasValue(value){
+        return value === null || value === undefined || value.length === 0 ? false : true;
     }
 
     private filterIncludes(valueA: any, valueB: any){
@@ -104,9 +126,10 @@ export class FilterService{
 export const enum FILTER_TYPE {
     LIKE = 'LIKE',
     EQUALS = 'EQUALS',
-    NOT_EQUALS = 'NOT-EQUALS',
+	NOTEQUALS = 'NOTEQUALS',
     LESS_EQUALS = 'LESS-EQUALS',
     LESS = 'LESS',
     GREATER_EQUALS = 'GREATER-EQUALS',
-    GREATER = 'GREATER'
+    GREATER = 'GREATER',
+    HAS_VALUE = 'HAS-VALUE',
 }
