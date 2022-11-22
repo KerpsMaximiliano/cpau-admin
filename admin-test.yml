@@ -33,7 +33,7 @@ jobs:
         command: custom
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
-        customCommand: 'run build'
+        customCommand: 'run build-test'
   - task: AzureStaticWebApp@0
     inputs:
       azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_HILL_01BA8B20F)
