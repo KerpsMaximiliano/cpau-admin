@@ -11,7 +11,7 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   variables:
-  - group: Azure-Static-Web-Apps-blue-hill-01ba8b20f-variable-group
+  - group: Azure-Static-Web-Apps-black-mushroom-05da17c0f-variable-group
   steps:
   - checkout: self
     submodules: true
