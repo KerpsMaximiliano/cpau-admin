@@ -65,6 +65,13 @@ export const PRODUCTO_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'checkbox'
   },
+  {
+    key: 'notificaciones',
+    labelKey: 'producto_create_form_fields_def_field_notificaciones',
+    controlType: 'textbox',
+    maxLength: 200,
+    required: true
+  },
   // {
   //   key: 'temporal',
   //   labelKey: 'producto_create_form_fields_def_field_temporal',
