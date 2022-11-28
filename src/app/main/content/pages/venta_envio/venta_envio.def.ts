@@ -28,5 +28,6 @@ export const VENTA_ENVIO_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '400px'
-    }   
+    },
+    backButton: true
 };

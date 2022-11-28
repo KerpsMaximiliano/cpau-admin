@@ -27,7 +27,7 @@ export const VENTA_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'Venta'
     },
     dialogConfig: {
-        width: '400px'
+        width: '500px'
     },
     filterInMemory: false,
     serverPagination: true,

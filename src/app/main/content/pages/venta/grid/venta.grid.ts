@@ -1,4 +1,5 @@
 import { FILTER_TYPE } from "app/modules/fwk/core/service/filter-service/filter.service";
+import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const VENTA_GRID_DEF = {
   columnsDef: [
@@ -61,38 +62,53 @@ export const VENTA_GRID_DEF = {
     {
       columnDef: 'fechaCompraString',
       columnNameKey: 'venta_grid_def_column_fechacomprastring'
+    },
+    {
+      columnDef: 'nombreEnvio',
+      columnNameKey: 'venta_grid_def_column_nombreenvio'
+    },
+    {
+      columnDef: 'domicilioEnvio',
+      columnNameKey: 'venta_grid_def_column_domicilioenvio'
+    },
+    {
+      columnDef: 'email',
+      columnNameKey: 'Email'
+    },
+    {
+      columnDef: 'matricula',
+      columnNameKey: 'Matrícula'
+    },
+    {
+      columnDef: 'matriculaTipo',
+      columnNameKey: 'Tipo'
+    },
+    {
+      columnDef: 'puedeGenerarEnvio',
+      columnNameKey: 'puedeGenerarEnvio'
     }
   ],
   sortAllColumns: true,
   displayedColumns: [
     'id',
     'tipoString',
+    'fechaCompraString',
     'montoTotalString',
     'tarjeta',
     'cuotas',
     'estadoPagoString',
     'estadoPagoEnvioString',
     'username',
-    'fechaCompraString'
+    'email',
+    'matricula',
+    'matriculaTipo'
   ],
   actions : [
-    {
-      actionNameKey: 'venta_grid_def_column_accion_venta_envio',
-      actionType: 'redirect',
-      redirect: {
-        url: '/VentaEnvio',
-        querystring: {
-          ventaId : 'id',
-          parentTitle: 'id'
-        }
-      },
-      icon: 'local_shipping'
-    },
     {
       actionNameKey: 'venta_grid_def_column_accion_venta_derecho_anual',
       actionType: 'redirect',
       redirect: {
-        url: '/VentaDetalleDerechoAnual',
+        url: '/VentaDerechoAnual',
         querystring: {
           ventaId : 'id',
           parentTitle: 'id'
@@ -124,8 +140,100 @@ export const VENTA_GRID_DEF = {
       },
       icon: 'business_center'
     },
+    {
+      icon: 'local_shipping',
+      actionNameKey: 'venta_grid_def_column_accion_venta_generarenvio',
+      formDef: {
+        showSubmitContinue: false,
+        fields:[
+          {
+            key: 'nombreEnvio',
+            labelKey: 'venta_grid_def_column_nombreenvio',
+            label: 'Nombre',
+            controlType: 'textbox',
+            disabled: true
+          }, 
+          {
+            key: 'domicilioEnvio',
+            labelKey: 'venta_grid_def_column_domicilioenvio',
+            label: 'Domicilio',
+            controlType: 'textbox',
+            disabled: true
+          },
+          {
+            key: 'monto',
+            required: true,
+            labelKey: 'venta_grid_def_column_monto',
+            label: 'Monto',
+            controlType: 'number'
+          },
+          {
+            key: 'medioPago',
+            labelKey: 'venta_grid_def_column_medioPago',
+            label: 'Medio de Pago',
+            type: 'select',
+            controlType: 'select',
+            required: true,
+            options: {
+              handlerSourceData: false,
+              elementLabel: 'nombre',
+              elementValue: 'id',
+              fromData: [{id: 15, nombre: 'Mastercard'},
+                         {id: 6, nombre: 'American Express'},
+                         {id: 1, nombre: 'Visa'},
+                         {id: 106, nombre: 'Maestro'},
+                         {id: 31, nombre: 'Electrón'},
+                         {id: -1, nombre: 'Otros (No se genera cupón de pago y se anula el envío dentro del sistema)'}
+                        ]
+              }
+          }, 
+          {
+            key: 'id',
+            labelKey: 'ID',
+            label: 'Id',
+            controlType: 'hidden'
+          }
+        ]
+      },
+      ws: {
+        key: 'venta_grid_def_button_action_generacinoenvio',
+        url: PREFIX_DOMAIN_API + 'VentaEnvio',
+        method: 'POST'
+      }
+    },
+    {
+      icon: 'contact_mail',
+      actionNameKey: 'venta_grid_def_column_accion_venta_datosenvio',
+      formDef: {
+        showSubmitContinue: false,
+        fields:[
+          {
+            key: 'nombreEnvio',
+            labelKey: 'venta_grid_def_column_nombreenvio',
+            label: 'Nombre',
+            controlType: 'textbox',
+            disabled: true
+          }, 
+          {
+            key: 'domicilioEnvio',
+            labelKey: 'venta_grid_def_column_domicilioenvio',
+            label: 'Domicilio',
+            controlType: 'textbox',
+            disabled: true
+          }
+        ]
+      }
+    },
   ],
   displayedActionsCondition: [
+    {
+      key: 'venta_grid_def_column_accion_venta_envio',
+      expression: {
+                    key: 'estadoPagoEnvio',
+                    value: 'NOAPLICA',
+                    compare: FILTER_TYPE.NOTEQUALS
+                  }
+    },
     {
       key: 'venta_grid_def_column_accion_venta_productos',
       expression: {
@@ -148,6 +256,22 @@ export const VENTA_GRID_DEF = {
                     key: 'tipo',
                     value: 'TRAMITE',
                     compare: FILTER_TYPE.LIKE
+                  }
+    },
+    {
+      key: 'venta_grid_def_column_accion_venta_generarenvio',
+      expression: {
+                    key: 'puedeGenerarEnvio',
+                    value: true,
+                    compare: FILTER_TYPE.EQUALS
+                  }
+    },
+    {
+      key: 'venta_grid_def_column_accion_venta_datosenvio',
+      expression: {
+                    key: 'showDatosEnvios',
+                    value: true,
+                    compare: FILTER_TYPE.EQUALS
                   }
     }
   ]

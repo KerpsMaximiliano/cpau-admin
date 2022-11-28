@@ -9,14 +9,21 @@ export const VENTA_DERECHO_ANUAL_GRID_DEF = {
       columnNameKey: 'venta_derecho_anual_grid_def_column_idventa'
     },
     {
-      columnDef: 'idMatriculadoCuentaCorriente',
-      columnNameKey: 'venta_derecho_anual_grid_def_column_idmatriculadocuentacorriente'
+      columnDef: 'montoString',
+      columnNameKey: 'venta_derecho_anual_grid_def_column_monto'
+    },
+    {
+      columnDef: 'monto',
+      columnNameKey: 'venta_derecho_anual_grid_def_column_monto'
+    },
+    {
+      columnDef: 'periodo',
+      columnNameKey: 'venta_derecho_anual_grid_def_column_periodo'
     }
   ],
   sortAllColumns: true,
   displayedColumns: [
-    'id',
-    'idVenta',
-    'idMatriculadoCuentaCorriente'
+    'periodo',
+    'montoString'
   ]
 };

@@ -60,9 +60,16 @@ export const PRODUCTO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
-    key: 'temporal',
-    labelKey: 'producto_create_form_fields_def_field_temporal',
-    type: 'string',
-    controlType: 'checkbox'
-  }
+    key: 'notificaciones',
+    labelKey: 'producto_create_form_fields_def_field_notificaciones',
+    controlType: 'textbox',
+    maxLength: 200,
+    required: true
+  },
+  // {
+  //   key: 'temporal',
+  //   labelKey: 'producto_create_form_fields_def_field_temporal',
+  //   type: 'string',
+  //   controlType: 'checkbox'
+  // }
 ];

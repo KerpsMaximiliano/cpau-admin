@@ -51,7 +51,7 @@ export const PERFIL_EMAIL_GRID_DEF = {
       expression: {
         key: 'tipoEmail',
         value: 'Particular',
-        compare: FILTER_TYPE.NOT_EQUALS
+        compare: FILTER_TYPE.NOTEQUALS
       }
     }
   ]

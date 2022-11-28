@@ -5,8 +5,8 @@ export const VENTA_TRAMITE_I18N_DEF = {
     page_title: 'VentaTramite',
     venta_tramite_nav_def: 'VentaTramite',
     venta_tramite_create_form_fields_def_field_id: 'Id',
-    venta_tramite_create_form_fields_def_field_idventa: 'idVenta',
-    venta_tramite_create_form_fields_def_field_idtramite: 'idTramite',
+    venta_tramite_create_form_fields_def_field_idventa: 'Id Operación',
+    venta_tramite_create_form_fields_def_field_idtramite: 'Trámite Nro',
     venta_tramite_create_form_fields_def_field_detalle: 'Detalle',
     venta_tramite_create_form_fields_def_field_monto: 'Monto',
     venta_tramite_update_form_fields_def_field_id: 'Id',
@@ -25,8 +25,8 @@ export const VENTA_TRAMITE_I18N_DEF = {
     venta_tramite_filter_form_fields_def_field_detalle: 'Detalle',
     venta_tramite_filter_form_fields_def_field_monto: 'Monto',
     venta_tramite_grid_def_column_id: 'Id',
-    venta_tramite_grid_def_column_idventa: 'idVenta',
-    venta_tramite_grid_def_column_idtramite: 'idTramite',
+    venta_tramite_grid_def_column_idventa: 'Id Operación',
+    venta_tramite_grid_def_column_idtramite: 'Trámite Nro.',
     venta_tramite_grid_def_column_detalle: 'Detalle',
     venta_tramite_grid_def_column_monto: 'Monto'
   }

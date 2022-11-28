@@ -14,6 +14,7 @@ export const CATEGORIA_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
+  deleteAction: true,
   displayedColumns: [
     'nombre',
     'descripcion'
