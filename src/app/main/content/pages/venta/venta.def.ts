@@ -29,6 +29,9 @@ export const VENTA_DEF: CrudDef = {
     dialogConfig: {
         width: '500px'
     },
+    exportCsv: {
+        csvExportFileName: 'Ventas.csv'
+    },
     filterInMemory: false,
     serverPagination: true,
     pagination: {
