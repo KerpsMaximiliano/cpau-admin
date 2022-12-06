@@ -16,9 +16,9 @@ export const VENTA_DERECHO_ANUAL_DEF: CrudDef = {
     grid: VENTA_DERECHO_ANUAL_GRID_DEF, // Si el crud tiene grilla, entonces se agrega su definicion.
     forms: {
         filter: VENTA_DERECHO_ANUAL_FILTER_FORM_FIELDS_DEF, // Si el crud tiene campos de busqueda, entonces se agrega su definicion.
-        create: VENTA_DERECHO_ANUAL_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
-        update: VENTA_DERECHO_ANUAL_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
-        read:  VENTA_DERECHO_ANUAL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
+        // create: VENTA_DERECHO_ANUAL_CREATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de alta, entonces se agrega su definicion.
+        // update: VENTA_DERECHO_ANUAL_UPDATE_FORM_FIELDS_DEF, // Si el crud tiene formulario de modificacion, entonces se agrega su definicion.
+        // read:  VENTA_DERECHO_ANUAL_READ_FORM_FIELDS_DEF // Si existe un formulario de edicion no exite uno de solo lectura
     },
     navigation: VENTA_DERECHO_ANUAL_NAV_DEF,
     security: VENTA_DERECHO_ANUAL_SECURITY_DEF,
