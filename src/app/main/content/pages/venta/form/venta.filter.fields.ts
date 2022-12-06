@@ -63,13 +63,13 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
-  {
-    key: 'email',
-    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email',
-    label: 'Email',
-    type: 'string',
-    controlType: 'textbox'
-  },
+  // {
+  //   key: 'email',
+  //   labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email',
+  //   label: 'Email',
+  //   type: 'string',
+  //   controlType: 'textbox'
+  // },
   {
     key: 'matricula',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula',
@@ -78,10 +78,15 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
     controlType: 'textbox'
   },
   {
-    key: 'fechaCompra',
-    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacompra',
-    label: 'Fecha Compra',
-    type: 'string',
-    controlType: 'textbox'
+    key: 'fechaDesde',
+    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacompradesde',
+    label: 'Fecha Desde',
+    controlType: 'textbox',
+  },
+  {
+    key: 'fechaHasta',
+    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacomprahasta',
+    label: 'Fecha Hasta',
+    controlType: 'textbox',
   }
 ];

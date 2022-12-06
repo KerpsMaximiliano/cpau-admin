@@ -61,6 +61,8 @@ export const VENTA_I18N_DEF = {
     venta_grid_def_column_medioPago: 'Medio de Pago',
     venta_grid_def_column_accion_venta_datosenvio: 'Datos de Envío',
     VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email: 'Email',
-    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula: 'Matrícula'
+    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula: 'Matrícula',
+    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacompradesde : 'Fecha Desde (dd/mm/aaaa)',
+    VENTA_FILTER_FORM_FIELDS_DEF_FIELD_fechacomprahasta : 'Fecha Hasta (dd/mm/aaaa)'
   }
 };
