@@ -1,4 +1,4 @@
-import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
+import { PREFIX_DOMAIN_API } from "environments/environment";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 import { CONTENIDO_HISTORY_DEF } from "../../contenidoHistory/contenidoHistory.def";
@@ -177,7 +177,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
         externalUrl: true,
         openTab: true,
         idUrl: true,
-        url: PREFIX_INSTITUCIONAL + '?redirectToPage=/notaPreview',
+        url: '/notaPreview',
         querystring: {
           id : 'id'
         }
