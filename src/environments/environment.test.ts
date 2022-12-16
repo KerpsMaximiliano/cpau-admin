@@ -1,4 +1,5 @@
 export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
+export const PREFIX_INSTITUCIONAL = 'https://test.cpau.org/Content/institucional';
 
 export const environment = {
     localAuth: true,
@@ -12,7 +13,7 @@ export const environment = {
 
     /* Config General URl*/
     URL_ROOT: '',
-    URL_LOGIN: '',
+    URL_LOGIN: PREFIX_INSTITUCIONAL,
     // Business
 
     URL_SECCIONES: 'seccion',
