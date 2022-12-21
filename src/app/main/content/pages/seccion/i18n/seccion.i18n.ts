@@ -67,6 +67,10 @@ export const SECCION_I18N_DEF = {
     SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_title: 'Título',
     seccion_grid_def_button_action_politicas: 'Políticas',
     section_content_grid_def_button_action_delete: 'Eliminar',
-    SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_filterDate: 'Filtro de fechas por defecto'
+    SECCION_UPDATE_FORM_FIELDS_DEF_FIELD_filterDate: 'Filtro de fechas por defecto',
+    seccion_grid_def_column_createDate: 'Fecha Creación',
+    seccion_grid_def_column_updateDate: 'Fecha Modificación',
+    seccion_grid_def_column_createUser: 'Usuario Creación',
+    seccion_grid_def_column_updateUser: 'Usuario Modificación'
   }
 };

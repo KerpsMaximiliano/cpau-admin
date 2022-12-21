@@ -61,6 +61,7 @@ import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
 import { VENTA_DEF } from './venta/venta.def';
 import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
 import { CONTENIDOS_HISTORY_DEF } from './revistanotas/contenidos_history/contenidos_history.def';
+import { SECCIONES_HISTORY_DEF } from './secciones_history/secciones_history.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -354,6 +355,11 @@ export const ROUTES: Routes = [
   },
   {
     path: CONTENIDOS_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: SECCIONES_HISTORY_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
   }

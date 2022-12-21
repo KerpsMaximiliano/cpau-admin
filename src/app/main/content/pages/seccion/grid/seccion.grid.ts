@@ -3,6 +3,7 @@ import { identifierModuleUrl } from "@angular/compiler";
 import { SECCION_CREATE_FORM_FIELDS_DEF } from "../form/seccion.create.fields";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
+import { SECCIONES_HISTORY_NAV_DEF } from "../../secciones_history/navigation/secciones_history.nav";
 
 export const SECCION_GRID_DEF : GridDef = {
   columnsDef: [
@@ -70,14 +71,35 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       columnDef: 'notdeleteable',
       columnNameKey: 'seccion_grid_def_column_policy'
+    },
+    {
+      columnDef: 'createdOnUtcString',
+      columnNameKey: 'seccion_grid_def_column_createDate'
+    },
+    {
+      columnDef: 'updatedOnUtcString',
+      columnNameKey: 'seccion_grid_def_column_updateDate'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'seccion_grid_def_column_createUser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'seccion_grid_def_column_updateUser'
     }
+
   ],
   sortAllColumns: true,
   deleteAction: false,
   displayedColumns: [
     'name',
     'seName',
-    'published'
+    'published',
+    'createUser',
+    'createdOnUtcString',
+    'lastEditUser',
+    'updatedOnUtcString',
   ],
   actions: [
     {
@@ -217,9 +239,21 @@ export const SECCION_GRID_DEF : GridDef = {
       },
       ws: {
         key: 'seccion_grid_def_button_action_politicas',
-        url: PREFIX_DOMAIN_API + 'Section/UpdateByProps',
+        url: PREFIX_DOMAIN_API + 'Section/UpdatePolicy',
         method: 'PUT'
       }
+    },
+    {
+      actionNameKey: 'Versiones Anteriores',
+      actionType: 'redirect',
+      redirect: {
+        url: SECCIONES_HISTORY_NAV_DEF.url,
+        querystring: {
+          sectionsId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'manage_history'
     }
     
   ],
