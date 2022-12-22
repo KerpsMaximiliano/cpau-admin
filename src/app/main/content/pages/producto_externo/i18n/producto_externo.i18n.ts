@@ -50,6 +50,10 @@ export const PRODUCTO_EXTERNO_I18N_DEF = {
     producto_externo_grid_def_button_action_publicar: 'Publicar',
     producto_externo_grid_def_button_action_despublicar: 'Despublicar',
     PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_urlHeader: 'URL Header',
-    PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader: 'Link Target Header'
+    PRODUCTO_EXTERNO_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader: 'Link Target Header',
+    producto_externo_grid_def_column_CreateDateString: 'Fecha Creación',
+    producto_externo_grid_def_column_LastEditDate: 'Fecha Modificación',
+    producto_externo_grid_def_column_CreateUser: 'Usuario Creación',
+    producto_externo_grid_def_column_LastEditUser: 'Usuario Modificación'
   }
 };

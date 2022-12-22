@@ -1,4 +1,5 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
+import { PRODUCTO_EXTERNO_HISTORY_NAV_DEF } from "../../producto_externo_history/navigation/producto_externo_history.nav";
 
 export const PRODUCTO_EXTERNO_GRID_DEF = {
   columnsDef: [
@@ -42,6 +43,22 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
     {
       columnDef: 'notActive',
       columnNameKey: 'producto_externo_grid_def_column_notactive'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'producto_externo_grid_def_column_CreateUser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'producto_externo_grid_def_column_LastEditUser'
+    },
+    {
+      columnDef: 'createDateString',
+      columnNameKey: 'producto_externo_grid_def_column_CreateDateString'
+    },
+    {
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'producto_externo_grid_def_column_LastEditDate'
     }
   ],
   sortAllColumns: true,
@@ -49,7 +66,11 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
   displayedColumns: [
     'title',
     'orden',
-    'active'
+    'active',
+    'createUser',
+    'createDateString',
+    'lastEditUser',
+    'lastEditDateString'
  ],
  actions: [
   {
@@ -72,6 +93,18 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
       method: 'PUT'
     }
   },
+  {
+    actionNameKey: 'Versiones Anteriores',
+    actionType: 'redirect',
+    redirect: {
+      url: PRODUCTO_EXTERNO_HISTORY_NAV_DEF.url,
+      querystring: {
+        externalProductId : 'id',
+        parentTitle: 'name'
+      }
+    },
+    icon: 'manage_history'
+  }
  ],
  displayedActionsCondition: [
   {
