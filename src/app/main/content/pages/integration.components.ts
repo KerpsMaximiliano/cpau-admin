@@ -61,6 +61,7 @@ import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
 import { CONTENIDOS_HISTORY_DEF } from './revistanotas/contenidos_history/contenidos_history.def';
 import { SECCIONES_HISTORY_DEF } from './secciones_history/secciones_history.def';
 import { PRODUCTO_EXTERNO_HISTORY_DEF } from './producto_externo_history/producto_externo_history.def';
+import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/noticia_carrousel_history.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -122,6 +123,7 @@ export const COMPONENTS: ComponentDef[] = [
   CONTENIDO_HISTORY_DEF,
   CONTENIDOS_HISTORY_DEF,
   SECCIONES_HISTORY_DEF,
-  PRODUCTO_EXTERNO_HISTORY_DEF
+  PRODUCTO_EXTERNO_HISTORY_DEF,
+  NOTICIA_CARROUSEL_HISTORY_DEF
 ];
 
