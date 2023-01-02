@@ -5,11 +5,41 @@
                 width: max-content;
             }
         } */
+        #lastEditDateStringHeader,
+        #lastEditDateStringCell{
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+            text-align: center;
+        }
 
+        #createDateStringHeader,
+        #createDateStringCell{
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+            text-align: center;
+        }
+
+        #lastEditUserHeader,
+        #lastEditUserCell{
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+            text-align: center;
+        }
+
+        #createUserHeader,
+        #createUserCell{
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+            text-align: center;
+        }
         .action-cell {
-            width: 40px !important;
-            min-width: 40px !important;
-            max-width: 40px !important;
+            width: 90px !important;
+            min-width: 90px !important;
+            max-width: 90px !important;
         }
 
         

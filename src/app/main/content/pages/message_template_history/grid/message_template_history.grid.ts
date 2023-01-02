@@ -19,30 +19,36 @@ export const MESSAGE_TEMPLATE_HISTORY_GRID_DEF = {
       columnNameKey: 'message_template_history_grid_def_column_bccemailaddresses'
     },
     {
-      columnDef: 'isActive',
-      columnNameKey: 'message_template_history_grid_def_column_isactive'
+      columnDef: 'subject',
+      columnNameKey: 'message_template_history_grid_def_column_subject'
     },
+    
     {
       columnDef: 'body',
       columnNameKey: 'message_template_history_grid_def_column_body'
+    },
+    {
+      columnDef: 'isActive',
+      columnNameKey: 'message_template_history_grid_def_column_isactive'
     },
     {
       columnDef: 'EmailAccountId',
       columnNameKey: 'message_template_history_grid_def_column_emailaccountid'
     },
     {
-      columnDef: 'body',
-      columnNameKey: 'message_template_history_grid_def_column_lastEditUser'
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'message_template_history_grid_def_column_lastEditDate'
     },
     {
-      columnDef: 'EmailAccountId',
-      columnNameKey: 'message_template_history_grid_def_column_lastEditDate'
-    }
+      columnDef: 'lastEditUser',
+      columnNameKey: 'message_template_history_grid_def_column_lastEditUser'
+    },
+    
   ],
   sortAllColumns: true,
   displayedColumns: [
     'lastEditUser',
-    'lastEditDate'
+    'lastEditDateString'
   ],
   actions : [
     {

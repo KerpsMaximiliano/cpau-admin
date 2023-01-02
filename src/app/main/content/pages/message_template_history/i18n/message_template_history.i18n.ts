@@ -40,7 +40,7 @@ export const MESSAGE_TEMPLATE_HISTORY_I18N_DEF = {
     message_template_history_grid_def_column_body: 'Body',
     message_template_history_grid_def_column_emailaccountid: 'email account',
     message_template_history_grid_def_column_restoreversion:'Restaurar Versión',
-    message_template_history_grid_def_column_lastEditDate:'Usuario Modificación',
-    message_template_history_grid_def_column_lastEditUser: 'Fecha Modificación'
+    message_template_history_grid_def_column_lastEditDate:'Fecha Modificación',
+    message_template_history_grid_def_column_lastEditUser: 'Usuario Modificación'
   }
 };

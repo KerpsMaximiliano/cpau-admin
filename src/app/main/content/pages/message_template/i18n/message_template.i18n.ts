@@ -38,6 +38,10 @@ export const MESSAGE_TEMPLATE_I18N_DEF = {
     message_template_grid_def_column_subject: 'Subject',
     message_template_grid_def_column_body: 'Body',
     message_template_grid_def_column_isactive: 'Is Active',
-    message_template_grid_def_column_emailaccountid: 'EmailAccountId'
+    message_template_grid_def_column_emailaccountid: 'EmailAccountId',
+    message_template_grid_def_column_createuser: 'Usuario Creación',
+    message_template_grid_def_column_LastEditUser: 'Usuario Modificación',
+    message_template_grid_def_column_CreateDateString: 'Fecha Creación',
+    message_template_grid_def_column_LastEditDate: 'Fecha Modificación'
   }
 };
