@@ -64,6 +64,7 @@ import { PRODUCTO_EXTERNO_HISTORY_DEF } from './producto_externo_history/product
 import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/noticia_carrousel_history.def';
 import { MESSAGE_TEMPLATE_HISTORY_DEF } from './message_template_history/message_template_history.def';
 import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.def';
+import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -128,6 +129,7 @@ export const COMPONENTS: ComponentDef[] = [
   PRODUCTO_EXTERNO_HISTORY_DEF,
   NOTICIA_CARROUSEL_HISTORY_DEF,
   MESSAGE_TEMPLATE_HISTORY_DEF,
-  MODAL_HOME_HISTORY_DEF
+  MODAL_HOME_HISTORY_DEF,
+  FORMULARIO_HISTORY_DEF,
 ];
 
