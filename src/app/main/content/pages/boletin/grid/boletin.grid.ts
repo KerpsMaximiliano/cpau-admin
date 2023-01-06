@@ -1,3 +1,5 @@
+import { PREFIX_INSTITUCIONAL } from "environments/environment";
+
 export const BOLETIN_GRID_DEF = {
   columnsDef: [
     {
@@ -74,7 +76,7 @@ export const BOLETIN_GRID_DEF = {
         openTab: true,
         externalUrl: true,
         idUrl: true,
-        url: '/boletin',
+        url: PREFIX_INSTITUCIONAL + '/boletin',
         querystring: {
           id : 'id'
         }
