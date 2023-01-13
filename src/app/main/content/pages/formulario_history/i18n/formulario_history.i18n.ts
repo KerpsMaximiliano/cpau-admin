@@ -112,7 +112,8 @@ export const FORMULARIO_HISTORY_I18N_DEF = {
     formulario_history_grid_def_column_info: 'Info General',
     formulario_history_grid_def_column_receipt: 'Comprobante',
     formulario_history_grid_def_column_finalMessge: 'Mensaje Final',
-    formulario_history_grid_def_column_descripcion: 'Descripción'
+    formulario_history_grid_def_column_descripcion: 'Descripción',
+    formulario_history_grid_def_column_restoreversion: 'Restaurar Versión'
 
     
   }

@@ -86,6 +86,18 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       columnNameKey: 'formulario_grid_def_column_createdate'
     },
     {
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'formulario_grid_def_column_lastEditDateString'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'formulario_grid_def_column_createUser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'formulario_grid_def_column_lastEditUser'
+    },
+    {
       columnDef: 'validateUser',
       columnNameKey: 'formulario_grid_def_column_validateuser'
     },
@@ -158,7 +170,10 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     'inscriptos',
     'quota',
     'isCurso',
-    'dateString'
+    'dateString',
+    'lastEditUser',
+    'lastEditDateString'
+
   ],
   actions: [
     {
@@ -183,7 +198,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'formulario_grid_def_button_action_finalMessage',
-        url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateFinalMessage/',
         method: 'PUT'
       }
     },
@@ -209,7 +224,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'formulario_grid_def_button_action_receipt',
-        url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateReceipt/',
         method: 'PUT'
       }
     },

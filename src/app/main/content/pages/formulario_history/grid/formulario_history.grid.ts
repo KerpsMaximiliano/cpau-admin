@@ -175,33 +175,33 @@ export const FORMULARIO_HISTORY_GRID_DEF = {
         showSubmitContinue: false,
         fields:[
           {
-            key: 'generalSettings',
+            key: 'checkGeneralSettings',
             label: 'Restaurar Info',
             controlType: 'checkbox'
           },
           {
-            key: 'description',
+            key: 'checkDescription',
             label: 'Restaurar Descripción',
             controlType: 'checkbox'
           },  
           {
-            key: 'finalMessage',
+            key: 'checkFinalMessage',
             label: 'Restaurar Mensaje Final',
             controlType: 'checkbox'
           }, 
           {
-            key: 'resumen',
+            key: 'checkResumen',
             labelKey: 'CONTENIDO_HISTORY_FORM_FIELDS_RESUMEN',
             label: 'Restaurar Resumen',
             controlType: 'checkbox'
           }, 
           {
-            key: 'receipt',
+            key: 'checkReceipt',
             label: 'Restaurar Comprobante',
             controlType: 'checkbox'
           }, 
           {
-            key: 'fields',
+            key: 'checkFields',
             label: 'Restaurar Campos',
             controlType: 'checkbox'
           }, 
