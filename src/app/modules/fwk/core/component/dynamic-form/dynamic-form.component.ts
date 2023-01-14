@@ -3,7 +3,7 @@ import { OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Injector } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import {defaultFormat as _rollupMoment} from 'moment';
@@ -13,7 +13,8 @@ import { FormService } from '../../service/dynamic-form/form.service';
 import { AbstractComponent } from '../abstract-component.component';
 import { DynamicField, CONTROL_TYPE } from '../../model/dynamic-form/dynamic-field';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
-import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS, MatError } from '@angular/material';
+import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { MatError } from '@angular/material/form-field';
 import { MY_FORMATS } from '../../service/dynamic-form/form.validator.service';
 import { GenericHttpService } from '../../service/generic-http-service/generic-http.service';
 import { ApiAutocompleteConfiguration } from '../autocomplete/autocomplete.interface';
@@ -73,7 +74,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   onFieldsChanges = new EventEmitter(true);
   initialized: boolean;
   @ViewChildren(MatError) matErrors: QueryList<MatError>;
-  @ViewChild('formDirective') private formDirective: NgForm;
+  @ViewChild('formDirective',{static: false}) private formDirective: NgForm;
   constructor(public injector: Injector,
     private formService: FormService,
     private genericHttpService: GenericHttpService,

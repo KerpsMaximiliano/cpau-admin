@@ -1,9 +1,8 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  of } from 'rxjs';
 
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { tap } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
 import { Entity } from '../../model/entity';
 import { HttpService } from '../http-service/http.service';
 import { FormService } from '../dynamic-form/form.service';

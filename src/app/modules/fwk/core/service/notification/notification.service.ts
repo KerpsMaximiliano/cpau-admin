@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
-import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { OnInit } from '@angular/core';
 import { Injector } from '@angular/core';
 import { BaseService } from '../base-service/base.service';
 import { I18nService } from '../i18n-service/i18n.service';

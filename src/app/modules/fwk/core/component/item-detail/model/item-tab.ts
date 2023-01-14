@@ -1,5 +1,5 @@
 
-import { FormGroup } from '@angular/forms/src/model';
+import { FormGroup } from '@angular/forms';
 import { MatTab } from '@angular/material/tabs/typings/tab';
 import { DynamicField } from '../../../model/dynamic-form/dynamic-field';
 

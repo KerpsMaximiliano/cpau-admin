@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostBinding, HostListener, Input, OnDestroy, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { animate, AnimationBuilder, AnimationPlayer, style } from '@angular/animations';
-import { ObservableMedia } from '@angular/flex-layout';
-import { Subscription } from 'rxjs/Subscription';
+import { MediaObserver } from '@angular/flex-layout';
+import { Subscription } from 'rxjs';
 
 import { FuseSidebarService } from './sidebar.service';
 import { FuseMatchMediaService } from '@fuse/services/match-media.service';
@@ -119,7 +119,7 @@ export class FuseSidebarComponent implements OnInit, OnDestroy
         private renderer: Renderer2,
         private elementRef: ElementRef,
         private animationBuilder: AnimationBuilder,
-        private observableMedia: ObservableMedia,
+        private observableMedia: MediaObserver,
         private fuseConfigService: FuseConfigService,
         private fuseSidebarService: FuseSidebarService,
         private fuseMatchMediaService: FuseMatchMediaService

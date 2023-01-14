@@ -8,7 +8,7 @@ import {
   delay,
   filter
 } from "rxjs/operators";
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { element } from 'protractor';
 
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {

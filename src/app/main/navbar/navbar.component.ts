@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { FusePerfectScrollbarDirective } from '@fuse/directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
@@ -26,7 +26,7 @@ export class FuseNavbarComponent extends AbstractComponent implements OnDestroy
     onConfigChanged: Subscription;
     fuseSettings: any;
 
-    @ViewChild(FusePerfectScrollbarDirective) set directive(theDirective: FusePerfectScrollbarDirective)
+    @ViewChild(FusePerfectScrollbarDirective,{static: false}) set directive(theDirective: FusePerfectScrollbarDirective)
     {
         if ( !theDirective )
         {

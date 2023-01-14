@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Directive } from '@angular/core';
 import { Injector } from '@angular/core';
 
 import { FormGroup } from '@angular/forms';
@@ -6,6 +6,7 @@ import { Input } from '@angular/core';
 import { FormService } from '../../../service/dynamic-form/form.service';
 import { DynamicField } from '../../../model/dynamic-form/dynamic-field';
 
+@Directive()
 export abstract class DynamicFieldFormComponent {
 
   @Input()

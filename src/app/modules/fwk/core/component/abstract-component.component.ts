@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
+import { Component, OnInit, ViewChild, Directive } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { FormGroup } from '@angular/forms';
-import { OnDestroy, AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Subscription } from 'rxjs/Subscription';
+import { OnDestroy, AfterViewInit } from '@angular/core';
+import { Subscription ,  Observable } from 'rxjs';
 import { Injector } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { ErrorHandler } from '@angular/core/src/error_handler';
+import { ErrorHandler } from '@angular/core';
 import { I18nService } from '../service/i18n-service/i18n.service';
 
 import { I18n } from '../model/i18n';
@@ -17,6 +18,7 @@ import { Router } from '@angular/router';
 import { ComponentDefService } from '../service/component-def-service/component-def.service';
 
 
+@Directive()
 export abstract class AbstractComponent implements OnInit{
   i18nService: I18nService;
   configService: FuseConfigService;

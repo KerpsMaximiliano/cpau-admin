@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Injector } from '@angular/core';
-import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { OnInit } from '@angular/core';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { MessageService } from '../message/message.service';
 import { FormDef } from '../../model/form-def';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { WsDef } from '../../model/ws-def';
 import { I18n } from '../../model/i18n';
 import { BasicModalComponent } from '../../component/crud/basic-modal/basic-modal.component';

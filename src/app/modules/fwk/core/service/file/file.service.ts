@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { I18n } from '../../model/i18n';
 import { ActionDef, ACTION_TYPES } from '../../model/component-def/action-def';
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  of } from 'rxjs';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { HTTP_METHODS } from '../../model/ws-def';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
-import { of } from 'rxjs/observable/of';
 import { constants } from 'fs';
 export const LOGIN_FORM_USERDATA = 'LOGIN_FORM_USERDATA';
 export const I18N_DATA = 'I18N_DATA';

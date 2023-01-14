@@ -4,7 +4,10 @@ import { RouterModule } from '@angular/router';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { FuseContentComponent } from 'app/main/content/content.component';
-import { MatCardModule, MatDividerModule, MatProgressBarModule, MatSidenavModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { FuseThemeOptionsModule, FuseNavigationModule, FuseSearchBarModule, FuseShortcutsModule, FuseSidebarModule } from '@fuse/components';
 import { FuseFooterModule } from '../footer/footer.module';
 import { FuseNavbarModule } from '../navbar/navbar.module';

@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { Injector } from '@angular/core';
 
-import { MatSelectionList } from '@angular/material';
+import { MatSelectionList } from '@angular/material/list';
 import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
@@ -32,8 +32,8 @@ export class PickListComponent extends AbstractComponent {
   _toData = [];
   @Output() onChangeControl = new EventEmitter(true);
 
-  @ViewChild('from') from: MatSelectionList;
-  @ViewChild('to') to: MatSelectionList;
+  @ViewChild('from', { static: true }) from: MatSelectionList;
+  @ViewChild('to', { static: true }) to: MatSelectionList;
 
   constructor(injector: Injector) {
     super(injector);

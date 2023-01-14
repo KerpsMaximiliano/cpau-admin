@@ -36,7 +36,7 @@ export const OPCION_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'position',
     labelKey: 'opcion_create_form_fields_def_field_position',
-    label: 'PosiciÃ³n',
+    label: 'Posición',
     controlType: 'number',
     required: true
   }

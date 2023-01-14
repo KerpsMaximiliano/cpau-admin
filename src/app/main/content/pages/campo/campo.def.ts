@@ -10,7 +10,6 @@ import { CrudDef } from 'app/modules/fwk/core/model/component-def/crud-def';
 import { PREFIX_DOMAIN_API } from 'environments/environment';
 import { CAMPO_CREATE_BEHAVIOR } from './form/campo.create.behavior';
 import { CAMPO_UPDATE_BEHAVIOR } from './form/campo.update.behavior';
-
 // Definicion de un template crud(Create,Read,Update and Delete)
 export const CAMPO_DEF: CrudDef = { 
     name: 'CAMPO',
@@ -19,7 +18,7 @@ export const CAMPO_DEF: CrudDef = {
     formsDef: {
         create: {
             fields: CAMPO_CREATE_FORM_FIELDS_DEF,
-            fieldsBehavior: CAMPO_CREATE_BEHAVIOR,
+			fieldsBehavior: CAMPO_CREATE_BEHAVIOR,
             showSubmitContinue: true
         },
         update: {

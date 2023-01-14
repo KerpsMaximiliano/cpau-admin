@@ -7,7 +7,7 @@
            [dpDayPicker]="config"
            mode="daytime"
            theme="dp-material"
-           attachTo=".mat-input-wrapper"
+           attachTo=".mat-form-field-wrapper"
            [disabled]="field.disabled" />
       <button title="Borrar" *ngIf="field.required === false || field.required === undefined && 
              (!field.disabled || field.disabled === undefined)" class="icon-button" (click)="remove()" matSuffix mat-icon-button>

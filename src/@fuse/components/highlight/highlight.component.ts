@@ -11,7 +11,7 @@ import './prism-languages';
 })
 export class FuseHighlightComponent implements OnInit
 {
-    @ContentChild('source') source: ElementRef;
+    source: ElementRef;
     @Input('lang') lang: string;
     @Input('path') path: string;
 

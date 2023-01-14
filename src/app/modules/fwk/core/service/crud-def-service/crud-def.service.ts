@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  of } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { tap, catchError, map } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
 import { Injector } from '@angular/core';
 import { HttpService } from '../http-service/http.service';
 import { CrudDef } from '../../model/component-def/crud-def';

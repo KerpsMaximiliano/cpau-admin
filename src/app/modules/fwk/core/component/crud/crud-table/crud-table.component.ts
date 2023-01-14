@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatDialog, MatSort } from '@angular/material';
-import { Observable } from 'rxjs/Observable';
-import { Subscriber } from 'rxjs/Subscriber';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Observable ,  Subscriber } from 'rxjs';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
@@ -24,7 +26,6 @@ import { FormGridModalComponent } from '../../form-grid-dialog/form-grid.dialog.
 import { ActionDefService } from '../../../service/action-def-service/action-def.service';
 import { DynamicFieldConditionIf } from '../../../model/dynamic-form/dynamic-field-condition-if';
 import { Params } from '@angular/router';
-import { PARAMETERS } from '@angular/core/src/util/decorators';
 import { FilterService } from '../../../service/filter-service/filter.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -35,18 +36,17 @@ const DELETE_COLUMN = 'delete';
   selector: 'app-crud-table',
   templateUrl: './crud-table.component.html',
   styleUrls: ['./crud-table.component.scss'],
-  animations: [
-    fuseAnimations,
-    trigger('groupButtons', [
-      state('true', style({
-        opacity: '1'
-      })),
-      state('false', style({
-        opacity: '0'
-      })),
-      transition('true => false', animate('300ms ease')),
-      transition('false => true', animate('300ms ease')),
-    ])]
+  animations: fuseAnimations,
+  // trigger('groupButtons', [
+  //   state('true', style({
+  //     opacity: '1'
+  //   })),
+  //   state('false', style({
+  //     opacity: '0'
+  //   })),
+  //   transition('true => false', animate('300ms ease')),
+  //   transition('false => true', animate('300ms ease')),
+  // ])]
 })
 export class CrudTableComponent extends AbstractComponent implements OnInit {
   resetSelects: any;
@@ -59,8 +59,8 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   @Input() grid: GridDef;
   @Input() onClickRow: any;
   @Input() urlDelete: any;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort,{static: false}) sort: MatSort;
   @Output() status =  new EventEmitter(true);
   @Output() onChangePagination = new EventEmitter();
   genericHttpService: GenericHttpService;
@@ -115,8 +115,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
       this.openActionsArray.fill(false);
       this.openActionsArray[index] = true;
     }
-  }
-
+  }  
   onInit() {
     this.selectable = this.selectable ? true : false;
     this.spinnerGeneralControl = this.spinnerService.getControlGlobalSpinner();

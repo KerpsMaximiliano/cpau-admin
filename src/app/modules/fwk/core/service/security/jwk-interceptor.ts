@@ -8,8 +8,8 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 
-import 'rxjs/add/operator/do';
-import { Observable } from 'rxjs/Observable';
+
+import { Observable } from 'rxjs';
 
 import { Router } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';

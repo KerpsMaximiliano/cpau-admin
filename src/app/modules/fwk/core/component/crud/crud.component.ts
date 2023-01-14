@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription ,  Observable } from 'rxjs';
 import { OnDestroy } from '@angular/core';
 
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { Injector } from '@angular/core';
 
 import { Output } from '@angular/core';
@@ -24,7 +24,6 @@ import { DialogService } from '../../service/dialog-service/dialog.service';
 import { ActionDef } from '../../model/component-def/action-def';
 import { FileService } from '../../service/file/file.service';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { DynamicField } from '../../model/dynamic-form/dynamic-field';
 
 

@@ -1,7 +1,6 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  of } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { tap, catchError, map } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
 
 import { Injectable } from '@angular/core';
 

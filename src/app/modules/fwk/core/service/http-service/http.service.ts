@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  of } from 'rxjs';
 
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 import { tap, catchError, map } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
-import { RequestOptions } from '@angular/http';
 import { Injector } from '@angular/core';
 import { BaseService } from '../base-service/base.service';
 import { GeneralErrorHandlerService } from '../security/general-error-handler.service';

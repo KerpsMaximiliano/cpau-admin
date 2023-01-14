@@ -1,10 +1,12 @@
+
+import {distinctUntilChanged, debounceTime} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE, AUTOCOMPLETE_DESPLEGABLE } from '../../model/dynamic-form/dynamic-field';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/switchMap';
+
+
+
+
 // Depending on whether rollup is used, moment needs to be imported differently.
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
@@ -12,7 +14,7 @@ import 'rxjs/add/operator/switchMap';
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 import {defaultFormat as _rollupMoment} from 'moment';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
 import { FormValidatorService } from './form.validator.service';
@@ -306,7 +308,7 @@ export class FormService {
             field.controlType === TEXTBOX ||
             field.controlType === NUMBER ||
             field.controlType === DATEPICKER) {
-              form.controls[field.key].valueChanges.debounceTime(1000).distinctUntilChanged()
+              form.controls[field.key].valueChanges.pipe(debounceTime(1000),distinctUntilChanged(),)
               .subscribe(newValue => {
                 const data = {fieldKey: field.key, entity: this.injectToEntity({}, form, fields),
                 fields: fields};

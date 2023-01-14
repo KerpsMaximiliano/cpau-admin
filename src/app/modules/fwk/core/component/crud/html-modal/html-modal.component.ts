@@ -1,14 +1,14 @@
 import {Component, Inject, Output, EventEmitter} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, ErrorStateMatcher} from '@angular/material';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { OnInit, OnDestroy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { Injector } from '@angular/core';
 
-import { startWith } from 'rxjs/operators/startWith';
-import { map } from 'rxjs/operators/map';
-import { Observable } from 'rxjs/Observable';
+import { startWith ,  map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { AbstractComponent } from '../../abstract-component.component';
 import { DynamicField } from '../../../model/dynamic-form/dynamic-field';
 import { FormService } from '../../../service/dynamic-form/form.service';

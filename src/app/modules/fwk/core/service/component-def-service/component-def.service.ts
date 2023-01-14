@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  Subject } from 'rxjs';
 import { CrudDef } from '../../model/component-def/crud-def';
 import { COMPONENTS } from '../../../../../main/content/pages/integration.components';
 import { I18nService } from '../i18n-service/i18n.service';
@@ -10,7 +10,6 @@ import { navigation } from '../../../../../navigation/navigation';
 import { ComponentDef } from '../../model/component-def/component-def';
 import { ToolbarComponentDef } from '../../model/component-def/toolbar-comp-def';
 import { componentFactoryName } from '@angular/compiler';
-import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class ComponentDefService{
