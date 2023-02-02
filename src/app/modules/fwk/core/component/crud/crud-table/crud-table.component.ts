@@ -36,17 +36,17 @@ const DELETE_COLUMN = 'delete';
   selector: 'app-crud-table',
   templateUrl: './crud-table.component.html',
   styleUrls: ['./crud-table.component.scss'],
-  animations: fuseAnimations,
-  // trigger('groupButtons', [
-  //   state('true', style({
-  //     opacity: '1'
-  //   })),
-  //   state('false', style({
-  //     opacity: '0'
-  //   })),
-  //   transition('true => false', animate('300ms ease')),
-  //   transition('false => true', animate('300ms ease')),
-  // ])]
+  animations: [fuseAnimations,
+  trigger('groupButtons', [
+    state('true', style({
+      opacity: '1'
+    })),
+    state('false', style({
+      opacity: '0'
+    })),
+    transition('true => false', animate('300ms ease')),
+    transition('false => true', animate('300ms ease')),
+  ])]
 })
 export class CrudTableComponent extends AbstractComponent implements OnInit {
   resetSelects: any;
