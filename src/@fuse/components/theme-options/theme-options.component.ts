@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostBinding, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { style, animate, AnimationBuilder, AnimationPlayer } from '@angular/animations';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { fuseAnimations } from '../../animations';
 import { FuseConfigService } from '../../services/config.service';
@@ -20,9 +20,9 @@ export class FuseThemeOptionsComponent extends AbstractComponent implements OnDe
 {
 
 
-    @ViewChild('openButton') openButton;
-    @ViewChild('panel') panel;
-    @ViewChild('overlay') overlay: ElementRef;
+    @ViewChild('openButton', { static: true }) openButton;
+    @ViewChild('panel', { static: true }) panel;
+    @ViewChild('overlay', { static: true }) overlay: ElementRef;
 
     public player: AnimationPlayer;
     config: any;

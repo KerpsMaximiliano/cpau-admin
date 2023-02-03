@@ -78,7 +78,7 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'position',
     labelKey: 'campo_create_form_fields_def_field_position',
-    label: 'PosiciÃ³n',
+    label: 'Posición',
     type: 'number',
     controlType: 'number',
     required: true

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable ,  of } from 'rxjs';
 import { Injector } from '@angular/core';
 import { HttpService } from '../http-service/http.service';
 import { WsDef, HTTP_METHODS } from '../../model/ws-def';

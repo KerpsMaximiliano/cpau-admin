@@ -1,6 +1,9 @@
+
+import {interval as observableInterval,  Observable } from 'rxjs';
+
+import {map} from 'rxjs/operators';
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/interval';
+
 
 import * as moment from 'moment';
 
@@ -32,12 +35,11 @@ export class FuseCountdownComponent implements OnInit
         let diff = eventDate.diff(currDate, 'seconds');
 
         const countDown =
-                  Observable
-                      .interval(1000)
-                      .map(value => {
+                  observableInterval(1000).pipe(
+                      map(value => {
                           return diff = diff - 1;
-                      })
-                      .map(value => {
+                      }),
+                      map(value => {
                           const timeLeft = moment.duration(value, 'seconds');
 
                           return {
@@ -46,7 +48,7 @@ export class FuseCountdownComponent implements OnInit
                               minutes: timeLeft.minutes(),
                               seconds: timeLeft.seconds()
                           };
-                      });
+                      }),);
 
         countDown.subscribe(value => {
             this.countdown = value;

@@ -1,6 +1,6 @@
 import { Navigation } from 'selenium-webdriver';
 import { NavigationService } from '../navigation/navigation.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Route, Routes } from '@angular/router';
 import { ComponentDef } from '../../model/component-def/component-def';
 

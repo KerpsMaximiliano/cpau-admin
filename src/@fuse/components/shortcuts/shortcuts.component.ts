@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-import { ObservableMedia } from '@angular/flex-layout';
+import { Subscription } from 'rxjs';
+import { MediaObserver } from '@angular/flex-layout';
 import { CookieService } from 'ngx-cookie-service';
 
 import { FuseMatchMediaService } from '@fuse/services/match-media.service';
@@ -25,12 +25,12 @@ export class FuseShortcutsComponent implements OnInit, OnDestroy
     matchMediaSubscription: Subscription;
     onConfigChanged: Subscription;
 
-    @ViewChild('searchInput') searchInputField;
-    @ViewChild('shortcuts') shortcutsEl: ElementRef;
+    @ViewChild('searchInput', { static: true }) searchInputField;
+    @ViewChild('shortcuts', { static: true }) shortcutsEl: ElementRef;
 
     constructor(
         private renderer: Renderer2,
-        private observableMedia: ObservableMedia,
+        private observableMedia: MediaObserver,
         private fuseMatchMedia: FuseMatchMediaService,
         private fuseNavigationService: FuseNavigationService,
         private fuseConfig: FuseConfigService,

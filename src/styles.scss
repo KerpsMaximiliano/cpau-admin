@@ -111,6 +111,11 @@
 .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
     background-color: rgba(0, 198, 85, 0.26) !important;
 }
+
+.mat-row, .mat-header-row {
+    padding: 0 24px;
+}
+
 @media screen and (max-width: 599px) {
     .top-bg {
     height: 273px !important;

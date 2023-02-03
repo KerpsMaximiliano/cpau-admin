@@ -1,7 +1,7 @@
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NotificationService } from 'app/modules/fwk/core/service/notification/notification.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { UploadService } from './upload.service';
 
 @Component({

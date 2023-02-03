@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL } from '../../model/dynamic-form/dynamic-field';
 
-import { AbstractControl } from '@angular/forms/src/model';
-import { ValidatorFn } from '@angular/forms/src/directives/validators';
+import { AbstractControl } from '@angular/forms';
+import { ValidatorFn } from '@angular/forms';
 import { String, StringBuilder } from 'typescript-string-operations';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import {MatDatepicker} from '@angular/material/datepicker';
@@ -17,8 +17,7 @@ import {
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 import {defaultFormat as _rollupMoment, Moment} from 'moment';
-import { Observer } from 'rxjs/Observer';
-import { Observable } from 'rxjs/Observable';
+import { Observer ,  Observable } from 'rxjs';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
 import { CONSTANTS } from '../../../constants';

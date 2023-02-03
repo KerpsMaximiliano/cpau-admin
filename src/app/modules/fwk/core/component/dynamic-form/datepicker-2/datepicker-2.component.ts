@@ -10,7 +10,7 @@ import { FormService } from '../../../service/dynamic-form/form.service';
 import * as _moment from 'moment';
 import { String } from 'typescript-string-operations';
 import { I18n } from '../../../model/i18n';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { BasicModalComponent } from '../../crud/basic-modal/basic-modal.component';
 import { EventEmitter } from 'protractor';
 import { MY_FORMATS } from '../../../service/dynamic-form/form.validator.service';

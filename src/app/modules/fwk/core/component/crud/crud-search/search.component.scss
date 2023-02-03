@@ -98,13 +98,13 @@ form:first-child{
         position: absolute;
         top: 5px;
     }
-    ::ng-deep.mat-input-wrapper {
+    ::ng-deep.mat-form-field-wrapper {
         font-size: 11px;
     }
     ::ng-deep.mat-form-field-label {
         color: white;
     }
-    ::ng-deep.mat-input-underline.mat-form-field-underline {
+    ::ng-deep.mat-form-field-underline.mat-form-field-underline {
         background-color: white;
     }
     ::ng-deep.mat-input-element {

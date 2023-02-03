@@ -4,7 +4,7 @@ import { AuthService } from './auth.service';
 import { environment } from 'environments/environment';
 import { I18nService } from '../i18n-service/i18n.service';
 import { I18n } from '../../model/i18n';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 
 

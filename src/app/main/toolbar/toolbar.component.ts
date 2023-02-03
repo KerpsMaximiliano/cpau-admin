@@ -11,12 +11,12 @@ import { AuthService } from '../../modules/fwk/core/service/security/auth.servic
 import { User } from '../../modules/fwk/core/model/user';
 import { SpinnerService } from '../../modules/fwk/core/module/spinner/service/spinner.service';
 import { DialogService } from '../../modules/fwk/core/service/dialog-service/dialog.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { GenericHttpService } from '../../modules/fwk/core/service/generic-http-service/generic-http.service';
 import { LocalStorageService } from '../../modules/fwk/core/service/local-storage/local-storage.service';
 import { HTTP_METHODS } from '../../modules/fwk/core/model/ws-def';
 import { CrudComponent } from 'app/modules/fwk/core/component/crud/crud.component';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector   : 'fuse-toolbar',

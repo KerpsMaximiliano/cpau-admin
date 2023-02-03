@@ -1,9 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Directive } from '@angular/core';
 import { Entity } from '../../model/entity';
-import { MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { FormGroup } from '@angular/forms';
-import { Injector } from '@angular/core/src/di/injector';
-import { Observable } from 'rxjs/Observable';
+import { Injector } from '@angular/core';
+import { Observable ,  Subscription } from 'rxjs';
 import { FormService } from '../../service/dynamic-form/form.service';
 import { CrudDefService } from '../../service/crud-def-service/crud-def.service';
 import { CRUD } from '../../service/crud-service/crud';
@@ -17,10 +19,10 @@ import { CrudDef } from '../../model/component-def/crud-def';
 import { GridDef } from '../../model/component-def/grid-def';
 import { ActivatedRoute } from '@angular/router';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
-import { Subscription } from 'rxjs';
 import * as moment from 'moment';
 
 
+@Directive()
 export  abstract class AbstractCrudComponent<E extends Entity, Service extends CRUD<E>> extends AbstractComponent implements OnInit {
   entity: E;
   entities: E[];

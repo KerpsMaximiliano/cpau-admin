@@ -1,6 +1,7 @@
 import { Component, OnInit, Injector, Inject } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA, MatTableDataSource } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
 import { Entity } from '../../model/entity';
 import { GridDef } from '../../model/component-def/grid-def';

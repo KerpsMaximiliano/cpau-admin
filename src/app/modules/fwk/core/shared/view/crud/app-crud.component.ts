@@ -1,7 +1,7 @@
 import { ViewEncapsulation, Component, OnInit, OnDestroy, Injector } from '@angular/core';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseConfigService } from '@fuse/services/config.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { CrudComponent } from '../../../component/crud/crud.component';
 import { LocalStorageService } from '../../../service/local-storage/local-storage.service';
 

@@ -6,8 +6,7 @@ import { FormService } from './service/dynamic-form/form.service';
 import { QuestionModalComponent } from './component/question-modal/question-modal.component';
 import { AuthGuardService } from './service/security/auth-guard.service';
 import { AuthService } from './service/security/auth.service';
-import { HttpModule } from '@angular/http';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler } from '@angular/core';
 import { PickListComponent } from './component/pick-list/pick-list.component';
 import { RouterModule } from '@angular/router';
@@ -152,7 +151,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     FlexLayoutModule,
     SpinnerComponent,
     HtmlModalComponent,

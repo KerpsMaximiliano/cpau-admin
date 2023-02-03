@@ -3,7 +3,7 @@ import { AbstractComponent } from '../../abstract-component.component';
 import { DynamicField } from '../../../model/dynamic-form/dynamic-field';
 import { FormGroup, NgForm } from '@angular/forms';
 import { DynamicFormComponent } from '../../dynamic-form/dynamic-form.component';
-import { MatButton } from '@angular/material';
+import { MatButton } from '@angular/material/button';
 import { DialogService } from '../../../service/dialog-service/dialog.service';
 import { LocalStorageService } from '../../../service/local-storage/local-storage.service';
 import { FormService } from '../../../service/dynamic-form/form.service';
@@ -45,7 +45,7 @@ export class SearchComponent extends AbstractComponent implements OnInit {
   onChangeSearchEntity =  new EventEmitter(true);
   form: FormGroup;
   entity: any;
-  @ViewChild('ngformElement')
+  @ViewChild('ngformElement',{static: false})
   ngFormElement: NgForm;
   dialogService: DialogService;
   generalField: DynamicField<any>[];

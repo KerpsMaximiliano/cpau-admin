@@ -1,9 +1,11 @@
+
+import {map, filter} from 'rxjs/operators';
 import { Component, HostBinding, OnDestroy, Renderer2, ElementRef, Inject, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
-import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
+import { Subscription } from 'rxjs';
+
+
 
 import { fuseAnimations } from '@fuse/animations/index';
 import { FuseConfigService } from '@fuse/services/config.service';
@@ -44,9 +46,9 @@ export class FuseContentComponent implements OnDestroy
         {
             this.document.body.className += ' is-mobile';
         }
-        this.router.events
-            .filter((event) => event instanceof NavigationEnd)
-            .map(() => this.activatedRoute)
+        this.router.events.pipe(
+            filter((event) => event instanceof NavigationEnd),
+            map(() => this.activatedRoute),)
             .subscribe((event) => {
                 switch ( this.fuseSettings.routerAnimation )
                 {

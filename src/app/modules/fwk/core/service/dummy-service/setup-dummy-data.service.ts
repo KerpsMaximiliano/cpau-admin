@@ -1,5 +1,5 @@
 import { Injector } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { User } from '../../model/user';
 import { Injectable } from '@angular/core';

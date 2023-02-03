@@ -1,8 +1,10 @@
 import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, ErrorStateMatcher, MatTableDataSource} from '@angular/material';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { Field } from '../../model/field';
-import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
-import { FormGroup } from '@angular/forms/src/model';
+import { OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { DynamicField } from '../../model/dynamic-form/dynamic-field';
 import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
