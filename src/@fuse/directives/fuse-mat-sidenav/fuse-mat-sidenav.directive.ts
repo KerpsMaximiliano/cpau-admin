@@ -29,20 +29,7 @@ export class FuseMatSidenavHelperDirective implements OnInit, OnDestroy
     {
         this.fuseMatSidenavService.setSidenav(this.id, this.matSidenav);
 
-        if ( this.observableMedia.isActive(this.matIsLockedOpenBreakpoint) )
-        {
-            this.isLockedOpen = true;
-            this.matSidenav.mode = 'side';
-            this.matSidenav.toggle(true);
-        }
-        else
-        {
-            this.isLockedOpen = false;
-            this.matSidenav.mode = 'over';
-            this.matSidenav.toggle(false);
-        }
-
-        this.matchMediaSubscription = this.fuseMatchMedia.onMediaChange.subscribe(() => {
+        if (this.matIsLockedOpenBreakpoint) {
             if ( this.observableMedia.isActive(this.matIsLockedOpenBreakpoint) )
             {
                 this.isLockedOpen = true;
@@ -55,12 +42,32 @@ export class FuseMatSidenavHelperDirective implements OnInit, OnDestroy
                 this.matSidenav.mode = 'over';
                 this.matSidenav.toggle(false);
             }
+        }
+        
+        this.matchMediaSubscription = this.fuseMatchMedia.onMediaChange.subscribe(() => {
+            if (this.matIsLockedOpenBreakpoint) {
+                if ( this.observableMedia.isActive(this.matIsLockedOpenBreakpoint) )
+                {
+                    this.isLockedOpen = true;
+                    this.matSidenav.mode = 'side';
+                    this.matSidenav.toggle(true);
+                }
+                else
+                {
+                    this.isLockedOpen = false;
+                    this.matSidenav.mode = 'over';
+                    this.matSidenav.toggle(false);
+                } 
+            }
+            
         });
     }
 
     ngOnDestroy()
     {
-        this.matchMediaSubscription.unsubscribe();
+        if (this.matchMediaSubscription) {
+            this.matchMediaSubscription.unsubscribe();
+        }
     }
 }
 
