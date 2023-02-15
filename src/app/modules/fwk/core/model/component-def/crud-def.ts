@@ -24,6 +24,7 @@ export class CrudDef extends ComponentDef {
     initFilter?: boolean;
     openLink?: string;
     openLinkTitle?: string;
+    downloadBoleta?: boolean;
     exportCsv?: {
       csvExportFileName: string
     };

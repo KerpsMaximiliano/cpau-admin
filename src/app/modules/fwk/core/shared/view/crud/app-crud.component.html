@@ -37,6 +37,13 @@
                 </button>
 
                 <button mat-icon-button
+                        *ngIf="crudDef.downloadBoleta"
+                        (click)="downloadBoleta()"
+                        class="icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted btn-add" title='Descargar Boleta'>
+                    <mat-icon aria-label="icon">newspaper</mat-icon>  
+                </button>
+
+                <button mat-icon-button
                         *ngIf="showAddButton()"
                         (click)="openAddDialog()"
                         class="icon-button_style- mat-mini-fab mat-accent ng-tns-c20-4 ng-star-inserted btn-add" title='Agregar'>

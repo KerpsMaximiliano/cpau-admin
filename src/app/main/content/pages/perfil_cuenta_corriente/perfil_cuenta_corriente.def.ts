@@ -23,8 +23,9 @@ export const PERFIL_CUENTA_CORRIENTE_DEF: CrudDef = {
     dialogConfig: {
         width: '800px'
     },
-    openLink: "https://www.cpau.org/api/matriculados/imprimirboleta",
-    openLinkTitle: 'Imprimir Boleta',
+    // openLink: "https://www.cpau.org/api/matriculados/imprimirboleta",
+    // openLinkTitle: 'Imprimir Boleta',
+    downloadBoleta: true,
     filterInMemory: false,
     backButton: true   
 };
