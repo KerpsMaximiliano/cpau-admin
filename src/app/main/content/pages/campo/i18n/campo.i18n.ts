@@ -43,8 +43,6 @@ export const CAMPO_I18N_DEF = {
     campo_grid_def_column_required: 'Requerido',
     campo_grid_def_column_value: 'Valor',
     campo_grid_def_button_action_opciones : 'Opciones',
-    campo_grid_def_button_action_subir: 'Subir',
-    campo_grid_def_button_action_bajar: 'Bajar',
     campo_grid_def_column_position: 'Posición',
     campo_create_form_fields_def_field_position: 'Posición'
   }

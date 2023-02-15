@@ -1,3 +1,5 @@
+import { MESSAGE_TEMPLATE_HISTORY_NAV_DEF } from "../../message_template_history/navigation/message_template_history.nav";
+
 export const MESSAGE_TEMPLATE_GRID_DEF = {
   columnsDef: [
     {
@@ -27,6 +29,22 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
     {
       columnDef: 'emailAccountId',
       columnNameKey: 'message_template_grid_def_column_emailaccountid'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'message_template_grid_def_column_createuser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'message_template_grid_def_column_LastEditUser'
+    },
+    {
+      columnDef: 'createDateString',
+      columnNameKey: 'message_template_grid_def_column_CreateDateString'
+    },
+    {
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'message_template_grid_def_column_LastEditDate'
     }
   ],
   sortAllColumns: true,
@@ -34,7 +52,26 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
   displayedColumns: [
     'name',
     'subject',
-    'bccEmailAddresses'
+    'bccEmailAddresses',
+    'createUser',
+    'createDateString',
+    'lastEditUser',
+    'lastEditDateString'
   ],
+  actions : [
+    {
+      actionNameKey: 'Versiones Anteriores',
+      actionType: 'redirect',
+      redirect: {
+        url: MESSAGE_TEMPLATE_HISTORY_NAV_DEF.url,
+        querystring: {
+          messageTemplateId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'manage_history'
+    }
+   ]
+  
   
 };

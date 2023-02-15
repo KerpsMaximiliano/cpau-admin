@@ -1,0 +1,6 @@
+export const MODAL_HOME_HISTORY_SECURITY_DEF = {
+  readAccess: 'MODAL_HOME_HISTORY_READ',
+  updateAccess: 'MODAL_HOME_HISTORY_UPDATE',
+  createAccess: 'MODAL_HOME_HISTORY_CREATE',
+  deleteAccess: 'MODAL_HOME_HISTORY_DELETE'
+};

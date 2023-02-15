@@ -1,6 +1,7 @@
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
+import { FORMULARIO_HISTORY_NAV_DEF } from "../../formulario_history/navigation/formulario_history.nav";
 
 const form_descripcion = 
   {
@@ -85,6 +86,18 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       columnNameKey: 'formulario_grid_def_column_createdate'
     },
     {
+      columnDef: 'lastEditDateString',
+      columnNameKey: 'formulario_grid_def_column_lastEditDateString'
+    },
+    {
+      columnDef: 'createUser',
+      columnNameKey: 'formulario_grid_def_column_createUser'
+    },
+    {
+      columnDef: 'lastEditUser',
+      columnNameKey: 'formulario_grid_def_column_lastEditUser'
+    },
+    {
       columnDef: 'validateUser',
       columnNameKey: 'formulario_grid_def_column_validateuser'
     },
@@ -157,7 +170,10 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     'inscriptos',
     'quota',
     'isCurso',
-    'dateString'
+    'dateString',
+    'lastEditUser',
+    'lastEditDateString'
+
   ],
   actions: [
     {
@@ -169,7 +185,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'formulario_grid_def_button_action_descripcion',
-        url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateDescription/',
         method: 'PUT'
       }
     },
@@ -182,7 +198,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'formulario_grid_def_button_action_finalMessage',
-        url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateFinalMessage/',
         method: 'PUT'
       }
     },
@@ -208,7 +224,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       ws: {
         key: 'formulario_grid_def_button_action_receipt',
-        url: PREFIX_DOMAIN_API + 'Form/UpdateByProps/',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateReceipt/',
         method: 'PUT'
       }
     },
@@ -302,6 +318,18 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       },
       icon: 'filter_none'
     },
+    {
+      actionNameKey: 'Versiones Anteriores',
+      actionType: 'redirect',
+      redirect: {
+        url: FORMULARIO_HISTORY_NAV_DEF.url,
+        querystring: {
+          formularioId : 'id',
+          parentTitle: 'name'
+        }
+      },
+      icon: 'manage_history'
+    }
     
   ],
   displayedActionsCondition: [

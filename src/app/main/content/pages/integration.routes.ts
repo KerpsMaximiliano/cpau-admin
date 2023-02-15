@@ -61,6 +61,12 @@ import { DETALLE_ENVIO_DEF } from './detalle_envio/detalle_envio.def';
 import { VENTA_DEF } from './venta/venta.def';
 import { CONTENIDO_HISTORY_DEF } from './contenidoHistory/contenidoHistory.def';
 import { CONTENIDOS_HISTORY_DEF } from './revistanotas/contenidos_history/contenidos_history.def';
+import { SECCIONES_HISTORY_DEF } from './secciones_history/secciones_history.def';
+import { PRODUCTO_EXTERNO_HISTORY_DEF } from './producto_externo_history/producto_externo_history.def';
+import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/noticia_carrousel_history.def';
+import { MESSAGE_TEMPLATE_HISTORY_DEF } from './message_template_history/message_template_history.def';
+import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.def';
+import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -356,8 +362,37 @@ export const ROUTES: Routes = [
     path: CONTENIDOS_HISTORY_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
+  },
+  {
+    path: SECCIONES_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: PRODUCTO_EXTERNO_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: NOTICIA_CARROUSEL_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: MESSAGE_TEMPLATE_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: MODAL_HOME_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: FORMULARIO_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
   }
-
 ];
 
 

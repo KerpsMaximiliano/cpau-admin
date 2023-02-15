@@ -71,33 +71,7 @@ export const CAMPO_GRID_DEF = {
           parentTitle: 'name'
         }
       }
-    },
-    // {
-    //   actionNameKey: 'campo_grid_def_button_action_bajar',
-    //   icon: 'arrow_downward',
-    //   ws: {
-    //     key: 'campo_grid_def_button_action_bajar',
-    //     url: PREFIX_DOMAIN_API + 'FormField/bajar',
-    //     method: 'GET',
-    //     querystring: {
-    //       idFormField: 'idFormField',
-    //       idForm : 'idForm',
-    //     }
-    //   }
-    // },
-    // {
-    //   actionNameKey: 'campo_grid_def_button_action_subir',
-    //   icon: 'arrow_upward',
-    //   ws: {
-    //     key: 'campo_grid_def_button_action_subir',
-    //     url: PREFIX_DOMAIN_API + 'FormField/subir',
-    //     method: 'GET',
-    //     querystring: {
-    //       idForm : 'idForm',
-    //       idFormField: 'idFormField'
-    //     }
-    //   }
-    // },
+    }
 
 
     

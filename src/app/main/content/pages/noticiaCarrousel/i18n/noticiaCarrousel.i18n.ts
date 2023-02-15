@@ -47,6 +47,10 @@ export const NOTICIA_CARROUSEL_I18N_DEF = {
     prodcuto_externo_grid_def_button_action_bajar: 'Bajar',
     prodcuto_externo_grid_def_button_action_subir: 'Subir',
     NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_urlHeader: 'URL Header',
-    NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader: 'Link Target Header'
+    NOTICIA_CARROUSEL_UPDATE_FORM_FIELDS_DEF_FIELD_linktargetHeader: 'Link Target Header',
+    noticia_carrousel_grid_def_column_createuser: 'Usuario Creación',
+    noticia_carrousel_grid_def_column_LastEditUser: 'Usuario Modificación',
+    noticia_carrousel_grid_def_column_CreateDateString: 'Fecha Creación',
+    noticia_carrousel_grid_def_column_LastEditDate: 'Fecha Modificación'
   }
 };

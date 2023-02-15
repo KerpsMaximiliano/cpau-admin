@@ -1,4 +1,6 @@
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
+import { MODAL_HOME_HISTORY_DEF } from "../../modal_home_history/modal_home_history.def";
+import { MODAL_HOME_HISTORY_NAV_DEF } from "../../modal_home_history/navigation/modal_home_history.nav";
 
 export const MODAL_GRID_DEF = {
     columnsDef: [
@@ -24,19 +26,19 @@ export const MODAL_GRID_DEF = {
             columnNameKey: 'modal_grid_def_column_enddate'
         },
         {
-            columnDef: 'creationUser',
+            columnDef: 'createUser',
             columnNameKey: 'modal_grid_def_column_CreationUser'
         },
         {
-            columnDef: 'updateUser',
+            columnDef: 'lastEditUser',
             columnNameKey: 'modal_grid_def_column_UpdateUser'
         },
         {
-            columnDef: 'creationDateString',
+            columnDef: 'createDateString',
             columnNameKey: 'modal_grid_def_column_CreationDateString'
         },
         {
-            columnDef: 'updateDateString',
+            columnDef: 'lastEditDateString',
             columnNameKey: 'modal_grid_def_column_UpdateDateString'
         }
     ],
@@ -46,9 +48,23 @@ export const MODAL_GRID_DEF = {
         'title',
         'dateStart',
         'dateEnd',
-        'creationUser',
-        'updateUser',
-        'creationDateString',
-        'updateDateString'
+        'createUser',
+        'createDateString',
+        'lastEditUser',
+        'lastEditDateString'
+    ],
+    actions : [
+        {
+        actionNameKey: 'Versiones Anteriores',
+        actionType: 'redirect',
+        redirect: {
+            url: MODAL_HOME_HISTORY_NAV_DEF.url,
+            querystring: {
+            modalHomeId : 'id',
+            parentTitle: 'name'
+            }
+        },
+        icon: 'manage_history'
+        }   
     ]
 } as GridDef;

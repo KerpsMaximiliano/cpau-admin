@@ -123,6 +123,8 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_column_isCurso: 'Es Curso',
     formulario_grid_def_column_minquota : 'Mínimo',
     formulario_grid_def_column_quotacol : 'Máximo',
+    formulario_grid_def_column_lastEditDateString: 'Fecha Modificación',
+    formulario_grid_def_column_lastEditUser: 'Usuario Modificación'
 
     
     
