@@ -1,15 +1,27 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 import { FORMULARIO_HISTORY_NAV_DEF } from "../../formulario_history/navigation/formulario_history.nav";
 
-const form_descripcion = 
-  {
-    key: 'description',
-    labelKey: 'formulario_create_form_fields_def_field_description',
-    label: 'Descripción',
-    controlType: HTML_EDITOR
+
+
+const form_finalMessage_text = {
+  key: 'finalMessage',
+  labelKey: 'formulario_create_form_fields_def_field_finalmessage_text',
+  label: 'Mensaje Final',
+  controlType: TEXTAREA
+}
+
+const form_receipt_text = {
+    key: 'receiptFooter',
+    labelKey: 'formulario_create_form_fields_def_field_receiptfooter_text',
+    label: 'Pie del Comprobante',
+    controlType: TEXTAREA
   }
+
+  
+
+  
 
 const form_finalMessage = {
   key: 'finalMessage',
@@ -25,22 +37,6 @@ const form_receipt = {
     controlType: HTML_EDITOR
   }
 
-/*const form_receipt = [
-  {
-    key: 'showReceipt',
-    labelKey: 'formulario_create_form_fields_def_field_showreceipt',
-    label: 'Mostrar Comprobante',
-    type: 'boolean',
-    controlType: 'checkbox'
-  },
-  {
-    key: 'receiptFooter',
-    labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
-    label: 'Pie del Comprobante',
-    controlType: HTML_EDITOR,
-    maxLength: 8000
-  }
-]*/
 
 export const FORMULARIO_GRID_DEF: GridDef = {
   columnsDef: [
@@ -180,7 +176,34 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       actionNameKey: 'formulario_grid_def_button_action_descripcion',
       icon: 'description',
       formDef : {
-        fields: [form_descripcion],
+        fields: [
+          {
+            key: 'description',
+            labelKey: 'formulario_create_form_fields_def_field_description',
+            label: 'Descripción',
+            controlType: HTML_EDITOR
+          }
+        ],
+        showSubmitContinue: true
+      },
+      ws: {
+        key: 'formulario_grid_def_button_action_descripcion',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateDescription/',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'formulario_grid_def_button_action_descripcion_text',
+      icon: 'document_scanner',
+      formDef : {
+        fields: [
+          {
+            key: 'description',
+            labelKey: 'formulario_create_form_fields_def_field_description',
+            label: 'Descripción',
+            controlType: TEXTAREA
+          }
+        ],
         showSubmitContinue: true
       },
       ws: {
@@ -191,9 +214,22 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     },
     {
       actionNameKey: 'formulario_grid_def_button_action_finalMessage',
-      icon: 'message',
+      icon: 'comment',
       formDef: {
         fields: [ form_finalMessage ],
+        showSubmitContinue: true
+      },
+      ws: {
+        key: 'formulario_grid_def_button_action_finalMessage',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateFinalMessage/',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'formulario_grid_def_button_action_finalMessage_text',
+      icon: 'mode_comment',
+      formDef: {
+        fields: [ form_finalMessage_text ],
         showSubmitContinue: true
       },
       ws: {
@@ -219,6 +255,32 @@ export const FORMULARIO_GRID_DEF: GridDef = {
             labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
             label: 'Pie del Comprobante',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'formulario_grid_def_button_action_receipt',
+        url: PREFIX_DOMAIN_API + 'Form/UpdateReceipt/',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'formulario_grid_def_button_action_receipt_text',
+      icon: 'receipt_long',
+      formDef: {
+        showSubmitContinue: true,
+        fields : [
+          {
+            key: 'showReceipt',
+            labelKey: 'formulario_create_form_fields_def_field_showreceipt',
+            label: 'Mostrar Comprobante',
+            controlType: 'checkbox'
+          },
+          {
+            key: 'receiptFooter',
+            labelKey: 'formulario_create_form_fields_def_field_receiptfooter',
+            label: 'Pie del Comprobante',
+            controlType: TEXTAREA
           }
         ]
       },

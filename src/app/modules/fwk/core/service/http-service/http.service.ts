@@ -86,6 +86,14 @@ export class HttpService extends BaseService {
     if (this.dummyService) {
        return this.dummyService.httpGet(url);
     }
+
+    if (url.indexOf("?") >= 0) {
+      url = url + "&";
+    } else {
+      url = url + "?";
+    }
+    url = url + "nocache=" + Math.floor(Math.random() * (9999 - 1111 + 1) + 1111);
+
     const observable = new Observable((observer) => {
         console.log('****** get -> ' + url);
         this.http.get<any>(url, options)

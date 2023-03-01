@@ -111,7 +111,7 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_column_contact: 'Contacto',
     formulario_grid_def_button_action_descripcion : 'Descripción',
     formulario_grid_def_button_action_finalMessage : 'Mensaje Final',
-    formulario_grid_def_button_action_receipt : 'Comprobantes',
+    formulario_grid_def_button_action_receipt : 'Comprobante',
     formulario_grid_def_button_action_campos: 'Campos',
     formulario_grid_def_column_inscriptos : 'Inscriptos',
     formulario_grid_def_button_action_inscriptos : 'Inscriptos',
@@ -124,7 +124,10 @@ export const FORMULARIO_I18N_DEF = {
     formulario_grid_def_column_minquota : 'Mínimo',
     formulario_grid_def_column_quotacol : 'Máximo',
     formulario_grid_def_column_lastEditDateString: 'Fecha Modificación',
-    formulario_grid_def_column_lastEditUser: 'Usuario Modificación'
+    formulario_grid_def_column_lastEditUser: 'Usuario Modificación',
+    formulario_grid_def_button_action_descripcion_text: 'Descripción (sin formato)',
+    formulario_grid_def_button_action_finalMessage_text: 'Mensaje Final (sin formato)',
+    formulario_grid_def_button_action_receipt_text: 'Comprobante (sin formato)',
 
     
     

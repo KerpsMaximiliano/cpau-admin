@@ -111,7 +111,9 @@ export const CONTENIDO_I18N_DEF = {
     contenido_create_form_fields_def_field_porcentaje : 'Porcentaje',
     contenido_create_form_fields_def_field_showPublishDate : 'Mostrar Fecha Publicación',
     contenido_create_form_fields_def_title_beneficios: 'BENEFICIOS',
-    contenido_create_form_fields_def_field_linktarget_posiciongaleria: 'Galería'
+    contenido_create_form_fields_def_field_linktarget_posiciongaleria: 'Galería',
+    contenido_grid_def_button_action_resumen_texto: 'Resumen (sin formato)',
+    contenido_grid_def_button_action_texto_text: 'Texto (sin formato)'
     
   }
 };

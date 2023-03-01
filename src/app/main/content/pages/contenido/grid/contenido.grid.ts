@@ -1,5 +1,5 @@
 import { PREFIX_DOMAIN_API, PREFIX_INSTITUCIONAL } from "environments/environment";
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 import { CONTENIDO_HISTORY_DEF } from "../../contenidoHistory/contenidoHistory.def";
 import { CONTENIDO_HISTORY_NAV_DEF } from "../../contenidoHistory/navigation/contenidoHistory.nav";
@@ -119,7 +119,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
   actions: [
     {
       actionNameKey: 'contenido_grid_def_button_action_resumen',
-      icon: 'notes',
+      icon: 'description',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -128,6 +128,26 @@ export const CONTENIDO_GRID_DEF: GridDef = {
             labelKey: 'contenido_create_form_fields_def_field_summary',
             label: 'Resumen',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'contenido_grid_def_button_action_resumen',
+        url: PREFIX_DOMAIN_API + 'Content/UpdateSummary',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'contenido_grid_def_button_action_resumen_texto',
+      icon: 'document_scanner',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'summary',
+            labelKey: 'contenido_create_form_fields_def_field_summary',
+            label: 'Resumen',
+            controlType: TEXTAREA
           }
         ]
       },
@@ -151,7 +171,26 @@ export const CONTENIDO_GRID_DEF: GridDef = {
           }
         ]
       },
-      
+      ws: {
+        key: 'contenido_grid_def_button_action_texto',
+        url: PREFIX_DOMAIN_API + 'Content/UpdateText',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'contenido_grid_def_button_action_texto_text',
+      icon: 'import_contacts',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'text',
+            labelKey: 'contenido_create_form_fields_def_field_text',
+            label: 'Texto',
+            controlType: TEXTAREA
+          }
+        ]
+      },
       ws: {
         key: 'contenido_grid_def_button_action_texto',
         url: PREFIX_DOMAIN_API + 'Content/UpdateText',

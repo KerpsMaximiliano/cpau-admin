@@ -1,4 +1,3 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const SECCIONES_HISTORY_GRID_DEF = {

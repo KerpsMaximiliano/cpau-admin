@@ -16,11 +16,11 @@ export const MODAL_DEF = {
     formsDef: {
         create: {
             fields: MODAL_CREATE_FORM_FIELDS_DEF,
-            showSubmitContinue: true
+            showSubmitContinue: false
         },
         update: {
             fields: MODAL_UPDATE_FORM_FIELDS_DEF,
-            showSubmitContinue: true
+            showSubmitContinue: false
         }
     },
     forms: {
@@ -34,7 +34,7 @@ export const MODAL_DEF = {
         url: PREFIX_DOMAIN_API + 'modalHome'
     },
     dialogConfig: {
-        width: '900px'
+        width: '700px'
     },
     pagination: {
         page: 0,

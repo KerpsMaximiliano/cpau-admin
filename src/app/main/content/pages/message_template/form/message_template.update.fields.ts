@@ -28,13 +28,13 @@ export const MESSAGE_TEMPLATE_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
-  {
-    key: 'body',
-    labelKey: 'MESSAGE_TEMPLATE_UPDATE_FORM_FIELDS_DEF_FIELD_body',
-    label: 'Body',
-    type: 'string',
-    controlType: HTML_EDITOR
-  },
+  // {
+  //   key: 'body',
+  //   labelKey: 'MESSAGE_TEMPLATE_UPDATE_FORM_FIELDS_DEF_FIELD_body',
+  //   label: 'Body',
+  //   type: 'string',
+  //   controlType: HTML_EDITOR
+  // },
   {
     key: 'isActive',
     labelKey: 'MESSAGE_TEMPLATE_UPDATE_FORM_FIELDS_DEF_FIELD_isactive',

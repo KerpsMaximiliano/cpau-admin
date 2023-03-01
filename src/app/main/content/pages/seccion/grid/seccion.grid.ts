@@ -1,6 +1,4 @@
 import { PREFIX_DOMAIN_API } from "environments/environment";
-import { identifierModuleUrl } from "@angular/compiler";
-import { SECCION_CREATE_FORM_FIELDS_DEF } from "../form/seccion.create.fields";
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
 import { SECCIONES_HISTORY_NAV_DEF } from "../../secciones_history/navigation/secciones_history.nav";

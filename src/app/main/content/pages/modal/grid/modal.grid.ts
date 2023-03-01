@@ -1,5 +1,6 @@
 import { GridDef } from "app/modules/fwk/core/model/component-def/grid-def";
-import { MODAL_HOME_HISTORY_DEF } from "../../modal_home_history/modal_home_history.def";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { PREFIX_DOMAIN_API } from "environments/environment";
 import { MODAL_HOME_HISTORY_NAV_DEF } from "../../modal_home_history/navigation/modal_home_history.nav";
 
 export const MODAL_GRID_DEF = {
@@ -43,6 +44,7 @@ export const MODAL_GRID_DEF = {
         }
     ],
     sortAllColumns: true,
+    groupActions: true,
     deleteAction: true,
     displayedColumns: [
         'title',
@@ -54,6 +56,46 @@ export const MODAL_GRID_DEF = {
         'lastEditDateString'
     ],
     actions : [
+        {
+            actionNameKey: 'Contenido',
+            icon: 'description',
+            formDef: {
+                showSubmitContinue: true,
+                fields:[
+                {
+                    key: 'content',
+                    labelKey: 'message_template_grid_def_column_body',
+                    label: 'Body',
+                    controlType: HTML_EDITOR
+                }
+                ]
+            },
+            ws: {
+                key: 'message_template_grid_def_column_body',
+                url: PREFIX_DOMAIN_API + 'modalHome/UpdateBody',
+                method: 'PUT'
+            }
+            },
+            {
+            actionNameKey: 'Contenido (Sin formato)',
+            icon: 'note',
+            formDef: {
+                showSubmitContinue: true,
+                fields:[
+                {
+                    key: 'content',
+                    labelKey: 'message_template_grid_def_column_body',
+                    label: 'Body',
+                    controlType: TEXTAREA
+                }
+                ]
+            },
+            ws: {
+                key: 'message_template_grid_def_column_body',
+                url: PREFIX_DOMAIN_API + 'modalHome/UpdateBody',
+                method: 'PUT'
+            }
+        },
         {
         actionNameKey: 'Versiones Anteriores',
         actionType: 'redirect',

@@ -1,4 +1,4 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const AUTORES_GRID_DEF = {
@@ -29,7 +29,7 @@ export const AUTORES_GRID_DEF = {
   actions: [
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',
-      icon: 'notes',
+      icon: 'description',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -48,8 +48,28 @@ export const AUTORES_GRID_DEF = {
       }
     },
     {
+      actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio_text',
+      icon: 'note',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'shortBio',
+            labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',
+            label: 'Short Bio',
+            controlType: TEXTAREA
+          }
+        ]
+      },
+      ws: {
+        key: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',
+        url: PREFIX_DOMAIN_API + 'Autores/UpdateShortBio',
+        method: 'PUT'
+      }
+    },
+    {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
-      icon: 'reorder',
+      icon: 'list_alt',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -58,6 +78,26 @@ export const AUTORES_GRID_DEF = {
             labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
             label: 'Bio',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
+        url: PREFIX_DOMAIN_API + 'Autores/UpdateBio',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio_text',
+      icon: 'summarize',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'bio',
+            labelKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
+            label: 'Bio',
+            controlType: TEXTAREA
           }
         ]
       },

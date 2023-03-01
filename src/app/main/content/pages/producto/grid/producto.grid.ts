@@ -1,4 +1,4 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const PRODUCTO_GRID_DEF = {
@@ -93,7 +93,7 @@ export const PRODUCTO_GRID_DEF = {
     },
     {
       actionNameKey: 'producto_grid_def_button_action_descripcionLarga',
-      icon: 'notes',
+      icon: 'description',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -102,6 +102,26 @@ export const PRODUCTO_GRID_DEF = {
             labelKey: 'producto_grid_def_button_action_descripcionLarga',
             label: 'Descripción Larga',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'contenido_grid_def_button_action_resumen',
+        url: PREFIX_DOMAIN_API + 'producto/UpdateByProps',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'producto_grid_def_button_action_descripcionLarga_text',
+      icon: 'document_scanner',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'descripcionLarga',
+            labelKey: 'producto_grid_def_button_action_descripcionLarga',
+            label: 'Descripción Larga',
+            controlType: TEXTAREA
           }
         ]
       },

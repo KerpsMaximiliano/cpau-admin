@@ -1,4 +1,4 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const REVISTAS_GRID_DEF = {
@@ -62,6 +62,7 @@ export const REVISTAS_GRID_DEF = {
     }
   ],
   deleteAction: true,
+  groupActions: true,
   sortAllColumns: true,
   displayedColumns: [
     'numeroNro',
@@ -73,7 +74,7 @@ export const REVISTAS_GRID_DEF = {
   actions: [
     {
       actionNameKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
-      icon: 'notes',
+      icon: 'description',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -82,6 +83,26 @@ export const REVISTAS_GRID_DEF = {
             labelKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
             label: 'HTML',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
+        url: PREFIX_DOMAIN_API + 'Revistas/UpdateTapa',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa_text',
+      icon: 'note',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'html',
+            labelKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
+            label: 'HTML',
+            controlType: TEXTAREA
           }
         ]
       },

@@ -53,10 +53,11 @@ export const CONTENIDOS_I18N_DEF = {
     contenidos_create_form_fields_def_field_esnota: 'Es nota',
     contenidos_create_form_fields_def_field_autores: 'Autores',
     contenidos_create_form_fields_def_field_tags: 'Tags',
-    contenidos_grid_def_column_usuarioAlta: 'Usuario Creaci髇',
-    contenidos_grid_def_column_usuarioUltimaModificacion: 'Usuario Modificaci髇',
-    contenidos_grid_def_column_fechaAltaString: 'Fecha Creaci髇',
-    contenidos_grid_def_column_fechaUltimaModificacionString: 'Fecha Modificaci髇'
+    contenidos_grid_def_column_usuarioAlta: 'Usuario Creaci贸n',
+    contenidos_grid_def_column_usuarioUltimaModificacion: 'Usuario Modificaci贸n',
+    contenidos_grid_def_column_fechaAltaString: 'Fecha Creaci贸n',
+    contenidos_grid_def_column_fechaUltimaModificacionString: 'Fecha Modificaci贸n',
+    contenidos_grid_def_column_texto_text: 'Texto (Sin formato)'
 
   }
 };

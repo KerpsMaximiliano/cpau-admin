@@ -28,6 +28,8 @@ export const AUTORES_I18N_DEF = {
     autores_grid_def_column_nombre: 'Nombre',
     autores_grid_def_column_shortbio: 'Bio Corta',
     autores_grid_def_column_bio: 'Bio',
-    autores_grid_def_column_imagenperfil: 'Imagen Perfil'
+    autores_grid_def_column_imagenperfil: 'Imagen Perfil',
+    AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio_text: 'Bio Corta (Sin formato)',
+    AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio_text: 'Bio (Sin formato)'
   }
 };

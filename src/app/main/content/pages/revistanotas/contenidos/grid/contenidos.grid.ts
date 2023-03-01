@@ -1,4 +1,4 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HTML_EDITOR, TEXTAREA } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 import { CONTENIDOS_HISTORY_DEF } from "../../contenidos_history/contenidos_history.def";
 import { CONTENIDOS_HISTORY_NAV_DEF } from "../../contenidos_history/navigation/contenidos_history.nav";
@@ -69,6 +69,7 @@ export const CONTENIDOS_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
+  groupActions: true,
   displayedColumns: [
     'titulo',
     'tipoString',
@@ -78,7 +79,7 @@ export const CONTENIDOS_GRID_DEF = {
   actions: [
     {
       actionNameKey: 'contenidos_grid_def_column_texto',
-      icon: 'article',
+      icon: 'description',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -87,6 +88,26 @@ export const CONTENIDOS_GRID_DEF = {
             labelKey: 'contenidos_grid_def_column_texto',
             label: 'Texto',
             controlType: HTML_EDITOR
+          }
+        ]
+      },
+      ws: {
+        key: 'contenidos_grid_def_column_texto',
+        url: PREFIX_DOMAIN_API + 'Contenidos/UpdateTexto',
+        method: 'PUT'
+      }
+    },
+    {
+      actionNameKey: 'contenidos_grid_def_column_texto_text',
+      icon: 'note',
+      formDef: {
+        showSubmitContinue: true,
+        fields:[
+          {
+            key: 'texto',
+            labelKey: 'contenidos_grid_def_column_texto',
+            label: 'Texto',
+            controlType: TEXTAREA
           }
         ]
       },

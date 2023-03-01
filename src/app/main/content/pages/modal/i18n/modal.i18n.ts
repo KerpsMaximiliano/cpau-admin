@@ -21,10 +21,10 @@ export const MODAL_I18N_DEF = {
         modal_read_form_fields_def_field_content: 'Contenido',
         modal_update_form_fields_def_field_title: 'Titulo',
         modal_update_form_fields_def_field_content: 'Contenido',
-        modal_grid_def_column_UpdateDateString: 'Fecha Actualizaci髇',
-        modal_grid_def_column_CreationDateString: 'Fecha Creaci髇',
-        modal_grid_def_column_UpdateUser: 'Usuario Actualizaci髇',
-        modal_grid_def_column_CreationUser: 'Usuario Creaci髇'
+        modal_grid_def_column_UpdateDateString: 'Fecha Actualizaci贸n',
+        modal_grid_def_column_CreationDateString: 'Fecha Creaci贸n',
+        modal_grid_def_column_UpdateUser: 'Usuario Actualizaci贸n',
+        modal_grid_def_column_CreationUser: 'Usuario Creaci贸n'
 
     }
 };

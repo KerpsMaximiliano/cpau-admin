@@ -21,13 +21,13 @@ export const MESSAGE_TEMPLATE_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
-  {
-    key: 'body',
-    labelKey: 'message_template_create_form_fields_def_field_body',
-    label: 'Body',
-    type: 'string',
-    controlType: HTML_EDITOR
-  },
+  // {
+  //   key: 'body',
+  //   labelKey: 'message_template_create_form_fields_def_field_body',
+  //   label: 'Body',
+  //   type: 'string',
+  //   controlType: HTML_EDITOR
+  // },
   {
     key: 'isActive',
     labelKey: 'message_template_create_form_fields_def_field_isactive',

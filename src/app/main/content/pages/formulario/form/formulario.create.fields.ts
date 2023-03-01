@@ -1,5 +1,3 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
-
 function todaynow() {
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');

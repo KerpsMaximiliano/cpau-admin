@@ -1,5 +1,3 @@
-import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
-
 export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'id',

@@ -12,14 +12,14 @@ export const MODAL_CREATE_FORM_FIELDS_DEF = [
         maxLength: 200,
         required: true
     },
-    {
-        key: 'content',
-        labelKey: 'modal_create_form_fields_def_field_content',
-        label: 'Contenido',
-        type: 'string',
-        controlType: HTML_EDITOR,
-        required: true
-    },
+    // {
+    //     key: 'content',
+    //     labelKey: 'modal_create_form_fields_def_field_content',
+    //     label: 'Contenido',
+    //     type: 'string',
+    //     controlType: HTML_EDITOR,
+    //     required: true
+    // },
     {
         key: 'dateStart',
         labelKey: 'modal_create_form_fields_def_field_startdate',
