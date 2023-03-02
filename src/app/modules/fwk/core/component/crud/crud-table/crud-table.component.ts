@@ -28,6 +28,7 @@ import { DynamicFieldConditionIf } from '../../../model/dynamic-form/dynamic-fie
 import { Params } from '@angular/router';
 import { FilterService } from '../../../service/filter-service/filter.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ComponentDefService } from 'app/modules/fwk/core/service/component-def-service/component-def.service';
 
 const ACTION_COLUMN = '_action';
 const DELETE_COLUMN = 'delete';
@@ -76,6 +77,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
   private dialogService: DialogService;
   private expressionService: ExpressionService;
   private actionDefService: ActionDefService;
+  private ComponentDefService: ComponentDefService
   initOk: boolean;
   // Paginador
   public pageSize = 10;
@@ -106,6 +108,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     this.dialogService = injector.get(DialogService);
     this.expressionService = injector.get(ExpressionService);
     this.actionDefService = injector.get(ActionDefService);
+    this.componentDefService = injector.get(ComponentDefService);
   }
 
   groupActionButton(index) {
@@ -124,7 +127,6 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     this.statustable = new StatusTable<any>();
     this.paginator._intl.itemsPerPageLabel = this.translate('itemsPerPageLabel');
     
-
     if (this.hasActions()){
       const existActions = this.grid.displayedColumns.find(c => c === ACTION_COLUMN);
       if (existActions === undefined || !existActions){
@@ -134,7 +136,6 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
         });
         this.grid.displayedColumns = displayedColumns;
       }
-      
     }
 
     if (this.hasGeneralActions()){
@@ -385,7 +386,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
       if (nameFunc === undefined){
         nameFunc = '';
       }
-      if (formUpdate) {
+      if (formUpdate && this.componentDefService.hasAccess(this.crud.crudDef.security?.updateAccess)) {
         data = {
           isEdit: true,
           entity: obj,

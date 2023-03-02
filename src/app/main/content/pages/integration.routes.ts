@@ -67,6 +67,8 @@ import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/notic
 import { MESSAGE_TEMPLATE_HISTORY_DEF } from './message_template_history/message_template_history.def';
 import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.def';
 import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
+import { NoContentComponent } from '../no-content/no-content.component';
+import { NO_CONTENT_DEF } from './no_content/no_content.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -246,6 +248,11 @@ export const ROUTES: Routes = [
   {
     path: PERFIL_MATRICULADO_UPLOAD_DEF.navigation.url.split('/')[1],
     component: UploadComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: NO_CONTENT_DEF.navigation.url.split('/')[1],
+    component: NoContentComponent,
     canActivate: [AuthGuardService]
   },
   {
