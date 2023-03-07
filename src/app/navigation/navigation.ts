@@ -9,6 +9,7 @@ import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores
 import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
 import { CONTENIDOS_NAV_DEF } from 'app/main/content/pages/revistanotas/contenidos/navigation/contenidos.nav';
 import { REVISTAS_NAV_DEF } from 'app/main/content/pages/revistanotas/revistas/navigation/revistas.nav';
+import { USER_ADMIN_DEF } from 'app/main/content/pages/user_admin/user_admin.def';
 import { VENTA_DEF } from 'app/main/content/pages/venta/venta.def';
 import { environment } from 'environments/environment';
 export const navigation = [
@@ -257,6 +258,38 @@ export const navigation = [
                         'title': 'Operaciones',
                         'translate': 'NAV.OPERACIONES.TITLE',
                         'icon': 'point_of_sale',
+                        'type': 'item',
+                        'url': '/' + VENTA_DEF.navigation.url,
+                    }
+                ]
+            },
+            {
+                'title': 'Seguridad',
+                'translate': 'NAV.MENU_SEGURIDAD.TITLE',
+                'type': 'collapse',
+                'icon': 'admin_panel_settings',
+                'children': [
+                    {
+                        'id': 'usuarios',
+                        'title': 'Usuarios',
+                        'translate': 'NAV.MENU_USUARIOS.TITLE',
+                        'icon': 'manage_accounts',
+                        'type': 'item',
+                        'url': '/' + USER_ADMIN_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'grupos',
+                        'title': 'Grupos',
+                        'translate': 'NAV.MENU_GRUPOS.TITLE',
+                        'icon': 'group_work',
+                        'type': 'item',
+                        'url': '/' + CATEGORIA_DEF.navigation.url,
+                    },
+                    {
+                        'id': 'permisos',
+                        'title': 'Permisos',
+                        'translate': 'NAV.MENU_PERMISOS.TITLE',
+                        'icon': 'atr',
                         'type': 'item',
                         'url': '/' + VENTA_DEF.navigation.url,
                     }

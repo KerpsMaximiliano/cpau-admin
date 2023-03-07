@@ -65,6 +65,7 @@ import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/notic
 import { MESSAGE_TEMPLATE_HISTORY_DEF } from './message_template_history/message_template_history.def';
 import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.def';
 import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
+import { USER_ADMIN_DEF } from './user_admin/user_admin.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -131,5 +132,6 @@ export const COMPONENTS: ComponentDef[] = [
   MESSAGE_TEMPLATE_HISTORY_DEF,
   MODAL_HOME_HISTORY_DEF,
   FORMULARIO_HISTORY_DEF,
+  USER_ADMIN_DEF
 ];
 

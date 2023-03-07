@@ -67,6 +67,7 @@ import { NOTICIA_CARROUSEL_HISTORY_DEF } from './noticia_carrousel_history/notic
 import { MESSAGE_TEMPLATE_HISTORY_DEF } from './message_template_history/message_template_history.def';
 import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.def';
 import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
+import { USER_ADMIN_DEF } from './user_admin/user_admin.def';
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -390,6 +391,11 @@ export const ROUTES: Routes = [
   },
   {
     path: FORMULARIO_HISTORY_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: USER_ADMIN_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
   }
