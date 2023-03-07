@@ -39,7 +39,8 @@
                 "output": "/tinymce/plugins"
               },
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+			  "src/staticwebapp.config.json"
             ],
             "styles": [
               "src/styles.scss"
