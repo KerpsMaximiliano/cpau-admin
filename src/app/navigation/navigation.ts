@@ -4,6 +4,7 @@ import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/naviga
 import { CONTACT_LIST_DESUSCRIPTION_NAV_DEF } from 'app/main/content/pages/contact_list_desuscription/navigation/contact_list_desuscription.nav';
 import { MATRICULADO_ESTADO_NAV_DEF } from 'app/main/content/pages/matriculado_estado/navigation/matriculado_estado.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
+import { PERMISO_DEF } from 'app/main/content/pages/permiso/permiso.def';
 import { PRODUCTO_DEF } from 'app/main/content/pages/producto/producto.def';
 import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores.def';
 import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
@@ -267,7 +268,7 @@ export const navigation = [
                 'title': 'Seguridad',
                 'translate': 'NAV.MENU_SEGURIDAD.TITLE',
                 'type': 'collapse',
-                'icon': 'admin_panel_settings',
+                'icon': 'security',
                 'children': [
                     {
                         'id': 'usuarios',
@@ -289,9 +290,9 @@ export const navigation = [
                         'id': 'permisos',
                         'title': 'Permisos',
                         'translate': 'NAV.MENU_PERMISOS.TITLE',
-                        'icon': 'atr',
+                        'icon': 'lock',
                         'type': 'item',
-                        'url': '/' + VENTA_DEF.navigation.url,
+                        'url': '/' + PERMISO_DEF.navigation.url,
                     }
                 ]
             },
