@@ -72,7 +72,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     options: {
       options: [
         {value: 'ContactList', label: 'Lista de Contactos' },
-        {value: 'MatriculadoEstados', label: 'Matrículados por Estado' },
+        {value: 'MatriculadoEstados', label: 'Matrículados por Estado y Tipo' },
         {value: 'MatriculadoActividades', label: 'Matrículados por Actividades' },
         {value: 'fromFile', label: 'Importar desde Archivo' }
       ]
@@ -109,10 +109,24 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
         compositeKey: ['id'],
         elementLabel: 'nombre',
         titleFrom: 'Matriculados por Estado',
-        titleTo: 'Matriculados Seleccionados',
+        titleTo: 'Seleccionados',
         fromWs: {
             key: 'matriculados_estado_ws',
             url: PREFIX_DOMAIN_API + 'MatriculadoEstado/GetAllWithGroupNumber' // REVISAR
+        }
+    }
+  },
+  {
+    key: 'matriculadosTiposIds',
+    controlType: 'pick-list',
+    options: {
+        compositeKey: ['id'],
+        elementLabel: 'nombre',
+        titleFrom: 'Matriculados por Tipo',
+        titleTo: 'Seleccionados',
+        fromWs: {
+            key: 'matriculados_tipo_ws',
+            url: PREFIX_DOMAIN_API + 'MatriculaTipo' // REVISAR
         }
     }
   },
