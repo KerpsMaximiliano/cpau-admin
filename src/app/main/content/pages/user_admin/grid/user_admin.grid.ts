@@ -1,3 +1,5 @@
+import { SEGURIDAD_GRUPO_USUARIO_NAV_DEF } from "../../seguridad_grupo_usuario/navigation/seguridad_grupo_usuario.nav";
+
 export const USER_ADMIN_GRID_DEF = {
   columnsDef: [
     {
@@ -37,5 +39,19 @@ export const USER_ADMIN_GRID_DEF = {
     'lastIpAddress',
     'createdOnUtcString',
     'lastLoginDateUtcString'
+  ],
+  actions: [
+    {
+      actionNameKey: 'Grupos de Permisos',
+      actionType: 'redirect',
+      redirect: {
+        url: SEGURIDAD_GRUPO_USUARIO_NAV_DEF.url,
+        querystring: {
+          idUsuario : 'id',
+          parentTitle: 'username'
+        }
+      },
+      icon: 'group_work'
+    }
   ]
 };

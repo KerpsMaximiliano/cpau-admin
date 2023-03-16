@@ -17,5 +17,6 @@ export const PERMISO_GRID_DEF = {
   displayedColumns: [
     'codigo',
     'nombre'
-  ]
+  ],
+  deleteAction: true
 };

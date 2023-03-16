@@ -1,6 +1,6 @@
 export const SECCION_SECURITY_DEF = {
-  readAccess: 'FAQ_CREATE',
-  updateAccess: 'FAQ_CREATE',
-  createAccess: 'FAQ_CREATE',
-  deleteAccess: 'FAQ_CREATE'
+  readAccess: 'SECCION_READ',
+  updateAccess: 'SECCION_UPDATE',
+  createAccess: 'SECCION_CREATE',
+  deleteAccess: 'SECCION_DELETE'
 };

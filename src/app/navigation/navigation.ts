@@ -1,15 +1,13 @@
 import { CATEGORIA_DEF } from 'app/main/content/pages/categoria/categoria.def';
-import { CONTACT_LIST_DEF } from 'app/main/content/pages/contact_list/contact_list.def';
 import { CONTACT_LIST_NAV_DEF } from 'app/main/content/pages/contact_list/navigation/contact_list.nav';
-import { CONTACT_LIST_DESUSCRIPTION_NAV_DEF } from 'app/main/content/pages/contact_list_desuscription/navigation/contact_list_desuscription.nav';
 import { MATRICULADO_ESTADO_NAV_DEF } from 'app/main/content/pages/matriculado_estado/navigation/matriculado_estado.nav';
 import { MATRICULA_TIPO_NAV_DEF } from 'app/main/content/pages/matricula_tipo/navigation/matricula_tipo.nav';
 import { PERMISO_DEF } from 'app/main/content/pages/permiso/permiso.def';
 import { PRODUCTO_DEF } from 'app/main/content/pages/producto/producto.def';
-import { AUTORES_DEF } from 'app/main/content/pages/revistanotas/autores/autores.def';
 import { AUTORES_NAV_DEF } from 'app/main/content/pages/revistanotas/autores/navigation/autores.nav';
 import { CONTENIDOS_NAV_DEF } from 'app/main/content/pages/revistanotas/contenidos/navigation/contenidos.nav';
 import { REVISTAS_NAV_DEF } from 'app/main/content/pages/revistanotas/revistas/navigation/revistas.nav';
+import { SEGURIDAD_GRUPO_DEF } from 'app/main/content/pages/seguridad_grupo/seguridad_grupo.def';
 import { USER_ADMIN_DEF } from 'app/main/content/pages/user_admin/user_admin.def';
 import { VENTA_DEF } from 'app/main/content/pages/venta/venta.def';
 import { environment } from 'environments/environment';
@@ -28,7 +26,7 @@ export const navigation = [
                     {
                         'title': 'Contactos',
                         'type': 'item',
-                        'url': '/' + environment.URL_IDENTIFICACION_BUSQUEDA
+                        'url': environment.URL_IDENTIFICACION_BUSQUEDA
                     },
                     {
                         'title': 'Listas de Contactos',
@@ -40,7 +38,7 @@ export const navigation = [
                         'title': 'Subir Imágenes',
                         'translate': 'NAV.IMAGEN.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_IMAGEN_SUBIR,
+                        'url': environment.URL_IMAGEN_SUBIR,
                     },
                     {
                         'id': 'matriculaTipo',
@@ -76,7 +74,7 @@ export const navigation = [
                                 'title': 'Secciones',
                                 'translate': 'NAV.SECCION.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_SECCIONES,
+                                'url': environment.URL_SECCIONES,
                                 'icon': 'dashboard'
                             },
                             {
@@ -85,7 +83,7 @@ export const navigation = [
                                 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type': 'item',
                                 'icon': 'library_books',
-                                'url': '/' + environment.URL_CONTENIDOS
+                                'url': environment.URL_CONTENIDOS
                             },
                             {
                                 'id': 'imagen',
@@ -93,7 +91,7 @@ export const navigation = [
                                 'translate': 'NAV.IMAGEN.TITLE',
                                 'type': 'item',
                                 'icon': 'photo_library',
-                                'url': '/' + environment.URL_IMAGEN,
+                                'url': environment.URL_IMAGEN,
                             },
                             {
                                 'id': 'productoExterno',
@@ -101,7 +99,7 @@ export const navigation = [
                                 'translate': 'NAV.PRODUCTOEXTERNO.TITLE',
                                 'type': 'item',
                                 'icon': 'extension',
-                                'url': '/' + environment.URL_PRODUCTO_EXTERNO,
+                                'url': environment.URL_PRODUCTO_EXTERNO,
                             },
                             {
                                 'id': 'noticiaCarrousel',
@@ -109,7 +107,7 @@ export const navigation = [
                                 'translate': 'NAV.NOTASCARROUSEL.TITLE',
                                 'type': 'item',
                                 'icon': 'burst_mode',
-                                'url': '/' + environment.URL_NOTICIA_CARROUSEL,
+                                'url': environment.URL_NOTICIA_CARROUSEL,
                             },
                         ]
                     },
@@ -124,21 +122,21 @@ export const navigation = [
                                 'title': 'Boletínes',
                                 'translate': 'NAV.BOLETIN.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_BOLETIN,
+                                'url': environment.URL_BOLETIN,
                             },
                             {
                                 'id': 'indice',
                                 'title': 'Índices',
                                 'translate': 'NAV.INDICE.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_INDICE,
+                                'url': environment.URL_INDICE,
                             },
                             {
                                 'id': 'mailing',
                                 'title': 'Mailing',
                                 'translate': 'NAV.MAILING.TITLE',
                                 'type': 'item',
-                                'url': '/' + environment.URL_MAILING,
+                                'url': environment.URL_MAILING,
                             },
                         ]
                     },
@@ -155,14 +153,14 @@ export const navigation = [
                         'title': 'Formularios',
                         'translate': 'NAV.FORMULARIO.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_FORMULARIO,
+                        'url': environment.URL_FORMULARIO,
                     },
                     {
                         'id': 'publicidad',
                         'title': 'Publicidades',
                         'translate': 'NAV.PUBLICIDAD.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_PUBLICIDAD,
+                        'url': environment.URL_PUBLICIDAD,
                     }
                     
                 ]
@@ -207,28 +205,28 @@ export const navigation = [
                         'title': 'Modal Home',
                         'translate': 'NAV.ABMMODAL.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_ABM_MODAL,
+                        'url': environment.URL_ABM_MODAL,
                     },
                     {
                         'id': 'messageTemplate',
                         'title': 'Plantillas de Mensajes',
                         'translate': 'NAV.MESSAGETEMPLATE.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_MESSAGE_TEMPLATE,
+                        'url': environment.URL_MESSAGE_TEMPLATE,
                     },
                     {
                         'id': 'emailAccount',
                         'title': 'Cuentas de Correo',
                         'translate': 'NAV.EMAILACCOUNT.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_EMAIL_ACCOUNT,
+                        'url': environment.URL_EMAIL_ACCOUNT,
                     },
                     {
                         'id': 'abmRoles',
                         'title': 'Roles',
                         'translate': 'NAV.ABMROLES.TITLE',
                         'type': 'item',
-                        'url': '/' + environment.URL_ABM_ROLES,
+                        'url': environment.URL_ABM_ROLES,
                     }
                 ]
             },
@@ -244,7 +242,7 @@ export const navigation = [
                         'translate': 'NAV.PRODUCTOS.TITLE',
                         'icon': 'inventory_2',
                         'type': 'item',
-                        'url': '/' + PRODUCTO_DEF.navigation.url,
+                        'url': PRODUCTO_DEF.navigation.url,
                     },
                     {
                         'id': 'categoria',
@@ -252,7 +250,7 @@ export const navigation = [
                         'translate': 'NAV.CATEGORIAS.TITLE',
                         'icon': 'category',
                         'type': 'item',
-                        'url': '/' + CATEGORIA_DEF.navigation.url,
+                        'url': CATEGORIA_DEF.navigation.url,
                     },
                     {
                         'id': 'ventas',
@@ -260,7 +258,7 @@ export const navigation = [
                         'translate': 'NAV.OPERACIONES.TITLE',
                         'icon': 'point_of_sale',
                         'type': 'item',
-                        'url': '/' + VENTA_DEF.navigation.url,
+                        'url': VENTA_DEF.navigation.url,
                     }
                 ]
             },
@@ -276,7 +274,7 @@ export const navigation = [
                         'translate': 'NAV.MENU_USUARIOS.TITLE',
                         'icon': 'manage_accounts',
                         'type': 'item',
-                        'url': '/' + USER_ADMIN_DEF.navigation.url,
+                        'url': USER_ADMIN_DEF.navigation.url,
                     },
                     {
                         'id': 'grupos',
@@ -284,7 +282,7 @@ export const navigation = [
                         'translate': 'NAV.MENU_GRUPOS.TITLE',
                         'icon': 'group_work',
                         'type': 'item',
-                        'url': '/' + CATEGORIA_DEF.navigation.url,
+                        'url': SEGURIDAD_GRUPO_DEF.navigation.url,
                     },
                     {
                         'id': 'permisos',
@@ -292,7 +290,7 @@ export const navigation = [
                         'translate': 'NAV.MENU_PERMISOS.TITLE',
                         'icon': 'lock',
                         'type': 'item',
-                        'url': '/' + PERMISO_DEF.navigation.url,
+                        'url': PERMISO_DEF.navigation.url,
                     }
                 ]
             },

@@ -69,6 +69,10 @@ import { MODAL_HOME_HISTORY_DEF } from './modal_home_history/modal_home_history.
 import { FORMULARIO_HISTORY_DEF } from './formulario_history/formulario_history.def';
 import { USER_ADMIN_DEF } from './user_admin/user_admin.def';
 import { PERMISO_DEF } from './permiso/permiso.def';
+import { SEGURIDAD_GRUPO_DEF } from './seguridad_grupo/seguridad_grupo.def';
+import { SEGURIDAD_GRUPO_PERMISO_DEF } from './seguridad_grupo_permiso/seguridad_grupo_permiso.def';
+import { SEGURIDAD_GRUPO_USUARIO_DEF } from './seguridad_grupo_usuario/seguridad_grupo_usuario.def';
+
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -404,7 +408,24 @@ export const ROUTES: Routes = [
     path: USER_ADMIN_DEF.navigation.url.split('/')[1],
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
-  }
+  },
+  {
+    path: SEGURIDAD_GRUPO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: SEGURIDAD_GRUPO_PERMISO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+  {
+    path: SEGURIDAD_GRUPO_USUARIO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]  
+  },
+ 
+
 ];
 
 
