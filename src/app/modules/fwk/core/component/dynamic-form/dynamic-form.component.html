@@ -78,6 +78,12 @@
         [controlName]="field.key" [compositeKey]="field.options.compositeKey"
         (onChangeControl)="onCustomControlChange(field.key,$event)"></app-pick-list>
     </div>
+    <div *ngIf="field.controlType == 'simple-pick-list'">
+      <app-simple-pick-list [elementLabel]="field.options.elementLabel" [titleFrom]="field.options.titleFrom"
+        [titleTo]="field.options.titleTo" [fromData]="field.options.fromData" [toData]="field.options.toData"
+        [controlName]="field.key" [compositeKey]="field.options.compositeKey"
+        (onChangeControl)="onCustomControlChange(field.key,$event)"></app-simple-pick-list>
+    </div>
     <div *ngIf="field.controlType == 'autocomplete'">
       <app-autocomplete [config]="field" [formGroup]="form" [searchTermInterface]="searchTermInterface(field)"
         [formControlName]="field.key" [name]="field.key">
