@@ -46,7 +46,6 @@ export class SimplePickListComponent extends AbstractComponent {
   onChangeSelectAll(e: boolean) {
     e ? this.list.selectAll() : this.list.deselectAll();
     this.onChangeControl.emit(this.dataSelected);
-    console.log(this.dataSelected)
   }
 
   getI18nName(): string {
@@ -58,13 +57,8 @@ export class SimplePickListComponent extends AbstractComponent {
   }
 
   onNgModelChangeList() {
-    console.log(this.dataSelected)
     this.selectAll = this.dataSelected.length === this._fromData.length;
     this.onChangeControl.emit(this.dataSelected);
-  }
-
-  onNgModelChangeToList(elements: any[]) {
-
   }
 
   onInit() {
