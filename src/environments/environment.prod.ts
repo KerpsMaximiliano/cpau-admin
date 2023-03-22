@@ -7,7 +7,7 @@ export const environment = {
     hmr: false,
 
     /** AUTHENTICATION */
-    AUTHENTICATION_URL:  PREFIX_DOMAIN_API + 'User/login',
+    AUTHENTICATION_URL:  PREFIX_DOMAIN_API + 'User/loginadmin',
     AUTHENTICATION_REFRESH_TOKEN_URL:  PREFIX_DOMAIN_API + 'Auth/refresh',
 
     /* Config General URl*/
