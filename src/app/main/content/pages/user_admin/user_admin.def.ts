@@ -28,5 +28,12 @@ export const USER_ADMIN_DEF: CrudDef = {
     },
     dialogConfig: {
         width: '400px'
-    }   
+    },
+    filterInMemory: false,
+    serverPagination: true,
+    pagination: {
+        page: 0,
+        pageSize: 10
+    },
+    cancelInitSearch: false   
 };

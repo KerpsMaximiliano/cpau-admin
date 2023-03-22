@@ -31,7 +31,7 @@ export const SEGURIDAD_GRUPO_USUARIO_GRID_DEF = {
       redirect: {
         url: SEGURIDAD_GRUPO_PERMISO_NAV_DEF.url,
         querystring: {
-          idGrupo : 'id',
+          idGrupo : 'idGrupo',
           parentTitle: 'grupoNombre'
         }
       },
