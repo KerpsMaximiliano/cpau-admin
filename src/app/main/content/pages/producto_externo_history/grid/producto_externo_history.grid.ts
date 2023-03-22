@@ -90,6 +90,7 @@ export const PRODUCTO_EXTERNO_HISTORY_GRID_DEF = {
       actionNameKey: 'producto_externo_history_grid_def_column_restoreversion',
       icon: 'repartition',
       confirm: true,
+      actionSecurity: 'PRODUCTO_EXTERNO_HISTORY_RESTORE_VERSION',
       ws: {
         key: 'contenidos_history_grid_def_column_restoreversion',
         url: PREFIX_DOMAIN_API + 'ExternalProduct/RestoreVersion',

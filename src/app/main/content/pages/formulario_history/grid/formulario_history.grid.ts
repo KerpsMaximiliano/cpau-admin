@@ -171,6 +171,7 @@ export const FORMULARIO_HISTORY_GRID_DEF = {
     {
       actionNameKey: 'formulario_history_grid_def_column_restoreversion',
       icon: 'repartition',
+      actionSecurity: 'FORMULARIO_HISTORY_RESTORE_VERSION',
       formDef: {
         showSubmitContinue: false,
         fields:[

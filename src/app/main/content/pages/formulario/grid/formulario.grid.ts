@@ -175,6 +175,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_descripcion',
       icon: 'description',
+      actionSecurity: 'FORMULARIO_UPDATE_DESCRIPTION',
       formDef : {
         fields: [
           {
@@ -195,6 +196,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_descripcion_text',
       icon: 'document_scanner',
+      actionSecurity: 'FORMULARIO_UPDATE_DESCRIPTION',
       formDef : {
         fields: [
           {
@@ -215,6 +217,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_finalMessage',
       icon: 'comment',
+      actionSecurity: 'FORMULARIO_UPDATE_FINAL_MESSAGE',
       formDef: {
         fields: [ form_finalMessage ],
         showSubmitContinue: true
@@ -228,6 +231,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_finalMessage_text',
       icon: 'mode_comment',
+      actionSecurity: 'FORMULARIO_UPDATE_FINAL_MESSAGE',
       formDef: {
         fields: [ form_finalMessage_text ],
         showSubmitContinue: true
@@ -241,6 +245,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_receipt',
       icon: 'receipt',
+      actionSecurity: 'FORMULARIO_UPDATE_RECEIPT',
       formDef: {
         showSubmitContinue: true,
         fields : [
@@ -267,6 +272,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_receipt_text',
       icon: 'receipt_long',
+      actionSecurity: 'FORMULARIO_UPDATE_RECEIPT',
       formDef: {
         showSubmitContinue: true,
         fields : [
@@ -293,6 +299,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_campos',
       icon: 'format_list_bulleted',
+      actionSecurity: 'FORMULARIO_CAMPOS_READ',
       actionType: 'redirect',
       redirect: {
         url: '/campo',
@@ -306,6 +313,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       actionNameKey: 'formulario_grid_def_button_action_inscriptos',
       icon: 'group',
       actionType: 'redirect',
+      actionSecurity: 'FORM_RESPONSE_READ',
       redirect: {
         url: '/formResponse',
         querystring: {
@@ -317,6 +325,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_copiar',
       icon: 'file_copy',
+      actionSecurity: 'FORMULARIO_DUPLICAR',
       form: [
         {
           key: 'name',
@@ -336,6 +345,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_publicar',
       icon: 'cloud_upload',
+      actionSecurity: 'FORMULARIO_PUBLICAR_DESPUBLICAR',
       confirm: true,
       ws: {
         key: 'formulario_grid_def_button_action_publicar',
@@ -346,6 +356,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'formulario_grid_def_button_action_despublicar',
       icon: 'cloud_download',
+      actionSecurity: 'FORMULARIO_PUBLICAR_DESPUBLICAR',
       confirm: true,
       ws: {
         key: 'formulario_grid_def_button_action_despublicar',
@@ -357,6 +368,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
       actionNameKey: 'formulario_grid_button_action_file_export',
       actionType: 'file-download',
       icon: 'launch',
+      actionSecurity: 'FORMULARIO_EXPORTAR_INSCRIPTOS',
       ws: {
         key: 'formulario_grid_button_action_file_export',
         url: PREFIX_DOMAIN_API + 'Form/ExportForm',
@@ -369,6 +381,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'Previsualizar',
       actionType: 'redirect',
+      actionSecurity: 'FORMULARIO_PREVIEW',
       redirect: {
         openTab: true,
         externalUrl: true,
@@ -383,6 +396,7 @@ export const FORMULARIO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'Versiones Anteriores',
       actionType: 'redirect',
+      actionSecurity: 'FORMULARIO_HISTORY_READ',
       redirect: {
         url: FORMULARIO_HISTORY_NAV_DEF.url,
         querystring: {

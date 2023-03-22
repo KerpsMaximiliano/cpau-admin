@@ -78,6 +78,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
   actions: [
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_editarnomatriculado',
+      actionSecurity: 'PERFIL_IDENTIFICACION_UPDATE_DATOS_NO_MATRICULADO',
       icon: 'edit_note',
       form: PERFIL_IDENTIFICACION_UPDATE_FORM_FIELDS_DEF,
       ws: {
@@ -90,6 +91,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrar_contacto',
       icon: 'person_off',
       confirm: true,
+      actionSecurity: 'PERFIL_IDENTIFICACION_DELETE_CONTACTO',
       ws: {
         key: 'section_content_grid_def_button_action_marcar_destacado',
         url: PREFIX_DOMAIN_API + '/admin/personas/contactos/',
@@ -99,6 +101,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_domicilio',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_DOMICILIO_READ',
       redirect: {
         url: '/perfilDomicilio',
         querystring: {
@@ -111,6 +114,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_email',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_EMAIL_READ',
       redirect: {
         url: '/perfilEmail',
         querystring: {
@@ -123,6 +127,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_telefono',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_TELEFONO_READ',
       redirect: {
         url: '/perfilTelefono',
         querystring: {
@@ -135,6 +140,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_matriculado',
       icon: 'description',
+      actionSecurity: 'PERFIL_IDENTIFICACION_UPDATE_ESTADO_MATRICULADO',
       form: [
         {
           label: 'id',
@@ -153,11 +159,6 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'textbox',
           disabled: true
         },
-
-
-        
-      
-
         {               
           key: 'estadoId',
           labelKey: 'matricula_create_form_fields_def_field_estado',
@@ -173,8 +174,6 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
               }
           }
         },
-
-
         {
           labelKey: 'matricula_create_form_fields_def_field_universidad',
           key: 'universidad',
@@ -212,6 +211,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_redes',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_REDES_SOCIALES_READ',
       redirect: {
         url: '/perfilRedesSociales',
         querystring: {
@@ -224,6 +224,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_cuentacorriente',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_CUENTA_CORRIENTE_READ',
       redirect: {
         url: '/perfilCuentaCorriente',
         querystring: {
@@ -235,6 +236,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       actionNameKey: 'seccion_grid_def_button_action_cuenta',
+      actionSecurity: 'PERFIL_IDENTIFICACION_UPDATE_CUENTA',
       icon: 'person',
       form: [
         {
@@ -284,6 +286,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'seccion_grid_def_button_action_rol',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_ROL_READ',
       redirect: {
         url: '/perfilRol',
         querystring: {
@@ -296,6 +299,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_publicaciones',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_PUBLICACIONES_READ',
       redirect: {
         url: '/perfilPublicaciones',
         querystring: {
@@ -308,6 +312,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_newsletter',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_NEWSLETTERS_READ',
       redirect: {
         url: '/perfilNewsletters',
         querystring: {
@@ -342,13 +347,15 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
         key: 'perfil_identificacion_grid_def_button_action_subirFoto',
         url: PREFIX_DOMAIN_API + 'admin/saveimage',
         method: 'POST'
-      }
+      },
+      actionSecurity: 'PERFIL_IDENTIFICACION_UPLOAD_FOTO_PERSONA'
     },
    
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_borrarfoto',
       icon: 'image_not_supported',
       confirm: true,
+      actionSecurity: 'PERFIL_IDENTIFICACION_DELETE_FOTO_PERSONA',
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_borrarfoto',
         url: PREFIX_DOMAIN_API + 'admin/deleteimage',
@@ -357,7 +364,8 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     },
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_recover_password',
-      icon: 'password',      
+      icon: 'password',
+      actionSecurity: 'PERFIL_IDENTIFICACION_RECOVER_PASSWORD',      
       confirm: true,
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_recoverPassword',
@@ -368,6 +376,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_habilitar_pagoonline',
       icon: 'credit_card',
+      actionSecurity: 'PERFIL_IDENTIFICACION_HABILITAR_DESHABILITAR_PAGO_ONLINE',  
       confirm: false,
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_habilitar_pagoonline',
@@ -379,6 +388,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_bloquear_pagoonline',
       icon: 'credit_card_off',
       confirm: false,
+      actionSecurity: 'PERFIL_IDENTIFICACION_HABILITAR_DESHABILITAR_PAGO_ONLINE',  
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_bloquear_pagoonline',
         url: PREFIX_DOMAIN_API + 'Matricula/bloquearPagoOnline',
@@ -388,6 +398,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_credencial',
       actionType: 'file-download',
+      actionSecurity: 'PERFIL_IDENTIFICACION_DESCARGAR_CREDENCIAL',  
       icon: 'assignment_ind',
       ws: {
         key: 'perfil_identificacion_grid_def_button_action_credencial',
@@ -401,6 +412,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_certificados',
       actionType: 'redirect',
+      actionSecurity: 'CERTIFICADO_MATRICULADO_READ',  
       redirect: {
         url: '/CertificadoMatriculado',
         querystring: {
@@ -413,6 +425,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_bloqueos_cursos',
       icon: 'free_cancellation',
+      actionSecurity: 'PERFIL_IDENTIFICACION_BLOQUEO_CURSOS',  
       form: [
         {
           key: 'bloqueoCursoPrimerSemestre',
@@ -442,6 +455,7 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
     {
       actionNameKey: 'perfil_identificacion_grid_def_button_action_linkcpaumail',
       icon: 'alternate_email',
+      actionSecurity: 'PERFIL_IDENTIFICACION_LINK_PAGO_CPAUMAIL', 
       form: [
         {
           key: 'monto',

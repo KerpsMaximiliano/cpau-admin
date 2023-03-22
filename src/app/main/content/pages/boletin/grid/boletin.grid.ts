@@ -61,6 +61,7 @@ export const BOLETIN_GRID_DEF = {
       actionNameKey: 'boletin_grid_def_button_action_contenido',
       icon: 'library_books',
       actionType: 'redirect',
+      actionSecurity: 'BOLETIN_CONTENIDO_READ',
       redirect: {
         url: '/boletinContenido',
         querystring: {
@@ -72,6 +73,7 @@ export const BOLETIN_GRID_DEF = {
     {
       actionNameKey: 'Previsualizar',
       actionType: 'redirect',
+      actionSecurity: 'BOLETIN_PREVIEW',
       redirect: {
         openTab: true,
         externalUrl: true,

@@ -1,6 +1,6 @@
 export const BANNER_SECURITY_DEF = {
-  readAccess: 'FAQ_CREATE',
-  updateAccess: 'FAQ_CREATE',
-  createAccess: 'FAQ_CREATE',
-  deleteAccess: 'FAQ_CREATE'
+  readAccess: 'BANNER_READ',
+  updateAccess: 'BANNER_UPDATE',
+  createAccess: 'BANNER_CREATE',
+  deleteAccess: 'BANNER_DELETE'
 };

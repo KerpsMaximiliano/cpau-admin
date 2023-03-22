@@ -80,6 +80,7 @@ export const CONTENIDOS_GRID_DEF = {
     {
       actionNameKey: 'contenidos_grid_def_column_texto',
       icon: 'description',
+      actionSecurity: 'RN_CONTENIDOS_UPDATE_TEXTO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -100,6 +101,7 @@ export const CONTENIDOS_GRID_DEF = {
     {
       actionNameKey: 'contenidos_grid_def_column_texto_text',
       icon: 'note',
+      actionSecurity: 'RN_CONTENIDOS_UPDATE_TEXTO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -120,6 +122,7 @@ export const CONTENIDOS_GRID_DEF = {
     {
       actionNameKey: 'contenidos_create_form_fields_def_field_tags',
       actionType: 'redirect',
+      actionSecurity: 'TAGS_READ',
       redirect: {
         url: '/ContenidoTags',
         querystring: {
@@ -132,6 +135,7 @@ export const CONTENIDOS_GRID_DEF = {
     {
       actionNameKey: 'contenidos_create_form_fields_def_field_autores',
       actionType: 'redirect',
+      actionSecurity: 'CONTENIDO_AUTORES_READ',
       redirect: {
         url: '/ContenidoAutores',
         querystring: {
@@ -144,6 +148,7 @@ export const CONTENIDOS_GRID_DEF = {
     {
       actionNameKey: 'Versiones Anteriores',
       actionType: 'redirect',
+      actionSecurity: 'RN_CONTENIDOS_HISTORY_READ',
       redirect: {
         url: CONTENIDOS_HISTORY_NAV_DEF.url,
         querystring: {

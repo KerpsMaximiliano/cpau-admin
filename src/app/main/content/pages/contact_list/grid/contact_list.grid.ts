@@ -35,6 +35,7 @@ export const CONTACT_LIST_GRID_DEF = {
     {
       actionNameKey: 'contact_list_grid_def_column_desuscription',
       actionType: 'redirect',
+      actionSecurity: 'CONTACT_LIST_DESUSCRIPTION_READ', 
       redirect: {
         url: '/contactListDesuscription',
         querystring: {
@@ -47,6 +48,7 @@ export const CONTACT_LIST_GRID_DEF = {
     {
       actionNameKey: 'contact_list_grid_def_column_members',
       actionType: 'redirect',
+      actionSecurity: 'CONTACT_LIST_MEMBERS_READ', 
       redirect: {
         url: '/contactListMembers',
         querystring: {
@@ -60,6 +62,7 @@ export const CONTACT_LIST_GRID_DEF = {
       actionNameKey: 'contact_list_grid_button_action_file_members',
       actionType: 'file-download',
       icon: 'file_download',
+      actionSecurity: 'CONTACT_LIST_EXPORT_MEMBERS', 
       ws: {
         key: 'indice_grid_button_action_file_inscriptos',
         url: PREFIX_DOMAIN_API + 'ContactList/Export',
@@ -73,6 +76,7 @@ export const CONTACT_LIST_GRID_DEF = {
       actionNameKey: 'contact_list_grid_button_action_file_import_members',
       actionType: 'file-upload',
       icon: 'file_upload',
+      actionSecurity: 'CONTACT_LIST_IMPORT_MEMBERS', 
       form: [
         {               
           key: 'file',

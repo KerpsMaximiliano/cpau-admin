@@ -107,6 +107,7 @@ export const VENTA_GRID_DEF = {
     {
       actionNameKey: 'venta_grid_def_column_accion_venta_derecho_anual',
       actionType: 'redirect',
+      actionSecurity: 'VENTA_DERECHO_ANUAL_READ',
       redirect: {
         url: '/VentaDerechoAnual',
         querystring: {
@@ -119,6 +120,7 @@ export const VENTA_GRID_DEF = {
     {
       actionNameKey: 'venta_grid_def_column_accion_venta_productos',
       actionType: 'redirect',
+      actionSecurity: 'VENTA_PRODUCTO_READ',
       redirect: {
         url: '/VentaProducto',
         querystring: {
@@ -131,6 +133,7 @@ export const VENTA_GRID_DEF = {
     {
       actionNameKey: 'venta_grid_def_column_accion_venta_tramites',
       actionType: 'redirect',
+      actionSecurity: 'VENTA_TRAMITE_READ',
       redirect: {
         url: '/VentaTramite',
         querystring: {
@@ -143,6 +146,7 @@ export const VENTA_GRID_DEF = {
     {
       icon: 'local_shipping',
       actionNameKey: 'venta_grid_def_column_accion_venta_generarenvio',
+      actionSecurity: 'VENTA_GENERAR_ENVIO',
       formDef: {
         showSubmitContinue: false,
         fields:[
@@ -204,6 +208,7 @@ export const VENTA_GRID_DEF = {
     {
       icon: 'contact_mail',
       actionNameKey: 'venta_grid_def_column_accion_venta_datosenvio',
+      actionSecurity: 'VENTA_VER_DATOS_ENVIO',
       formDef: {
         showSubmitContinue: false,
         fields:[

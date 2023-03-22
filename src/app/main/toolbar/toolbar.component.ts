@@ -166,10 +166,11 @@ export class FuseToolbarComponent extends CrudComponent implements OnInit, OnDes
     }
 
     getUsername(){
-        if (this.user){
-            return this.user.username;
-        }
-        return '';
+        return JSON.parse(localStorage.getItem('currentUser')).username;
+        // if (this.user){
+        //     return this.user.username;
+        // }
+        // return '';
     }
 
     onLogout(){

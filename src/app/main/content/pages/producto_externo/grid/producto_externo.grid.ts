@@ -77,6 +77,7 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
     actionNameKey: 'producto_externo_grid_def_button_action_publicar',
     icon: 'cloud_upload',
     confirm: true,
+    actionSecurity: 'PRODUCTO_EXTERNO_PUBLICAR_DESPUBLICAR',
     ws: {
       key: 'producto_externo_grid_def_button_action_publicar',
       url: PREFIX_DOMAIN_API + 'ExternalProduct/ActivarDesactivar/',
@@ -86,6 +87,7 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
   {
     actionNameKey: 'producto_externo_grid_def_button_action_despublicar',
     icon: 'cloud_download',
+    actionSecurity: 'PRODUCTO_EXTERNO_PUBLICAR_DESPUBLICAR',
     confirm: true,
     ws: {
       key: 'producto_externo_grid_def_button_action_despublicar',
@@ -96,6 +98,7 @@ export const PRODUCTO_EXTERNO_GRID_DEF = {
   {
     actionNameKey: 'Versiones Anteriores',
     actionType: 'redirect',
+    actionSecurity: 'PRODUCTO_EXTERNO_HISTORY_READ',
     redirect: {
       url: PRODUCTO_EXTERNO_HISTORY_NAV_DEF.url,
       querystring: {

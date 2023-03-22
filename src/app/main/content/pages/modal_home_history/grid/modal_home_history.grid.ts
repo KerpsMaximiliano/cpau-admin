@@ -52,6 +52,7 @@ export const MODAL_HOME_HISTORY_GRID_DEF = {
   actions : [
     {
       actionNameKey: 'modal_home_history_grid_def_column_restoreversion',
+      actionSecurity: 'MODAL_HOME_HISTORY_RESTORE_VERSION',
       icon: 'repartition',
       confirm: true,
       ws: {

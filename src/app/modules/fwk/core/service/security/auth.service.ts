@@ -7,6 +7,8 @@ import { environment } from 'environments/environment';
 import { GenericHttpService } from '../generic-http-service/generic-http.service';
 import { SpinnerService } from '../../module/spinner/service/spinner.service';
 import { Router } from '@angular/router';
+import { navigation } from 'app/navigation/navigation';
+import { NavigationService } from '../navigation/navigation.service';
 
 
 const USER_DATA = 'currentUser';
@@ -16,7 +18,7 @@ export class AuthService extends HttpService {
   
   private genericHttpService: GenericHttpService;
   private spinnerService: SpinnerService;
-  constructor(protected injector: Injector, private router: Router) { 
+  constructor(protected injector: Injector, private router: Router, private navigationService: NavigationService) { 
     super(injector, '');
     this.spinnerService = injector.get(SpinnerService);
     this.genericHttpService = injector.get(GenericHttpService);
@@ -58,6 +60,7 @@ export class AuthService extends HttpService {
       this.genericHttpService.basicPost(environment.AUTHENTICATION_URL, {username, password}).subscribe(response => {
         this.setUser(response);
         this.setToken(response.token);
+        this.navigationService.setNavigation(navigation);
         observer.next(response);
       }, e => {
         observer.error(e);

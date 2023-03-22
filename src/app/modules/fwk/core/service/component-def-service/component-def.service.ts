@@ -184,4 +184,59 @@ export class ComponentDefService{
     }
     return null;
   }
+  getUserPermisos():string[]{
+    const permisos = this.localStorageService.getUserLocalStorage()?.permisos;
+    return permisos ? permisos.split(";") : [];
+  }
+
+    hasAccess(security){
+    if(security ==  null || security ==  undefined){
+        return true;
+    }
+    let userPermisos = this.getUserPermisos();
+    return userPermisos.includes(security);
+    }
+
+    applySecurity(component){
+        let userPermisos = this.getUserPermisos();
+        if(component.security.createAccess && !userPermisos.includes(component.security.createAccess)){
+            delete component.formsDef?.create;
+        }
+        if(component.security.updateAccess && !userPermisos.includes(component.security.updateAccess)){
+            delete component.formsDef?.update;
+        }
+        if(component.security.deleteAccess && !userPermisos.includes(component.security.deleteAccess)){
+            component.grid.deleteAction = false;
+            delete component.grid.deleteColumn
+        }
+        let allowedActions = [];
+        component.grid.actions?.forEach(action => {
+            if((action.actionSecurity && userPermisos.includes(action.actionSecurity))
+            || !action.actionSecurity){
+                allowedActions.push(action);
+            }
+        });
+        component.grid.actions = allowedActions;
+    }
+    filterNavArrayBySecurity(navArray, allowedSecurityValues) {
+        return navArray.map(nav => {
+          return this.filterNavByPermission(nav, allowedSecurityValues);
+        }).filter(nav => nav !== null);
+      }
+
+    filterNavByPermission(nav, allowedSecurityValues) {
+        if (nav.permission && !allowedSecurityValues.includes(nav.permission)) {
+          return null;
+        }
+        if (nav.children) {
+            nav.children = nav.children.map(child => {
+            return this.filterNavByPermission(child, allowedSecurityValues);
+          }).filter(child => child !== null);
+          if (nav.children.length === 0) {
+            delete nav.children;
+          }
+        }
+        return nav;
+      }
+
 }

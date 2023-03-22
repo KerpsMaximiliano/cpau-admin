@@ -183,6 +183,7 @@ export const CONTENIDO_HISTORY_GRID_DEF: GridDef = {
           }
         ]
       },
+      actionSecurity: 'CONTENIDO_HISTORY_RESTORE_VERSION',
       ws: {
         key: 'contenido_grid_def_button_action_restore',
         url: PREFIX_DOMAIN_API + 'Content/RestoreVersion',

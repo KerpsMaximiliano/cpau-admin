@@ -81,6 +81,7 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
             if (def === null){
               return;
             }
+            this.componentDefService.applySecurity(def);
             this.activatedRoute.queryParams.subscribe(params => {
               this.applyParamsToFilter(params, def);
               this.setUpCRUDDef(def); 

@@ -68,6 +68,7 @@ export const IDENTIFICACION_BUSQUEDA_GRID_DEF = {
     {
       actionNameKey: 'Editar',
       actionType: 'redirect',
+      actionSecurity: 'PERFIL_IDENTIFICACION_READ',
       redirect: {
         url: '/perfilIdentificacion',
         querystring: {

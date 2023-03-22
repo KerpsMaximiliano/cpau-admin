@@ -75,6 +75,7 @@ export const REVISTAS_GRID_DEF = {
     {
       actionNameKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa',
       icon: 'description',
+      actionSecurity: 'REVISTAS_UPDATE_TAPA',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -95,6 +96,7 @@ export const REVISTAS_GRID_DEF = {
     {
       actionNameKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_tapa_text',
       icon: 'note',
+      actionSecurity: 'REVISTAS_UPDATE_TAPA',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -115,6 +117,7 @@ export const REVISTAS_GRID_DEF = {
     {
       actionNameKey: 'revistas_UPDATE_FORM_FIELDS_DEF_FIELD_contenidos',
       actionType: 'redirect',
+      actionSecurity: 'RN_REVISTA_CONTENIDOS_READ',
       redirect: {
         url: '/RevistaContenidos',
         querystring: {

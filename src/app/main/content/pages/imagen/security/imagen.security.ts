@@ -1,6 +1,6 @@
 export const IMAGEN_SECURITY_DEF = {
-  readAccess: 'FAQ_CREATE',
-  updateAccess: 'FAQ_CREATE',
-  createAccess: 'FAQ_CREATE',
-  deleteAccess: 'FAQ_CREATE'
+  readAccess: 'IMAGEN_READ',
+  updateAccess: 'IMAGEN_UPDATE',
+  createAccess: 'IMAGEN_CREATE',
+  deleteAccess: 'IMAGEN_DELETE'
 };

@@ -5,6 +5,7 @@ import { environment } from 'environments/environment';
 import { ComponentDef } from '../../model/component-def/component-def';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { Observable } from 'rxjs';
+import { ComponentDefService } from '../component-def-service/component-def.service';
 
 @Injectable()
 export class NavigationService {
@@ -12,7 +13,7 @@ export class NavigationService {
   navigationClone: any;
   navigation: any;
   obserbers: {(obj: any)} [] = [];
-  constructor(private i18nService: I18nService, private localStorageService: LocalStorageService) {
+  constructor(private i18nService: I18nService, private localStorageService: LocalStorageService, private componentDefService: ComponentDefService) {
     this.i18nService.getByName('navigation').subscribe(
       i18n => {
                 if (i18n){
@@ -34,6 +35,9 @@ export class NavigationService {
   setNavigation(nav) {
     this.navigation = this.localStorageService.clone(nav);
     this.navigationClone = this.localStorageService.clone(nav);
+    let userPermisos = this.componentDefService.getUserPermisos();
+    // this.navigation = this.componentDefService.filterNavArrayBySecurity(this.navigation, userPermisos)
+    this.navigationClone = this.componentDefService.filterNavArrayBySecurity(this.navigationClone, userPermisos)
   }
 
   public setUpByMappingComponent(components: ComponentDef[]){

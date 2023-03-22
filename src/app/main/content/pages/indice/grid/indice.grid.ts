@@ -38,6 +38,7 @@ export const INDICE_GRID_DEF = {
     {
       actionNameKey: 'indice_grid_button_action_file_inscriptos',
       actionType: 'file-download',
+      actionSecurity: 'INDICE_EXPORTAR_INSCRIPTOS',
       icon: 'launch',
       ws: {
         key: 'indice_grid_button_action_file_inscriptos',

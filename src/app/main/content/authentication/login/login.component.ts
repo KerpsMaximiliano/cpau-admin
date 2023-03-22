@@ -106,20 +106,15 @@ export class LoginComponent extends AbstractFormComponent implements OnInit {
                        password: this.loginForm.controls.password.value};
         const control = this.requestQeue.addRequest();
         this.authService.login(user.username, user.password)
-            .subscribe(rest => {                   
-                    control.received();
-                    this.router.navigate(['/']);
-                },
-                error => {
-                    if (error.status === 401) {
+            .subscribe(
+                x => {
+                    if (x.statusCode === 401) {
                         this.loginFormErrors.userorpassinvalid = true;
-                        console.log(this.loginFormErrors);
+                    } else {
+                        this.router.navigate(['/']);
                     }
                     control.received();
                 },
-                () => {
-                    this.router.navigate(['/']);
-                }
             );
         }
 

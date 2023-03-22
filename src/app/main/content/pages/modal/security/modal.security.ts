@@ -1,6 +1,6 @@
 export const MODAL_SECURITY_DEF = {
-    readAccess: 'FAQ_CREATE',
-    updateAccess: 'FAQ_CREATE',
-    createAccess: 'FAQ_CREATE',
-    deleteAccess: 'FAQ_CREATE'
+    readAccess: 'MODAL_READ',
+    updateAccess: 'MODAL_UPDATE',
+    createAccess: 'MODAL_CREATE',
+    deleteAccess: 'MODAL_DELETE'
 };

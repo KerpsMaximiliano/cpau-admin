@@ -8,6 +8,7 @@ export class NavigationDef {
     title?: string;
 
     // Opcionales
+    permission?: string;
     translate?: string;
     showMenu?: boolean;
 }

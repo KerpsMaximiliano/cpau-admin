@@ -103,6 +103,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'section_content_grid_def_button_action_delete',
       icon: 'delete',
+      actionSecurity: 'SECCION_DELETE', 
       confirm: true,
       ws: {
         key: 'section_content_grid_def_button_action_delete',
@@ -113,6 +114,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'seccion_grid_def_button_action_nueva_seccion_hija',
       icon: 'post_add',
+      actionSecurity: 'SECCION_CREATE', 
       formDef: {
         showSubmitContinue: true,
         fields : [
@@ -156,6 +158,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'seccion_grid_def_button_action_contenido',
       actionType: 'redirect',
+      actionSecurity: 'SECCIONES_CONTENIDO_READ', 
       redirect: {
         url: '/sectionContent',
         querystring: {
@@ -179,6 +182,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'seccion_grid_def_button_action_mover_seccion',
       icon: 'low_priority',
+      actionSecurity: 'SECCIONES_MOVER_SECCION', 
       form: [
         {
           label: 'id',
@@ -225,6 +229,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'seccion_grid_def_button_action_politicas',
       icon: 'account_balance',
+      actionSecurity: 'SECCIONES_UPDATE_POLITICAS', 
       formDef: {
         fields : [
           {
@@ -244,6 +249,7 @@ export const SECCION_GRID_DEF : GridDef = {
     {
       actionNameKey: 'Versiones Anteriores',
       actionType: 'redirect',
+      actionSecurity: 'SECCIONES_HISTORY_READ', 
       redirect: {
         url: SECCIONES_HISTORY_NAV_DEF.url,
         querystring: {

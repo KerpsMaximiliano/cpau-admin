@@ -8,7 +8,7 @@ export const USER_DATA_FOR_FORCE_CHANGE_PASSWORD = 'USER_DATA_FOR_FORCE_CHANGE_P
 @Injectable()
 export class LocalStorageService {
   private tokenKey = 'jwt_token';
-  
+  private USER_DATA = 'currentUser'
   constructor() { }
 
   setTokenKey(tokenKey){
@@ -85,5 +85,9 @@ export class LocalStorageService {
 
   remove(key) {
     localStorage.removeItem(key);
+  }
+
+  getUserLocalStorage(): any {
+    return this.get(this.USER_DATA);
   }
 }

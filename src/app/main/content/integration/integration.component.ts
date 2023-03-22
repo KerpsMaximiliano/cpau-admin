@@ -26,6 +26,8 @@ export class IntegrationComponent extends AbstractComponent implements OnInit{
   ngOnInit(){
     const component = this.getComponentDefByUrl(this.route.routeConfig.path);
     if (component){
+      if(component.security && component.security.readAccess && !this.componentDefService.hasAccess(component.security.readAccess))
+        window.location.href = 'noContent';
       this.template = component.template;
       this.setUpComponentDef(component);
     }
