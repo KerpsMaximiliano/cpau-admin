@@ -3,8 +3,8 @@ export const PERMISO_UPDATE_FORM_FIELDS_DEF = [
     key: 'id',
     labelKey: 'PERMISO_UPDATE_FORM_FIELDS_DEF_FIELD_id',
     label: 'Id',
-    type: 'number',
-    controlType: 'number'
+    type: 'hidden',
+    controlType: 'hidden'
   },
   {
     key: 'codigo',

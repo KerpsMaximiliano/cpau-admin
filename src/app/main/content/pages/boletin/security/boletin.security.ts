@@ -1,6 +1,6 @@
 export const BOLETIN_SECURITY_DEF = {
-  readAccess: 'FAQ_CREATE',
-  updateAccess: 'FAQ_CREATE',
-  createAccess: 'FAQ_CREATE',
-  deleteAccess: 'FAQ_CREATE'
+  readAccess: 'BOLETIN_READ',
+  updateAccess: 'BOLETIN_UPDATE',
+  createAccess: 'BOLETIN_CREATE',
+  deleteAccess: 'BOLETIN_DELETE'
 };

@@ -120,6 +120,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_resumen',
       icon: 'description',
+      actionSecurity: 'CONTENIDO_UPDATE_RESUMEN',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -140,6 +141,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_resumen_texto',
       icon: 'document_scanner',
+      actionSecurity: 'CONTENIDO_UPDATE_RESUMEN',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -160,6 +162,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_texto',
       icon: 'menu_book',
+      actionSecurity: 'CONTENIDO_UPDATE_TEXTO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -180,6 +183,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_texto_text',
       icon: 'import_contacts',
+      actionSecurity: 'CONTENIDO_UPDATE_TEXTO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -200,6 +204,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_imagenes',
       icon: 'photo_album',
+      actionSecurity: 'CONTENT_IMAGE_READ',
       actionType: 'redirect',
       redirect: {
         url: '/contentImage',
@@ -212,6 +217,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'Previsualizar',
       actionType: 'redirect',
+      actionSecurity: 'CONTENIDO_PREVIEW',
       redirect: {
         externalUrl: true,
         openTab: true,
@@ -226,6 +232,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'contenido_grid_def_button_action_duplicate',
       icon: 'control_point_duplicate',
+      actionSecurity: 'CONTENIDO_DUPLICAR',
       formDef: {
         showSubmitContinue: false,
         fields:[
@@ -254,6 +261,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'Secciones',
       actionType: 'redirect',
+      actionSecurity: 'SECTION_CONTENT_READ',
       redirect: {
         url: "/seccionesContenido",
         querystring: {
@@ -265,6 +273,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
     {
       actionNameKey: 'Versiones Anteriores',
       actionType: 'redirect',
+      actionSecurity: 'CONTENIDO_HISTORY_READ',
       redirect: {
         url: CONTENIDO_HISTORY_NAV_DEF.url,
         querystring: {

@@ -30,6 +30,7 @@ export const AUTORES_GRID_DEF = {
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio',
       icon: 'description',
+      actionSecurity: 'AUTORES_UPDATE_SHORT_BIO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -50,6 +51,7 @@ export const AUTORES_GRID_DEF = {
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_shortbio_text',
       icon: 'note',
+      actionSecurity: 'AUTORES_UPDATE_SHORT_BIO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -70,6 +72,7 @@ export const AUTORES_GRID_DEF = {
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio',
       icon: 'list_alt',
+      actionSecurity: 'AUTORES_UPDATE_BIO',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -90,6 +93,7 @@ export const AUTORES_GRID_DEF = {
     {
       actionNameKey: 'AUTORES_UPDATE_FORM_FIELDS_DEF_FIELD_bio_text',
       icon: 'summarize',
+      actionSecurity: 'AUTORES_UPDATE_BIO',
       formDef: {
         showSubmitContinue: true,
         fields:[

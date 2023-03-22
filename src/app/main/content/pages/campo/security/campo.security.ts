@@ -1,6 +1,6 @@
 export const CAMPO_SECURITY_DEF = {
-  readAccess: 'FAQ_CREATE',
-  updateAccess: 'FAQ_CREATE',
-  createAccess: 'FAQ_CREATE',
-  deleteAccess: 'FAQ_CREATE'
+  readAccess: 'FORMULARIO_CAMPOS_READ',
+  updateAccess: 'FORMULARIO_CAMPOS_UPDATE',
+  createAccess: 'FORMULARIO_CAMPOS_CREATE',
+  deleteAccess: 'FORMULARIO_CAMPOS_DELETE'
 };

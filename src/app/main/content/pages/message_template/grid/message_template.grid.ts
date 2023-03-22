@@ -66,6 +66,7 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
     {
       actionNameKey: 'Body',
       icon: 'description',
+      actionSecurity: 'MESSAGE_TEMPLATE_UPDATE_BODY',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -86,6 +87,7 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
     {
       actionNameKey: 'Body (Sin formato)',
       icon: 'note',
+      actionSecurity: 'MESSAGE_TEMPLATE_UPDATE_BODY',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -106,6 +108,7 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
     {
       actionNameKey: 'Versiones Anteriores',
       actionType: 'redirect',
+      actionSecurity: 'MESSAGE_TEMPLATE_HISTORY_READ',
       redirect: {
         url: MESSAGE_TEMPLATE_HISTORY_NAV_DEF.url,
         querystring: {

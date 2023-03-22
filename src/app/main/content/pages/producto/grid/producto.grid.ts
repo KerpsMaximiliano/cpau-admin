@@ -67,6 +67,7 @@ export const PRODUCTO_GRID_DEF = {
     {
       actionNameKey: 'producto_grid_def_button_action_uploadPhoto',
       icon: 'photo',
+      actionSecurity: 'PRODUCTO_SUBIR_FOTO',
       form: [
         {
           key: 'imagen',
@@ -94,6 +95,7 @@ export const PRODUCTO_GRID_DEF = {
     {
       actionNameKey: 'producto_grid_def_button_action_descripcionLarga',
       icon: 'description',
+      actionSecurity: 'PRODUCTO_UPDATE_DESCRIPCION',
       formDef: {
         showSubmitContinue: true,
         fields:[
@@ -114,6 +116,7 @@ export const PRODUCTO_GRID_DEF = {
     {
       actionNameKey: 'producto_grid_def_button_action_descripcionLarga_text',
       icon: 'document_scanner',
+      actionSecurity: 'PRODUCTO_UPDATE_DESCRIPCION',
       formDef: {
         showSubmitContinue: true,
         fields:[

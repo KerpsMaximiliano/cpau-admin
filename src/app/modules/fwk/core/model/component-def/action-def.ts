@@ -20,6 +20,7 @@ export class ActionDef {
     form?: DynamicField<any>[];
     formDef?: FormDef;
     actionType?: string;
+    actionSecurity?: string;
     htmlModal?: HtmlModalDef; // Si es un modal que muestra contenido html especificar su contenido
     gridModal?: any;
     ws?: WsDef;

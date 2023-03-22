@@ -67,6 +67,7 @@ export const NOTICIA_CARROUSEL_GRID_DEF = {
   {
     actionNameKey: 'Versiones Anteriores',
     actionType: 'redirect',
+    actionSecurity: 'NOTICIA_CARROUSEL_HISTORY_READ',
     redirect: {
       url: NOTICIA_CARROUSEL_HISTORY_NAV_DEF.url,
       querystring: {

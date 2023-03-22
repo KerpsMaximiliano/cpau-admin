@@ -71,9 +71,8 @@ import { USER_ADMIN_DEF } from './user_admin/user_admin.def';
 import { PERMISO_DEF } from './permiso/permiso.def';
 import { SEGURIDAD_GRUPO_DEF } from './seguridad_grupo/seguridad_grupo.def';
 import { SEGURIDAD_GRUPO_PERMISO_DEF } from './seguridad_grupo_permiso/seguridad_grupo_permiso.def';
-import { SEGURIDAD_GRUPO_USUARIO_DEF } from './seguridad_grupo_usuario/seguridad_grupo_usuario.def';
-
-export const ROUTES: Routes = [
+import { SEGURIDAD_GRUPO_USUARIO_DEF } from './seguridad_grupo_usuario/seguridad_grupo_usuario.def';import { NoContentComponent } from '../no-content/no-content.component';
+import { NO_CONTENT_DEF } from './no_content/no_content.def';export const ROUTES: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -252,6 +251,11 @@ export const ROUTES: Routes = [
   {
     path: PERFIL_MATRICULADO_UPLOAD_DEF.navigation.url.split('/')[1],
     component: UploadComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: NO_CONTENT_DEF.navigation.url.split('/')[1],
+    component: NoContentComponent,
     canActivate: [AuthGuardService]
   },
   {

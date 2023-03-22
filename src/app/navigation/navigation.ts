@@ -22,16 +22,19 @@ export const navigation = [
                 'title': 'Personas',
                 'type': 'collapse',
                 'icon': 'group',
+                'permission': 'MENU_PERSONAS',
                 'children': [
                     {
                         'title': 'Contactos',
                         'type': 'item',
-                        'url': environment.URL_IDENTIFICACION_BUSQUEDA
+                        'url': environment.URL_IDENTIFICACION_BUSQUEDA,
+                        'permission': 'IDENTIFICACION_BUSQUEDA_READ',
                     },
                     {
                         'title': 'Listas de Contactos',
                         'type': 'item',
-                        'url': CONTACT_LIST_NAV_DEF.url
+                        'url': CONTACT_LIST_NAV_DEF.url,
+                        'permission': 'CONTACT_LIST_READ',
                     },  
                     {
                         'id': 'imagen',
@@ -39,6 +42,7 @@ export const navigation = [
                         'translate': 'NAV.IMAGEN.TITLE',
                         'type': 'item',
                         'url': environment.URL_IMAGEN_SUBIR,
+                        'permission': 'PERFIL_MATRICULADO_UPLOAD_READ',
                     },
                     {
                         'id': 'matriculaTipo',
@@ -46,6 +50,7 @@ export const navigation = [
                         'translate': 'NAV.MATRICULA_TIPO.TITLE',
                         'type': 'item',
                         'url': MATRICULA_TIPO_NAV_DEF.url,
+                        'permission': 'MATRICULA_TIPO_READ',
                     },
                     {
                         'id': 'matriculadoEstado',
@@ -53,6 +58,7 @@ export const navigation = [
                         'translate': 'NAV.MATRICULA_ESTADO.TITLE',
                         'type': 'item',
                         'url': MATRICULADO_ESTADO_NAV_DEF.url,
+                        'permission': 'MATRICULADO_ESTADO_READ',
 
                     }
                 ]
@@ -62,12 +68,14 @@ export const navigation = [
                 'translate': 'NAV.GESTION_CONTENIDOS',
                 'type': 'collapse',
                 'icon': 'backup_table',
+                'permission': 'MENU_GESTION_CONTENIDOS',
                 'children': [
                     {
                         'title': 'Contenidos',
                         'translate': 'NAV.MENU_CONTENIDOS',
                         'type': 'collapse',
                         'icon': 'source',
+                        'permission': 'SUBMENU_CONTENIDOS',
                         'children': [
                             {
                                 'id': 'seccion',
@@ -75,7 +83,8 @@ export const navigation = [
                                 'translate': 'NAV.SECCION.TITLE',
                                 'type': 'item',
                                 'url': environment.URL_SECCIONES,
-                                'icon': 'dashboard'
+                                'icon': 'dashboard',
+                                'permission': 'SECCION_READ',
                             },
                             {
                                 'id': 'contenido',
@@ -83,7 +92,8 @@ export const navigation = [
                                 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type': 'item',
                                 'icon': 'library_books',
-                                'url': environment.URL_CONTENIDOS
+                                'url': environment.URL_CONTENIDOS,
+                                'permission': 'CONTENIDO_READ',
                             },
                             {
                                 'id': 'imagen',
@@ -92,6 +102,7 @@ export const navigation = [
                                 'type': 'item',
                                 'icon': 'photo_library',
                                 'url': environment.URL_IMAGEN,
+                                'permission': 'IMAGEN_READ'
                             },
                             {
                                 'id': 'productoExterno',
@@ -100,6 +111,7 @@ export const navigation = [
                                 'type': 'item',
                                 'icon': 'extension',
                                 'url': environment.URL_PRODUCTO_EXTERNO,
+                                'permission': 'PRODUCTO_EXTERNO_READ'
                             },
                             {
                                 'id': 'noticiaCarrousel',
@@ -108,6 +120,7 @@ export const navigation = [
                                 'type': 'item',
                                 'icon': 'burst_mode',
                                 'url': environment.URL_NOTICIA_CARROUSEL,
+                                'permission': 'NOTICIA_CARROUSEL_READ'
                             },
                         ]
                     },
@@ -116,6 +129,7 @@ export const navigation = [
                         'translate': 'NAV.MENU_BOLETINES',
                         'type': 'collapse',
                         'icon': 'newspaper',
+                        'permission': 'MENU_NEWSLETTER',
                         'children': [
                             {
                                 'id': 'boletin',
@@ -123,6 +137,7 @@ export const navigation = [
                                 'translate': 'NAV.BOLETIN.TITLE',
                                 'type': 'item',
                                 'url': environment.URL_BOLETIN,
+                                'permission': 'BOLETIN_READ'
                             },
                             {
                                 'id': 'indice',
@@ -130,6 +145,7 @@ export const navigation = [
                                 'translate': 'NAV.INDICE.TITLE',
                                 'type': 'item',
                                 'url': environment.URL_INDICE,
+                                'permission': 'INDICE_READ'
                             },
                             {
                                 'id': 'mailing',
@@ -137,6 +153,7 @@ export const navigation = [
                                 'translate': 'NAV.MAILING.TITLE',
                                 'type': 'item',
                                 'url': environment.URL_MAILING,
+                                'permission': 'MAILING_READ'
                             },
                         ]
                     },
@@ -147,6 +164,7 @@ export const navigation = [
                 'translate': 'NAV.MENU_HERRAMIENTAS',
                 'type': 'collapse',
                 'icon': 'construction',
+                'permission': 'MENU_HERRAMIENTAS',
                 'children': [
                     {
                         'id': 'formulario',
@@ -154,6 +172,7 @@ export const navigation = [
                         'translate': 'NAV.FORMULARIO.TITLE',
                         'type': 'item',
                         'url': environment.URL_FORMULARIO,
+                        'permission': 'FORMULARIO_READ'
                     },
                     {
                         'id': 'publicidad',
@@ -161,6 +180,7 @@ export const navigation = [
                         'translate': 'NAV.PUBLICIDAD.TITLE',
                         'type': 'item',
                         'url': environment.URL_PUBLICIDAD,
+                        'permission': 'BANNER_READ'
                     }
                     
                 ]
@@ -170,6 +190,7 @@ export const navigation = [
                 'translate': 'NAV.MENU_REVISTAS_NOTAS',
                 'type': 'collapse',
                 'icon': 'menu_book',
+                'permission': 'MENU_REVISTAS_NOTAS',
                 'children': [
                     {
                         'id': 'autores',
@@ -177,6 +198,7 @@ export const navigation = [
                         'translate': 'NAV.AUTORES.TITLE',
                         'type': 'item',
                         'url': AUTORES_NAV_DEF.url,
+                        'permission': 'AUTORES_READ'
                     },
                     {
                         'id': 'contenidos',
@@ -184,6 +206,7 @@ export const navigation = [
                         'translate': 'NAV.CONTENIDOS.TITLE',
                         'type': 'item',
                         'url': CONTENIDOS_NAV_DEF.url,
+                        'permission': 'RN_CONTENIDOS_READ'
                     },
                     {
                         'id': 'revistas',
@@ -191,6 +214,7 @@ export const navigation = [
                         'translate': 'NAV.REVISTAS.TITLE',
                         'type': 'item',
                         'url': REVISTAS_NAV_DEF.url,
+                        'permission': 'RN_REVISTAS_READ'
                     }                        
                 ]
             },
@@ -199,6 +223,7 @@ export const navigation = [
                 'translate': 'NAV.MENU_SISTEMA',
                 'type': 'collapse',
                 'icon': 'settings',
+                'permission': 'MENU_SISTEMA',
                 'children': [
                     {
                         'id': 'abmModal',
@@ -206,6 +231,7 @@ export const navigation = [
                         'translate': 'NAV.ABMMODAL.TITLE',
                         'type': 'item',
                         'url': environment.URL_ABM_MODAL,
+                        'permission': 'MODAL_READ'
                     },
                     {
                         'id': 'messageTemplate',
@@ -213,6 +239,7 @@ export const navigation = [
                         'translate': 'NAV.MESSAGETEMPLATE.TITLE',
                         'type': 'item',
                         'url': environment.URL_MESSAGE_TEMPLATE,
+                        'permission': 'MESSAGE_TEMPLATE_READ'
                     },
                     {
                         'id': 'emailAccount',
@@ -220,6 +247,7 @@ export const navigation = [
                         'translate': 'NAV.EMAILACCOUNT.TITLE',
                         'type': 'item',
                         'url': environment.URL_EMAIL_ACCOUNT,
+                        'permission': 'EMAIL_ACCOUNT_READ'
                     },
                     {
                         'id': 'abmRoles',
@@ -227,6 +255,7 @@ export const navigation = [
                         'translate': 'NAV.ABMROLES.TITLE',
                         'type': 'item',
                         'url': environment.URL_ABM_ROLES,
+                        'permission': 'ABM_ROLES_READ'
                     }
                 ]
             },
@@ -235,6 +264,7 @@ export const navigation = [
                 'translate': 'NAV.MENU_VENTAS',
                 'type': 'collapse',
                 'icon': 'storefront',
+                'permission': 'MENU_VENTAS',
                 'children': [
                     {
                         'id': 'producto',
@@ -243,6 +273,7 @@ export const navigation = [
                         'icon': 'inventory_2',
                         'type': 'item',
                         'url': PRODUCTO_DEF.navigation.url,
+                        'permission': 'PRODUCTO_READ'
                     },
                     {
                         'id': 'categoria',
@@ -251,6 +282,7 @@ export const navigation = [
                         'icon': 'category',
                         'type': 'item',
                         'url': CATEGORIA_DEF.navigation.url,
+                        'permission': 'CATEGORIA_READ'
                     },
                     {
                         'id': 'ventas',
@@ -259,6 +291,7 @@ export const navigation = [
                         'icon': 'point_of_sale',
                         'type': 'item',
                         'url': VENTA_DEF.navigation.url,
+                        'permission': 'VENTA_READ'
                     }
                 ]
             },
@@ -267,6 +300,7 @@ export const navigation = [
                 'translate': 'NAV.MENU_SEGURIDAD.TITLE',
                 'type': 'collapse',
                 'icon': 'security',
+                'permission': 'MENU_SEGURIDAD',
                 'children': [
                     {
                         'id': 'usuarios',
@@ -275,6 +309,7 @@ export const navigation = [
                         'icon': 'manage_accounts',
                         'type': 'item',
                         'url': USER_ADMIN_DEF.navigation.url,
+                        'permission': 'USER_ADMIN_READ'
                     },
                     {
                         'id': 'grupos',
@@ -283,6 +318,7 @@ export const navigation = [
                         'icon': 'group_work',
                         'type': 'item',
                         'url': SEGURIDAD_GRUPO_DEF.navigation.url,
+                        'permission': 'SEGURIDAD_GRUPO_READ'
                     },
                     {
                         'id': 'permisos',
@@ -291,6 +327,7 @@ export const navigation = [
                         'icon': 'lock',
                         'type': 'item',
                         'url': PERMISO_DEF.navigation.url,
+                        'permission': 'PERMISO_READ'
                     }
                 ]
             },

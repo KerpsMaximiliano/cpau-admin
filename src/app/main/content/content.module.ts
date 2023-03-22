@@ -17,11 +17,13 @@ import { LoginModule } from './authentication/login/login.module';
 import { IntegrationModule } from './integration/integration.module';
 import { UploadComponent } from './upload/upload.component';
 import { UploadService } from './upload/upload.service';
+import { NoContentComponent } from './no-content/no-content.component';
 
 @NgModule({
     declarations: [
         FuseContentComponent,
-        UploadComponent
+        UploadComponent,
+        NoContentComponent
     ],
     imports     : [
         RouterModule,

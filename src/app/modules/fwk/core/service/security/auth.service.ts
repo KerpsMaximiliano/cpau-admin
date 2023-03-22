@@ -56,6 +56,7 @@ export class AuthService extends HttpService {
   login(username, password): Observable<any> {
     return new Observable((observer) => {
       this.genericHttpService.basicPost(environment.AUTHENTICATION_URL, {username, password}).subscribe(response => {
+        //response.permisos = "FORMULARIO_UPDATE;REVISTAS_READ;REVISTAS_DELETE"
         this.setUser(response);
         this.setToken(response.token);
         observer.next(response);

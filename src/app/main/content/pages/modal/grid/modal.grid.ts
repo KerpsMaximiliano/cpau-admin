@@ -59,6 +59,7 @@ export const MODAL_GRID_DEF = {
         {
             actionNameKey: 'Contenido',
             icon: 'description',
+            actionSecurity: 'MODAL_UPDATE_CONTENIDO',
             formDef: {
                 showSubmitContinue: true,
                 fields:[
@@ -79,6 +80,7 @@ export const MODAL_GRID_DEF = {
             {
             actionNameKey: 'Contenido (Sin formato)',
             icon: 'note',
+            actionSecurity: 'MODAL_UPDATE_CONTENIDO',
             formDef: {
                 showSubmitContinue: true,
                 fields:[
@@ -99,6 +101,7 @@ export const MODAL_GRID_DEF = {
         {
         actionNameKey: 'Versiones Anteriores',
         actionType: 'redirect',
+        actionSecurity: 'MODAL_UPDATE_CONTENIDO',
         redirect: {
             url: MODAL_HOME_HISTORY_NAV_DEF.url,
             querystring: {

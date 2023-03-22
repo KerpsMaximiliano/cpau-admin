@@ -1,6 +1,6 @@
 export const REVISTAS_SECURITY_DEF = {
-  readAccess: 'REVISTAS_READ',
-  updateAccess: 'REVISTAS_UPDATE',
-  createAccess: 'REVISTAS_CREATE',
-  deleteAccess: 'REVISTAS_DELETE'
+  readAccess: 'RN_REVISTAS_READ',
+  updateAccess: 'RN_REVISTAS_UPDATE',
+  createAccess: 'RN_REVISTAS_CREATE',
+  deleteAccess: 'RN_REVISTAS_DELETE'
 };

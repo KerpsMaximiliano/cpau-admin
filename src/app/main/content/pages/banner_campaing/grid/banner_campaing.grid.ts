@@ -29,6 +29,7 @@ export const BANNER_CAMPAING_GRID_DEF = {
     {
       actionNameKey: 'banner_campaign_grid_def_button_action_banner',
       icon: 'burst_mode',
+      actionSecurity: 'BANNER_READ',
       actionType: 'redirect',
       redirect: {
         url: '/banner',

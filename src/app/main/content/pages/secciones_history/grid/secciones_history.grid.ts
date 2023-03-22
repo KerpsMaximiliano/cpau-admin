@@ -94,6 +94,7 @@ export const SECCIONES_HISTORY_GRID_DEF = {
       actionNameKey: 'contenidos_history_grid_def_column_restoreversion',
       icon: 'repartition',
       confirm: true,
+      actionSecurity: 'SECCIONES_HISTORY_RESTORE_VERSION',
       ws: {
         key: 'contenidos_history_grid_def_column_restoreversion',
         url: PREFIX_DOMAIN_API + 'Section/RestoreVersion',

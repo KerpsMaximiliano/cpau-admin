@@ -78,6 +78,7 @@ export const CONTENIDOS_HISTORY_GRID_DEF = {
     {
       actionNameKey: 'contenidos_history_grid_def_column_restoreversion',
       icon: 'repartition',
+      actionSecurity: 'RN_CONTENIDOS_HISTORY_RESTORE_VERSION',
       confirm: true,
       ws: {
         key: 'contenidos_history_grid_def_column_restoreversion',
