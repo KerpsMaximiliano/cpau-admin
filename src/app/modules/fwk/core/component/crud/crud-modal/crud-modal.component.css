@@ -30,6 +30,11 @@ app-pick-list{
     margin-bottom: 20px;
 }
 
+app-simple-pick-list{
+    display: flex;
+    margin-bottom: 20px;
+}
+
 button:last-child {
     float: right;
 }

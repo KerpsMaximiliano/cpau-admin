@@ -211,7 +211,7 @@ export class FormService {
     }
   }
   private setUpPickListTextFromI18n(i18n: I18n, element: DynamicField<any>){
-    if (element.controlType === CONTROL_TYPE.picklist){
+    if (element.controlType === CONTROL_TYPE.picklist || CONTROL_TYPE.simplepicklist ){
       if (element.options){
         if (element.options.titleFromKey){
           element.options.titleFrom = i18n.translate(element.options.titleFromKey);

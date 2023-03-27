@@ -13,6 +13,7 @@ export const DATETIMEPICKER: any = 'datetimepicker';
 export const CHECKBOX: any = 'checkbox';
 export const TEXTAREA: any = 'textarea';
 export const PICKLIST: any = 'pick-list';
+export const SIMPLEPICKLIST: any = 'simple-pick-list';
 export const FILE: any = 'file';
 export const RADIO_BUTTON = 'radio-button';
 export const HTML_EDITOR = 'html_editor';
@@ -39,6 +40,7 @@ export const CONTROL_TYPE = {
   checkbox : CHECKBOX,
   textarea : TEXTAREA,
   picklist : PICKLIST,
+  simplepicklist: SIMPLEPICKLIST,
   file: FILE,
   radio_button: RADIO_BUTTON,
   html: HTML,
@@ -66,6 +68,7 @@ export enum ControlTypeEnum {
   checkbox = 'CHECKBOX',
   textarea = 'TEXTAREA',
   picklist = 'PICKLIST',
+  simplepicklist = 'SIMPLEPICKLIST',
   file =  'FILE',
   radio_button = 'RADIO-BUTTON',
   html = 'HTML',

@@ -9,6 +9,7 @@ import { AuthService } from './service/security/auth.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler } from '@angular/core';
 import { PickListComponent } from './component/pick-list/pick-list.component';
+import { SimplePickListComponent } from './component/simple-pick-list/simple-pick-list.component';
 import { RouterModule } from '@angular/router';
 import { DatepickerComponent } from './component/dynamic-form/datepicker/datepicker.component';
 import { MaterialModule } from '../material/material.module';
@@ -91,6 +92,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuestionModalComponent,
     GridModalComponent,
     PickListComponent,
+    SimplePickListComponent,
     SearchComponent,
     FileComponent,
     SpinnerComponent,
@@ -114,6 +116,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuestionModalComponent,
     GridModalComponent,
     PickListComponent,
+    SimplePickListComponent,
     DatepickerComponent,
     Datepicker2Component,
     SearchComponent,
@@ -143,6 +146,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuestionModalComponent,
     GridModalComponent,
     PickListComponent,
+    SimplePickListComponent,
     SearchComponent,
     SanitizeHtmlPipe,
     FileComponent,

@@ -143,6 +143,9 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       if (element.controlType === 'pick-list' && this.entity[element.key] !== '') {
         element.options.toData = this.entity[element.key];
       }
+      if (element.controlType === 'simple-pick-list' && this.entity[element.key] !== '') {
+        element.options.toData = this.entity[element.key];
+      }
     });
   }
 
@@ -186,7 +189,7 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
       let isObjectModified = false;
       this.fields.forEach(field => {
         if (isObjectModified === false) {
-          if (field.controlType === 'pick-list') {
+          if (field.controlType === 'pick-list' || 'simple-pick-list') {
             if ((this.initStateObject[field.key] === undefined && obj[field.key] !== undefined) ||
               (this.initStateObject[field.key] !== undefined && obj[field.key] === undefined) ||
               (this.initStateObject[field.key].length !== obj[field.key].length)) {
