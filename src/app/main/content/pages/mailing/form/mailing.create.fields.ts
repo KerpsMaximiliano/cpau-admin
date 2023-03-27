@@ -232,17 +232,4 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     icon: 'attach_file',
     showPreview: true
   }
-  
-  
-  
-
-
-
-  // {
-  //   key: 'incluirDesuscriptos',
-  //   labelKey: 'Incluir Desuscriptos',
-  //   type: 'boolean',
-  //   controlType: 'checkbox'
-  // },
-
 ];

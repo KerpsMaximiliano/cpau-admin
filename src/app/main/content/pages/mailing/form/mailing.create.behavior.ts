@@ -22,8 +22,8 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
           key: 'matriculadoEstadosIds',
           controlType: 'hidden'
         },
-        {
-          key: 'matriculadoTiposIds',
+        {       
+          key: 'matriculadosTiposIds',
           controlType: 'hidden'
         },
          {
@@ -59,7 +59,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
           controlType: 'pick-list'
         },
         {
-          key: 'matriculadoTiposIds',
+          key: 'matriculadosTiposIds',
           controlType: 'pick-list'
         },
         {
@@ -95,7 +95,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
             controlType: 'hidden'
           },
           {
-            key: 'matriculadoTiposIds',
+            key: 'matriculadosTiposIds',
             controlType: 'hidden'
           },
           {
@@ -131,10 +131,10 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
             controlType: 'hidden'
           },
           {
-            key: 'matriculadoTiposIds',
+            key: 'matriculadosTiposIds',
             controlType: 'hidden'
           },
-           {
+          {
             key: 'matriculadoActividadesIds',
             controlType: 'hidden'
           },
