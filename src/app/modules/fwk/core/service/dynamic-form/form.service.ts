@@ -344,7 +344,7 @@ export class FormService {
     if ((field.controlType === CONTROL_TYPE.select || 
           field.controlType === CONTROL_TYPE.autocomplete || 
           field.controlType === CONTROL_TYPE.autocomplete_desplegable || 
-          field.controlType === CONTROL_TYPE.picklist) &&
+          field.controlType === CONTROL_TYPE.picklist || CONTROL_TYPE.simplepicklist) &&
             field.options.fromWs) {
       const fromWs: WsDef = field.options.fromWs;
       fromWs.method = HTTP_METHODS.get;
