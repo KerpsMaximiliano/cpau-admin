@@ -60,7 +60,7 @@ export const MAILING_CREATE_BEHAVIOR: any[] =
         },
         {
           key: 'matriculadosTiposIds',
-          controlType: 'pick-list'
+          controlType: 'simple-pick-list'
         },
         {
           key: 'matriculadoActividadesIds',

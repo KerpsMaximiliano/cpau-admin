@@ -118,7 +118,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
   },
   {
     key: 'matriculadosTiposIds',
-    controlType: 'pick-list',
+    controlType: 'simple-pick-list',
     options: {
         compositeKey: ['id'],
         elementLabel: 'nombre',
