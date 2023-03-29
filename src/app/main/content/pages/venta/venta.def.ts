@@ -30,7 +30,8 @@ export const VENTA_DEF: CrudDef = {
         width: '500px'
     },
     exportCsv: {
-        csvExportFileName: 'Ventas.csv'
+        csvExportFileName: 'Ventas.csv',
+        ws: PREFIX_DOMAIN_API + `ventas/export`
     },
     filterInMemory: false,
     serverPagination: true,

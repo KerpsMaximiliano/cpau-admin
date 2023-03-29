@@ -299,7 +299,12 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
   }
 
   exportCsv(){
-    if (this.crudDef.exportCsv && this.crudDef.exportCsv.csvExportFileName) {
+    if (this.crudDef.exportCsv.ws) {
+      console.log(this.crudDef.exportCsv.ws)
+      console.log(this.appliedFilterEntity)
+      return
+    }
+    else if (this.crudDef.exportCsv && this.crudDef.exportCsv.csvExportFileName) {
       const data = this.entities.map(e => {
         const reg = {}; 
         Object.getOwnPropertyNames(e).forEach( prop => {
