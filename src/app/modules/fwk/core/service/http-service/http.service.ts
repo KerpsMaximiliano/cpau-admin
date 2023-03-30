@@ -52,6 +52,16 @@ export class HttpService extends BaseService {
     });
   }
 
+  downloadCsv(url, params) {
+    const options = Object.assign({}, HttpOptionsDownloadFile)
+    options['params'] = params
+    this.http.get(url, options)    
+        .subscribe((resp: HttpResponse<Blob>) => {
+      var name = 'Ventas';
+      this.downloadFile(resp, name);
+    });
+  }
+
   downloadFile(resp: HttpResponse<Blob>, name: string) {
     const contentType = resp.headers.get('Content-type');
     const file = new Blob([ resp.body ], {type: contentType});
