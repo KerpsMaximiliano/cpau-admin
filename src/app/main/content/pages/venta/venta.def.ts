@@ -31,7 +31,7 @@ export const VENTA_DEF: CrudDef = {
     },
     exportCsv: {
         csvExportFileName: 'Ventas.csv',
-        ws: PREFIX_DOMAIN_API + `ventas/export`
+        ws: PREFIX_DOMAIN_API + `venta/export`
     },
     filterInMemory: false,
     serverPagination: true,
