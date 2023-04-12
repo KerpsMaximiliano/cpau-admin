@@ -1,6 +1,6 @@
 // export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
-export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
-// export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
+// export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
+export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
 export const PREFIX_INSTITUCIONAL = '/';
 
 export const environment = {

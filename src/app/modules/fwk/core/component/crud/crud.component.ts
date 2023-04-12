@@ -302,6 +302,9 @@ export class CrudComponent extends AbstractCrudComponent<any, any> implements On
     if (this.crudDef.exportCsv.ws) {
       const params = this.service.getParametersToUrl(this.appliedFilterEntity)
       this.service.downloadCsv(this.crudDef.exportCsv.ws, params)
+        .subscribe(
+          res => this.fileService.downloadFileOctectStream(res) 
+        )
       return
     }
     else if (this.crudDef.exportCsv && this.crudDef.exportCsv.csvExportFileName) {

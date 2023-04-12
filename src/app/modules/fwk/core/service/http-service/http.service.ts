@@ -52,14 +52,16 @@ export class HttpService extends BaseService {
     });
   }
 
-  downloadCsv(url, params) {
-    const options = Object.assign({}, HttpOptionsDownloadFile)
+  downloadCsv(url, params): Observable<any> {
+    const options = Object.assign({}, this._httpOptions)
     options['params'] = params
-    this.http.get(url, options)    
-        .subscribe((resp: HttpResponse<Blob>) => {
-      var name = 'Ventas';
-      this.downloadFile(resp, name);
-    });
+    const observable = new Observable((observer) => {
+        this.http.get<any>(url, options)
+            .subscribe(response => this.subHandleResponse(observer, response),
+                        e => this.subHandleError(observer, e),
+                        () => observer.complete());
+      });
+    return observable;
   }
 
   downloadFile(resp: HttpResponse<Blob>, name: string) {

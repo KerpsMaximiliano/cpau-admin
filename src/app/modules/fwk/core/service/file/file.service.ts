@@ -54,7 +54,7 @@ export class FileService {
    this.createAndDownloadBlobFile(array, undefined, fileEntity.fileName);
   }
 
-  private downloadFileOctectStream(fileEntity){
+  downloadFileOctectStream(fileEntity){
     const decoded_data = atob(fileEntity.file);
     // this.downloadFile(fileEntity);
     const byteNumbers = new Array(decoded_data.length);
