@@ -11,6 +11,7 @@ import { SEGURIDAD_GRUPO_DEF } from 'app/main/content/pages/seguridad_grupo/segu
 import { USER_ADMIN_DEF } from 'app/main/content/pages/user_admin/user_admin.def';
 import { VENTA_DEF } from 'app/main/content/pages/venta/venta.def';
 import { environment } from 'environments/environment';
+import { TEMPLATE_CONTENIDO_NAV_DEF } from 'app/main/content/pages/template_contenido/navigation/template_contenido.nav';
 export const navigation = [
     {
         'id': 'administration',
@@ -94,6 +95,15 @@ export const navigation = [
                                 'icon': 'library_books',
                                 'url': environment.URL_CONTENIDOS,
                                 'permission': 'CONTENIDO_READ',
+                            },
+                            {
+                                'id': 'templateContenido',
+                                'title': 'Templates',
+                                // 'translate': 'NAV.CONTENIDO.TITLE',
+                                'type': 'item',
+                                'icon': 'library_books',
+                                'url': TEMPLATE_CONTENIDO_NAV_DEF.url,
+                                'permission': 'TEMPLATE_CONTENIDO_READ',
                             },
                             {
                                 'id': 'imagen',

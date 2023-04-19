@@ -70,6 +70,7 @@ import { PERMISO_DEF } from './permiso/permiso.def';
 import { SEGURIDAD_GRUPO_DEF } from './seguridad_grupo/seguridad_grupo.def';
 import { SEGURIDAD_GRUPO_PERMISO_DEF } from './seguridad_grupo_permiso/seguridad_grupo_permiso.def';
 import { SEGURIDAD_GRUPO_USUARIO_DEF } from './seguridad_grupo_usuario/seguridad_grupo_usuario.def';
+import { TEMPLATE_CONTENIDO_DEF } from './template_contenido/template_contenido.def';
 
 export const COMPONENTS: ComponentDef[] = [
   IMAGEN_DEF,
@@ -140,6 +141,7 @@ export const COMPONENTS: ComponentDef[] = [
   PERMISO_DEF,
   SEGURIDAD_GRUPO_DEF,
   SEGURIDAD_GRUPO_PERMISO_DEF,
-  SEGURIDAD_GRUPO_USUARIO_DEF
+  SEGURIDAD_GRUPO_USUARIO_DEF,
+  TEMPLATE_CONTENIDO_DEF
 ];
 
