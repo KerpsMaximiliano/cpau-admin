@@ -17,23 +17,20 @@ import { BackButtonComponent } from 'app/modules/fwk/core/component/back-button/
         FuseToolbarComponent,
         BackButtonComponent
     ],
-    imports     : [
+    imports: [
         RouterModule,
-
         MatButtonModule,
         MatIconModule,
         MatMenuModule,
         MatProgressBarModule,
         MatToolbarModule,
-
         FuseSharedModule,
         FuseSearchBarModule,
         FuseShortcutsModule,
     ],
-    exports     : [
+    exports: [
         FuseToolbarComponent
-    ],
-    entryComponents: [BackButtonComponent]
+    ]
 })
 export class FuseToolbarModule
 {

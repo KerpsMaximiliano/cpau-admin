@@ -7,9 +7,8 @@ import { FwkModule } from 'app/modules/fwk/core/fwk.module';
 
 @NgModule({
     declarations: [LoginComponent],
-    entryComponents: [LoginComponent],
     exports: [LoginComponent],
-    imports     : [
+    imports: [
         FuseSharedModule,
         FwkModule
     ]

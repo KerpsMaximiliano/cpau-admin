@@ -10,14 +10,13 @@ import { ComponentDefService } from 'app/modules/fwk/core/service/component-def-
 import { SharedModule } from 'app/main/shared/shared.module';
 const integration =  [IntegrationComponent];
 @NgModule({
-  imports: [
-    FuseSharedModule,
-    FwkModule
-  ],
-  entryComponents: integration ,
-  declarations: integration,
-  exports: integration,
-  providers: [],
+    imports: [
+        FuseSharedModule,
+        FwkModule
+    ],
+    declarations: integration,
+    exports: integration,
+    providers: []
 })
 export class IntegrationModule{
   constructor(private navigationService: NavigationService, 
