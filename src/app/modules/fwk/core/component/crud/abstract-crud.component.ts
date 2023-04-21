@@ -39,6 +39,7 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
   crudDef: CrudDef;
   genericHttpService: GenericHttpService;
   filterEntity: any;
+  appliedFilterEntity: any;
   i18nComponent: I18n;
   actionDefService: ActionDefService;
   expressionService: ExpressionService;
@@ -273,6 +274,7 @@ export  abstract class AbstractCrudComponent<E extends Entity, Service extends C
                   };
 
                   this.postFindAll();
+                  this.appliedFilterEntity = Object.assign({}, this.filterEntity || null);
                   this.dataSource._renderChangesSubscription = new Subscription();
                   this.dataSource._renderChangesSubscription.add(() => {
                     this.spinnerControl.hide();
