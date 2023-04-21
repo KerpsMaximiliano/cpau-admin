@@ -1,4 +1,5 @@
 // Page Layouts
+@use '~@angular/material' as mat;
 $carded-header-height: 130px !default;
 $carded-header-height-sm: 40px !default;
 $carded-toolbar-height: 64px !default;
@@ -85,7 +86,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                     flex-direction: column;
                     flex: 1;
                     overflow: hidden;
-                    @include mat-elevation(7);
+                    @include mat.elevation(7);
 
                     .toolbar {
                         display: flex;
@@ -135,7 +136,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                     height: auto;
                     z-index: 4;
                     overflow-y: hidden;
-                    @include mat-elevation(7);
+                    @include mat.elevation(7);
 
                     &.mat-is-locked-open {
                         background: none;
@@ -195,7 +196,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                             flex-direction: column;
                             flex: 1;
                             overflow: hidden;
-                            @include mat-elevation(7);
+                            @include mat.elevation(7);
 
                             .toolbar {
                                 display: flex;
@@ -398,7 +399,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                         .center {
                             flex: 1;
                             min-height: 100%;
-                            @include mat-elevation(0);
+                            @include mat.elevation(0);
 
                             .content {
                                 display: flex;
@@ -422,7 +423,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                     min-width: 240px;
                     max-width: 240px;
                     z-index: 51;
-                    @include mat-elevation(7);
+                    @include mat.elevation(7);
 
                     &.mat-is-locked-open {
                         width: 220px;
@@ -457,7 +458,7 @@ $top-bg-image: url('../../../assets/images/backgrounds/header-bg.png');
                         flex-direction: column;
                         flex: 1;
                         overflow: auto;
-                        @include mat-elevation(7);
+                        @include mat.elevation(7);
 
                         .content {
                         }

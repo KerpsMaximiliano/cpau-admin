@@ -1,9 +1,9 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 $mat-white: (
     500: white,
     contrast: (
-        500: $black-87-opacity
+        500: rgba(black, 0.87)
     )
 );
 
@@ -30,30 +30,30 @@ $mat-fusedark: (
     A400: #5C616F,
     A700: #2D323E,
     contrast: (
-        50: $black-87-opacity,
-        100: $black-87-opacity,
-        200: $black-87-opacity,
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
         300: white,
         400: white,
-        500: $white-87-opacity,
-        600: $white-87-opacity,
-        700: $white-87-opacity,
-        800: $white-87-opacity,
-        900: $white-87-opacity,
-        A100: $black-87-opacity,
-        A200: $white-87-opacity,
-        A400: $white-87-opacity,
-        A700: $white-87-opacity,
+        500: rgba(white, 0.87),
+        600: rgba(white, 0.87),
+        700: rgba(white, 0.87),
+        800: rgba(white, 0.87),
+        900: rgba(white, 0.87),
+        A100: rgba(black, 0.87),
+        A200: rgba(white, 0.87),
+        A400: rgba(white, 0.87),
+        A700: rgba(white, 0.87),
     )
 );
 
 // Palettes
-$primary: mat-palette($mat-fusedark);
-$accent: mat-palette($mat-light-blue, 600, 400, 700);
-$warn: mat-palette($mat-red);
+$primary: mat.define-palette($mat-fusedark);
+$accent: mat.define-palette(mat.$light-blue-palette, 600, 400, 700);
+$warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$theme: mat-light-theme($primary, $accent, $warn);
+$theme: mat.define-light-theme($primary, $accent, $warn);
 
 $background: map-get($theme, background);
 $foreground: map-get($theme, foreground);

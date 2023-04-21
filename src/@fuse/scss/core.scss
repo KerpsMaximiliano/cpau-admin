@@ -1,4 +1,5 @@
 // ngx-datatable
+@use '~@angular/material' as mat;
 @import '~@swimlane/ngx-datatable/themes/material';
 
 // Perfect scrollbar
@@ -8,10 +9,10 @@
 @import "fuse";
 
 // Theming
-@include mat-core();
+@include mat.core();
 
 // Include theme styles for core and each component used in your app.
-@include angular-material-theme($theme);
+@include mat.all-component-themes($theme);
 
 // Partials
 @import "partials/reset";

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "src/@fuse/scss/fuse";
 
 body {
@@ -65,7 +66,7 @@ fuse-navbar {
             padding: 0 16px 0 24px;
             transition: padding 200ms ease;
             background-color: rgba(255, 255, 255, .05);
-            @include mat-elevation(1);
+            @include mat.elevation(1);
 
             .logo {
                 display: flex;

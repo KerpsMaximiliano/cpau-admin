@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 
 @import "src/@fuse/scss/fuse";
 
@@ -95,6 +96,6 @@
     &[fuse-layout-mode="boxed"] {
         max-width: 1200px;
         margin: 0 auto;
-        @include mat-elevation(8);
+        @include mat.elevation(8);
     }
 }

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 html {
     font-size: 62.5%;
     font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
@@ -46,7 +47,7 @@ h6, .h6 {
 
 // Links
 a {
-    color: mat-color($accent);
+    color: mat.get-color-from-palette($accent);
     text-decoration: none;
 
     &:not(.mat-button):not(.mat-raised-button):not(.mat-icon-button) {
