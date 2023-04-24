@@ -1,10 +1,12 @@
+import { HIDDEN, HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+
 export const TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'id',
     labelKey: 'TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_id',
     label: 'Id',
     type: 'number',
-    controlType: 'number'
+    controlType: HIDDEN
   },
   {
     key: 'title',
@@ -25,6 +27,6 @@ export const TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_content',
     label: 'Contenido',
     type: 'text',
-    controlType: 'textbox'
+    controlType: HTML_EDITOR
   }
 ];

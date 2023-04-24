@@ -1,11 +1,6 @@
+import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+
 export const TEMPLATE_CONTENIDO_CREATE_FORM_FIELDS_DEF = [
-  {
-    key: 'id',
-    labelKey: 'template_contenido_create_form_fields_def_field_id',
-    label: 'Id',
-    type: 'number',
-    controlType: 'number'
-  },
   {
     key: 'title',
     labelKey: 'template_contenido_create_form_fields_def_field_title',
@@ -25,6 +20,6 @@ export const TEMPLATE_CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'template_contenido_create_form_fields_def_field_content',
     label: 'Contenido',
     type: 'text',
-    controlType: 'textbox'
+    controlType: HTML_EDITOR
   }
 ];

@@ -24,7 +24,7 @@ export const TEMPLATE_CONTENIDO_DEF: CrudDef = {
     security: TEMPLATE_CONTENIDO_SECURITY_DEF,
     ws: {
         key: 'TEMPLATE_CONTENIDO_CRUD_URL',
-        url: PREFIX_DOMAIN_API + 'tempalteContenido'
+        url: PREFIX_DOMAIN_API + 'templateContent'
     },
     dialogConfig: {
         width: '400px'
