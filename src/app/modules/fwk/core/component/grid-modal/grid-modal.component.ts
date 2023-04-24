@@ -7,7 +7,7 @@ import { OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { DynamicField } from '../../model/dynamic-form/dynamic-field';
-import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
+//import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
 import { GridDef } from '../../model/component-def/grid-def';
 
 /**
