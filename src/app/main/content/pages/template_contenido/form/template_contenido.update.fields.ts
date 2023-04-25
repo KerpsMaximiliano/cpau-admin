@@ -13,7 +13,10 @@ export const TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     labelKey: 'TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_title',
     label: 'Titulo',
     type: 'text',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true,
+    minLength: 3,
+    maxLength: 10,
   },
   {
     key: 'description',

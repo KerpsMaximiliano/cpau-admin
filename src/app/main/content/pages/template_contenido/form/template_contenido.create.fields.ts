@@ -6,14 +6,19 @@ export const TEMPLATE_CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'template_contenido_create_form_fields_def_field_title',
     label: 'Titulo',
     type: 'text',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required:  true,
+    minLength: 3,
+    maxLength: 100,
   },
   {
     key: 'description',
     labelKey: 'template_contenido_create_form_fields_def_field_description',
     label: 'Descipcion',
     type: 'text',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    minLength: 3,
+    maxLength: 300,
   },
   {
     key: 'content',

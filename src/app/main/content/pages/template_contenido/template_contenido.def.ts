@@ -27,7 +27,7 @@ export const TEMPLATE_CONTENIDO_DEF: CrudDef = {
         url: PREFIX_DOMAIN_API + 'templateContent'
     },
     dialogConfig: {
-        width: '400px'
+        width: '800px'
     },
 
     pagination: {

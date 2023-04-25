@@ -19,6 +19,7 @@ export const TEMPLATE_CONTENIDO_GRID_DEF = {
   ],
   sortAllColumns: true,
   groupActions: true,
+  deleteAction: true,
   displayedColumns: [
     // 'id',
     'title',
