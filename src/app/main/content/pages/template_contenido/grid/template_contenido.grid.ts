@@ -18,7 +18,7 @@ export const TEMPLATE_CONTENIDO_GRID_DEF = {
     }
   ],
   sortAllColumns: true,
-  groupActions: true,
+  groupActions: false,
   deleteAction: true,
   displayedColumns: [
     // 'id',
@@ -26,19 +26,19 @@ export const TEMPLATE_CONTENIDO_GRID_DEF = {
     'description',
     // 'content'
   ],
-  actions:[
-    {
-      actionNameKey: 'Versiones Anteriores',
-      actionType: 'redirect',
-      actionSecurity: 'CONTENIDO_HISTORY_READ',
-      redirect: {
-        url: '',
-        querystring: {
-          contentId : 'id',
-          parentTitle: 'title'
-        }
-      },
-      icon: 'manage_history'
-    },
-  ]
+  // actions:[
+  //   {
+  //     actionNameKey: 'Versiones Anteriores',
+  //     actionType: 'redirect',
+  //     actionSecurity: 'CONTENIDO_HISTORY_READ',
+  //     redirect: {
+  //       url: '',
+  //       querystring: {
+  //         contentId : 'id',
+  //         parentTitle: 'title'
+  //       }
+  //     },
+  //     icon: 'manage_history'
+  //   },
+  // ]
 };
