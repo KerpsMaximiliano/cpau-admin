@@ -3,7 +3,7 @@ import {distinctUntilChanged, debounceTime} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DynamicField, HIDDEN, AUTOCOMPLETE, NUMBER, TEXTBOX, DATEPICKER, SELECT, EMAIL, CONTROL_TYPE, AUTOCOMPLETE_DESPLEGABLE } from '../../model/dynamic-form/dynamic-field';
-
+import { PREFIX_DOMAIN_API } from 'environments/environment';
 
 
 
@@ -33,7 +33,7 @@ const moment: any = _rollupMoment || _moment;
 
 @Injectable()
 export class FormService {
-
+  editorTemplates = [];
   i18n: I18n;
   constructor(i18nService: I18nService,
               private filterService: FilterService,
@@ -556,6 +556,13 @@ export class FormService {
         }
       });
     }
+  }
+
+  setEditorTemplates() {
+    this.genericHttpService.basicGet(PREFIX_DOMAIN_API + 'TemplateContent', undefined, undefined, undefined)
+      .subscribe({
+        next: r => this.editorTemplates = r
+      })
   }
 
   private evalCondition(condition: DynamicFieldConditionIf, fields, entity){
