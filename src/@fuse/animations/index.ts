@@ -65,8 +65,7 @@ export const fuseAnimations = [
 
     trigger('slideInOut', [
         state('0', style({
-            height : '0px',
-            display: 'none'
+            height : '0px'
         })),
         state('1', style({
             height : '*',
