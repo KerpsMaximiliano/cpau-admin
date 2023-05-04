@@ -71,6 +71,7 @@ export const SECCION_I18N_DEF = {
     seccion_grid_def_column_createDate: 'Fecha Creación',
     seccion_grid_def_column_updateDate: 'Fecha Modificación',
     seccion_grid_def_column_createUser: 'Usuario Creación',
-    seccion_grid_def_column_updateUser: 'Usuario Modificación'
+    seccion_grid_def_column_updateUser: 'Usuario Modificación',
+    seccion_grid_def_button_action_reordenar: 'Resetear Posiciones de Contenidos'
   }
 };
