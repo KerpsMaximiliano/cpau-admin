@@ -64,34 +64,34 @@ export const PRODUCTO_GRID_DEF = {
     'notificaciones'
   ],
   actions: [
-    {
-      actionNameKey: 'producto_grid_def_button_action_uploadPhoto',
-      icon: 'photo',
-      actionSecurity: 'PRODUCTO_SUBIR_FOTO',
-      form: [
-        {
-          key: 'imagen',
-          labelKey: 'foto_contacto',
-          label: 'foto_contacto',
-          type: 'image_preview_src',
-          controlType: 'image_preview_src',
-        },
-        {               
-          key: 'imagen',
-          labelKey: 'Foto (solo jpg)',
-          controlType: 'file'
-        },
-        {               
-          key: 'id',
-          controlType: 'hidden',
-        },
-      ],
-      ws: {
-        key: 'producto_grid_def_button_action_uploadPhoto',
-        url: PREFIX_DOMAIN_API + 'producto/saveimage',
-        method: 'POST'
-      }
-    },
+    // {
+    //   actionNameKey: 'producto_grid_def_button_action_uploadPhoto',
+    //   icon: 'photo',
+    //   actionSecurity: 'PRODUCTO_SUBIR_FOTO',
+    //   form: [
+    //     {
+    //       key: 'imagen',
+    //       labelKey: 'foto_contacto',
+    //       label: 'foto_contacto',
+    //       type: 'image_preview_src',
+    //       controlType: 'image_preview_src',
+    //     },
+    //     {               
+    //       key: 'imagen',
+    //       labelKey: 'Foto (solo jpg)',
+    //       controlType: 'file'
+    //     },
+    //     {               
+    //       key: 'id',
+    //       controlType: 'hidden',
+    //     },
+    //   ],
+    //   ws: {
+    //     key: 'producto_grid_def_button_action_uploadPhoto',
+    //     url: PREFIX_DOMAIN_API + 'producto/saveimage',
+    //     method: 'POST'
+    //   }
+    // },
     {
       actionNameKey: 'producto_grid_def_button_action_descripcionLarga',
       icon: 'description',

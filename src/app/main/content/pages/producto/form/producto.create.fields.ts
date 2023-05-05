@@ -62,10 +62,26 @@ export const PRODUCTO_CREATE_FORM_FIELDS_DEF = [
   {
     key: 'notificaciones',
     labelKey: 'producto_create_form_fields_def_field_notificaciones',
+    label: 'Notificaciones',
     controlType: 'textbox',
     maxLength: 200,
     required: true
   },
+  {
+    key: 'Imagen',
+    labelKey: 'producto_create_form_fields_def_field_imagen',
+    label: 'Imagen',
+    controlType: 'import_image',
+    //required: true,
+    minLength: 3,
+    maxLength: 200,
+    options: {
+      // => https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-resourceType
+      resourceType: 'Images'
+    },
+    showPreview: true
+  },
+  
   // {
   //   key: 'temporal',
   //   labelKey: 'producto_create_form_fields_def_field_temporal',

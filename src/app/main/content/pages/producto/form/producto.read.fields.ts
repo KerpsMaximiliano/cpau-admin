@@ -78,5 +78,6 @@ export const PRODUCTO_READ_FORM_FIELDS_DEF = [
     type: 'string',
     disabled: true,
     controlType: 'textbox'
-  }
+  },
+  
 ];
