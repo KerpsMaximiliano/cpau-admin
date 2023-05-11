@@ -159,21 +159,28 @@ export const PERFIL_IDENTIFICACION_GRID_DEF = {
           controlType: 'textbox',
           disabled: true
         },
-        {               
-          key: 'estadoId',
+        {
           labelKey: 'matricula_create_form_fields_def_field_estado',
-          label: 'Estado',
-          controlType: 'select',
-          options: {
-              handlerSourceData: false,
-              elementLabel: 'nombre',
-              elementValue: 'id',
-              fromWs: {
-                key: 'matricula_create_form_fields_def_field_estado',
-                url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
-              }
-          }
+          key: 'estado',
+          controlType: 'textbox',
+          disabled: true
         },
+        
+        // {               
+        //   key: 'estadoId',
+        //   labelKey: 'matricula_create_form_fields_def_field_estado',
+        //   label: 'Estado',
+        //   controlType: 'select',
+        //   options: {
+        //       handlerSourceData: false,
+        //       elementLabel: 'nombre',
+        //       elementValue: 'id',
+        //       fromWs: {
+        //         key: 'matricula_create_form_fields_def_field_estado',
+        //         url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
+        //       }
+        //   }
+        // },
         {
           labelKey: 'matricula_create_form_fields_def_field_universidad',
           key: 'universidad',
