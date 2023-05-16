@@ -1,7 +1,5 @@
 import { CONTROL_TYPE } from '../../../../../modules/fwk/core/model/dynamic-form/dynamic-field';
 
-
-
 export const MAILING_CREATE_BEHAVIOR: any[] = 
 [
   {
