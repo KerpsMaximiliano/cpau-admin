@@ -11,6 +11,7 @@ export const SELECT: any = 'select';
 export const DATEPICKER: any = 'datepicker';
 export const DATETIMEPICKER: any = 'datetimepicker';
 export const CHECKBOX: any = 'checkbox';
+export const HEADER: any = 'header';
 export const TEXTAREA: any = 'textarea';
 export const PICKLIST: any = 'pick-list';
 export const SIMPLEPICKLIST: any = 'simple-pick-list';
@@ -38,6 +39,7 @@ export const CONTROL_TYPE = {
   datepicker : DATEPICKER,
   datetimepicker : DATETIMEPICKER,
   checkbox : CHECKBOX,
+  header: HEADER,
   textarea : TEXTAREA,
   picklist : PICKLIST,
   simplepicklist: SIMPLEPICKLIST,
@@ -66,6 +68,7 @@ export enum ControlTypeEnum {
   datepicker = 'DATEPICKER',
   datetimepicker = 'DATETIMEPICKER',
   checkbox = 'CHECKBOX',
+  header = 'HEADER',
   textarea = 'TEXTAREA',
   picklist = 'PICKLIST',
   simplepicklist = 'SIMPLEPICKLIST',

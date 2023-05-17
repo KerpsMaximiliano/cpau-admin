@@ -39,7 +39,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'Parámetros',
     title: 'Parámetros',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
   {
     key: 'hasParameters',
@@ -60,7 +60,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'Destinatarios',
     title: 'Destinatarios',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
   {
     key: 'to',
@@ -156,7 +156,7 @@ export const MAILING_CREATE_FORM_FIELDS_DEF = [
     key: 'info_title',
     labelKey: 'Contenido',
     title: 'Contenido',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
 
   {

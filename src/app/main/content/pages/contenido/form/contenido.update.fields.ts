@@ -92,7 +92,7 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_agenda',
     title: 'Agenda',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
 
   /*{
@@ -134,7 +134,7 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_beneficios',
     title: 'Beneficios',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
   {
     key: 'percent',

@@ -11,7 +11,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'info_title',
     labelKey: 'contenido_create_form_fields_def_title_info',
     title: 'Info',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
   {
     key: 'title',
@@ -102,7 +102,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_agenda',
     title: 'Agenda',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
 
   {
@@ -121,7 +121,7 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_beneficios',
     title: 'Beneficios',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
 
   {
