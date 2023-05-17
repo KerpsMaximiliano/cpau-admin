@@ -1,3 +1,6 @@
+import { RADIO_BUTTON } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'id',
@@ -68,29 +71,58 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     required: true,
     cssClass: 'formulario_todate'
   },
-  
-  // {
-  //   key: 'validateUser',
-  //   labelKey: 'formulario_create_form_fields_def_field_validateuser',
-  //   label: 'Validate User',
-  //   type: 'boolean',
-  //   controlType: 'checkbox'
-  // },
-  // {
-  //   key: 'showUserData',
-  //   labelKey: 'formulario_create_form_fields_def_field_showuserdata',
-  //   label: 'Mostrar Datos de Usuario',
-  //   type: 'boolean',
-  //   controlType: 'checkbox'
-  // },
-  
-  // {
-  //   key: 'allowUpdates',
-  //   labelKey: 'formulario_create_form_fields_def_field_allowupdates',
-  //   label: 'Permitir Actualizaci�n de Datos',
-  //   type: 'boolean',
-  //   controlType: 'checkbox'
-  // },
+  {
+    key: 'nivelAcceso',
+    label: 'Destinatarios',
+    required: true,
+    requiredMessage: 'Debe seleccionar un destinatario',
+    controlType: RADIO_BUTTON,
+    value: 'A',
+    options: {
+      options: [
+        {value: 'A', label: 'Anonimo' },
+        {value: 'R', label: 'Registrado' }
+      ]
+    }
+  },
+  {
+    key: 'accesoMatriculado',
+    labelKey: 'Acceso Matriculado',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'accesoNoMatriculado',
+    labelKey: 'Acceso No Matriculado',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'estadosMatricula',
+    label: 'Destinatarios',
+    required: true,
+    requiredMessage: 'Debe seleccionar un destinatario',
+    controlType: RADIO_BUTTON,
+    options: {
+      options: [
+        {value: 'T', label: 'Todos' },
+        {value: 'S', label: 'Seleccionados' }
+      ]
+    }
+  },
+  {
+    key: 'estadosSeleccionados',
+    labelKey: 'Seleccionados',
+    controlType: 'simple-pick-list',
+    options: {
+      compositeKey: ['id'],
+      elementLabel: 'nombre',
+      titleFrom: 'Matriculados por Estado',
+      titleTo: 'Seleccionados',
+      fromWs: {
+          key: 'matriculados_estado_ws',
+          url: PREFIX_DOMAIN_API + 'MatriculadoEstado/GetAllWithGroupNumber' // REVISAR
+      }
+  }
+  },
   {
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',

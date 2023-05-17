@@ -82,7 +82,6 @@ export const CAMPO_CREATE_BEHAVIOR =
       ]            
     }
   },
-
 ];
 
 

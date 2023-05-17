@@ -23,6 +23,7 @@ export const FORMULARIO_DEF: CrudDef = {
         },
         update: {
             fields: FORMULARIO_UPDATE_FORM_FIELDS_DEF,
+            fieldsBehavior: FORMULARIO_CREATE_BEHAVIOR,
             showSubmitContinue: true
         }
     },
