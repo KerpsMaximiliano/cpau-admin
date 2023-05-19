@@ -67,13 +67,13 @@ export class FileService {
           
   createAndDownloadBlobFile(body, options, filename) {
     const blob = new Blob([body], options);
-    if (navigator.msSaveBlob) 
-    { 
-        // IE 10+
-        navigator.msSaveBlob(blob, filename);
-    } 
-    else
-    {
+    // if (navigator.msSaveBlob) 
+    // { 
+    //     // IE 10+
+    //     navigator.msSaveBlob(blob, filename);
+    // } 
+    // else
+    // {
         const link = document.createElement('a');
         // Browsers that support HTML5 download attribute
         if (link.download !== undefined) 
@@ -86,16 +86,16 @@ export class FileService {
             link.click();
             document.body.removeChild(link);
         }
-    }
+   // }
   }
 
   public downloadCsv(data: any, exportFileName: string) {
       const csvData = this.convertToCSV(data);
       const blob = new Blob([csvData], { type: 'text/csv;charset=iso-8859-1;' });
 
-      if (navigator.msSaveBlob) { // IE 10+
-          navigator.msSaveBlob(blob, this.createFileName(exportFileName));
-      } else {
+      // if (navigator.msSaveBlob) { // IE 10+
+      //     navigator.msSaveBlob(blob, this.createFileName(exportFileName));
+      // } else {
         const link = document.createElement('a');
           if (link.download !== undefined) { // feature detection
               // Browsers that support HTML5 download attribute
@@ -105,7 +105,7 @@ export class FileService {
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
-          }
+          //}
       }
   }
   private convertToCSV(objarray: any) {

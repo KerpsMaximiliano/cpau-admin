@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 .nav {
 
     .nav-subheader {
@@ -75,11 +76,11 @@
                 background-color: #3400FF;
 
                 .mat-ripple-element {
-                    background-color: mat-color($accent, default-contrast, 0.1);
+                    background-color: mat.get-color-from-palette($accent, default-contrast, 0.1);
                 }
 
                 &, .nav-link-icon {
-                    color: mat-color($accent, default-contrast);
+                    color: mat.get-color-from-palette($accent, default-contrast);
                 }
 
                 .nav-link-badge {

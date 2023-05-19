@@ -75,7 +75,7 @@ export class HttpService extends BaseService {
 
     // Descarga
     if (ie || oldIE || ieEDGE) {
-      window.navigator.msSaveBlob(file, name);
+      //window.navigator.msSaveBlob(file, name);
     } else {
       const fileURL = URL.createObjectURL(file);
       const a       = document.createElement('a');

@@ -10,8 +10,7 @@ import { FuseSplashScreenService } from '@fuse/services/splash-screen.service';
 import { FuseTranslationLoaderService } from '@fuse/services/translation-loader.service';
 
 @NgModule({
-    entryComponents: [],
-    providers      : [
+    providers: [
         FuseConfigService,
         FuseCopierService,
         FuseMatchMediaService,
