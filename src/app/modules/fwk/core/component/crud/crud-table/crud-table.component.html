@@ -30,6 +30,7 @@
   <ng-container *ngFor="let def of grid.columnsDef" matColumnDef="{{def.columnDef}}">
     <mat-header-cell 
          *matHeaderCellDef 
+          (click)="restartActionButtons()"
           mat-sort-header="{{def.columnDef}}" 
           disabled="{{isDisableSort(def.columnDef)}}"
           start="{{orderStart(def.columnDef)}}" id="{{def.columnDef}}Header"> {{def.columnName}} </mat-header-cell>

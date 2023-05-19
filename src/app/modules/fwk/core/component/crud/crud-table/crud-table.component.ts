@@ -42,11 +42,11 @@ const DELETE_COLUMN = 'delete';
     state('true', style({
       opacity: '1'
     })),
-    state('false', style({
+    state('false, void', style({
       opacity: '0'
     })),
-    transition('true => false', animate('300ms ease')),
-    transition('false => true', animate('300ms ease')),
+    transition('true <=> false', animate('300ms ease')),
+    transition('true <=> void', animate('300ms ease')),
   ])]
 })
 export class CrudTableComponent extends AbstractComponent implements OnInit {
@@ -576,6 +576,10 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     }
     const sort = this.grid.sortAllColumns;
     return sort === undefined ? true : !sort;
+  }
+
+  restartActionButtons() {
+    this.openActionsArray.fill(false);
   }
 
   orderStart(columnKey) {
