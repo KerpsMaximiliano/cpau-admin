@@ -101,7 +101,7 @@ export const navigation = [
                                 'title': 'Templates',
                                 // 'translate': 'NAV.CONTENIDO.TITLE',
                                 'type': 'item',
-                                'icon': 'library_books',
+                                'icon': 'tab_duplicate',
                                 'url': TEMPLATE_CONTENIDO_NAV_DEF.url,
                                 'permission': 'TEMPLATE_CONTENIDO_READ',
                             },

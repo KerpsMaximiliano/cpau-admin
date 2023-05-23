@@ -258,6 +258,17 @@ export const SECCION_GRID_DEF : GridDef = {
         }
       },
       icon: 'manage_history'
+    },
+    {
+      actionNameKey: 'seccion_grid_def_button_action_reordenar',
+      icon: 'swipe_vertical',
+      //actionSecurity: 'SECCIONES_REORDER',
+      confirm: true,
+      ws: {
+        key: 'seccion_grid_def_button_action_reordenar',
+        url: PREFIX_DOMAIN_API + 'SectionContent/ResetPositions',
+        method: 'PUT'
+      }
     }
     
   ],

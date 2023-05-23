@@ -26,7 +26,8 @@ export class CrudDef extends ComponentDef {
     openLinkTitle?: string;
     downloadBoleta?: boolean;
     exportCsv?: {
-      csvExportFileName: string
+      csvExportFileName: string,
+      ws?: string
     };
     // Deprecado
     searchFields?: any;

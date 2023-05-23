@@ -49,7 +49,8 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   form: FormGroup;
   formError: any;
   filteredData: Observable<any>;
-
+  editorTemplates = this.formService.editorTemplates;
+  
   _fields: DynamicField<any>[];
   formValidated: boolean;
   initStateObject: any;
@@ -84,6 +85,11 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
 
   onInit(): void {
     this.onInitWithFields(this.fields, this.entity);
+    this.setEditorTemplates();
+  }
+
+  setEditorTemplates() {
+    this.formService.setEditorTemplates();
   }
 
   onInitWithFields(fields, entity): void {
@@ -152,12 +158,6 @@ export class DynamicFormComponent extends AbstractComponent implements OnInit {
   getMessageErrorValidation(field) {
     return this.formService.getMessageErrorValidation(this.form, field);
   }
-
-  templates = [
-    { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
-    { title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
-    { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
-  ]
 
   onFormValuesChanged() {
 

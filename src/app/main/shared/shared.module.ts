@@ -42,7 +42,7 @@ const routes = [
         BrowserAnimationsModule,
         HttpClientModule,
         AppRoutingModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
         TranslateModule.forRoot(),
         // Fuse Main and Shared modules
         FuseModule.forRoot(fuseConfig),

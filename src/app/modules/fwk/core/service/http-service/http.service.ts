@@ -52,6 +52,18 @@ export class HttpService extends BaseService {
     });
   }
 
+  downloadCsv(url, params): Observable<any> {
+    const options = Object.assign({}, this._httpOptions)
+    options['params'] = params
+    const observable = new Observable((observer) => {
+        this.http.get<any>(url, options)
+            .subscribe(response => this.subHandleResponse(observer, response),
+                        e => this.subHandleError(observer, e),
+                        () => observer.complete());
+      });
+    return observable;
+  }
+
   downloadFile(resp: HttpResponse<Blob>, name: string) {
     const contentType = resp.headers.get('Content-type');
     const file = new Blob([ resp.body ], {type: contentType});
@@ -63,7 +75,7 @@ export class HttpService extends BaseService {
 
     // Descarga
     if (ie || oldIE || ieEDGE) {
-      window.navigator.msSaveBlob(file, name);
+      //window.navigator.msSaveBlob(file, name);
     } else {
       const fileURL = URL.createObjectURL(file);
       const a       = document.createElement('a');

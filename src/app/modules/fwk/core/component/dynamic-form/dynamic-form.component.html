@@ -72,6 +72,9 @@
     <div class="mat-checkbox" *ngIf="field.controlType == 'checkbox'">
       <mat-checkbox [formControlName]="field.key" [id]="field.key">{{field.label}}</mat-checkbox>
     </div>
+    <div *ngIf="field.controlType == 'header'">
+      <div>{{field.label}}</div>
+    </div>
     <div *ngIf="field.controlType == 'pick-list'">
       <app-pick-list [elementLabel]="field.options.elementLabel" [titleFrom]="field.options.titleFrom"
         [titleTo]="field.options.titleTo" [fromData]="field.options.fromData" [toData]="field.options.toData"
@@ -122,11 +125,10 @@
           toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
           base_url: '/tinymce',
           toolbar_sticky: true,
-          toolbar_sticky_offset: isSmallScreen ? 102 : 108,
-          toolbar_mode: 'sliding',
+          toolbar_mode: 'sliding',        
           contextmenu: 'link image table',
           suffix: '.min',
-          templates: templates,
+          templates: editorTemplates,
           quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
           cleanup: false,
           verify_html : false,

@@ -16,14 +16,16 @@ export const TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'textbox',
     required: true,
     minLength: 3,
-    maxLength: 10,
+    maxLength: 100,
   },
   {
     key: 'description',
     labelKey: 'TEMPLATE_CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_description',
     label: 'Descipcion',
     type: 'text',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    minLength: 3,
+    maxLength: 300,
   },
   {
     key: 'content',

@@ -9,7 +9,7 @@ import { LocalStorageService } from '../local-storage/local-storage.service';
 import { navigation } from '../../../../../navigation/navigation';
 import { ComponentDef } from '../../model/component-def/component-def';
 import { ToolbarComponentDef } from '../../model/component-def/toolbar-comp-def';
-import { componentFactoryName } from '@angular/compiler';
+//import { componentFactoryName } from '@angular/compiler';
 
 @Injectable()
 export class ComponentDefService{
