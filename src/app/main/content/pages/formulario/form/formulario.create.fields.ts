@@ -74,6 +74,12 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     cssClass: 'formulario_create_todate'
   },
   {
+    key: 'acceso_title',
+    labelKey: 'Nivel de Acceso',
+    title: 'Parámetros',
+    controlType: 'checkbox'
+  },
+  {
     key: 'nivelAcceso',
     label: 'Destinatarios',
     required: true,
@@ -85,8 +91,12 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
         {value: 'A', label: 'Anonimo' },
         {value: 'R', label: 'Registrado' }
       ]
-    }
+    },
+    cssClass: "my-mat-radio-button",
+    parentTitle: "nashe"
+
   },
+
   {
     key: 'accesoMatriculado',
     labelKey: 'Acceso Matriculado',
@@ -97,6 +107,9 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'Acceso No Matriculado',
     controlType: 'checkbox',
   },
+
+
+
   {
     key: 'estadosMatricula',
     label: 'Destinatarios',
@@ -108,7 +121,8 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
         {value: 'T', label: 'Todos' },
         {value: 'S', label: 'Seleccionados' }
       ]
-    }
+    },
+    cssClass: "my-mat-radio-button",
   },
   {
     key: 'estadosSeleccionados',

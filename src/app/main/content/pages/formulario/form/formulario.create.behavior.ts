@@ -14,11 +14,11 @@ export const FORMULARIO_CREATE_BEHAVIOR: any[] =
       then: [
         {
             key: 'accesoMatriculado',
-            controlType: 'checkbox'
+            controlType: 'checkbox',
           },
           {
           key: 'accesoNoMatriculado',
-          controlType: 'checkbox'
+          controlType: 'checkbox',
           },
 
       ],
@@ -70,6 +70,7 @@ export const FORMULARIO_CREATE_BEHAVIOR: any[] =
         key: 'accesoNoMatriculado',
         controlType: 'hidden'
         },
+
 
       ],
       else: [
@@ -126,8 +127,6 @@ export const FORMULARIO_CREATE_BEHAVIOR: any[] =
       ]            
     }
   },
-
-  
 ];
 
 
