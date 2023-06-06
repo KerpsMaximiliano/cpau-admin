@@ -119,7 +119,7 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
       titleTo: 'Seleccionados',
       fromWs: {
           key: 'matriculados_estado_ws',
-          url: PREFIX_DOMAIN_API + 'MatriculadoEstado/GetAllWithGroupNumber' // REVISAR
+          url: PREFIX_DOMAIN_API + 'MatriculadoEstado' // REVISAR
       }
   }
   },

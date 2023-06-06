@@ -73,72 +73,7 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     required: true,
     cssClass: 'formulario_create_todate'
   },
-  {
-    key: 'acceso_title',
-    labelKey: 'Nivel de Acceso',
-    title: 'Parámetros',
-    controlType: 'checkbox'
-  },
-  {
-    key: 'nivelAcceso',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
-    value: 'A',
-    options: {
-      options: [
-        {value: 'A', label: 'Anonimo' },
-        {value: 'R', label: 'Registrado' }
-      ]
-    },
-    cssClass: "my-mat-radio-button",
-    parentTitle: "nashe"
-
-  },
-
-  {
-    key: 'accesoMatriculado',
-    labelKey: 'Acceso Matriculado',
-    controlType: 'checkbox',
-  },
-  {
-    key: 'accesoNoMatriculado',
-    labelKey: 'Acceso No Matriculado',
-    controlType: 'checkbox',
-  },
-
-
-
-  {
-    key: 'estadosMatricula',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
-    options: {
-      options: [
-        {value: 'T', label: 'Todos' },
-        {value: 'S', label: 'Seleccionados' }
-      ]
-    },
-    cssClass: "my-mat-radio-button",
-  },
-  {
-    key: 'estadosSeleccionados',
-    labelKey: 'Seleccionados',
-    controlType: 'simple-pick-list',
-    options: {
-      compositeKey: ['id'],
-      elementLabel: 'nombre',
-      titleFrom: 'Matriculados por Estado',
-      titleTo: 'Seleccionados',
-      fromWs: {
-          key: 'matriculados_estado_ws',
-          url: PREFIX_DOMAIN_API + 'MatriculadoEstado/GetAllWithGroupNumber' // REVISAR
-      }
-  }
-  },
+  
   {
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',
@@ -191,6 +126,66 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     type: 'boolean',
     controlType: 'checkbox',
     cssClass: 'formulario_create_isCurso'
+  },
+  {
+    key: 'agenda_title',
+    labelKey: 'Nivel de Acceso',
+    title: 'Nivel de Acceso',
+    controlType: 'header'
+  },
+  {
+    key: 'nivelAcceso',
+    label: 'Destinatarios',
+    required: true,
+    requiredMessage: 'Debe seleccionar un destinatario',
+    controlType: RADIO_BUTTON,
+    value: 'A',
+    options: {
+      options: [
+        {value: 'A', label: 'Anonimo' },
+        {value: 'R', label: 'Registrado' }
+      ]
+    }
+  },
+  {
+    key: 'accesoNoMatriculado',
+    labelKey: 'Acceso No Matriculado',
+    type: 'check',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'accesoMatriculado',
+    labelKey: 'Acceso Matriculado',
+    type: 'check',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'estadosMatricula',
+    label: 'Destinatarios',
+    required: true,
+    requiredMessage: 'Debe seleccionar un destinatario',
+    controlType: RADIO_BUTTON,
+    options: {
+      options: [
+        {value: 'T', label: 'Todos' },
+        {value: 'S', label: 'Seleccionados' }
+      ]
+    }
+  },
+  {
+    key: 'estadosSeleccionados',
+    labelKey: 'Seleccionados',
+    controlType: 'simple-pick-list',
+    options: {
+      compositeKey: ['id'],
+      elementLabel: 'nombre',
+      titleFrom: 'Matriculados por Estado',
+      titleTo: 'Seleccionados',
+      fromWs: {
+          key: 'matriculados_estado_ws',
+          url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
+      }
+  }
   }
   
 ];

@@ -137,59 +137,13 @@
         width:15% !important;
     }
 
-    .my-mat-radio-button {
-        width: 60% !important;
-    }
 
-    // .my-mat-radio-button {
-    //     :ng-deep{
-    //         .mat-radio-button{
-    //             background-color: red;
-    //         }
-    //     }
-    // }
 
-    .accesoMatriculadoDiv {
-        display: inline-block !important;
-        width: 50% !important;
-        margin-right: -168px;
-        margin-bottom: -20px;
-    }
-    .accesoNoMatriculadoDiv {
-        display: inline-block;
-        width: 50% !important;
-        margin-bottom: -20px;
-        margin-right: 45px;
-    }
 
-    @media screen and (max-width: 800px)
-    {
-        .my-mat-radio-button {
-            width: 100% !important;
-        }
 
-        .accesoMatriculadoDiv {
-            width: 100% !important;
-        }
-        .accesoNoMatriculadoDiv {
-            width: 100% !important;
-        }
-    }
-    #info_title > label:nth-child(1) > div:nth-child(1), #acceso_title > label:nth-child(1) > div:nth-child(1) {
-        display:none;
-    }
-    
-    #info_title > label:nth-child(1) > span:nth-child(2), #acceso_title > label:nth-child(1) > span:nth-child(2) {
-        font-size: 16px;
-        color: gray;
-        font-weight: bolder;
-    }
-    
-    .info_titleDiv > div:nth-child(2), .acceso_titleDiv > div:nth-child(2) {
-        background-color: gainsboro;
-        text-align: center;
-        padding: 3px;
-    }
+
+
+
 
     .placeDiv{
         display: inline-block !important;
@@ -405,4 +359,21 @@
     .mat-checkbox {
         //Estilos campos formularios
     }
+}
+
+
+#info_title > label:nth-child(1) > div:nth-child(1), #agenda_title > label:nth-child(1) > div:nth-child(1) {
+	display:none;
+}
+
+#info_title > label:nth-child(1) > span:nth-child(2), #agenda_title > label:nth-child(1) > span:nth-child(2) {
+    font-size: 16px;
+    color: gray;
+    font-weight: bolder;
+}
+
+.info_titleDiv > div:nth-child(2), .agenda_titleDiv > div:nth-child(2) {
+    background-color: gainsboro;
+    text-align: center;
+    padding: 3px;
 }
