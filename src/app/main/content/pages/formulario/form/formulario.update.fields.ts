@@ -1,4 +1,4 @@
-import { RADIO_BUTTON } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { HEADER, RADIO_BUTTON } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
@@ -72,58 +72,6 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     cssClass: 'formulario_todate'
   },
   {
-    key: 'nivelAcceso',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
-    value: 'A',
-    options: {
-      options: [
-        {value: 'A', label: 'Anonimo' },
-        {value: 'R', label: 'Registrado' }
-      ]
-    }
-  },
-  {
-    key: 'accesoMatriculado',
-    labelKey: 'Acceso Matriculado',
-    controlType: 'checkbox',
-  },
-  {
-    key: 'accesoNoMatriculado',
-    labelKey: 'Acceso No Matriculado',
-    controlType: 'checkbox',
-  },
-  {
-    key: 'estadosMatricula',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
-    options: {
-      options: [
-        {value: 'T', label: 'Todos' },
-        {value: 'S', label: 'Seleccionados' }
-      ]
-    }
-  },
-  {
-    key: 'estadosSeleccionados',
-    labelKey: 'Seleccionados',
-    controlType: 'simple-pick-list',
-    options: {
-      compositeKey: ['id'],
-      elementLabel: 'nombre',
-      titleFrom: 'Matriculados por Estado',
-      titleTo: 'Seleccionados',
-      fromWs: {
-          key: 'matriculados_estado_ws',
-          url: PREFIX_DOMAIN_API + 'MatriculadoEstado' // REVISAR
-      }
-  }
-  },
-  {
     key: 'showTitle',
     labelKey: 'formulario_create_form_fields_def_field_showtitle',
     type: 'boolean',
@@ -174,5 +122,69 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     type: 'boolean',
     controlType: 'checkbox',
     cssClass: 'formulario_isCurso'
+  },
+  {
+    key: 'agenda_title',
+    labelKey: 'Nivel de Acceso',
+    title: 'Nivel de Acceso',
+    controlType: HEADER
+  },
+  {
+    key: 'nivelAcceso',
+    labelKey: 'Tipos de Usuarios',
+    controlType: 'select',
+    value: 'A',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'label',
+      elementValue: 'value',
+      fromData: [ 
+        {value: 'A', label: 'Anonimo' },
+        {value: 'R', label: 'Registrado' }
+      ]
+    }
+  },
+  {
+    key: 'accesoNoMatriculado',
+    labelKey: 'Acceso No Matriculado',
+    type: 'check',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'accesoMatriculado',
+    labelKey: 'Acceso Matriculado',
+    type: 'check',
+    controlType: 'checkbox',
+  },
+  {
+    key: 'estadosMatricula',
+    labelKey: 'Destinatarios',
+    controlType: 'select',
+    value: 'A',
+    options: {
+      handlerSourceData: false,
+      elementLabel: 'label',
+      elementValue: 'value',
+      fromData: [ 
+        {value: 'T', label: 'Todos' },
+        {value: 'S', label: 'Por Estado' }
+      ]
+    }
+  },
+
+  {
+    key: 'estadosSeleccionados',
+    labelKey: 'Seleccionados',
+    controlType: 'simple-pick-list',
+    options: {
+      compositeKey: ['id'],
+      elementLabel: 'nombre',
+      titleFrom: 'Matriculados por Estado',
+      titleTo: 'Seleccionados',
+      fromWs: {
+          key: 'matriculados_estado_ws',
+          url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
+      }
+  }
   }
 ];

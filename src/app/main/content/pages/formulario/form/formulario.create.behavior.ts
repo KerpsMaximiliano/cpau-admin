@@ -1,4 +1,4 @@
-import { CONTROL_TYPE, RADIO_BUTTON } from '../../../../../modules/fwk/core/model/dynamic-form/dynamic-field';
+import { CONTROL_TYPE, RADIO_BUTTON, SELECT } from '../../../../../modules/fwk/core/model/dynamic-form/dynamic-field';
 
 export const FORMULARIO_CREATE_BEHAVIOR: any[] = 
 [
@@ -90,7 +90,7 @@ export const FORMULARIO_CREATE_BEHAVIOR: any[] =
       then: [
         {
             key: 'estadosMatricula',
-            controlType: RADIO_BUTTON
+            controlType: SELECT
         },
 
 

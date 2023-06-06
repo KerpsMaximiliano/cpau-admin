@@ -1,4 +1,4 @@
-import { RADIO_BUTTON, IMPORT_IMAGE } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { RADIO_BUTTON, IMPORT_IMAGE, HEADER, SELECT } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
 import { PREFIX_DOMAIN_API } from "environments/environment";
 
 
@@ -131,17 +131,18 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     key: 'agenda_title',
     labelKey: 'Nivel de Acceso',
     title: 'Nivel de Acceso',
-    controlType: 'header'
+    controlType: HEADER
   },
   {
     key: 'nivelAcceso',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
+    labelKey: 'Tipos de Usuarios',
+    controlType: 'select',
     value: 'A',
     options: {
-      options: [
+      handlerSourceData: false,
+      elementLabel: 'label',
+      elementValue: 'value',
+      fromData: [ 
         {value: 'A', label: 'Anonimo' },
         {value: 'R', label: 'Registrado' }
       ]
@@ -161,17 +162,20 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
   },
   {
     key: 'estadosMatricula',
-    label: 'Destinatarios',
-    required: true,
-    requiredMessage: 'Debe seleccionar un destinatario',
-    controlType: RADIO_BUTTON,
+    labelKey: 'Destinatarios',
+    controlType: 'select',
+    value: 'A',
     options: {
-      options: [
+      handlerSourceData: false,
+      elementLabel: 'label',
+      elementValue: 'value',
+      fromData: [ 
         {value: 'T', label: 'Todos' },
-        {value: 'S', label: 'Seleccionados' }
+        {value: 'S', label: 'Por Estado' }
       ]
     }
   },
+
   {
     key: 'estadosSeleccionados',
     labelKey: 'Seleccionados',
