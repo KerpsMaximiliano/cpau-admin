@@ -18,7 +18,7 @@ jobs:
   - task: NodeTool@0
     inputs:
       versionSource: 'spec'
-      versionSpec: '14.x'
+      versionSpec: '16.x'
   - script: |
       npm install -g @angular/cli@6.0.8
     displayName: 'install angular cli'
