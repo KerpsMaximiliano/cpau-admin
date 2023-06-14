@@ -18,7 +18,7 @@ jobs:
   - task: NodeTool@0
     inputs:
       versionSource: 'spec'
-      versionSpec: '12.20.0'
+      versionSpec: '10.6.0'
   - script: |
       npm cache clean --force
     displayName: 'npm cache clean --force'
