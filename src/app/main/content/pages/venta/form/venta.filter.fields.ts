@@ -56,20 +56,20 @@ export const VENTA_FILTER_FORM_FIELDS_DEF = [
                  {id: 'NOAPLICA', nombre: 'No Aplica'}]
       }
   },
-  {
-    key: 'usuario',
-    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_userid',
-    label: 'Username',
-    type: 'string',
-    controlType: 'textbox'
-  },
   // {
-  //   key: 'email',
-  //   labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email',
-  //   label: 'Email',
+  //   key: 'usuario',
+  //   labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_userid',
+  //   label: 'Username',
   //   type: 'string',
   //   controlType: 'textbox'
   // },
+  {
+    key: 'email',
+    labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_email',
+    label: 'Email',
+    type: 'string',
+    controlType: 'textbox'
+  },
   {
     key: 'matricula',
     labelKey: 'VENTA_FILTER_FORM_FIELDS_DEF_FIELD_matricula',
