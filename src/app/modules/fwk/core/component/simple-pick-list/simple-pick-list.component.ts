@@ -77,4 +77,18 @@ export class SimplePickListComponent extends AbstractComponent {
     this._fromData =  value;
   }
 
+  @Input()
+  set toData(value) {
+    if (value === undefined || value === '') {
+      value = [];
+    }
+    this.dataSelected = [];
+    value.forEach(element => {
+      this.dataSelected.push(element);
+    });
+  }
+
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
 }
