@@ -61,7 +61,8 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     key: 'fromDateString',
     labelKey: 'formulario_create_form_fields_def_field_fromdate',
     label: 'Fecha Desde',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     required: true,
     cssClass: 'formulario_create_fromdate'
   },
@@ -69,7 +70,8 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     key: 'toDateString',
     labelKey: 'formulario_create_form_fields_def_field_todate',
     label: 'Fecha Hasta',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     required: true,
     cssClass: 'formulario_create_todate'
   },
@@ -107,7 +109,8 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'formulario_create_form_fields_def_field_date',
     label: 'Fecha',
     type: 'string',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     cssClass: 'formulario_create_date'
   },
   {
@@ -164,13 +167,15 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     key: 'estadosMatricula',
     labelKey: 'Destinatarios',
     controlType: 'select',
-    value: 'A',
+    value: 'T',
     options: {
       handlerSourceData: false,
       elementLabel: 'label',
       elementValue: 'value',
       fromData: [ 
         {value: 'T', label: 'Todos' },
+        {value: 'A', label: 'Activos' },
+        {value: 'N', label: 'No Activos' },
         {value: 'S', label: 'Por Estado' }
       ]
     }
