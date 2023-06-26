@@ -39,45 +39,47 @@ export const FORMULARIO_CREATE_BEHAVIOR: any[] =
       then: [
         {
           key: 'accesoMatriculado',
-          controlType: 'hidden'
+          controlType: 'hidden',
+          value: false
+
         },
         {
         key: 'accesoNoMatriculado',
-        controlType: 'hidden'
-        },
-
+        controlType: 'hidden',
+        value: false
+        }
       ],
       else: [
 
       ]            
     }
   },
-  {
-    fieldKey: 'nivelAcceso',
-    condition: {
-      if: [
-        {
-          key: 'nivelAcceso',
-          value: 'A',
-        } 
-      ],
-      then: [
-        {
-          key: 'accesoMatriculado',
-          controlType: 'hidden'
-        },
-        {
-        key: 'accesoNoMatriculado',
-        controlType: 'hidden'
-        },
+  // {
+  //   fieldKey: 'nivelAcceso',
+  //   condition: {
+  //     if: [
+  //       {
+  //         key: 'nivelAcceso',
+  //         value: 'A',
+  //       } 
+  //     ],
+  //     then: [
+  //       {
+  //         key: 'accesoMatriculado',
+  //         controlType: 'hidden'
+  //       },
+  //       {
+  //       key: 'accesoNoMatriculado',
+  //       controlType: 'hidden'
+  //       },
 
 
-      ],
-      else: [
+  //     ],
+  //     else: [
 
-      ]            
-    }
-  },
+  //     ]            
+  //   }
+  // },
   {
     fieldKey: 'accesoMatriculado',
     condition: {
