@@ -113,27 +113,23 @@
     </div>
     <div *ngIf="field.controlType == 'html_editor'">
       <editor [formControlName]="field.key" initialValue="{{field.value}}" [init]="{
-          base_url: '/tinymce',
-          suffix: '.min',
-          custom_elements:'style',
-          allow_unsafe_link_target: true,
-          allow_html_in_named_anchor: true,
-          height: 300,
-          promotion: false,
-          menubar: true,
-          plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
-          toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
-          base_url: '/tinymce',
-          toolbar_sticky: true,
-          toolbar_mode: 'sliding',        
-          contextmenu: 'link image table',
-          suffix: '.min',
-          templates: editorTemplates,
-          quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
-          cleanup: false,
-          verify_html : false,
-          extended_valid_elements: '*[*]',
-          valid_elements: '*[*]'
+        base_url: '/tinymce',
+        suffix: '.min',
+        custom_elements:'style',
+        allow_unsafe_link_target: true,
+        allow_html_in_named_anchor: true,
+        height: 300,
+        promotion: false,
+        menubar: true,
+        plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
+        toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+        toolbar_sticky: true,
+        toolbar_mode: 'sliding',        
+        contextmenu: 'link image table',
+        templates: editorTemplates,
+        quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+        cleanup: false,
+        extended_valid_elements: '*[*]'
         }"></editor>
       <!-- <ckeditor   [formControlName]="field.key" data="{{field.value}}"></ckeditor> -->
     </div>
