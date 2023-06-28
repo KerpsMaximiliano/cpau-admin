@@ -98,7 +98,20 @@ export const SECTION_CONTENT_GRID_DEF: GridDef = {
       },
       icon: 'library_books'
     },
+    {
+      actionNameKey: 'Ver Noticias',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        url: 'seccionboletincontenido',
+        querystring: {
+          id : 'id'
+        }
+      },
+      icon: 'library_books'
+    },
   ],
+  
   displayedActionsCondition: [
     {
       key: 'section_content_grid_def_button_action_marcar_destacado',

@@ -123,13 +123,10 @@ export const CONTENIDO_CREATE_FORM_FIELDS_DEF = [
     title: 'Beneficios',
     controlType: 'header'
   },
-
   {
     key: 'percent',
     labelKey: 'contenido_create_form_fields_def_field_porcentaje',
     controlType: 'number',
     required: false
   },
-  
-
 ];

@@ -9,8 +9,6 @@ export const SECTION_CONTENT_CREATE_FORM_FIELDS_DEF = [
     mappingQuerystring: true
   },
   
-
-
   {
     key: 'content',
     labelKey: 'section_content_create_form_fields_def_field_contentid',

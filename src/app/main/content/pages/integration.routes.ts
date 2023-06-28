@@ -73,6 +73,8 @@ import { SEGURIDAD_GRUPO_DEF } from './seguridad_grupo/seguridad_grupo.def';
 import { SEGURIDAD_GRUPO_PERMISO_DEF } from './seguridad_grupo_permiso/seguridad_grupo_permiso.def';
 import { SEGURIDAD_GRUPO_USUARIO_DEF } from './seguridad_grupo_usuario/seguridad_grupo_usuario.def';import { NoContentComponent } from '../no-content/no-content.component';
 import { NO_CONTENT_DEF } from './no_content/no_content.def';import { TEMPLATE_CONTENIDO_DEF } from './template_contenido/template_contenido.def';
+import { SECCION_BOLETIN_CONTENIDO_DEF } from './seccion_boletin_contenido/seccion_boletin_contenido.def';
+
 export const ROUTES: Routes = [
   {
     path: 'dashboard',
@@ -434,7 +436,11 @@ export const ROUTES: Routes = [
     component: IntegrationComponent,
     canActivate: [AuthGuardService]  
   },
- 
+  {
+    path: SECCION_BOLETIN_CONTENIDO_DEF.navigation.url.split('/')[1],
+    component: IntegrationComponent,
+    canActivate: [AuthGuardService]
+  },
 
 ];
 
