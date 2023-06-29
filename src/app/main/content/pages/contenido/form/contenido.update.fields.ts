@@ -1,9 +1,9 @@
 export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
   {
-    key: 'info_title',
+    key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_info',
     title: 'Info',
-    controlType: 'checkbox'
+    controlType: 'header'
   },
   {
     key: 'title',
