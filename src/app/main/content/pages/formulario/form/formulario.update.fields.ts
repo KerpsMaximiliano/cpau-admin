@@ -59,7 +59,8 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     key: 'fromDateString',
     labelKey: 'formulario_create_form_fields_def_field_fromdate',
     label: 'Fecha Desde',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     required: true,
     cssClass: 'formulario_fromdate'
   },
@@ -67,7 +68,8 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     key: 'toDateString',
     labelKey: 'formulario_create_form_fields_def_field_todate',
     label: 'Fecha Hasta',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     required: true,
     cssClass: 'formulario_todate'
   },
@@ -103,7 +105,8 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     key: 'dateString',
     labelKey: 'formulario_create_form_fields_def_field_date',
     label: 'Fecha',
-    controlType: 'datepicker',
+    // controlType: 'datepicker',
+    controlType: 'datetimepicker',
     cssClass: 'formulario_date'
   },
   {
@@ -167,6 +170,8 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
       elementValue: 'value',
       fromData: [ 
         {value: 'T', label: 'Todos' },
+        {value: 'A', label: 'Activos' },
+        {value: 'N', label: 'No Activos' },
         {value: 'S', label: 'Por Estado' }
       ]
     }

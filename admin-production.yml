@@ -18,7 +18,10 @@ jobs:
   - task: NodeTool@0
     inputs:
       versionSource: 'spec'
-      versionSpec: '14.x'
+      versionSpec: '12.20.x'
+  - script: |
+      npm cache clean --force
+    displayName: 'npm cache clean --force'
   - script: |
       npm install -g @angular/cli@6.0.8
     displayName: 'install angular cli'
