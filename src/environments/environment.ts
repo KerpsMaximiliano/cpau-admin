@@ -1,5 +1,5 @@
-// export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
-export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
+export const PREFIX_DOMAIN_API =  'https://localhost:44348/api/';
+// export const PREFIX_DOMAIN_API =  'https://cpauorgapi-test.azurewebsites.net/api/';
 export const PREFIX_INSTITUCIONAL = '/';
 
 export const environment = {
@@ -36,5 +36,6 @@ export const environment = {
 	URL_IMAGEN_SUBIR: 'perfilMatriculadoUpload',
 	URL_EMAIL_ACCOUNT: 'emailAccount',
     URL_ABM_ROLES: 'abmrole',
+    URL_SECCION_BOLETIN_CONTENIDO: 'seccionboletincontenido',
     AUTOCOMPLETE_WAITING_TIME: 700
 };
