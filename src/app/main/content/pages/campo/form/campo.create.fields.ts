@@ -76,9 +76,16 @@ export const CAMPO_CREATE_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
+    key: 'unique',
+    labelKey: 'campo_create_form_fields_def_field_unique',
+    label: 'Valor Unico',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
+  {
     key: 'position',
     labelKey: 'campo_create_form_fields_def_field_position',
-    label: 'Posición',
+    label: 'Posiciï¿½n',
     type: 'number',
     controlType: 'number',
     required: true

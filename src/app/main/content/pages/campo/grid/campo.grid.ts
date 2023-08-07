@@ -13,7 +13,6 @@ export const CAMPO_GRID_DEF = {
       id: true,
       columnNameKey: 'campo_grid_def_column_idform'
     },
-   
     {
       columnDef: 'name',
       columnNameKey: 'campo_grid_def_column_name'
@@ -25,6 +24,10 @@ export const CAMPO_GRID_DEF = {
     {
       columnDef: 'required',
       columnNameKey: 'campo_grid_def_column_required'
+    },
+    {
+      columnDef: 'unique',
+      columnNameKey: 'campo_grid_def_column_unique'
     },
     {
       columnDef: 'value',
@@ -41,6 +44,7 @@ export const CAMPO_GRID_DEF = {
     'name',
     'type',
     'required',
+    'unique',
     'value',
     'position'
   ],

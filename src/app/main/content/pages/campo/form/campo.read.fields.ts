@@ -40,6 +40,13 @@ export const CAMPO_READ_FORM_FIELDS_DEF = [
     controlType: 'checkbox'
   },
   {
+    key: 'unique',
+    labelKey: 'campo_create_form_fields_def_field_unique',
+    label: 'Valor Unico',
+    type: 'boolean',
+    controlType: 'checkbox'
+  },
+  {
     key: 'value',
     labelKey: 'CAMPO_READ_FORM_FIELDS_DEF_FIELD_value',
     label: 'Valor',
