@@ -11,7 +11,7 @@ export const FORM_RESPONSE_FILTER_FORM_FIELDS_DEF = [
     labelKey: 'FORM_RESPONSE_FILTER_FORM_FIELDS_DEF_FIELD_formid',
     label: 'Form Id',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'hidden'
   },
   {
     key: 'parentTitle',
