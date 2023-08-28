@@ -55,8 +55,6 @@ export const MESSAGE_TEMPLATE_GRID_DEF = {
   deleteAction: true,
   displayedColumns: [
     'name',
-    'subject',
-    'bccEmailAddresses',
     'createUser',
     'createDateString',
     'lastEditUser',

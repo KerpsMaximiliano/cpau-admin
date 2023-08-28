@@ -1,4 +1,5 @@
 import { HTML_EDITOR } from "app/modules/fwk/core/model/dynamic-form/dynamic-field";
+import { PREFIX_DOMAIN_API } from "environments/environment";
 
 export const MESSAGE_TEMPLATE_CREATE_FORM_FIELDS_DEF = [
   {
@@ -6,6 +7,31 @@ export const MESSAGE_TEMPLATE_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'message_template_create_form_fields_def_field_name',
     label: 'Nombre',
     controlType: 'textbox'
+  },
+  {
+    key: 'accountList',
+    labelKey: 'message_template_create_form_fields_def_field_emailaccountid',
+    label: 'Cuenta',
+    controlType: 'autocomplete-desplegable',
+    required: true,
+    options: {
+      transferIdToField: 'emailAccountId',
+      elementLabel: 'friendlyName',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        title: 'accountList'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'EmailAccount/accounts'
+    }
+  },
+  {
+    key: 'emailAccountId',
+    controlType: 'hidden'
   },
   {
     key: 'bccEmailAddresses',
@@ -34,13 +60,5 @@ export const MESSAGE_TEMPLATE_CREATE_FORM_FIELDS_DEF = [
     label: 'Is Active',
     value: true,
     controlType: 'hidden'
-  },
-  {
-    key: 'emailAccountId',
-    labelKey: 'message_template_create_form_fields_def_field_emailaccountid',
-    label: 'EmailAccountId',
-    type: 'string',
-    value: 1,
-    controlType: 'hidden',
   }
 ];
