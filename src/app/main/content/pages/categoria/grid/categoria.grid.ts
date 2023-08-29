@@ -1,7 +1,10 @@
+import { PREFIX_DOMAIN_API } from "environments/environment";
+
 export const CATEGORIA_GRID_DEF = {
   columnsDef: [
     {
       columnDef: 'id',
+      id: true,
       columnNameKey: 'categoria_grid_def_column_id'
     },
     {
@@ -18,5 +21,17 @@ export const CATEGORIA_GRID_DEF = {
   displayedColumns: [
     'nombre',
     'descripcion'
+  ],
+  actions : [
+    {
+      actionNameKey: 'categoria_grid_def_button_action_reordenar',
+      icon: 'swipe_vertical',
+      confirm: true,
+      ws: {
+        key: 'seccion_grid_def_button_action_reordenar',
+        url: PREFIX_DOMAIN_API + 'Producto/ResetPositions',
+        method: 'PUT'
+      }
+    }
   ]
 };

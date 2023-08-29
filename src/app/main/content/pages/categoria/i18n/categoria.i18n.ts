@@ -18,6 +18,7 @@ export const CATEGORIA_I18N_DEF = {
     categoria_filter_form_fields_def_field_descripcion: 'Descripcion',
     categoria_grid_def_column_id: 'Id',
     categoria_grid_def_column_nombre: 'Nombre',
-    categoria_grid_def_column_descripcion: 'Descripcion'
+    categoria_grid_def_column_descripcion: 'Descripcion',
+    categoria_grid_def_button_action_reordenar : 'Resetar Orden Productos'
   }
 };

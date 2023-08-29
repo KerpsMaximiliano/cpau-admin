@@ -50,6 +50,10 @@ export const PRODUCTO_GRID_DEF = {
     {
       columnDef: 'notificaciones',
       columnNameKey: 'producto_grid_def_column_notificaciones'
+    },
+    {
+      columnDef: 'orden',
+      columnNameKey: 'producto_grid_def_column_orden'
     }
   ],
   sortAllColumns: true,
@@ -61,7 +65,8 @@ export const PRODUCTO_GRID_DEF = {
     'enviable',
     'publicado',
     // 'temporal'
-    'notificaciones'
+    'notificaciones',
+    'orden'
   ],
   actions: [
     // {

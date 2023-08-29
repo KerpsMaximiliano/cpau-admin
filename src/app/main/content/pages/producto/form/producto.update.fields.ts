@@ -21,6 +21,13 @@ export const PRODUCTO_UPDATE_FORM_FIELDS_DEF = [
     }
   },
   {
+    key: 'orden',
+    labelKey: 'producto_create_form_fields_def_field_orden',
+    label: 'Orden',
+    controlType: 'number',
+    required: true
+  },
+  {
     key: 'nombre',
     labelKey: 'producto_create_form_fields_def_field_nombre',
     label: 'Nombre',
