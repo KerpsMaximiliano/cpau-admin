@@ -21,5 +21,12 @@ export const CATEGORIA_UPDATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox',
     maxLength: 400
+  },
+  {
+    key: 'orden',
+    labelKey: 'CATEGORIA_UPDATE_FORM_FIELDS_DEF_FIELD_orden',
+    label: 'Orden',
+    controlType: 'number',
+    required: true
   }
 ];

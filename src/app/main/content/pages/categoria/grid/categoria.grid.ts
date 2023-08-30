@@ -14,13 +14,18 @@ export const CATEGORIA_GRID_DEF = {
     {
       columnDef: 'descripcion',
       columnNameKey: 'categoria_grid_def_column_descripcion'
+    },
+    {
+      columnDef: 'orden',
+      columnNameKey: 'categoria_grid_def_column_orden'
     }
   ],
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
     'nombre',
-    'descripcion'
+    'descripcion',
+    'orden'
   ],
   actions : [
     {
