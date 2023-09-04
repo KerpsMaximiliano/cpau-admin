@@ -85,9 +85,6 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
                 ]
       }
   },
-  
- 
-
   {
     key: 'agenda_title',
     labelKey: 'contenido_create_form_fields_def_title_agenda',
@@ -142,7 +139,6 @@ export const CONTENIDO_UPDATE_FORM_FIELDS_DEF = [
     controlType: 'number',
     required: false
   },
-
   {
     key: 'id',
     labelKey: 'CONTENIDO_UPDATE_FORM_FIELDS_DEF_FIELD_id',

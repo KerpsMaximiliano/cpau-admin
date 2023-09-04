@@ -2,7 +2,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'title',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_title',
-    label: 'Título',
+    label: 'Tï¿½tulo',
     type: 'string',
     disabled: true,
     controlType: 'textbox'
@@ -10,7 +10,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'showTitle',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_showtitle',
-    label: 'Mostrar Título',
+    label: 'Mostrar Tï¿½tulo',
     type: 'checkbox',
     disabled: true,
     controlType: 'textbox'
@@ -18,7 +18,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'subTitle',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_subtitle',
-    label: 'Subtítulo',
+    label: 'Subtï¿½tulo',
     type: 'string',
     disabled: true,
     controlType: 'textbox'
@@ -66,7 +66,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'publishDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_publishdate',
-    label: 'Fecha de Publicación',
+    label: 'Fecha de Publicaciï¿½n',
     type: 'datetimepicker',
     disabled: true,
     controlType: 'textbox'
@@ -74,7 +74,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'expirationDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_expirationdate',
-    label: 'Fecha de Expiración',
+    label: 'Fecha de Expiraciï¿½n',
     type: 'datetimepicker',
     disabled: true,
     controlType: 'textbox'
@@ -82,7 +82,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'showPublishDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_showpublishdate',
-    label: 'Mostrar fecha de publicación',
+    label: 'Mostrar fecha de publicaciï¿½n',
     type: 'checkbox',
     disabled: true,
     controlType: 'textbox'
@@ -90,7 +90,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'eventCategoryId',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_eventcategoryid',
-    label: 'Categoría',
+    label: 'Categorï¿½a',
     type: 'number',
     disabled: true,
     controlType: 'number'
@@ -106,7 +106,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'eventEndDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_eventenddate',
-    label: 'Fecha Finalización',
+    label: 'Fecha Finalizaciï¿½n',
     type: 'datepicker',
     disabled: true,
     controlType: 'textbox'
@@ -122,7 +122,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'createDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_createdate',
-    label: 'Auditoría Creado el: ',
+    label: 'Auditorï¿½a Creado el: ',
     type: 'datepicker',
     disabled: true,
     controlType: 'textbox'
@@ -130,7 +130,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'lastEditDate',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_lasteditdate',
-    label: 'Auditoría Ultima Actualización: ',
+    label: 'Auditorï¿½a Ultima Actualizaciï¿½n: ',
     type: 'datepicker',
     disabled: true,
     controlType: 'textbox'
@@ -138,7 +138,7 @@ export const CONTENIDO_READ_FORM_FIELDS_DEF = [
   {
     key: 'allowAnonymous',
     labelKey: 'CONTENIDO_READ_FORM_FIELDS_DEF_FIELD_allowanonymous',
-    label: 'Acceso Público',
+    label: 'Acceso Pï¿½blico',
     type: 'checkbox',
     disabled: true,
     controlType: 'textbox'

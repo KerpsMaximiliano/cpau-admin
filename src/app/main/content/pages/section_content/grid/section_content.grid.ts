@@ -98,7 +98,20 @@ export const SECTION_CONTENT_GRID_DEF: GridDef = {
       },
       icon: 'library_books'
     },
+    {
+      actionNameKey: 'Ver boletines que lo contienen',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        url: 'seccionboletincontenido',
+        querystring: {
+          sectionContentId : 'id'
+        }
+      },
+      icon: 'account_tree'
+    },
   ],
+  
   displayedActionsCondition: [
     {
       key: 'section_content_grid_def_button_action_marcar_destacado',

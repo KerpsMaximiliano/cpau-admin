@@ -105,7 +105,6 @@ export class HttpService extends BaseService {
       url = url + "?";
     }
     url = url + "nocache=" + Math.floor(Math.random() * (9999 - 1111 + 1) + 1111);
-
     const observable = new Observable((observer) => {
         console.log('****** get -> ' + url);
         this.http.get<any>(url, options)
