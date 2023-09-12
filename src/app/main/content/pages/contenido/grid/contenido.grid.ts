@@ -265,6 +265,7 @@ export const CONTENIDO_GRID_DEF: GridDef = {
       redirect: {
         url: "/seccionesContenido",
         querystring: {
+          parentTitle: 'title',
           contenidoId : 'id'
         }
       },

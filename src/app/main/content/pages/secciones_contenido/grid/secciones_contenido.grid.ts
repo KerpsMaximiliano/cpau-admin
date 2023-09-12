@@ -6,6 +6,10 @@ export const SECCIONES_CONTENIDO_GRID_DEF = {
       columnNameKey: 'seccion_grid_def_column_id'
     },
     {
+      columnDef: 'sectionContentId',
+      columnNameKey: 'seccion_grid_def_column_sectioncontentid'
+    },
+    {
       columnDef: 'contenidoId',
       columnNameKey: 'SECCIONES_CONTENIDO_FILTER_FORM_FIELDS_DEF_FIELD_contenidoId'
     },
@@ -89,6 +93,18 @@ export const SECCIONES_CONTENIDO_GRID_DEF = {
         }
       },
       icon: 'library_books'
-    }
+    },
+    {
+      actionNameKey: 'Ver boletines que lo contienen',
+      actionType: 'redirect',
+      redirect: {
+        openTab: true,
+        url: 'seccionboletincontenido',
+        querystring: {
+          sectionContentId : 'sectionContentId'
+        }
+      },
+      icon: 'account_tree'
+    },
   ]
 };
