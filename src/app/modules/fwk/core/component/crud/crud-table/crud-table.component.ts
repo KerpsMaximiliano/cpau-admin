@@ -270,7 +270,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
           });
       } else if (ACTION_TYPES.redirect === action.actionType){
         var url: String = action.redirect.url;
-                
+        this.spinnerGeneralControl.show();
         const queryParams: Params = this.getQueryParams(action.redirect.querystring, entity);
         
         if (queryParams['externalUrl']) {
@@ -306,7 +306,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
             }
           
           }
-
+          this.spinnerGeneralControl.hide();
           var win = window.open(url + queryParamsString, '_blank');
           win.focus();
 
@@ -331,6 +331,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
                 });
               }
             }
+            this.spinnerGeneralControl.hide();
             let win = window.open(url + queryParamsString, '_blank');
             win.focus();
           } else {
@@ -360,6 +361,7 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     if (this.crud === undefined){
       return;
     }
+    this.spinnerGeneralControl.show();
     const url = this.crud.crudDef.ws.url;
     let id  = this.grid.columnsDef.find(c => c.id);
     id = id ? id.columnDef : 'id';
@@ -367,11 +369,13 @@ export class CrudTableComponent extends AbstractComponent implements OnInit {
     if (this.crud.crudDef.forceGetDetail){
       this.genericHttpService.basicGet(url, {id: row[id]}, undefined, {id: 'id'}).subscribe(r => {
         if (r){
+          this.spinnerGeneralControl.hide();
           this.processObj(r);
         }
       });
     }else{
       this.processObj(row);
+      this.spinnerGeneralControl.hide();
     }
     
   }
