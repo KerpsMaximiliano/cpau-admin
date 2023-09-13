@@ -95,5 +95,21 @@ export const REVISTAS_UPDATE_FORM_FIELDS_DEF = [
     maxLength: 500,
     icon: 'attach_file',
     showPreview: true,
+  },
+  {
+    key: 'pdfUrl',
+    labelKey: 'revistas_create_form_fields_def_field_pdfurl',
+    controlType: 'import_image',
+    maxLength: 500,
+    icon: 'attach_file',
+    showPreview: true,
+  },
+  {
+    key: 'fbUrl',
+    labelKey: 'revistas_create_form_fields_def_field_fburl',
+    controlType: 'import_image',
+    maxLength: 500,
+    icon: 'attach_file',
+    showPreview: true,
   }
 ];
