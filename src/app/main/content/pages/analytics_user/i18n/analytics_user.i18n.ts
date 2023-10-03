@@ -1,0 +1,23 @@
+export const ANALYTICS_USER_I18N_DEF = {
+  name: "ANALYTICS_USER_I18N_DEF",
+  lang: "es",
+  words: {
+    page_title: "Estadisticas - Usuario",
+    analytics_user_nav_def: "Gupos - Usuarios",
+    analytics_user_create_form_fields_def_field_id: "Id",
+    analytics_user_create_form_fields_def_field_idgrupo: "Grupo",
+    analytics_user_create_form_fields_def_field_idusuario: "Usuario",
+    analytics_user_update_form_fields_def_field_id: "Id",
+    analytics_user_update_form_fields_def_field_idgrupo: "Grupo",
+    analytics_user_update_form_fields_def_field_idusuario: "Usuario",
+    analytics_user_read_form_fields_def_field_id: "Id",
+    analytics_user_read_form_fields_def_field_idgrupo: "Grupo",
+    analytics_user_read_form_fields_def_field_idusuario: "Usuario",
+    analytics_user_filter_form_fields_def_field_id: "Id",
+    analytics_user_filter_form_fields_def_field_idgrupo: "Grupo",
+    analytics_user_filter_form_fields_def_field_idusuario: "Usuario",
+    analytics_user_grid_def_column_id: "Id",
+    analytics_user_grid_def_column_idgrupo: "Grupo",
+    analytics_user_grid_def_column_idusuario: "Usuario",
+  },
+};
