@@ -21,7 +21,6 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     required: true,
     cssClass: 'formulario_create_name'
   },
-  
   {
     key: 'remarks',
     labelKey: 'formulario_create_form_fields_def_field_remarks',
@@ -131,6 +130,31 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
     cssClass: 'formulario_create_isCurso'
   },
   {
+    key: 'templateRecordatorio',
+    labelKey: 'formulario_create_form_fields_def_field_SelectedRecordatorioTemplate',
+    label: 'Template Recordatorio',
+    controlType: 'autocomplete-desplegable',
+    required: false,
+    options: {
+      transferIdToField: 'templateRecordatorioId',
+      elementLabel: 'name',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'templateRecordatorio'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'MessageTemplate/FilterMessageTemplateByName'
+    }
+  },
+  {
+    key: 'templateRecordatorioId',
+    controlType: 'hidden'
+  },
+  {
     key: 'agenda_title',
     labelKey: 'Nivel de Acceso',
     title: 'Nivel de Acceso',
@@ -180,7 +204,6 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
       ]
     }
   },
-
   {
     key: 'estadosSeleccionados',
     labelKey: 'Seleccionados',
@@ -194,7 +217,7 @@ export const FORMULARIO_CREATE_FORM_FIELDS_DEF = [
           key: 'matriculados_estado_ws',
           url: PREFIX_DOMAIN_API + 'MatriculadoEstado'
       }
-  }
+    }
   }
   
 ];

@@ -405,8 +405,21 @@ export const FORMULARIO_GRID_DEF: GridDef = {
         }
       },
       icon: 'manage_history'
-    }
-    
+    },
+    {
+      actionNameKey: 'Enviar Recordatorio',
+      icon: 'alarm',
+      actionSecurity: 'FORMULARIO_ENVIAR_RECORDATORIO',
+      confirm: true,
+      ws: {
+        key: 'formulario_grid_def_button_action_despublicar',
+        url: PREFIX_DOMAIN_API + 'Form/MandarRecordatorio',
+        method: 'GET',
+        querystring: {
+          formularioId : 'id'
+        }
+      },
+    },
   ],
   displayedActionsCondition: [
      {
