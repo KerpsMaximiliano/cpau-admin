@@ -26,6 +26,7 @@ export const FORMULARIO_I18N_DEF = {
     formulario_create_form_fields_def_field_date: 'Fecha',
     formulario_create_form_fields_def_field_contact: 'Contacto',
     formulario_create_form_fields_def_field_isCurso: 'Es curso',
+    formulario_create_form_fields_def_field_SelectedRecordatorioTemplate: 'Template Recordatorio',
     formulario_update_form_fields_def_field_isCurso: 'Es curso',
     formulario_update_form_fields_def_field_id: 'ID',
     formulario_update_form_fields_def_field_name: 'Nombre',

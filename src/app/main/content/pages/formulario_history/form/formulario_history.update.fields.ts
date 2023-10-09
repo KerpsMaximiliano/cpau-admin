@@ -142,14 +142,14 @@ export const FORMULARIO_HISTORY_UPDATE_FORM_FIELDS_DEF = [
   {
     key: 'updateUser',
     labelKey: 'FORMULARIO_HISTORY_UPDATE_FORM_FIELDS_DEF_FIELD_updateuser',
-    label: 'Usuario Modificación',
+    label: 'Usuario Modificaciï¿½n',
     type: 'string',
     controlType: 'textbox'
   },
   {
     key: 'updateDateString',
     labelKey: 'FORMULARIO_HISTORY_UPDATE_FORM_FIELDS_DEF_FIELD_updatedatestring',
-    label: 'Fecha Modificación',
+    label: 'Fecha Modificaciï¿½n',
     type: 'string',
     controlType: 'textbox'
   }
