@@ -15,6 +15,10 @@ export const CONTACT_LIST_GRID_DEF = {
       columnNameKey: 'contact_list_grid_def_column_descripition'
     },
     {
+      columnDef: 'memeberCount',
+      columnNameKey: 'contact_list_grid_def_column_MemeberCount'
+    },
+    {
       columnDef: 'allowsJoin',
       columnNameKey: 'contact_list_grid_def_column_allowsjoin'
     },
@@ -29,7 +33,7 @@ export const CONTACT_LIST_GRID_DEF = {
     'codeList',
     'name',
     'descripition',
-    'allowsJoin'
+    'memeberCount'
   ],
   actions: [
     {
@@ -61,6 +65,7 @@ export const CONTACT_LIST_GRID_DEF = {
     {
       actionNameKey: 'contact_list_grid_button_action_file_members',
       actionType: 'file-download',
+      labelTitle: 'Exportar Miembros',
       icon: 'file_download',
       actionSecurity: 'CONTACT_LIST_EXPORT_MEMBERS', 
       ws: {
@@ -76,6 +81,7 @@ export const CONTACT_LIST_GRID_DEF = {
       actionNameKey: 'contact_list_grid_button_action_file_import_members',
       actionType: 'file-upload',
       icon: 'file_upload',
+      labelTitle: 'Importar Miembros',
       actionSecurity: 'CONTACT_LIST_IMPORT_MEMBERS', 
       form: [
         {               
@@ -93,7 +99,52 @@ export const CONTACT_LIST_GRID_DEF = {
         url: PREFIX_DOMAIN_API + 'ContactList/Import',
         method: 'POST'        
       }
-    }
+    },
+    {
+      actionNameKey: 'contact_list_grid_button_action_clone',
+      labelTitle: 'Clonar lista de contactos',
+      icon: 'file_copy',
+      form: [
+        {
+          key: 'name',
+          labelKey: 'contact_list_create_form_fields_def_field_name',
+          label: 'Nombre',
+          type: 'string',
+          controlType: 'textbox',
+          required: true
+        },
+        {
+          key: 'descripition',
+          labelKey: 'contact_list_create_form_fields_def_field_descripition',
+          label: 'Descripci�n',
+          type: 'string',
+          controlType: 'textbox'
+        },
+        {
+          key: 'allowsJoin',
+          labelKey: 'contact_list_create_form_fields_def_field_allowsjoin',
+          type: 'checkbox',
+          controlType: 'checkbox'
+        },
+        {
+          key: 'codeList',
+          labelKey: 'contact_list_create_form_fields_def_field_codelist',
+          type: 'string',
+          controlType: 'textbox',
+          required: true
+        },
+        {               
+          key: 'id',
+          controlType: 'hidden',
+        },
+      ],
+      ws: {
+        key: 'indice_grid_button_action_file_import_members',
+        url: PREFIX_DOMAIN_API + 'ContactList/Clonar',
+        method: 'POST'        
+      }
+    },
+    
  
 
 

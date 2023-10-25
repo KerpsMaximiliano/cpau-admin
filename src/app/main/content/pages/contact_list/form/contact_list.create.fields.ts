@@ -4,7 +4,8 @@ export const CONTACT_LIST_CREATE_FORM_FIELDS_DEF = [
     labelKey: 'contact_list_create_form_fields_def_field_name',
     label: 'Nombre',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true
   },
   {
     key: 'descripition',
@@ -13,16 +14,17 @@ export const CONTACT_LIST_CREATE_FORM_FIELDS_DEF = [
     type: 'string',
     controlType: 'textbox'
   },
-  {
-    key: 'allowsJoin',
-    labelKey: 'contact_list_create_form_fields_def_field_allowsjoin',
-    type: 'checkbox',
-    controlType: 'checkbox'
-  },
+  // {
+  //   key: 'allowsJoin',
+  //   labelKey: 'contact_list_create_form_fields_def_field_allowsjoin',
+  //   type: 'checkbox',
+  //   controlType: 'checkbox'
+  // },
   {
     key: 'codeList',
     labelKey: 'contact_list_create_form_fields_def_field_codelist',
     type: 'string',
-    controlType: 'textbox'
+    controlType: 'textbox',
+    required: true
   }
 ];
