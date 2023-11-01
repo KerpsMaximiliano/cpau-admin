@@ -74,6 +74,29 @@ export const FORM_RESPONSE_GRID_DEF = {
         url: PREFIX_DOMAIN_API + 'admin/personas/bloqueocursos',
         method: 'PUT'
       }
-    }
-  ]
+    },
+    {
+      actionNameKey: 'form_response_grid_def_column_button_action_confirmar_espera',
+      icon: 'fact_check',
+      actionSecurity: 'FORMULARIO_CONFIRMAR_ESPERA',
+      confirm: true,
+      ws: {
+        key: 'formulario_grid_def_button_action_despublicar',
+        url: PREFIX_DOMAIN_API + 'FormResponse/ConfirmarEspera',
+        method: 'GET',
+        querystring: {
+          idForm : 'id'
+        }
+      },
+    },
+  ],
+  displayedActionsCondition: [
+    {
+      key: 'form_response_grid_def_column_button_action_confirmar_espera',
+      expression: {
+                    key: 'status',
+                    value: 'Queued'
+                  }
+    },
+ ]
 };

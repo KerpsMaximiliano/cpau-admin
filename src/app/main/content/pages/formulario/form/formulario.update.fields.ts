@@ -151,6 +151,85 @@ export const FORMULARIO_UPDATE_FORM_FIELDS_DEF = [
     key: 'templateRecordatorioId',
     controlType: 'hidden'
   },
+
+  {
+    key: 'templateInscripcion',
+    labelKey: 'formulario_create_form_fields_def_field_SelectedInscripcionTemplate',
+    label: 'Template Inscripción',
+    controlType: 'autocomplete-desplegable',
+    required: false,
+    options: {
+      transferIdToField: 'templateInscripcionId',
+      elementLabel: 'name',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'templateInscripcion'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'MessageTemplate/FilterMessageTemplateByName'
+    }
+  },
+  {
+    key: 'templateInscripcionId',
+    controlType: 'hidden'
+  },
+
+  {
+    key: 'templateEspera',
+    labelKey: 'formulario_create_form_fields_def_field_SelectedEsperaTemplate',
+    label: 'Template Inscripción',
+    controlType: 'autocomplete-desplegable',
+    required: false,
+    options: {
+      transferIdToField: 'templateEsperaId',
+      elementLabel: 'name',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'templateEspera'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'MessageTemplate/FilterMessageTemplateByName'
+    }
+  },
+  {
+    key: 'templateEsperaId',
+    controlType: 'hidden'
+  },
+
+  {
+    key: 'templateConfirmacion',
+    labelKey: 'formulario_create_form_fields_def_field_SelectedConfirmacionTemplate',
+    label: 'Template Confirmación',
+    controlType: 'autocomplete-desplegable',
+    required: false,
+    options: {
+      transferIdToField: 'templateConfirmacionId',
+      elementLabel: 'name',
+      elementValue: 'id',
+      useNativeFilter: false,
+      selectElementOrCleanField: 'Debe seleccionar un elemento o limpiar el campo'
+    },
+    apiOptions: {
+      queryString: {
+        name: 'templateConfirmacion'
+      },
+      defaultShow: 20,
+      url: PREFIX_DOMAIN_API + 'MessageTemplate/FilterMessageTemplateByName'
+    }
+  },
+  {
+    key: 'templateConfirmacionId',
+    controlType: 'hidden'
+  },
+  
   {
     key: 'agenda_title',
     labelKey: 'Nivel de Acceso',
