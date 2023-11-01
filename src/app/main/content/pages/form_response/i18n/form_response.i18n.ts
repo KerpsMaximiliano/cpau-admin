@@ -22,8 +22,8 @@ export const FORM_RESPONSE_I18N_DEF = {
     form_response_grid_def_column_nombreApellido: 'Apellido y Nombre',
     form_response_grid_def_column_matricula: 'Matricula',
     form_response_grid_def_column_tipo: 'Tipo',
-    form_response_grid_def_column_button_action_borrar_inscripto: 'Desuscribir Inscripto',
+    form_response_grid_def_column_button_action_borrar_inscripto: 'Desuscribir',
     form_response_grid_def_column_button_action_bloqueos_cursos: 'Bloqueo de Cursos por Semestre',
-    form_response_grid_def_column_button_action_confirmar_espera: 'Confirmar Espera'
+    form_response_grid_def_column_button_action_confirmar_espera: 'Inscribir (Quitar de lista de espera)'
   }
 };
