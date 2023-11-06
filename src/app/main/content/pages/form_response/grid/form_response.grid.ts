@@ -12,6 +12,10 @@ export const FORM_RESPONSE_GRID_DEF = {
       columnNameKey: 'form_response_grid_def_column_status'
     },
     {
+      columnDef: 'statusString',
+      columnNameKey: 'form_response_grid_def_column_status'
+    },
+    {
       columnDef: 'date',
       columnNameKey: 'form_response_grid_def_column_date'
     },
@@ -34,15 +38,20 @@ export const FORM_RESPONSE_GRID_DEF = {
     {
       columnDef: 'tipo',
       columnNameKey: 'form_response_grid_def_column_tipo'
+    },
+    {
+      columnDef: 'email',
+      columnNameKey: 'form_response_grid_def_column_email'
     }
   ],
   sortAllColumns: true,
   deleteAction: true,
   displayedColumns: [
     'nombreApellido',
+    'email',
     'tipo',
     'matricula',
-    'status',
+    'statusString',
     'date'
   ],
   actions: [
